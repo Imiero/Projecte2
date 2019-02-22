@@ -36,5 +36,12 @@ namespace EspaiActiu
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormSolicitudes f = new FormSolicitudes();
+            f.Show();
+            this.Hide();
+        }
     }
 }
