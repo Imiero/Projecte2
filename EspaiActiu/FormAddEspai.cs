@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace EspaiActiu
 {
-    public partial class FormLogin : Form
+    public partial class FormAddEspai : Form
     {
-        public FormLogin()
+        public FormAddEspai()
         {
             InitializeComponent();
-        }
-
-        private void buttonLogin_Click(object sender, EventArgs e)
-        {
-            FormInicio f1 = new FormInicio();
-            f1.Show();
         }
     }
 }

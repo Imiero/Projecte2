@@ -47,25 +47,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddEntitat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddEntitat.Designer.cs">
+      <DependentUpon>FormAddEntitat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddEspai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddEspai.Designer.cs">
+      <DependentUpon>FormAddEspai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDenegacio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDenegacio.Designer.cs">
+      <DependentUpon>FormDenegacio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetallsEntitat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetallsEntitat.Designer.cs">
+      <DependentUpon>FormDetallsEntitat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetallsEspai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetallsEspai.Designer.cs">
+      <DependentUpon>FormDetallsEspai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSolicitudes.cs">
+    <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSolicitudes.Designer.cs">
-      <DependentUpon>FormSolicitudes.cs</DependentUpon>
+    <Compile Include="FormInicio.Designer.cs">
+      <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddEntitat.resx">
+      <DependentUpon>FormAddEntitat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddEspai.resx">
+      <DependentUpon>FormAddEspai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDenegacio.resx">
+      <DependentUpon>FormDenegacio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetallsEntitat.resx">
+      <DependentUpon>FormDetallsEntitat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetallsEspai.resx">
+      <DependentUpon>FormDetallsEspai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSolicitudes.resx">
-      <DependentUpon>FormSolicitudes.cs</DependentUpon>
+    <EmbeddedResource Include="FormInicio.resx">
+      <DependentUpon>FormInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
