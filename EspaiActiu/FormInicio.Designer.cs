@@ -57,7 +57,7 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::EspaiActiu.Properties.Resources.logo_principal_color;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(1252, 6);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(1208, 6);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(388, 132);
