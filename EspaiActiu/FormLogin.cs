@@ -12,6 +12,7 @@ namespace EspaiActiu
 {
     public partial class FormLogin : Form
     {
+        public static bool correcto = true;
         public FormLogin()
         {
             InitializeComponent();
@@ -19,8 +20,16 @@ namespace EspaiActiu
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            FormInicio f1 = new FormInicio();
-            f1.Show();
+
+
+            //TODO:validacion here.....
+
+
+
+           if(correcto)
+            {
+                this.Close();
+            }
         }
     }
 }
