@@ -75,5 +75,10 @@ namespace EspaiActiu
         {
             Sortir();
         }
+
+        private void SidePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

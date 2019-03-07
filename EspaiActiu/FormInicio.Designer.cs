@@ -45,8 +45,11 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPagePeticions = new System.Windows.Forms.TabPage();
+            this.tabPageEspais = new System.Windows.Forms.TabPage();
+            this.tabPageEquips = new System.Windows.Forms.TabPage();
+            this.tabPageModificacion = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -55,6 +58,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabPagePeticions.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePanel
@@ -78,6 +82,7 @@
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(437, 948);
             this.SidePanel.TabIndex = 1;
+            this.SidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SidePanel_Paint);
             // 
             // pictureBox4
             // 
@@ -225,33 +230,65 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(472, 191);
+            this.tabControl1.Controls.Add(this.tabPagePeticions);
+            this.tabControl1.Controls.Add(this.tabPageEspais);
+            this.tabControl1.Controls.Add(this.tabPageEquips);
+            this.tabControl1.Controls.Add(this.tabPageModificacion);
+            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl1.ItemSize = new System.Drawing.Size(0, 10);
+            this.tabControl1.Location = new System.Drawing.Point(437, 176);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1147, 728);
+            this.tabControl1.Size = new System.Drawing.Size(1194, 772);
             this.tabControl1.TabIndex = 3;
             // 
-            // tabPage1
+            // tabPagePeticions
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 33);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1139, 691);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPagePeticions.Controls.Add(this.label5);
+            this.tabPagePeticions.Location = new System.Drawing.Point(4, 14);
+            this.tabPagePeticions.Name = "tabPagePeticions";
+            this.tabPagePeticions.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePeticions.Size = new System.Drawing.Size(1186, 754);
+            this.tabPagePeticions.TabIndex = 0;
+            this.tabPagePeticions.Text = "tabPage1";
             // 
-            // tabPage2
+            // tabPageEspais
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 33);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 63);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageEspais.Location = new System.Drawing.Point(4, 14);
+            this.tabPageEspais.Name = "tabPageEspais";
+            this.tabPageEspais.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageEspais.Size = new System.Drawing.Size(1186, 754);
+            this.tabPageEspais.TabIndex = 1;
+            this.tabPageEspais.Text = "tabPage2";
+            this.tabPageEspais.UseVisualStyleBackColor = true;
+            // 
+            // tabPageEquips
+            // 
+            this.tabPageEquips.Location = new System.Drawing.Point(4, 5);
+            this.tabPageEquips.Name = "tabPageEquips";
+            this.tabPageEquips.Size = new System.Drawing.Size(1186, 763);
+            this.tabPageEquips.TabIndex = 2;
+            this.tabPageEquips.Text = "tabPage1";
+            this.tabPageEquips.UseVisualStyleBackColor = true;
+            // 
+            // tabPageModificacion
+            // 
+            this.tabPageModificacion.Location = new System.Drawing.Point(4, 5);
+            this.tabPageModificacion.Name = "tabPageModificacion";
+            this.tabPageModificacion.Size = new System.Drawing.Size(1186, 763);
+            this.tabPageModificacion.TabIndex = 3;
+            this.tabPageModificacion.Text = "tabPage1";
+            this.tabPageModificacion.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(339, 283);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "label5";
             // 
             // FormInicio
             // 
@@ -275,6 +312,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPagePeticions.ResumeLayout(false);
+            this.tabPagePeticions.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -298,7 +337,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPagePeticions;
+        private System.Windows.Forms.TabPage tabPageEspais;
+        private System.Windows.Forms.TabPage tabPageEquips;
+        private System.Windows.Forms.TabPage tabPageModificacion;
+        private System.Windows.Forms.Label label5;
     }
 }
