@@ -138,5 +138,17 @@
   <ItemGroup>
     <None Include="Resources\logo-principal-color.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espais_tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entitats_tab.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
