@@ -18,13 +18,20 @@ namespace EspaiActiu
         }
 
         
-
-
-        private void bDenegarSollicitut_Click(object sender, EventArgs e)
+        private void tabPeticio()
         {
             FormDenegacio f = new FormDenegacio();
             f.ShowDialog();
-            f.Text = "Denegació sol·licitut d'espai";
+        }
+        private void Sortir()
+        {
+            this.Close();
+        }
+
+        private void bDenegarSollicitut_Click(object sender, EventArgs e)
+        {
+
+
         }
 
         private void bAfegirEntitat_Click(object sender, EventArgs e)
@@ -37,6 +44,36 @@ namespace EspaiActiu
         {
             FormAddEspai f = new FormAddEspai();
             f.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            tabPeticio();
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            tabPeticio();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            tabPeticio();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Sortir();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Sortir();
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            Sortir();
         }
     }
 }
