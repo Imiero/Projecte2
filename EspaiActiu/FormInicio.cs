@@ -17,11 +17,35 @@ namespace EspaiActiu
             InitializeComponent();
         }
 
-        
+        //myLabel.ForeColor = System.Drawing.Color.Red;
+        //myLabel.ForeColor = Color.FromArgb(0, 0, 0);//(R, G, B) (0, 0, 0 = black)
+
+        private void resetColors()
+        {
+            Petilabel.ForeColor = System.Drawing.Color.Black;
+            EspaLabel.ForeColor = System.Drawing.Color.Black;
+            Equipslabel.ForeColor = System.Drawing.Color.Black;
+        }
         private void tabPeticio()
         {
-            FormDenegacio f = new FormDenegacio();
-            f.ShowDialog();
+            tabControl1.SelectedIndex = 0;
+            resetColors();
+            Petilabel.ForeColor = System.Drawing.Color.White;
+            
+        }
+        private void tabEspais()
+        {
+            tabControl1.SelectedIndex = 1;
+            resetColors();
+            EspaLabel.ForeColor = System.Drawing.Color.White;
+            
+        }
+        private void tabEquips()
+        {
+            tabControl1.SelectedIndex = 2;
+            resetColors();
+            Equipslabel.ForeColor = System.Drawing.Color.White;
+
         }
         private void Sortir()
         {
@@ -76,9 +100,39 @@ namespace EspaiActiu
             Sortir();
         }
 
-        private void SidePanel_Paint(object sender, PaintEventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
+            tabEspais();
+        }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            tabEspais();
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            tabEspais();
+        }
+
+        private void Equipslabel_Click(object sender, EventArgs e)
+        {
+            tabEquips();
+        }
+
+        private void EquipsPanel_Click(object sender, EventArgs e)
+        {
+            tabEquips();
+        }
+
+        private void EquipsImage_Click(object sender, EventArgs e)
+        {
+            tabEquips();
+        }
+
+        private void FormInicio_Load(object sender, EventArgs e)
+        {
+            tabPeticio();
         }
     }
 }
