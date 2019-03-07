@@ -121,4 +121,16 @@
   <data name="logo-principal-color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-principal-color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="new_tab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_tab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit_tab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exit_tab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="espais_tab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\espais_tab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="entitats_tab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\entitats_tab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

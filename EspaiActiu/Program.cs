@@ -16,7 +16,20 @@ namespace EspaiActiu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            FormLogin login = new FormLogin();
+
+            Application.Run(login);
+            bool log = true;
+            if (FormLogin.correcto)
+            {
+                Application.Run(new FormInicio());
+            }
+            else
+            {
+                Application.Exit();
+            }
+        
         }
+
     }
 }

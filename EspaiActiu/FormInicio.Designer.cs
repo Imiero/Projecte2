@@ -28,36 +28,198 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.SidePanel = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.EquipsImage = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Equipslabel = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.EquipsPanel = new System.Windows.Forms.Panel();
+            this.EspaiImage = new System.Windows.Forms.PictureBox();
+            this.EspaLabel = new System.Windows.Forms.Label();
+            this.EspaisLabel = new System.Windows.Forms.Panel();
+            this.PetiImage = new System.Windows.Forms.PictureBox();
+            this.Petilabel = new System.Windows.Forms.Label();
+            this.PetiPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.tab = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.bCercarEspai = new System.Windows.Forms.Button();
-            this.bAfegirEspai = new System.Windows.Forms.Button();
-            this.tbCercarEspai = new System.Windows.Forms.TextBox();
-            this.bEliminarEspai = new System.Windows.Forms.Button();
-            this.lvLlistaEspais = new System.Windows.Forms.ListView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.bDenegarSollicitut = new System.Windows.Forms.Button();
-            this.bAceptarSollicitut = new System.Windows.Forms.Button();
-            this.dgSollicituts = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.bAfegirEntitat = new System.Windows.Forms.Button();
-            this.bEliminarEntitat = new System.Windows.Forms.Button();
-            this.bCercarEntitat = new System.Windows.Forms.Button();
-            this.tbCercarEntitat = new System.Windows.Forms.TextBox();
-            this.lvLlistaEntitats = new System.Windows.Forms.ListView();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPagePeticions = new System.Windows.Forms.TabPage();
+            this.buttonBuscarPeticion = new System.Windows.Forms.Button();
+            this.textBoxBuscarPeticion = new System.Windows.Forms.TextBox();
+            this.tabPageEspais = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabPageEquips = new System.Windows.Forms.TabPage();
+            this.tabPageModificacion = new System.Windows.Forms.TabPage();
+            this.SidePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EquipsImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EspaiImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PetiImage)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.tab.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgSollicituts)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPagePeticions.SuspendLayout();
+            this.tabPageEspais.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // SidePanel
+            // 
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(160)))), ((int)(((byte)(56)))));
+            this.SidePanel.Controls.Add(this.pictureBox4);
+            this.SidePanel.Controls.Add(this.EquipsImage);
+            this.SidePanel.Controls.Add(this.label4);
+            this.SidePanel.Controls.Add(this.Equipslabel);
+            this.SidePanel.Controls.Add(this.panel5);
+            this.SidePanel.Controls.Add(this.EquipsPanel);
+            this.SidePanel.Controls.Add(this.EspaiImage);
+            this.SidePanel.Controls.Add(this.EspaLabel);
+            this.SidePanel.Controls.Add(this.EspaisLabel);
+            this.SidePanel.Controls.Add(this.PetiImage);
+            this.SidePanel.Controls.Add(this.Petilabel);
+            this.SidePanel.Controls.Add(this.PetiPanel);
+            this.SidePanel.Controls.Add(this.panel1);
+            this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SidePanel.Location = new System.Drawing.Point(0, 0);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(437, 955);
+            this.SidePanel.TabIndex = 1;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
+            this.pictureBox4.Image = global::EspaiActiu.Properties.Resources.exit_tab;
+            this.pictureBox4.Location = new System.Drawing.Point(15, 776);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(115, 117);
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // EquipsImage
+            // 
+            this.EquipsImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
+            this.EquipsImage.Image = global::EspaiActiu.Properties.Resources.entitats_tab;
+            this.EquipsImage.Location = new System.Drawing.Point(18, 519);
+            this.EquipsImage.Name = "EquipsImage";
+            this.EquipsImage.Size = new System.Drawing.Size(115, 117);
+            this.EquipsImage.TabIndex = 7;
+            this.EquipsImage.TabStop = false;
+            this.EquipsImage.Click += new System.EventHandler(this.EquipsImage_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(161, 799);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 56);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Sortir";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // Equipslabel
+            // 
+            this.Equipslabel.AutoSize = true;
+            this.Equipslabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Equipslabel.Location = new System.Drawing.Point(164, 542);
+            this.Equipslabel.Name = "Equipslabel";
+            this.Equipslabel.Size = new System.Drawing.Size(183, 56);
+            this.Equipslabel.TabIndex = 8;
+            this.Equipslabel.Text = "Equips";
+            this.Equipslabel.Click += new System.EventHandler(this.Equipslabel_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(3, 761);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(431, 158);
+            this.panel5.TabIndex = 9;
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            // 
+            // EquipsPanel
+            // 
+            this.EquipsPanel.Location = new System.Drawing.Point(6, 504);
+            this.EquipsPanel.Name = "EquipsPanel";
+            this.EquipsPanel.Size = new System.Drawing.Size(431, 158);
+            this.EquipsPanel.TabIndex = 9;
+            this.EquipsPanel.Click += new System.EventHandler(this.EquipsPanel_Click);
+            // 
+            // EspaiImage
+            // 
+            this.EspaiImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
+            this.EspaiImage.Image = global::EspaiActiu.Properties.Resources.espais_tab;
+            this.EspaiImage.Location = new System.Drawing.Point(15, 355);
+            this.EspaiImage.Name = "EspaiImage";
+            this.EspaiImage.Size = new System.Drawing.Size(118, 117);
+            this.EspaiImage.TabIndex = 4;
+            this.EspaiImage.TabStop = false;
+            this.EspaiImage.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // EspaLabel
+            // 
+            this.EspaLabel.AutoSize = true;
+            this.EspaLabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EspaLabel.Location = new System.Drawing.Point(161, 378);
+            this.EspaLabel.Name = "EspaLabel";
+            this.EspaLabel.Size = new System.Drawing.Size(179, 56);
+            this.EspaLabel.TabIndex = 5;
+            this.EspaLabel.Text = "Espais";
+            this.EspaLabel.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // EspaisLabel
+            // 
+            this.EspaisLabel.Location = new System.Drawing.Point(3, 340);
+            this.EspaisLabel.Name = "EspaisLabel";
+            this.EspaisLabel.Size = new System.Drawing.Size(431, 158);
+            this.EspaisLabel.TabIndex = 6;
+            this.EspaisLabel.Click += new System.EventHandler(this.panel3_Click);
+            // 
+            // PetiImage
+            // 
+            this.PetiImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
+            this.PetiImage.Image = global::EspaiActiu.Properties.Resources.new_tab;
+            this.PetiImage.Location = new System.Drawing.Point(15, 191);
+            this.PetiImage.Name = "PetiImage";
+            this.PetiImage.Size = new System.Drawing.Size(118, 117);
+            this.PetiImage.TabIndex = 0;
+            this.PetiImage.TabStop = false;
+            this.PetiImage.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Petilabel
+            // 
+            this.Petilabel.AutoSize = true;
+            this.Petilabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Petilabel.Location = new System.Drawing.Point(161, 214);
+            this.Petilabel.Name = "Petilabel";
+            this.Petilabel.Size = new System.Drawing.Size(237, 56);
+            this.Petilabel.TabIndex = 3;
+            this.Petilabel.Text = "Peticións";
+            this.Petilabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // PetiPanel
+            // 
+            this.PetiPanel.Location = new System.Drawing.Point(3, 176);
+            this.PetiPanel.Name = "PetiPanel";
+            this.PetiPanel.Size = new System.Drawing.Size(431, 158);
+            this.PetiPanel.TabIndex = 3;
+            this.PetiPanel.Click += new System.EventHandler(this.panel2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(198)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.pictureBoxLogo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(437, 170);
+            this.panel1.TabIndex = 0;
             // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::EspaiActiu.Properties.Resources.logo_principal_color;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(1208, 6);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(15, 15);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(388, 132);
@@ -65,213 +227,124 @@
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // tab
+            // MainPanel
             // 
-            this.tab.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tab.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tab.Controls.Add(this.tabPage1);
-            this.tab.Controls.Add(this.tabPage2);
-            this.tab.Controls.Add(this.tabPage3);
-            this.tab.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tab.ItemSize = new System.Drawing.Size(50, 150);
-            this.tab.Location = new System.Drawing.Point(33, 146);
-            this.tab.Margin = new System.Windows.Forms.Padding(6);
-            this.tab.Multiline = true;
-            this.tab.Name = "tab";
-            this.tab.Padding = new System.Drawing.Point(6, 30);
-            this.tab.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tab.SelectedIndex = 0;
-            this.tab.Size = new System.Drawing.Size(1553, 642);
-            this.tab.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tab.TabIndex = 1;
+            this.MainPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MainPanel.Location = new System.Drawing.Point(437, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1060, 170);
+            this.MainPanel.TabIndex = 2;
             // 
-            // tabPage1
+            // tabControl1
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Window;
-            this.tabPage1.Controls.Add(this.bCercarEspai);
-            this.tabPage1.Controls.Add(this.bAfegirEspai);
-            this.tabPage1.Controls.Add(this.tbCercarEspai);
-            this.tabPage1.Controls.Add(this.bEliminarEspai);
-            this.tabPage1.Controls.Add(this.lvLlistaEspais);
-            this.tabPage1.Location = new System.Drawing.Point(160, 4);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage1.Size = new System.Drawing.Size(1389, 634);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Espais";
+            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tabControl1.Controls.Add(this.tabPagePeticions);
+            this.tabControl1.Controls.Add(this.tabPageEspais);
+            this.tabControl1.Controls.Add(this.tabPageEquips);
+            this.tabControl1.Controls.Add(this.tabPageModificacion);
+            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
+            this.tabControl1.Location = new System.Drawing.Point(437, 170);
+            this.tabControl1.Multiline = true;
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1060, 785);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl1.TabIndex = 3;
             // 
-            // bCercarEspai
+            // tabPagePeticions
             // 
-            this.bCercarEspai.Location = new System.Drawing.Point(541, 57);
-            this.bCercarEspai.Margin = new System.Windows.Forms.Padding(6);
-            this.bCercarEspai.Name = "bCercarEspai";
-            this.bCercarEspai.Size = new System.Drawing.Size(138, 42);
-            this.bCercarEspai.TabIndex = 6;
-            this.bCercarEspai.Text = "Cercar";
-            this.bCercarEspai.UseVisualStyleBackColor = true;
+            this.tabPagePeticions.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPagePeticions.Controls.Add(this.buttonBuscarPeticion);
+            this.tabPagePeticions.Controls.Add(this.textBoxBuscarPeticion);
+            this.tabPagePeticions.Location = new System.Drawing.Point(4, 5);
+            this.tabPagePeticions.Name = "tabPagePeticions";
+            this.tabPagePeticions.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePeticions.Size = new System.Drawing.Size(1052, 776);
+            this.tabPagePeticions.TabIndex = 0;
+            this.tabPagePeticions.Text = "tabPage1";
             // 
-            // bAfegirEspai
+            // buttonBuscarPeticion
             // 
-            this.bAfegirEspai.Location = new System.Drawing.Point(666, 548);
-            this.bAfegirEspai.Margin = new System.Windows.Forms.Padding(6);
-            this.bAfegirEspai.Name = "bAfegirEspai";
-            this.bAfegirEspai.Size = new System.Drawing.Size(229, 61);
-            this.bAfegirEspai.TabIndex = 3;
-            this.bAfegirEspai.Text = "Afegir";
-            this.bAfegirEspai.UseVisualStyleBackColor = true;
+            this.buttonBuscarPeticion.Location = new System.Drawing.Point(805, 46);
+            this.buttonBuscarPeticion.Name = "buttonBuscarPeticion";
+            this.buttonBuscarPeticion.Size = new System.Drawing.Size(94, 49);
+            this.buttonBuscarPeticion.TabIndex = 2;
+            this.buttonBuscarPeticion.Text = "Cercar";
+            this.buttonBuscarPeticion.UseVisualStyleBackColor = true;
             // 
-            // tbCercarEspai
+            // textBoxBuscarPeticion
             // 
-            this.tbCercarEspai.Location = new System.Drawing.Point(59, 57);
-            this.tbCercarEspai.Margin = new System.Windows.Forms.Padding(6);
-            this.tbCercarEspai.Name = "tbCercarEspai";
-            this.tbCercarEspai.Size = new System.Drawing.Size(404, 29);
-            this.tbCercarEspai.TabIndex = 5;
+            this.textBoxBuscarPeticion.Location = new System.Drawing.Point(44, 60);
+            this.textBoxBuscarPeticion.Name = "textBoxBuscarPeticion";
+            this.textBoxBuscarPeticion.Size = new System.Drawing.Size(671, 29);
+            this.textBoxBuscarPeticion.TabIndex = 1;
             // 
-            // bEliminarEspai
+            // tabPageEspais
             // 
-            this.bEliminarEspai.Location = new System.Drawing.Point(957, 548);
-            this.bEliminarEspai.Margin = new System.Windows.Forms.Padding(6);
-            this.bEliminarEspai.Name = "bEliminarEspai";
-            this.bEliminarEspai.Size = new System.Drawing.Size(229, 61);
-            this.bEliminarEspai.TabIndex = 4;
-            this.bEliminarEspai.Text = "Eliminar";
-            this.bEliminarEspai.UseVisualStyleBackColor = true;
+            this.tabPageEspais.Controls.Add(this.button1);
+            this.tabPageEspais.Location = new System.Drawing.Point(4, 5);
+            this.tabPageEspais.Name = "tabPageEspais";
+            this.tabPageEspais.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageEspais.Size = new System.Drawing.Size(1052, 776);
+            this.tabPageEspais.TabIndex = 1;
+            this.tabPageEspais.Text = "tabPage2";
+            this.tabPageEspais.UseVisualStyleBackColor = true;
             // 
-            // lvLlistaEspais
+            // button1
             // 
-            this.lvLlistaEspais.Location = new System.Drawing.Point(57, 135);
-            this.lvLlistaEspais.Margin = new System.Windows.Forms.Padding(6);
-            this.lvLlistaEspais.Name = "lvLlistaEspais";
-            this.lvLlistaEspais.Size = new System.Drawing.Size(1126, 390);
-            this.lvLlistaEspais.TabIndex = 2;
-            this.lvLlistaEspais.UseCompatibleStateImageBehavior = false;
+            this.button1.Location = new System.Drawing.Point(525, 352);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabPageEquips
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Window;
-            this.tabPage2.Controls.Add(this.bDenegarSollicitut);
-            this.tabPage2.Controls.Add(this.bAceptarSollicitut);
-            this.tabPage2.Controls.Add(this.dgSollicituts);
-            this.tabPage2.Location = new System.Drawing.Point(160, 4);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(6);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage2.Size = new System.Drawing.Size(1389, 634);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Sol·licituts";
+            this.tabPageEquips.Location = new System.Drawing.Point(4, 5);
+            this.tabPageEquips.Name = "tabPageEquips";
+            this.tabPageEquips.Size = new System.Drawing.Size(1052, 776);
+            this.tabPageEquips.TabIndex = 2;
+            this.tabPageEquips.Text = "tabPage1";
+            this.tabPageEquips.UseVisualStyleBackColor = true;
             // 
-            // bDenegarSollicitut
+            // tabPageModificacion
             // 
-            this.bDenegarSollicitut.Location = new System.Drawing.Point(959, 548);
-            this.bDenegarSollicitut.Margin = new System.Windows.Forms.Padding(6);
-            this.bDenegarSollicitut.Name = "bDenegarSollicitut";
-            this.bDenegarSollicitut.Size = new System.Drawing.Size(231, 61);
-            this.bDenegarSollicitut.TabIndex = 2;
-            this.bDenegarSollicitut.Text = "Denegar";
-            this.bDenegarSollicitut.UseVisualStyleBackColor = true;
-            // 
-            // bAceptarSollicitut
-            // 
-            this.bAceptarSollicitut.Location = new System.Drawing.Point(667, 548);
-            this.bAceptarSollicitut.Margin = new System.Windows.Forms.Padding(6);
-            this.bAceptarSollicitut.Name = "bAceptarSollicitut";
-            this.bAceptarSollicitut.Size = new System.Drawing.Size(229, 61);
-            this.bAceptarSollicitut.TabIndex = 1;
-            this.bAceptarSollicitut.Text = "Aceptar";
-            this.bAceptarSollicitut.UseVisualStyleBackColor = true;
-            // 
-            // dgSollicituts
-            // 
-            this.dgSollicituts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSollicituts.Location = new System.Drawing.Point(61, 30);
-            this.dgSollicituts.Margin = new System.Windows.Forms.Padding(6);
-            this.dgSollicituts.Name = "dgSollicituts";
-            this.dgSollicituts.Size = new System.Drawing.Size(1129, 484);
-            this.dgSollicituts.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.bAfegirEntitat);
-            this.tabPage3.Controls.Add(this.bEliminarEntitat);
-            this.tabPage3.Controls.Add(this.bCercarEntitat);
-            this.tabPage3.Controls.Add(this.tbCercarEntitat);
-            this.tabPage3.Controls.Add(this.lvLlistaEntitats);
-            this.tabPage3.Location = new System.Drawing.Point(160, 4);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(6);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage3.Size = new System.Drawing.Size(1389, 634);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Entitats";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // bAfegirEntitat
-            // 
-            this.bAfegirEntitat.Location = new System.Drawing.Point(671, 546);
-            this.bAfegirEntitat.Margin = new System.Windows.Forms.Padding(6);
-            this.bAfegirEntitat.Name = "bAfegirEntitat";
-            this.bAfegirEntitat.Size = new System.Drawing.Size(229, 61);
-            this.bAfegirEntitat.TabIndex = 12;
-            this.bAfegirEntitat.Text = "Afegir";
-            this.bAfegirEntitat.UseVisualStyleBackColor = true;
-            // 
-            // bEliminarEntitat
-            // 
-            this.bEliminarEntitat.Location = new System.Drawing.Point(963, 546);
-            this.bEliminarEntitat.Margin = new System.Windows.Forms.Padding(6);
-            this.bEliminarEntitat.Name = "bEliminarEntitat";
-            this.bEliminarEntitat.Size = new System.Drawing.Size(229, 61);
-            this.bEliminarEntitat.TabIndex = 13;
-            this.bEliminarEntitat.Text = "Eliminar";
-            this.bEliminarEntitat.UseVisualStyleBackColor = true;
-            // 
-            // bCercarEntitat
-            // 
-            this.bCercarEntitat.Location = new System.Drawing.Point(535, 57);
-            this.bCercarEntitat.Margin = new System.Windows.Forms.Padding(6);
-            this.bCercarEntitat.Name = "bCercarEntitat";
-            this.bCercarEntitat.Size = new System.Drawing.Size(138, 42);
-            this.bCercarEntitat.TabIndex = 11;
-            this.bCercarEntitat.Text = "Cercar";
-            this.bCercarEntitat.UseVisualStyleBackColor = true;
-            // 
-            // tbCercarEntitat
-            // 
-            this.tbCercarEntitat.Location = new System.Drawing.Point(61, 57);
-            this.tbCercarEntitat.Margin = new System.Windows.Forms.Padding(6);
-            this.tbCercarEntitat.Name = "tbCercarEntitat";
-            this.tbCercarEntitat.Size = new System.Drawing.Size(404, 29);
-            this.tbCercarEntitat.TabIndex = 10;
-            // 
-            // lvLlistaEntitats
-            // 
-            this.lvLlistaEntitats.Location = new System.Drawing.Point(61, 135);
-            this.lvLlistaEntitats.Margin = new System.Windows.Forms.Padding(6);
-            this.lvLlistaEntitats.Name = "lvLlistaEntitats";
-            this.lvLlistaEntitats.Size = new System.Drawing.Size(1126, 390);
-            this.lvLlistaEntitats.TabIndex = 7;
-            this.lvLlistaEntitats.UseCompatibleStateImageBehavior = false;
+            this.tabPageModificacion.Location = new System.Drawing.Point(4, 5);
+            this.tabPageModificacion.Name = "tabPageModificacion";
+            this.tabPageModificacion.Size = new System.Drawing.Size(1052, 776);
+            this.tabPageModificacion.TabIndex = 3;
+            this.tabPageModificacion.Text = "tabPage1";
+            this.tabPageModificacion.UseVisualStyleBackColor = true;
             // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1872, 1028);
-            this.Controls.Add(this.tab);
-            this.Controls.Add(this.pictureBoxLogo);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(1497, 955);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.MainPanel);
+            this.Controls.Add(this.SidePanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormInicio";
             this.Text = "Inicio";
+            this.Load += new System.EventHandler(this.FormInicio_Load);
+            this.SidePanel.ResumeLayout(false);
+            this.SidePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EquipsImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EspaiImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PetiImage)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            this.tab.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgSollicituts)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPagePeticions.ResumeLayout(false);
+            this.tabPagePeticions.PerformLayout();
+            this.tabPageEspais.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -279,22 +352,28 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.TabControl tab;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button bCercarEspai;
-        private System.Windows.Forms.Button bAfegirEspai;
-        private System.Windows.Forms.TextBox tbCercarEspai;
-        private System.Windows.Forms.Button bEliminarEspai;
-        private System.Windows.Forms.ListView lvLlistaEspais;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button bDenegarSollicitut;
-        private System.Windows.Forms.Button bAceptarSollicitut;
-        private System.Windows.Forms.DataGridView dgSollicituts;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button bAfegirEntitat;
-        private System.Windows.Forms.Button bEliminarEntitat;
-        private System.Windows.Forms.Button bCercarEntitat;
-        private System.Windows.Forms.TextBox tbCercarEntitat;
-        private System.Windows.Forms.ListView lvLlistaEntitats;
+        private System.Windows.Forms.Panel SidePanel;
+        private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox PetiImage;
+        private System.Windows.Forms.Label Petilabel;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox EquipsImage;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Equipslabel;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel EquipsPanel;
+        private System.Windows.Forms.PictureBox EspaiImage;
+        private System.Windows.Forms.Label EspaLabel;
+        private System.Windows.Forms.Panel EspaisLabel;
+        private System.Windows.Forms.Panel PetiPanel;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPagePeticions;
+        private System.Windows.Forms.TabPage tabPageEspais;
+        private System.Windows.Forms.TabPage tabPageEquips;
+        private System.Windows.Forms.TabPage tabPageModificacion;
+        private System.Windows.Forms.Button buttonBuscarPeticion;
+        private System.Windows.Forms.TextBox textBoxBuscarPeticion;
+        private System.Windows.Forms.Button button1;
     }
 }

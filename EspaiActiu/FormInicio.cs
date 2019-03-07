@@ -17,77 +17,45 @@ namespace EspaiActiu
             InitializeComponent();
         }
 
-        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        //myLabel.ForeColor = System.Drawing.Color.Red;
+        //myLabel.ForeColor = Color.FromArgb(0, 0, 0);//(R, G, B) (0, 0, 0 = black)
+
+        private void resetColors()
         {
-            Graphics g = e.Graphics;
-
-            Brush _textBrush;
-
-            tabPage1.Text = "sssss";
-            tabPage2.Text = @"Something Meaningful";
-            tabPage3.Text = @"Something Meaningful";
-            // Get the item from the collection.
-
-            TabPage _tabPage = tab.TabPages[e.Index];
-
-
-
-            // Get the real bounds for the tab rectangle.
-
-            Rectangle _tabBounds = tab.GetTabRect(e.Index);
-
-
-
-            if (e.State == DrawItemState.Selected)
-
-            {
-
-
-
-                // Draw a different background color, and don't paint a focus rectangle.
-
-                _textBrush = new SolidBrush(Color.FloralWhite);
-
-                g.FillRectangle(Brushes.DarkSeaGreen, e.Bounds);
-
-            }
-
-            else
-
-            {
-
-                _textBrush = new System.Drawing.SolidBrush(e.ForeColor);
-
-                e.DrawBackground();
-
-            }
-
-
-
-            // Use our own font.
-
-            Font _tabFont = new Font("Robot", (float)15.0, FontStyle.Bold, GraphicsUnit.Pixel);
-
-
-
-            // Draw string. Center the text.
-
-            StringFormat _stringFlags = new StringFormat();
-
-            _stringFlags.Alignment = StringAlignment.Center;
-
-            _stringFlags.LineAlignment = StringAlignment.Center;
-
-            g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
+            Petilabel.ForeColor = System.Drawing.Color.Black;
+            EspaLabel.ForeColor = System.Drawing.Color.Black;
+            Equipslabel.ForeColor = System.Drawing.Color.Black;
         }
+        private void tabPeticio()
+        {
+            tabControl1.SelectedIndex = 0;
+            resetColors();
+            Petilabel.ForeColor = System.Drawing.Color.White;
+            
+        }
+        private void tabEspais()
+        {
+            tabControl1.SelectedIndex = 1;
+            resetColors();
+            EspaLabel.ForeColor = System.Drawing.Color.White;
+            
+        }
+        private void tabEquips()
+        {
+            tabControl1.SelectedIndex = 2;
+            resetColors();
+            Equipslabel.ForeColor = System.Drawing.Color.White;
 
-
+        }
+        private void Sortir()
+        {
+            this.Close();
+        }
 
         private void bDenegarSollicitut_Click(object sender, EventArgs e)
         {
-            FormDenegacio f = new FormDenegacio();
-            f.ShowDialog();
-            f.Text = "Denegació sol·licitut d'espai";
+
+
         }
 
         private void bAfegirEntitat_Click(object sender, EventArgs e)
@@ -100,6 +68,71 @@ namespace EspaiActiu
         {
             FormAddEspai f = new FormAddEspai();
             f.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            tabPeticio();
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            tabPeticio();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            tabPeticio();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Sortir();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Sortir();
+        }
+
+        private void panel5_Click(object sender, EventArgs e)
+        {
+            Sortir();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            tabEspais();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            tabEspais();
+        }
+
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            tabEspais();
+        }
+
+        private void Equipslabel_Click(object sender, EventArgs e)
+        {
+            tabEquips();
+        }
+
+        private void EquipsPanel_Click(object sender, EventArgs e)
+        {
+            tabEquips();
+        }
+
+        private void EquipsImage_Click(object sender, EventArgs e)
+        {
+            tabEquips();
+        }
+
+        private void FormInicio_Load(object sender, EventArgs e)
+        {
+            tabPeticio();
         }
     }
 }
