@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.buttonLogin = new System.Windows.Forms.Button();
             this.ButtonValidar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -59,6 +60,10 @@
             this.ClientSize = new System.Drawing.Size(875, 608);
             this.Controls.Add(this.ButtonValidar);
             this.Controls.Add(this.buttonLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.Text = "FormLogin";
             this.ResumeLayout(false);

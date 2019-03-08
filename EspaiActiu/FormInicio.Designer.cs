@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.SidePanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,6 +55,8 @@
             this.tabPageEquips = new System.Windows.Forms.TabPage();
             this.tabPageModificacion = new System.Windows.Forms.TabPage();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.GroupBoxPeticio = new System.Windows.Forms.GroupBox();
+            this.dataGridViewPeticio = new System.Windows.Forms.DataGridView();
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.EquipsPanel.SuspendLayout();
@@ -65,6 +68,8 @@
             this.tabControl1.SuspendLayout();
             this.tabPagePeticions.SuspendLayout();
             this.tabPageEspais.SuspendLayout();
+            this.GroupBoxPeticio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeticio)).BeginInit();
             this.SuspendLayout();
             // 
             // SidePanel
@@ -86,7 +91,7 @@
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(437, 955);
+            this.SidePanel.Size = new System.Drawing.Size(437, 1228);
             this.SidePanel.TabIndex = 1;
             // 
             // label1
@@ -258,30 +263,31 @@
             this.tabControl1.Controls.Add(this.tabPageEquips);
             this.tabControl1.Controls.Add(this.tabPageModificacion);
             this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
+            this.tabControl1.ItemSize = new System.Drawing.Size(0, 10);
             this.tabControl1.Location = new System.Drawing.Point(437, 170);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1060, 785);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 3;
             // 
             // tabPagePeticions
             // 
             this.tabPagePeticions.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPagePeticions.Controls.Add(this.GroupBoxPeticio);
             this.tabPagePeticions.Controls.Add(this.buttonBuscarPeticion);
             this.tabPagePeticions.Controls.Add(this.textBoxBuscarPeticion);
-            this.tabPagePeticions.Location = new System.Drawing.Point(4, 5);
+            this.tabPagePeticions.Location = new System.Drawing.Point(4, 14);
             this.tabPagePeticions.Name = "tabPagePeticions";
             this.tabPagePeticions.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePeticions.Size = new System.Drawing.Size(1052, 776);
+            this.tabPagePeticions.Size = new System.Drawing.Size(1052, 767);
             this.tabPagePeticions.TabIndex = 0;
             this.tabPagePeticions.Text = "tabPage1";
             // 
             // buttonBuscarPeticion
             // 
-            this.buttonBuscarPeticion.Location = new System.Drawing.Point(805, 46);
+            this.buttonBuscarPeticion.Location = new System.Drawing.Point(872, 43);
             this.buttonBuscarPeticion.Name = "buttonBuscarPeticion";
             this.buttonBuscarPeticion.Size = new System.Drawing.Size(94, 49);
             this.buttonBuscarPeticion.TabIndex = 2;
@@ -290,21 +296,21 @@
             // 
             // textBoxBuscarPeticion
             // 
-            this.textBoxBuscarPeticion.Location = new System.Drawing.Point(44, 60);
+            this.textBoxBuscarPeticion.Location = new System.Drawing.Point(221, 57);
             this.textBoxBuscarPeticion.Name = "textBoxBuscarPeticion";
-            this.textBoxBuscarPeticion.Size = new System.Drawing.Size(671, 29);
+            this.textBoxBuscarPeticion.Size = new System.Drawing.Size(577, 29);
             this.textBoxBuscarPeticion.TabIndex = 1;
             // 
             // tabPageEspais
             // 
+            this.tabPageEspais.BackColor = System.Drawing.SystemColors.Window;
             this.tabPageEspais.Controls.Add(this.button1);
-            this.tabPageEspais.Location = new System.Drawing.Point(4, 5);
+            this.tabPageEspais.Location = new System.Drawing.Point(4, 14);
             this.tabPageEspais.Name = "tabPageEspais";
             this.tabPageEspais.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEspais.Size = new System.Drawing.Size(1052, 776);
+            this.tabPageEspais.Size = new System.Drawing.Size(1052, 767);
             this.tabPageEspais.TabIndex = 1;
             this.tabPageEspais.Text = "tabPage2";
-            this.tabPageEspais.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -317,21 +323,21 @@
             // 
             // tabPageEquips
             // 
-            this.tabPageEquips.Location = new System.Drawing.Point(4, 5);
+            this.tabPageEquips.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPageEquips.Location = new System.Drawing.Point(4, 14);
             this.tabPageEquips.Name = "tabPageEquips";
-            this.tabPageEquips.Size = new System.Drawing.Size(1052, 776);
+            this.tabPageEquips.Size = new System.Drawing.Size(1052, 767);
             this.tabPageEquips.TabIndex = 2;
             this.tabPageEquips.Text = "tabPage1";
-            this.tabPageEquips.UseVisualStyleBackColor = true;
             // 
             // tabPageModificacion
             // 
-            this.tabPageModificacion.Location = new System.Drawing.Point(4, 5);
+            this.tabPageModificacion.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPageModificacion.Location = new System.Drawing.Point(4, 14);
             this.tabPageModificacion.Name = "tabPageModificacion";
-            this.tabPageModificacion.Size = new System.Drawing.Size(1052, 776);
+            this.tabPageModificacion.Size = new System.Drawing.Size(1052, 767);
             this.tabPageModificacion.TabIndex = 3;
             this.tabPageModificacion.Text = "tabPage1";
-            this.tabPageModificacion.UseVisualStyleBackColor = true;
             // 
             // MainPanel
             // 
@@ -339,20 +345,42 @@
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.MainPanel.Location = new System.Drawing.Point(437, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1060, 169);
+            this.MainPanel.Size = new System.Drawing.Size(1104, 147);
             this.MainPanel.TabIndex = 2;
+            // 
+            // GroupBoxPeticio
+            // 
+            this.GroupBoxPeticio.Controls.Add(this.dataGridViewPeticio);
+            this.GroupBoxPeticio.Location = new System.Drawing.Point(32, 122);
+            this.GroupBoxPeticio.Name = "GroupBoxPeticio";
+            this.GroupBoxPeticio.Size = new System.Drawing.Size(983, 613);
+            this.GroupBoxPeticio.TabIndex = 3;
+            this.GroupBoxPeticio.TabStop = false;
+            this.GroupBoxPeticio.Text = "Nou Peticións";
+            // 
+            // dataGridViewPeticio
+            // 
+            this.dataGridViewPeticio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPeticio.Location = new System.Drawing.Point(28, 44);
+            this.dataGridViewPeticio.Name = "dataGridViewPeticio";
+            this.dataGridViewPeticio.RowTemplate.Height = 31;
+            this.dataGridViewPeticio.Size = new System.Drawing.Size(930, 543);
+            this.dataGridViewPeticio.TabIndex = 0;
             // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1497, 955);
+            this.ClientSize = new System.Drawing.Size(1541, 1228);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.SidePanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormInicio";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.FormInicio_Load);
@@ -370,6 +398,8 @@
             this.tabPagePeticions.ResumeLayout(false);
             this.tabPagePeticions.PerformLayout();
             this.tabPageEspais.ResumeLayout(false);
+            this.GroupBoxPeticio.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeticio)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,5 +432,7 @@
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox GroupBoxPeticio;
+        private System.Windows.Forms.DataGridView dataGridViewPeticio;
     }
 }
