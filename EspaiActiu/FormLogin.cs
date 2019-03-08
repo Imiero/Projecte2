@@ -12,7 +12,7 @@ namespace EspaiActiu
 {
     public partial class FormLogin : Form
     {
-        public static bool correcto = true;
+        public static bool correcto = false;
         public FormLogin()
         {
             InitializeComponent();
@@ -30,6 +30,15 @@ namespace EspaiActiu
             {
                 this.Close();
             }
+            else
+            {
+                DialogResult error = MessageBox.Show("Verificar Credenciales","Atenció",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void ButtonValidar_Click(object sender, EventArgs e)
+        {
+            correcto = true;
         }
     }
 }

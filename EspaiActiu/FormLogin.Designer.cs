@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.buttonLogin = new System.Windows.Forms.Button();
+            this.ButtonValidar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonLogin
@@ -41,11 +42,22 @@
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
+            // ButtonValidar
+            // 
+            this.ButtonValidar.Location = new System.Drawing.Point(29, 21);
+            this.ButtonValidar.Name = "ButtonValidar";
+            this.ButtonValidar.Size = new System.Drawing.Size(103, 69);
+            this.ButtonValidar.TabIndex = 1;
+            this.ButtonValidar.Text = "Validar";
+            this.ButtonValidar.UseVisualStyleBackColor = true;
+            this.ButtonValidar.Click += new System.EventHandler(this.ButtonValidar_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 608);
+            this.Controls.Add(this.ButtonValidar);
             this.Controls.Add(this.buttonLogin);
             this.Name = "FormLogin";
             this.Text = "FormLogin";
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Button ButtonValidar;
     }
 }

@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.SidePanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.EquipsImage = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Equipslabel = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.EquipsPanel = new System.Windows.Forms.Panel();
+            this.EquipsImage = new System.Windows.Forms.PictureBox();
+            this.Equipslabel = new System.Windows.Forms.Label();
             this.EspaiImage = new System.Windows.Forms.PictureBox();
             this.EspaLabel = new System.Windows.Forms.Label();
             this.EspaisLabel = new System.Windows.Forms.Panel();
@@ -43,7 +45,6 @@
             this.PetiPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.MainPanel = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPagePeticions = new System.Windows.Forms.TabPage();
             this.buttonBuscarPeticion = new System.Windows.Forms.Button();
@@ -52,8 +53,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tabPageEquips = new System.Windows.Forms.TabPage();
             this.tabPageModificacion = new System.Windows.Forms.TabPage();
+            this.MainPanel = new System.Windows.Forms.Panel();
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.EquipsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EquipsImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EspaiImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PetiImage)).BeginInit();
@@ -67,10 +70,10 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(160)))), ((int)(((byte)(56)))));
+            this.SidePanel.Controls.Add(this.label1);
+            this.SidePanel.Controls.Add(this.label2);
             this.SidePanel.Controls.Add(this.pictureBox4);
-            this.SidePanel.Controls.Add(this.EquipsImage);
             this.SidePanel.Controls.Add(this.label4);
-            this.SidePanel.Controls.Add(this.Equipslabel);
             this.SidePanel.Controls.Add(this.panel5);
             this.SidePanel.Controls.Add(this.EquipsPanel);
             this.SidePanel.Controls.Add(this.EspaiImage);
@@ -86,6 +89,24 @@
             this.SidePanel.Size = new System.Drawing.Size(437, 955);
             this.SidePanel.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(0, 321);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(438, 2);
+            this.label1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(0, 469);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(438, 2);
+            this.label2.TabIndex = 4;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
@@ -96,17 +117,6 @@
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // EquipsImage
-            // 
-            this.EquipsImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
-            this.EquipsImage.Image = global::EspaiActiu.Properties.Resources.entitats_tab;
-            this.EquipsImage.Location = new System.Drawing.Point(18, 519);
-            this.EquipsImage.Name = "EquipsImage";
-            this.EquipsImage.Size = new System.Drawing.Size(115, 117);
-            this.EquipsImage.TabIndex = 7;
-            this.EquipsImage.TabStop = false;
-            this.EquipsImage.Click += new System.EventHandler(this.EquipsImage_Click);
             // 
             // label4
             // 
@@ -119,17 +129,6 @@
             this.label4.Text = "Sortir";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // Equipslabel
-            // 
-            this.Equipslabel.AutoSize = true;
-            this.Equipslabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equipslabel.Location = new System.Drawing.Point(164, 542);
-            this.Equipslabel.Name = "Equipslabel";
-            this.Equipslabel.Size = new System.Drawing.Size(183, 56);
-            this.Equipslabel.TabIndex = 8;
-            this.Equipslabel.Text = "Equips";
-            this.Equipslabel.Click += new System.EventHandler(this.Equipslabel_Click);
-            // 
             // panel5
             // 
             this.panel5.Location = new System.Drawing.Point(3, 761);
@@ -140,17 +139,41 @@
             // 
             // EquipsPanel
             // 
-            this.EquipsPanel.Location = new System.Drawing.Point(6, 504);
+            this.EquipsPanel.Controls.Add(this.EquipsImage);
+            this.EquipsPanel.Controls.Add(this.Equipslabel);
+            this.EquipsPanel.Location = new System.Drawing.Point(3, 474);
             this.EquipsPanel.Name = "EquipsPanel";
-            this.EquipsPanel.Size = new System.Drawing.Size(431, 158);
+            this.EquipsPanel.Size = new System.Drawing.Size(431, 140);
             this.EquipsPanel.TabIndex = 9;
             this.EquipsPanel.Click += new System.EventHandler(this.EquipsPanel_Click);
+            // 
+            // EquipsImage
+            // 
+            this.EquipsImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
+            this.EquipsImage.Image = global::EspaiActiu.Properties.Resources.entitats_tab;
+            this.EquipsImage.Location = new System.Drawing.Point(13, 7);
+            this.EquipsImage.Name = "EquipsImage";
+            this.EquipsImage.Size = new System.Drawing.Size(115, 117);
+            this.EquipsImage.TabIndex = 7;
+            this.EquipsImage.TabStop = false;
+            this.EquipsImage.Click += new System.EventHandler(this.EquipsImage_Click);
+            // 
+            // Equipslabel
+            // 
+            this.Equipslabel.AutoSize = true;
+            this.Equipslabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Equipslabel.Location = new System.Drawing.Point(159, 45);
+            this.Equipslabel.Name = "Equipslabel";
+            this.Equipslabel.Size = new System.Drawing.Size(183, 56);
+            this.Equipslabel.TabIndex = 8;
+            this.Equipslabel.Text = "Equips";
+            this.Equipslabel.Click += new System.EventHandler(this.Equipslabel_Click);
             // 
             // EspaiImage
             // 
             this.EspaiImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
             this.EspaiImage.Image = global::EspaiActiu.Properties.Resources.espais_tab;
-            this.EspaiImage.Location = new System.Drawing.Point(15, 355);
+            this.EspaiImage.Location = new System.Drawing.Point(16, 341);
             this.EspaiImage.Name = "EspaiImage";
             this.EspaiImage.Size = new System.Drawing.Size(118, 117);
             this.EspaiImage.TabIndex = 4;
@@ -161,7 +184,7 @@
             // 
             this.EspaLabel.AutoSize = true;
             this.EspaLabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EspaLabel.Location = new System.Drawing.Point(161, 378);
+            this.EspaLabel.Location = new System.Drawing.Point(162, 364);
             this.EspaLabel.Name = "EspaLabel";
             this.EspaLabel.Size = new System.Drawing.Size(179, 56);
             this.EspaLabel.TabIndex = 5;
@@ -170,9 +193,9 @@
             // 
             // EspaisLabel
             // 
-            this.EspaisLabel.Location = new System.Drawing.Point(3, 340);
+            this.EspaisLabel.Location = new System.Drawing.Point(4, 326);
             this.EspaisLabel.Name = "EspaisLabel";
-            this.EspaisLabel.Size = new System.Drawing.Size(431, 158);
+            this.EspaisLabel.Size = new System.Drawing.Size(431, 140);
             this.EspaisLabel.TabIndex = 6;
             this.EspaisLabel.Click += new System.EventHandler(this.panel3_Click);
             // 
@@ -202,7 +225,7 @@
             // 
             this.PetiPanel.Location = new System.Drawing.Point(3, 176);
             this.PetiPanel.Name = "PetiPanel";
-            this.PetiPanel.Size = new System.Drawing.Size(431, 158);
+            this.PetiPanel.Size = new System.Drawing.Size(431, 140);
             this.PetiPanel.TabIndex = 3;
             this.PetiPanel.Click += new System.EventHandler(this.panel2_Click);
             // 
@@ -226,15 +249,6 @@
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
-            // 
-            // MainPanel
-            // 
-            this.MainPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MainPanel.Location = new System.Drawing.Point(437, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1060, 170);
-            this.MainPanel.TabIndex = 2;
             // 
             // tabControl1
             // 
@@ -319,14 +333,23 @@
             this.tabPageModificacion.Text = "tabPage1";
             this.tabPageModificacion.UseVisualStyleBackColor = true;
             // 
+            // MainPanel
+            // 
+            this.MainPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MainPanel.Location = new System.Drawing.Point(437, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1060, 169);
+            this.MainPanel.TabIndex = 2;
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1497, 955);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.MainPanel);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.SidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -336,6 +359,8 @@
             this.SidePanel.ResumeLayout(false);
             this.SidePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.EquipsPanel.ResumeLayout(false);
+            this.EquipsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EquipsImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EspaiImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PetiImage)).EndInit();
@@ -353,7 +378,6 @@
 
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox PetiImage;
         private System.Windows.Forms.Label Petilabel;
@@ -375,5 +399,8 @@
         private System.Windows.Forms.Button buttonBuscarPeticion;
         private System.Windows.Forms.TextBox textBoxBuscarPeticion;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

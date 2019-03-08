@@ -52,11 +52,7 @@ namespace EspaiActiu
             this.Close();
         }
 
-        private void bDenegarSollicitut_Click(object sender, EventArgs e)
-        {
 
-
-        }
 
         private void bAfegirEntitat_Click(object sender, EventArgs e)
         {
@@ -70,6 +66,8 @@ namespace EspaiActiu
             f.Show();
         }
 
+
+        //tab peticions
         private void label1_Click(object sender, EventArgs e)
         {
             tabPeticio();
@@ -85,6 +83,9 @@ namespace EspaiActiu
             tabPeticio();
         }
 
+
+
+        //tab salir
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Sortir();
@@ -100,6 +101,8 @@ namespace EspaiActiu
             Sortir();
         }
 
+
+        //tabs espais
         private void label2_Click(object sender, EventArgs e)
         {
             tabEspais();
@@ -115,6 +118,8 @@ namespace EspaiActiu
             tabEspais();
         }
 
+
+        //tabs equips
         private void Equipslabel_Click(object sender, EventArgs e)
         {
             tabEquips();
@@ -134,5 +139,7 @@ namespace EspaiActiu
         {
             tabPeticio();
         }
+
+
     }
 }
