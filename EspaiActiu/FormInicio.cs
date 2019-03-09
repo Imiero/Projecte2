@@ -24,7 +24,7 @@ namespace EspaiActiu
         {
             Petilabel.ForeColor = System.Drawing.Color.Black;
             EspaLabel.ForeColor = System.Drawing.Color.Black;
-            Equipslabel.ForeColor = System.Drawing.Color.Black;
+            Entitatslabel.ForeColor = System.Drawing.Color.Black;
         }
         private void tabPeticio()
         {
@@ -44,7 +44,7 @@ namespace EspaiActiu
         {
             tabControl1.SelectedIndex = 2;
             resetColors();
-            Equipslabel.ForeColor = System.Drawing.Color.White;
+            Entitatslabel.ForeColor = System.Drawing.Color.White;
 
         }
         private void Sortir()
@@ -140,6 +140,16 @@ namespace EspaiActiu
             tabPeticio();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormAddEntitat fEnti = new FormAddEntitat();
+            fEnti.ShowDialog();
+        }
 
+        private void buttonAddEspai_Click(object sender, EventArgs e)
+        {
+            FormAddEspai fEspai = new FormAddEspai();
+            fEspai.ShowDialog();
+        }
     }
 }

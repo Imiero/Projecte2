@@ -16,5 +16,10 @@ namespace EspaiActiu
         {
             InitializeComponent();
         }
+
+        private void bSortir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

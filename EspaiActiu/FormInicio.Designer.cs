@@ -35,9 +35,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.EquipsPanel = new System.Windows.Forms.Panel();
-            this.EquipsImage = new System.Windows.Forms.PictureBox();
-            this.Equipslabel = new System.Windows.Forms.Label();
+            this.EntitatsPanel = new System.Windows.Forms.Panel();
+            this.EntitatsImage = new System.Windows.Forms.PictureBox();
+            this.Entitatslabel = new System.Windows.Forms.Label();
             this.EspaiImage = new System.Windows.Forms.PictureBox();
             this.EspaLabel = new System.Windows.Forms.Label();
             this.EspaisLabel = new System.Windows.Forms.Panel();
@@ -48,28 +48,42 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPagePeticions = new System.Windows.Forms.TabPage();
+            this.GroupBoxPeticio = new System.Windows.Forms.GroupBox();
+            this.dataGridViewPeticio = new System.Windows.Forms.DataGridView();
             this.buttonBuscarPeticion = new System.Windows.Forms.Button();
             this.textBoxBuscarPeticion = new System.Windows.Forms.TextBox();
             this.tabPageEspais = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabPageEquips = new System.Windows.Forms.TabPage();
             this.tabPageModificacion = new System.Windows.Forms.TabPage();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.GroupBoxPeticio = new System.Windows.Forms.GroupBox();
-            this.dataGridViewPeticio = new System.Windows.Forms.DataGridView();
+            this.groupBoxEspais = new System.Windows.Forms.GroupBox();
+            this.dataGridViewEspais = new System.Windows.Forms.DataGridView();
+            this.buttonCercarEspais = new System.Windows.Forms.Button();
+            this.textBoxCercarEspais = new System.Windows.Forms.TextBox();
+            this.buttonAddEspai = new System.Windows.Forms.Button();
+            this.buttonEntitat = new System.Windows.Forms.Button();
+            this.groupBoxEntitats = new System.Windows.Forms.GroupBox();
+            this.dataGridViewEntitats = new System.Windows.Forms.DataGridView();
+            this.buttonCercarEntitat = new System.Windows.Forms.Button();
+            this.textBoxCercarEntitats = new System.Windows.Forms.TextBox();
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.EquipsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EquipsImage)).BeginInit();
+            this.EntitatsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EntitatsImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EspaiImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PetiImage)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPagePeticions.SuspendLayout();
-            this.tabPageEspais.SuspendLayout();
             this.GroupBoxPeticio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeticio)).BeginInit();
+            this.tabPageEspais.SuspendLayout();
+            this.tabPageEquips.SuspendLayout();
+            this.groupBoxEspais.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspais)).BeginInit();
+            this.groupBoxEntitats.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
             this.SuspendLayout();
             // 
             // SidePanel
@@ -80,7 +94,7 @@
             this.SidePanel.Controls.Add(this.pictureBox4);
             this.SidePanel.Controls.Add(this.label4);
             this.SidePanel.Controls.Add(this.panel5);
-            this.SidePanel.Controls.Add(this.EquipsPanel);
+            this.SidePanel.Controls.Add(this.EntitatsPanel);
             this.SidePanel.Controls.Add(this.EspaiImage);
             this.SidePanel.Controls.Add(this.EspaLabel);
             this.SidePanel.Controls.Add(this.EspaisLabel);
@@ -90,35 +104,39 @@
             this.SidePanel.Controls.Add(this.panel1);
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
+            this.SidePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(437, 1228);
+            this.SidePanel.Size = new System.Drawing.Size(358, 907);
             this.SidePanel.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(0, 321);
+            this.label1.Location = new System.Drawing.Point(0, 267);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(438, 2);
+            this.label1.Size = new System.Drawing.Size(359, 2);
             this.label1.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(0, 469);
+            this.label2.Location = new System.Drawing.Point(0, 391);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(438, 2);
+            this.label2.Size = new System.Drawing.Size(359, 2);
             this.label2.TabIndex = 4;
             // 
             // pictureBox4
             // 
             this.pictureBox4.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
             this.pictureBox4.Image = global::EspaiActiu.Properties.Resources.exit_tab;
-            this.pictureBox4.Location = new System.Drawing.Point(15, 776);
+            this.pictureBox4.Location = new System.Drawing.Point(15, 786);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(115, 117);
+            this.pictureBox4.Size = new System.Drawing.Size(94, 97);
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -127,60 +145,66 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(161, 799);
+            this.label4.Location = new System.Drawing.Point(135, 805);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 56);
+            this.label4.Size = new System.Drawing.Size(129, 47);
             this.label4.TabIndex = 8;
             this.label4.Text = "Sortir";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel5
             // 
-            this.panel5.Location = new System.Drawing.Point(3, 761);
+            this.panel5.Location = new System.Drawing.Point(5, 773);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(431, 158);
+            this.panel5.Size = new System.Drawing.Size(353, 132);
             this.panel5.TabIndex = 9;
             this.panel5.Click += new System.EventHandler(this.panel5_Click);
             // 
-            // EquipsPanel
+            // EntitatsPanel
             // 
-            this.EquipsPanel.Controls.Add(this.EquipsImage);
-            this.EquipsPanel.Controls.Add(this.Equipslabel);
-            this.EquipsPanel.Location = new System.Drawing.Point(3, 474);
-            this.EquipsPanel.Name = "EquipsPanel";
-            this.EquipsPanel.Size = new System.Drawing.Size(431, 140);
-            this.EquipsPanel.TabIndex = 9;
-            this.EquipsPanel.Click += new System.EventHandler(this.EquipsPanel_Click);
+            this.EntitatsPanel.Controls.Add(this.EntitatsImage);
+            this.EntitatsPanel.Controls.Add(this.Entitatslabel);
+            this.EntitatsPanel.Location = new System.Drawing.Point(2, 395);
+            this.EntitatsPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EntitatsPanel.Name = "EntitatsPanel";
+            this.EntitatsPanel.Size = new System.Drawing.Size(353, 117);
+            this.EntitatsPanel.TabIndex = 9;
+            this.EntitatsPanel.Click += new System.EventHandler(this.EquipsPanel_Click);
             // 
-            // EquipsImage
+            // EntitatsImage
             // 
-            this.EquipsImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
-            this.EquipsImage.Image = global::EspaiActiu.Properties.Resources.entitats_tab;
-            this.EquipsImage.Location = new System.Drawing.Point(13, 7);
-            this.EquipsImage.Name = "EquipsImage";
-            this.EquipsImage.Size = new System.Drawing.Size(115, 117);
-            this.EquipsImage.TabIndex = 7;
-            this.EquipsImage.TabStop = false;
-            this.EquipsImage.Click += new System.EventHandler(this.EquipsImage_Click);
+            this.EntitatsImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
+            this.EntitatsImage.Image = global::EspaiActiu.Properties.Resources.entitats_tab;
+            this.EntitatsImage.Location = new System.Drawing.Point(11, 6);
+            this.EntitatsImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EntitatsImage.Name = "EntitatsImage";
+            this.EntitatsImage.Size = new System.Drawing.Size(94, 97);
+            this.EntitatsImage.TabIndex = 7;
+            this.EntitatsImage.TabStop = false;
+            this.EntitatsImage.Click += new System.EventHandler(this.EquipsImage_Click);
             // 
-            // Equipslabel
+            // Entitatslabel
             // 
-            this.Equipslabel.AutoSize = true;
-            this.Equipslabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Equipslabel.Location = new System.Drawing.Point(159, 45);
-            this.Equipslabel.Name = "Equipslabel";
-            this.Equipslabel.Size = new System.Drawing.Size(183, 56);
-            this.Equipslabel.TabIndex = 8;
-            this.Equipslabel.Text = "Equips";
-            this.Equipslabel.Click += new System.EventHandler(this.Equipslabel_Click);
+            this.Entitatslabel.AutoSize = true;
+            this.Entitatslabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Entitatslabel.Location = new System.Drawing.Point(130, 37);
+            this.Entitatslabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Entitatslabel.Name = "Entitatslabel";
+            this.Entitatslabel.Size = new System.Drawing.Size(171, 47);
+            this.Entitatslabel.TabIndex = 8;
+            this.Entitatslabel.Text = "Entitats";
+            this.Entitatslabel.Click += new System.EventHandler(this.Equipslabel_Click);
             // 
             // EspaiImage
             // 
             this.EspaiImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
             this.EspaiImage.Image = global::EspaiActiu.Properties.Resources.espais_tab;
-            this.EspaiImage.Location = new System.Drawing.Point(16, 341);
+            this.EspaiImage.Location = new System.Drawing.Point(13, 284);
+            this.EspaiImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EspaiImage.Name = "EspaiImage";
-            this.EspaiImage.Size = new System.Drawing.Size(118, 117);
+            this.EspaiImage.Size = new System.Drawing.Size(97, 97);
             this.EspaiImage.TabIndex = 4;
             this.EspaiImage.TabStop = false;
             this.EspaiImage.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -189,18 +213,20 @@
             // 
             this.EspaLabel.AutoSize = true;
             this.EspaLabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EspaLabel.Location = new System.Drawing.Point(162, 364);
+            this.EspaLabel.Location = new System.Drawing.Point(133, 303);
+            this.EspaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EspaLabel.Name = "EspaLabel";
-            this.EspaLabel.Size = new System.Drawing.Size(179, 56);
+            this.EspaLabel.Size = new System.Drawing.Size(152, 47);
             this.EspaLabel.TabIndex = 5;
             this.EspaLabel.Text = "Espais";
             this.EspaLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // EspaisLabel
             // 
-            this.EspaisLabel.Location = new System.Drawing.Point(4, 326);
+            this.EspaisLabel.Location = new System.Drawing.Point(3, 272);
+            this.EspaisLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EspaisLabel.Name = "EspaisLabel";
-            this.EspaisLabel.Size = new System.Drawing.Size(431, 140);
+            this.EspaisLabel.Size = new System.Drawing.Size(353, 117);
             this.EspaisLabel.TabIndex = 6;
             this.EspaisLabel.Click += new System.EventHandler(this.panel3_Click);
             // 
@@ -208,9 +234,10 @@
             // 
             this.PetiImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
             this.PetiImage.Image = global::EspaiActiu.Properties.Resources.new_tab;
-            this.PetiImage.Location = new System.Drawing.Point(15, 191);
+            this.PetiImage.Location = new System.Drawing.Point(12, 159);
+            this.PetiImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PetiImage.Name = "PetiImage";
-            this.PetiImage.Size = new System.Drawing.Size(118, 117);
+            this.PetiImage.Size = new System.Drawing.Size(97, 97);
             this.PetiImage.TabIndex = 0;
             this.PetiImage.TabStop = false;
             this.PetiImage.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -219,18 +246,20 @@
             // 
             this.Petilabel.AutoSize = true;
             this.Petilabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Petilabel.Location = new System.Drawing.Point(161, 214);
+            this.Petilabel.Location = new System.Drawing.Point(132, 178);
+            this.Petilabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Petilabel.Name = "Petilabel";
-            this.Petilabel.Size = new System.Drawing.Size(237, 56);
+            this.Petilabel.Size = new System.Drawing.Size(202, 47);
             this.Petilabel.TabIndex = 3;
             this.Petilabel.Text = "Peticións";
             this.Petilabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // PetiPanel
             // 
-            this.PetiPanel.Location = new System.Drawing.Point(3, 176);
+            this.PetiPanel.Location = new System.Drawing.Point(2, 147);
+            this.PetiPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PetiPanel.Name = "PetiPanel";
-            this.PetiPanel.Size = new System.Drawing.Size(431, 140);
+            this.PetiPanel.Size = new System.Drawing.Size(353, 117);
             this.PetiPanel.TabIndex = 3;
             this.PetiPanel.Click += new System.EventHandler(this.panel2_Click);
             // 
@@ -240,17 +269,18 @@
             this.panel1.Controls.Add(this.pictureBoxLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 170);
+            this.panel1.Size = new System.Drawing.Size(358, 142);
             this.panel1.TabIndex = 0;
             // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::EspaiActiu.Properties.Resources.logo_principal_color;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(15, 15);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(388, 132);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(317, 110);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
@@ -264,11 +294,12 @@
             this.tabControl1.Controls.Add(this.tabPageModificacion);
             this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl1.ItemSize = new System.Drawing.Size(0, 10);
-            this.tabControl1.Location = new System.Drawing.Point(437, 170);
+            this.tabControl1.Location = new System.Drawing.Point(358, 142);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1060, 785);
+            this.tabControl1.Size = new System.Drawing.Size(1457, 753);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 3;
             // 
@@ -279,81 +310,22 @@
             this.tabPagePeticions.Controls.Add(this.buttonBuscarPeticion);
             this.tabPagePeticions.Controls.Add(this.textBoxBuscarPeticion);
             this.tabPagePeticions.Location = new System.Drawing.Point(4, 14);
+            this.tabPagePeticions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPagePeticions.Name = "tabPagePeticions";
-            this.tabPagePeticions.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePeticions.Size = new System.Drawing.Size(1052, 767);
+            this.tabPagePeticions.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPagePeticions.Size = new System.Drawing.Size(1449, 735);
             this.tabPagePeticions.TabIndex = 0;
             this.tabPagePeticions.Text = "tabPage1";
-            // 
-            // buttonBuscarPeticion
-            // 
-            this.buttonBuscarPeticion.Location = new System.Drawing.Point(872, 43);
-            this.buttonBuscarPeticion.Name = "buttonBuscarPeticion";
-            this.buttonBuscarPeticion.Size = new System.Drawing.Size(94, 49);
-            this.buttonBuscarPeticion.TabIndex = 2;
-            this.buttonBuscarPeticion.Text = "Cercar";
-            this.buttonBuscarPeticion.UseVisualStyleBackColor = true;
-            // 
-            // textBoxBuscarPeticion
-            // 
-            this.textBoxBuscarPeticion.Location = new System.Drawing.Point(221, 57);
-            this.textBoxBuscarPeticion.Name = "textBoxBuscarPeticion";
-            this.textBoxBuscarPeticion.Size = new System.Drawing.Size(577, 29);
-            this.textBoxBuscarPeticion.TabIndex = 1;
-            // 
-            // tabPageEspais
-            // 
-            this.tabPageEspais.BackColor = System.Drawing.SystemColors.Window;
-            this.tabPageEspais.Controls.Add(this.button1);
-            this.tabPageEspais.Location = new System.Drawing.Point(4, 14);
-            this.tabPageEspais.Name = "tabPageEspais";
-            this.tabPageEspais.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEspais.Size = new System.Drawing.Size(1052, 767);
-            this.tabPageEspais.TabIndex = 1;
-            this.tabPageEspais.Text = "tabPage2";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(525, 352);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // tabPageEquips
-            // 
-            this.tabPageEquips.BackColor = System.Drawing.SystemColors.Window;
-            this.tabPageEquips.Location = new System.Drawing.Point(4, 14);
-            this.tabPageEquips.Name = "tabPageEquips";
-            this.tabPageEquips.Size = new System.Drawing.Size(1052, 767);
-            this.tabPageEquips.TabIndex = 2;
-            this.tabPageEquips.Text = "tabPage1";
-            // 
-            // tabPageModificacion
-            // 
-            this.tabPageModificacion.BackColor = System.Drawing.SystemColors.Window;
-            this.tabPageModificacion.Location = new System.Drawing.Point(4, 14);
-            this.tabPageModificacion.Name = "tabPageModificacion";
-            this.tabPageModificacion.Size = new System.Drawing.Size(1052, 767);
-            this.tabPageModificacion.TabIndex = 3;
-            this.tabPageModificacion.Text = "tabPage1";
-            // 
-            // MainPanel
-            // 
-            this.MainPanel.BackColor = System.Drawing.Color.Gainsboro;
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MainPanel.Location = new System.Drawing.Point(437, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1104, 147);
-            this.MainPanel.TabIndex = 2;
             // 
             // GroupBoxPeticio
             // 
             this.GroupBoxPeticio.Controls.Add(this.dataGridViewPeticio);
-            this.GroupBoxPeticio.Location = new System.Drawing.Point(32, 122);
+            this.GroupBoxPeticio.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBoxPeticio.Location = new System.Drawing.Point(33, 99);
+            this.GroupBoxPeticio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GroupBoxPeticio.Name = "GroupBoxPeticio";
-            this.GroupBoxPeticio.Size = new System.Drawing.Size(983, 613);
+            this.GroupBoxPeticio.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GroupBoxPeticio.Size = new System.Drawing.Size(804, 511);
             this.GroupBoxPeticio.TabIndex = 3;
             this.GroupBoxPeticio.TabStop = false;
             this.GroupBoxPeticio.Text = "Nou Peticións";
@@ -361,24 +333,202 @@
             // dataGridViewPeticio
             // 
             this.dataGridViewPeticio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPeticio.Location = new System.Drawing.Point(28, 44);
+            this.dataGridViewPeticio.Location = new System.Drawing.Point(23, 37);
+            this.dataGridViewPeticio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewPeticio.Name = "dataGridViewPeticio";
             this.dataGridViewPeticio.RowTemplate.Height = 31;
-            this.dataGridViewPeticio.Size = new System.Drawing.Size(930, 543);
+            this.dataGridViewPeticio.Size = new System.Drawing.Size(761, 452);
             this.dataGridViewPeticio.TabIndex = 0;
+            // 
+            // buttonBuscarPeticion
+            // 
+            this.buttonBuscarPeticion.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscarPeticion.Location = new System.Drawing.Point(720, 33);
+            this.buttonBuscarPeticion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuscarPeticion.Name = "buttonBuscarPeticion";
+            this.buttonBuscarPeticion.Size = new System.Drawing.Size(77, 41);
+            this.buttonBuscarPeticion.TabIndex = 2;
+            this.buttonBuscarPeticion.Text = "Cercar";
+            this.buttonBuscarPeticion.UseVisualStyleBackColor = true;
+            // 
+            // textBoxBuscarPeticion
+            // 
+            this.textBoxBuscarPeticion.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuscarPeticion.Location = new System.Drawing.Point(188, 44);
+            this.textBoxBuscarPeticion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxBuscarPeticion.Name = "textBoxBuscarPeticion";
+            this.textBoxBuscarPeticion.Size = new System.Drawing.Size(473, 26);
+            this.textBoxBuscarPeticion.TabIndex = 1;
+            // 
+            // tabPageEspais
+            // 
+            this.tabPageEspais.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPageEspais.Controls.Add(this.buttonAddEspai);
+            this.tabPageEspais.Controls.Add(this.groupBoxEspais);
+            this.tabPageEspais.Controls.Add(this.buttonCercarEspais);
+            this.tabPageEspais.Controls.Add(this.textBoxCercarEspais);
+            this.tabPageEspais.Location = new System.Drawing.Point(4, 14);
+            this.tabPageEspais.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEspais.Name = "tabPageEspais";
+            this.tabPageEspais.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEspais.Size = new System.Drawing.Size(1449, 735);
+            this.tabPageEspais.TabIndex = 1;
+            this.tabPageEspais.Text = "tabPage2";
+            // 
+            // tabPageEquips
+            // 
+            this.tabPageEquips.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPageEquips.Controls.Add(this.buttonEntitat);
+            this.tabPageEquips.Controls.Add(this.groupBoxEntitats);
+            this.tabPageEquips.Controls.Add(this.buttonCercarEntitat);
+            this.tabPageEquips.Controls.Add(this.textBoxCercarEntitats);
+            this.tabPageEquips.Location = new System.Drawing.Point(4, 14);
+            this.tabPageEquips.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageEquips.Name = "tabPageEquips";
+            this.tabPageEquips.Size = new System.Drawing.Size(1449, 735);
+            this.tabPageEquips.TabIndex = 2;
+            this.tabPageEquips.Text = "tabPage1";
+            // 
+            // tabPageModificacion
+            // 
+            this.tabPageModificacion.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPageModificacion.Location = new System.Drawing.Point(4, 14);
+            this.tabPageModificacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageModificacion.Name = "tabPageModificacion";
+            this.tabPageModificacion.Size = new System.Drawing.Size(1449, 735);
+            this.tabPageModificacion.TabIndex = 3;
+            this.tabPageModificacion.Text = "tabPage1";
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MainPanel.Location = new System.Drawing.Point(358, 0);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(892, 122);
+            this.MainPanel.TabIndex = 2;
+            // 
+            // groupBoxEspais
+            // 
+            this.groupBoxEspais.Controls.Add(this.dataGridViewEspais);
+            this.groupBoxEspais.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxEspais.Location = new System.Drawing.Point(33, 99);
+            this.groupBoxEspais.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxEspais.Name = "groupBoxEspais";
+            this.groupBoxEspais.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxEspais.Size = new System.Drawing.Size(804, 511);
+            this.groupBoxEspais.TabIndex = 6;
+            this.groupBoxEspais.TabStop = false;
+            this.groupBoxEspais.Text = "Espais";
+            // 
+            // dataGridViewEspais
+            // 
+            this.dataGridViewEspais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEspais.Location = new System.Drawing.Point(23, 37);
+            this.dataGridViewEspais.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewEspais.Name = "dataGridViewEspais";
+            this.dataGridViewEspais.RowTemplate.Height = 31;
+            this.dataGridViewEspais.Size = new System.Drawing.Size(761, 452);
+            this.dataGridViewEspais.TabIndex = 0;
+            // 
+            // buttonCercarEspais
+            // 
+            this.buttonCercarEspais.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCercarEspais.Location = new System.Drawing.Point(720, 33);
+            this.buttonCercarEspais.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCercarEspais.Name = "buttonCercarEspais";
+            this.buttonCercarEspais.Size = new System.Drawing.Size(77, 41);
+            this.buttonCercarEspais.TabIndex = 5;
+            this.buttonCercarEspais.Text = "Cercar";
+            this.buttonCercarEspais.UseVisualStyleBackColor = true;
+            // 
+            // textBoxCercarEspais
+            // 
+            this.textBoxCercarEspais.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCercarEspais.Location = new System.Drawing.Point(188, 44);
+            this.textBoxCercarEspais.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxCercarEspais.Name = "textBoxCercarEspais";
+            this.textBoxCercarEspais.Size = new System.Drawing.Size(473, 26);
+            this.textBoxCercarEspais.TabIndex = 4;
+            // 
+            // buttonAddEspai
+            // 
+            this.buttonAddEspai.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddEspai.Location = new System.Drawing.Point(673, 652);
+            this.buttonAddEspai.Name = "buttonAddEspai";
+            this.buttonAddEspai.Size = new System.Drawing.Size(108, 49);
+            this.buttonAddEspai.TabIndex = 7;
+            this.buttonAddEspai.Text = "Afegir Espai";
+            this.buttonAddEspai.UseVisualStyleBackColor = true;
+            this.buttonAddEspai.Click += new System.EventHandler(this.buttonAddEspai_Click);
+            // 
+            // buttonEntitat
+            // 
+            this.buttonEntitat.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEntitat.Location = new System.Drawing.Point(673, 652);
+            this.buttonEntitat.Name = "buttonEntitat";
+            this.buttonEntitat.Size = new System.Drawing.Size(108, 49);
+            this.buttonEntitat.TabIndex = 11;
+            this.buttonEntitat.Text = "Afegir Entitat";
+            this.buttonEntitat.UseVisualStyleBackColor = true;
+            this.buttonEntitat.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBoxEntitats
+            // 
+            this.groupBoxEntitats.Controls.Add(this.dataGridViewEntitats);
+            this.groupBoxEntitats.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxEntitats.Location = new System.Drawing.Point(33, 99);
+            this.groupBoxEntitats.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxEntitats.Name = "groupBoxEntitats";
+            this.groupBoxEntitats.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxEntitats.Size = new System.Drawing.Size(804, 511);
+            this.groupBoxEntitats.TabIndex = 10;
+            this.groupBoxEntitats.TabStop = false;
+            this.groupBoxEntitats.Text = "Equips";
+            // 
+            // dataGridViewEntitats
+            // 
+            this.dataGridViewEntitats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEntitats.Location = new System.Drawing.Point(23, 37);
+            this.dataGridViewEntitats.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewEntitats.Name = "dataGridViewEntitats";
+            this.dataGridViewEntitats.RowTemplate.Height = 31;
+            this.dataGridViewEntitats.Size = new System.Drawing.Size(761, 452);
+            this.dataGridViewEntitats.TabIndex = 0;
+            // 
+            // buttonCercarEntitat
+            // 
+            this.buttonCercarEntitat.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCercarEntitat.Location = new System.Drawing.Point(720, 33);
+            this.buttonCercarEntitat.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCercarEntitat.Name = "buttonCercarEntitat";
+            this.buttonCercarEntitat.Size = new System.Drawing.Size(77, 41);
+            this.buttonCercarEntitat.TabIndex = 9;
+            this.buttonCercarEntitat.Text = "Cercar";
+            this.buttonCercarEntitat.UseVisualStyleBackColor = true;
+            // 
+            // textBoxCercarEntitats
+            // 
+            this.textBoxCercarEntitats.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCercarEntitats.Location = new System.Drawing.Point(188, 44);
+            this.textBoxCercarEntitats.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxCercarEntitats.Name = "textBoxCercarEntitats";
+            this.textBoxCercarEntitats.Size = new System.Drawing.Size(473, 26);
+            this.textBoxCercarEntitats.TabIndex = 8;
             // 
             // FormInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1541, 1228);
+            this.ClientSize = new System.Drawing.Size(1250, 907);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.SidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormInicio";
@@ -387,9 +537,9 @@
             this.SidePanel.ResumeLayout(false);
             this.SidePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.EquipsPanel.ResumeLayout(false);
-            this.EquipsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EquipsImage)).EndInit();
+            this.EntitatsPanel.ResumeLayout(false);
+            this.EntitatsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EntitatsImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EspaiImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PetiImage)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -397,9 +547,16 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPagePeticions.ResumeLayout(false);
             this.tabPagePeticions.PerformLayout();
-            this.tabPageEspais.ResumeLayout(false);
             this.GroupBoxPeticio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeticio)).EndInit();
+            this.tabPageEspais.ResumeLayout(false);
+            this.tabPageEspais.PerformLayout();
+            this.tabPageEquips.ResumeLayout(false);
+            this.tabPageEquips.PerformLayout();
+            this.groupBoxEspais.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspais)).EndInit();
+            this.groupBoxEntitats.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -412,11 +569,11 @@
         private System.Windows.Forms.PictureBox PetiImage;
         private System.Windows.Forms.Label Petilabel;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox EquipsImage;
+        private System.Windows.Forms.PictureBox EntitatsImage;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label Equipslabel;
+        private System.Windows.Forms.Label Entitatslabel;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel EquipsPanel;
+        private System.Windows.Forms.Panel EntitatsPanel;
         private System.Windows.Forms.PictureBox EspaiImage;
         private System.Windows.Forms.Label EspaLabel;
         private System.Windows.Forms.Panel EspaisLabel;
@@ -428,11 +585,20 @@
         private System.Windows.Forms.TabPage tabPageModificacion;
         private System.Windows.Forms.Button buttonBuscarPeticion;
         private System.Windows.Forms.TextBox textBoxBuscarPeticion;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox GroupBoxPeticio;
         private System.Windows.Forms.DataGridView dataGridViewPeticio;
+        private System.Windows.Forms.Button buttonAddEspai;
+        private System.Windows.Forms.GroupBox groupBoxEspais;
+        private System.Windows.Forms.DataGridView dataGridViewEspais;
+        private System.Windows.Forms.Button buttonCercarEspais;
+        private System.Windows.Forms.TextBox textBoxCercarEspais;
+        private System.Windows.Forms.Button buttonEntitat;
+        private System.Windows.Forms.GroupBox groupBoxEntitats;
+        private System.Windows.Forms.DataGridView dataGridViewEntitats;
+        private System.Windows.Forms.Button buttonCercarEntitat;
+        private System.Windows.Forms.TextBox textBoxCercarEntitats;
     }
 }
