@@ -135,21 +135,25 @@ namespace EspaiActiu
             tabEquips();
         }
 
+
+
+
         private void FormInicio_Load(object sender, EventArgs e)
         {
             tabPeticio();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormAddEntitat fEnti = new FormAddEntitat();
-            fEnti.ShowDialog();
-        }
 
         private void buttonAddEspai_Click(object sender, EventArgs e)
         {
             FormAddEspai fEspai = new FormAddEspai();
             fEspai.ShowDialog();
+        }
+
+        private void buttonAddEntitat_Click(object sender, EventArgs e)
+        {
+            FormAddEntitat fEnti = new FormAddEntitat();
+            fEnti.ShowDialog();
         }
     }
 }
