@@ -59,7 +59,7 @@ namespace EspaiActiu
             if (textBoxContraseña.PasswordChar == '*')
             {
                 textBoxContraseña.PasswordChar = '\0';
-                pictureBoxOjoPassword.Image = Properties.Resources.icons8_eye_32;
+                pictureBoxOjoPassword.Image = Properties.Resources.ojoabierto;
             }
 
             else if (textBoxContraseña.PasswordChar == '\0')

@@ -111,7 +111,6 @@
             // 
             // EntitatsImage
             // 
-            this.EntitatsImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
             this.EntitatsImage.Image = global::EspaiActiu.Properties.Resources.entitats_tab;
             this.EntitatsImage.Location = new System.Drawing.Point(30, 32);
             this.EntitatsImage.Margin = new System.Windows.Forms.Padding(2);
@@ -158,7 +157,6 @@
             // 
             // EspaiImage
             // 
-            this.EspaiImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
             this.EspaiImage.Image = global::EspaiActiu.Properties.Resources.espais_tab;
             this.EspaiImage.Location = new System.Drawing.Point(29, 31);
             this.EspaiImage.Margin = new System.Windows.Forms.Padding(2);
@@ -193,7 +191,6 @@
             // 
             // PetiImage
             // 
-            this.PetiImage.ErrorImage = global::EspaiActiu.Properties.Resources.logo_principal_color;
             this.PetiImage.Image = global::EspaiActiu.Properties.Resources.new_tab;
             this.PetiImage.Location = new System.Drawing.Point(30, 31);
             this.PetiImage.Margin = new System.Windows.Forms.Padding(2);
@@ -215,7 +212,7 @@
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Image = global::EspaiActiu.Properties.Resources.logo_principal_color;
+            this.pictureBoxLogo.Image = global::EspaiActiu.Properties.Resources.logo_color;
             this.pictureBoxLogo.Location = new System.Drawing.Point(5, 5);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
@@ -503,7 +500,7 @@
 
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Panel MainPanel;
+
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox PetiImage;
         private System.Windows.Forms.Label Petilabel;
@@ -523,8 +520,6 @@
         private System.Windows.Forms.TextBox textBoxBuscarPeticion;
 
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox GroupBoxPeticio;
         private System.Windows.Forms.DataGridView dataGridViewPeticio;
         private System.Windows.Forms.Button buttonAddEspai;
