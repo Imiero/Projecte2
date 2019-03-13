@@ -20,25 +20,76 @@ namespace EspaiActiu
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-
-
             //TODO:validacion here.....
 
+            //Validaciones de las textbox
 
+            if (textBoxContraseña.Text.Length == 0 && textBoxNombre.Text.Length == 0)
+            {
+                MessageBox.Show("Omplir els camps.", "Errror", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
-           if(correcto)
+            else if (textBoxNombre.Text.Length == 0)
+            {
+                MessageBox.Show("Omplir el camp Nom d'usuari.", "Errror", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                textBoxNombre.Focus();
+            }
+
+            else if (textBoxContraseña.Text.Length == 0)
+            {
+                MessageBox.Show("Omplir el camp Clau d'accés.", "Errror", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                textBoxContraseña.Focus();
+            }
+
+            else
+            {
+                // En este else irian las comprobaciones con el servidor
+                correcto = true;
+            }
+
+            if (correcto)
             {
                 this.Close();
             }
-            else
+        }
+
+        //Botón del ojo para mostar o esconder la contraseña
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (textBoxContraseña.PasswordChar == '*')
             {
-                DialogResult error = MessageBox.Show("Verificar Credenciales","Atenció",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                textBoxContraseña.PasswordChar = '\0';
+                pictureBoxOjoPassword.Image = Properties.Resources.icons8_eye_32;
+            }
+
+            else if (textBoxContraseña.PasswordChar == '\0')
+            {
+                textBoxContraseña.PasswordChar = '*';
+                pictureBoxOjoPassword.Image = Properties.Resources.ojocerrado;
             }
         }
 
-        private void ButtonValidar_Click(object sender, EventArgs e)
+        protected override void OnShown(EventArgs e)
         {
-            correcto = true;
+            textBoxNombre.Focus(); //Abrimos el formularion con el focus en la caja de nombre de usuario
+            base.OnShown(e);
+        }
+
+        private void textBoxNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //Al apretar enter en los textbox se clica sobre el boton de Login
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonLogin.PerformClick();
+                // Suprimir volumen
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
         }
     }
 }
