@@ -219,7 +219,7 @@
             this.pictureBoxLogo.Location = new System.Drawing.Point(5, 5);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(421, 146);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(394, 129);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
@@ -442,7 +442,7 @@
             this.tabPageModificacion.Location = new System.Drawing.Point(4, 14);
             this.tabPageModificacion.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageModificacion.Name = "tabPageModificacion";
-            this.tabPageModificacion.Size = new System.Drawing.Size(1449, 735);
+            this.tabPageModificacion.Size = new System.Drawing.Size(1449, 833);
             this.tabPageModificacion.TabIndex = 3;
             this.tabPageModificacion.Text = "tabPage1";
             // 
