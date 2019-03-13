@@ -60,6 +60,7 @@
             this.buttonCercarEntitat = new System.Windows.Forms.Button();
             this.textBoxCercarEntitats = new System.Windows.Forms.TextBox();
             this.tabPageModificacion = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SidePanel.SuspendLayout();
             this.EntitatsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EntitatsImage)).BeginInit();
@@ -67,7 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.EspaiImage)).BeginInit();
             this.PetiPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PetiImage)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPagePeticions.SuspendLayout();
@@ -79,6 +79,7 @@
             this.tabPageEquips.SuspendLayout();
             this.groupBoxEntitats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePanel
@@ -94,14 +95,14 @@
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
             this.SidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(358, 907);
+            this.SidePanel.Size = new System.Drawing.Size(358, 995);
             this.SidePanel.TabIndex = 1;
             // 
             // EntitatsPanel
             // 
             this.EntitatsPanel.Controls.Add(this.EntitatsImage);
             this.EntitatsPanel.Controls.Add(this.Entitatslabel);
-            this.EntitatsPanel.Location = new System.Drawing.Point(2, 490);
+            this.EntitatsPanel.Location = new System.Drawing.Point(2, 604);
             this.EntitatsPanel.Margin = new System.Windows.Forms.Padding(2);
             this.EntitatsPanel.Name = "EntitatsPanel";
             this.EntitatsPanel.Size = new System.Drawing.Size(353, 117);
@@ -137,7 +138,7 @@
             // 
             this.EspaLabel.AutoSize = true;
             this.EspaLabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EspaLabel.Location = new System.Drawing.Point(133, 398);
+            this.EspaLabel.Location = new System.Drawing.Point(133, 512);
             this.EspaLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EspaLabel.Name = "EspaLabel";
             this.EspaLabel.Size = new System.Drawing.Size(152, 47);
@@ -148,7 +149,7 @@
             // EspaisLabel
             // 
             this.EspaisLabel.Controls.Add(this.EspaiImage);
-            this.EspaisLabel.Location = new System.Drawing.Point(3, 367);
+            this.EspaisLabel.Location = new System.Drawing.Point(3, 481);
             this.EspaisLabel.Margin = new System.Windows.Forms.Padding(2);
             this.EspaisLabel.Name = "EspaisLabel";
             this.EspaisLabel.Size = new System.Drawing.Size(353, 117);
@@ -172,7 +173,7 @@
             // 
             this.Petilabel.AutoSize = true;
             this.Petilabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Petilabel.Location = new System.Drawing.Point(132, 273);
+            this.Petilabel.Location = new System.Drawing.Point(132, 387);
             this.Petilabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Petilabel.Name = "Petilabel";
             this.Petilabel.Size = new System.Drawing.Size(202, 47);
@@ -183,7 +184,7 @@
             // PetiPanel
             // 
             this.PetiPanel.Controls.Add(this.PetiImage);
-            this.PetiPanel.Location = new System.Drawing.Point(2, 242);
+            this.PetiPanel.Location = new System.Drawing.Point(2, 356);
             this.PetiPanel.Margin = new System.Windows.Forms.Padding(2);
             this.PetiPanel.Name = "PetiPanel";
             this.PetiPanel.Size = new System.Drawing.Size(353, 117);
@@ -206,21 +207,19 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(198)))), ((int)(((byte)(63)))));
-            this.panel1.Controls.Add(this.pictureBoxLogo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(358, 142);
+            this.panel1.Size = new System.Drawing.Size(358, 139);
             this.panel1.TabIndex = 0;
             // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = global::EspaiActiu.Properties.Resources.logo_principal_color;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(5, 5);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(317, 110);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(421, 146);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
@@ -239,7 +238,7 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1457, 753);
+            this.tabControl1.Size = new System.Drawing.Size(1457, 851);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 3;
             // 
@@ -253,7 +252,7 @@
             this.tabPagePeticions.Margin = new System.Windows.Forms.Padding(2);
             this.tabPagePeticions.Name = "tabPagePeticions";
             this.tabPagePeticions.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPagePeticions.Size = new System.Drawing.Size(1449, 735);
+            this.tabPagePeticions.Size = new System.Drawing.Size(1449, 833);
             this.tabPagePeticions.TabIndex = 0;
             this.tabPagePeticions.Text = "tabPage1";
             // 
@@ -311,7 +310,7 @@
             this.tabPageEspais.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageEspais.Name = "tabPageEspais";
             this.tabPageEspais.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPageEspais.Size = new System.Drawing.Size(1449, 735);
+            this.tabPageEspais.Size = new System.Drawing.Size(1449, 833);
             this.tabPageEspais.TabIndex = 1;
             this.tabPageEspais.Text = "tabPage2";
             // 
@@ -379,7 +378,7 @@
             this.tabPageEquips.Location = new System.Drawing.Point(4, 14);
             this.tabPageEquips.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageEquips.Name = "tabPageEquips";
-            this.tabPageEquips.Size = new System.Drawing.Size(1449, 735);
+            this.tabPageEquips.Size = new System.Drawing.Size(1449, 833);
             this.tabPageEquips.TabIndex = 2;
             this.tabPageEquips.Text = "tabPage1";
             // 
@@ -447,19 +446,28 @@
             this.tabPageModificacion.TabIndex = 3;
             this.tabPageModificacion.Text = "tabPage1";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(198)))), ((int)(((byte)(63)))));
+            this.panel2.Controls.Add(this.pictureBoxLogo);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1589, 136);
+            this.panel2.TabIndex = 4;
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1250, 907);
+            this.ClientSize = new System.Drawing.Size(1589, 995);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.SidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FormInicio";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.FormInicio_Load);
@@ -472,7 +480,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.EspaiImage)).EndInit();
             this.PetiPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PetiImage)).EndInit();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPagePeticions.ResumeLayout(false);
@@ -487,6 +494,7 @@
             this.tabPageEquips.PerformLayout();
             this.groupBoxEntitats.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -529,6 +537,6 @@
         private System.Windows.Forms.DataGridView dataGridViewEntitats;
         private System.Windows.Forms.Button buttonCercarEntitat;
         private System.Windows.Forms.TextBox textBoxCercarEntitats;
-
+        private System.Windows.Forms.Panel panel2;
     }
 }
