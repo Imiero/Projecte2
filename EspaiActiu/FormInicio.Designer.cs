@@ -485,7 +485,7 @@
             this.groupBoxEntitats.Size = new System.Drawing.Size(804, 511);
             this.groupBoxEntitats.TabIndex = 10;
             this.groupBoxEntitats.TabStop = false;
-            this.groupBoxEntitats.Text = "Equips";
+            this.groupBoxEntitats.Text = "Entitats";
             // 
             // dataGridViewEntitats
             // 
