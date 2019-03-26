@@ -34,8 +34,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +58,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ACTIVIDADES_DEMANADAS.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACTIVITATS.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ADMINS.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BD\ORMAdmins.cs" />
+    <Compile Include="BD\ORMEntitats.cs" />
+    <Compile Include="CATEGORIA_EDAT.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIA_NIVELL.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMPETICIO.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DIES_SETMANA.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITATS.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EQUIPS.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
     <Compile Include="FormAddEntitat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,8 +129,56 @@
     <Compile Include="FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="HORARIS_ACTIVITAT.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HORARIS_ACT_DEMANADA.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HORARIS_INSTALACIO.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INCIDENCIA.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INSTALACIO.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LLOC_DEPORTIVO.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSantCugat.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelSantCugat.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSantCugat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSantCugat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelSantCugat.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SEXE.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SPORTS.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TELEFONS.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPUS_ACTIVIDAD.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPUS_INCIDENCIES.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormAddEntitat.resx">
       <DependentUpon>FormAddEntitat.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +210,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="ModelSantCugat.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelSantCugat.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelSantCugat.edmx.diagram">
+      <DependentUpon>ModelSantCugat.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ENTITATS.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMAdmins.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -179,6 +279,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_color.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ModelSantCugat.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelSantCugat.edmx</DependentUpon>
+      <LastGenOutput>ModelSantCugat.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelSantCugat.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelSantCugat.edmx</DependentUpon>
+      <LastGenOutput>ModelSantCugat.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="336b2498c4cb45a084126e1ca2f52d26" Name="Diagram1">
+        <EntityTypeShape EntityType="sant_cugatModel.ACTIVIDADES_DEMANADAS" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.ACTIVITATS" Width="1.5" PointX="10.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.ADMINS" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.CATEGORIA_EDAT" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.CATEGORIA_NIVELL" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.COMPETICIO" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.DIES_SETMANA" Width="1.5" PointX="13.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.ENTITATS" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.EQUIPS" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.HORARIS_ACT_DEMANADA" Width="1.5" PointX="13.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.HORARIS_ACTIVITAT" Width="1.5" PointX="15.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.HORARIS_INSTALACIO" Width="1.5" PointX="15.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.INCIDENCIA" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.INSTALACIO" Width="1.5" PointX="3.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.LLOC_DEPORTIVO" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.SEXE" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.SPORTS" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.TELEFONS" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.TIPUS_ACTIVIDAD" Width="1.5" PointX="6" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sant_cugatModel.TIPUS_INCIDENCIES" Width="1.5" PointX="3.75" PointY="12.125" IsExpanded="true" />
+        <AssociationConnector Association="sant_cugatModel.FK_ACTIVIDADES_DEMANADAS_EQUIPS" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_ACTIVIDADES_DEMANADAS_LLOC_DEPORTIVO" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_ACTIVIDADES_DEMANADAS_TIPUS_ACTIVIDAD" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_ACTIVITATS_ACTIVIDADES_DEMANADAS" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_HORARIS_ACT_DEMANADA_ACTIVIDADES_DEMANADAS" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_ACTIVITATS_ADMINS" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_ACTIVITATS_EQUIPS" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_ACTIVITATS_LLOC_DEPORTIVO" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_ACTIVITATS_TIPUS_ACTIVIDAD" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_HORARIS_ACTIVITAT_ACTIVITATS" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_EQUIPS_CATEGORIA_EDAT" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_EQUIPS_CATEGORIA" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_EQUIPS_COMPETICIO" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_HORARIS_ACT_DEMANADA_DIES_SETMANA" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_HORARIS_ACTIVITAT_DIES_SETMANA" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_HORARIS_INSTALACIO_DIES_SETMANA" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_EQUIPS_ENTITATS" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_INCIDENCIA_ENTITATS" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_TELEFONS_ENTITATS" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_EQUIPS_SEXE" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_EQUIPS_SPORTS" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_HORARIS_CENTRES_CENTRE_DEPO" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_INCIDENCIA_LLOC_DEPORTIVO" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_INCIDENCIA_TIPUS_INCIDENCIES" ManuallyRouted="false" />
+        <AssociationConnector Association="sant_cugatModel.FK_ESPAIS_CENTRE_DEPO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

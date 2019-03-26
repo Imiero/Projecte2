@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EspaiActiu.BD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,25 +27,43 @@ namespace EspaiActiu
 
             if (textBoxContraseña.Text.Length == 0 && textBoxNombre.Text.Length == 0)
             {
-                MessageBox.Show("Omplir els camps.", "Errror", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Omplir els camps.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             else if (textBoxNombre.Text.Length == 0)
             {
-                MessageBox.Show("Omplir el camp Nom d'usuari.", "Errror", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Omplir el camp Nom d'usuari.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 textBoxNombre.Focus();
             }
 
             else if (textBoxContraseña.Text.Length == 0)
             {
-                MessageBox.Show("Omplir el camp Clau d'accés.", "Errror", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Omplir el camp Clau d'accés.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 textBoxContraseña.Focus();
             }
 
             else
             {
                 // En este else irian las comprobaciones con el servidor
-                correcto = true;
+                List<ADMINS> _admins = ORMAdmins.SelectAllAdmins();
+                
+                foreach(ADMINS admin in _admins)
+                {
+                    if(admin.nombre == textBoxNombre.Text)
+                    {
+                        if(admin.password == textBoxContraseña.Text)
+                        {
+                            correcto = true;
+                        }
+                    }
+
+                }
+
+                if (!correcto)
+                {
+                    MessageBox.Show("Nom o contrasenya incorrectes.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    textBoxNombre.Focus();
+                }
             }
 
             if (correcto)
@@ -86,7 +105,7 @@ namespace EspaiActiu
             if (e.KeyCode == Keys.Enter)
             {
                 buttonLogin.PerformClick();
-                // Suprimir volumen
+                // Suprimir volumne
                 e.SuppressKeyPress = true;
                 e.Handled = true;
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EspaiActiu.BD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -136,6 +137,7 @@ namespace EspaiActiu
         private void FormInicio_Load(object sender, EventArgs e)
         {
             tabPeticio();
+            bindingSourceEntitats.DataSource = ORMEntitats.SelectAllEntitats();
         }
 
 
@@ -151,5 +153,18 @@ namespace EspaiActiu
             fEnti.ShowDialog();
         }
 
+        private void dataGridViewEntitats_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bindingSourceEntitats_CurrentChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void tabPagePeticions_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
