@@ -222,6 +222,7 @@
     <None Include="Properties\DataSources\EspaiActiu.BD.ORMAdmins.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\LLOC_DEPORTIVO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

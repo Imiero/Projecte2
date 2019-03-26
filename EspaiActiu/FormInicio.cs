@@ -166,5 +166,43 @@ namespace EspaiActiu
         {
 
         }
+
+        private void textBoxCercarEntitats_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void buttonCercarEntitat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormInicio_Activated(object sender, EventArgs e)
+        {
+            bindingSourceEntitats.DataSource = ORMEntitats.SelectEntitatsByNom(textBoxCercarEntitats.Text);
+        }
+
+        private void dataGridViewEntitats_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            DialogResult result3 = MessageBox.Show("Segur que vols eliminar l'entitat?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result3 == DialogResult.Yes)
+            {
+                ORMEntitats.DeleteEntitat((ENTITATS)dataGridViewEntitats.SelectedRows[0].DataBoundItem);
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        //Abrir los detalles de una entidad al hacer doble click en una
+        private void dataGridViewEntitats_DoubleClick(object sender, EventArgs e)
+        {
+            ENTITATS entitat = (ENTITATS)dataGridViewEntitats.CurrentRow.DataBoundItem;
+
+            FormDetallsEntitat f = new FormDetallsEntitat(entitat);
+            f.ShowDialog();
+        }
     }
 }

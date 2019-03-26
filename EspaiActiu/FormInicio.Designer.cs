@@ -58,11 +58,10 @@
             this.buttonAddEntitat = new System.Windows.Forms.Button();
             this.groupBoxEntitats = new System.Windows.Forms.GroupBox();
             this.dataGridViewEntitats = new System.Windows.Forms.DataGridView();
-            this.buttonCercarEntitat = new System.Windows.Forms.Button();
             this.textBoxCercarEntitats = new System.Windows.Forms.TextBox();
             this.tabPageModificacion = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +72,8 @@
             this.eQUIPSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iNCIDENCIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tELEFONSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             this.SidePanel.SuspendLayout();
             this.EntitatsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EntitatsImage)).BeginInit();
@@ -93,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).BeginInit();
             this.SuspendLayout();
             // 
             // SidePanel
@@ -108,7 +110,7 @@
             this.SidePanel.Location = new System.Drawing.Point(0, 0);
             this.SidePanel.Margin = new System.Windows.Forms.Padding(1);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(239, 476);
+            this.SidePanel.Size = new System.Drawing.Size(239, 523);
             this.SidePanel.TabIndex = 1;
             // 
             // EntitatsPanel
@@ -384,9 +386,8 @@
             // tabPageEquips
             // 
             this.tabPageEquips.BackColor = System.Drawing.SystemColors.Window;
-            this.tabPageEquips.Controls.Add(this.buttonAddEntitat);
+            this.tabPageEquips.Controls.Add(this.label1);
             this.tabPageEquips.Controls.Add(this.groupBoxEntitats);
-            this.tabPageEquips.Controls.Add(this.buttonCercarEntitat);
             this.tabPageEquips.Controls.Add(this.textBoxCercarEntitats);
             this.tabPageEquips.Location = new System.Drawing.Point(4, 14);
             this.tabPageEquips.Margin = new System.Windows.Forms.Padding(1);
@@ -398,10 +399,10 @@
             // buttonAddEntitat
             // 
             this.buttonAddEntitat.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddEntitat.Location = new System.Drawing.Point(449, 424);
+            this.buttonAddEntitat.Location = new System.Drawing.Point(520, 321);
             this.buttonAddEntitat.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddEntitat.Name = "buttonAddEntitat";
-            this.buttonAddEntitat.Size = new System.Drawing.Size(72, 32);
+            this.buttonAddEntitat.Size = new System.Drawing.Size(61, 24);
             this.buttonAddEntitat.TabIndex = 11;
             this.buttonAddEntitat.Text = "Afegir Entitat";
             this.buttonAddEntitat.UseVisualStyleBackColor = true;
@@ -410,18 +411,20 @@
             // groupBoxEntitats
             // 
             this.groupBoxEntitats.Controls.Add(this.dataGridViewEntitats);
+            this.groupBoxEntitats.Controls.Add(this.buttonAddEntitat);
             this.groupBoxEntitats.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxEntitats.Location = new System.Drawing.Point(22, 64);
             this.groupBoxEntitats.Margin = new System.Windows.Forms.Padding(1);
             this.groupBoxEntitats.Name = "groupBoxEntitats";
             this.groupBoxEntitats.Padding = new System.Windows.Forms.Padding(1);
-            this.groupBoxEntitats.Size = new System.Drawing.Size(590, 332);
+            this.groupBoxEntitats.Size = new System.Drawing.Size(590, 350);
             this.groupBoxEntitats.TabIndex = 10;
             this.groupBoxEntitats.TabStop = false;
             this.groupBoxEntitats.Text = "Entitats";
             // 
             // dataGridViewEntitats
             // 
+            this.dataGridViewEntitats.AllowUserToAddRows = false;
             this.dataGridViewEntitats.AutoGenerateColumns = false;
             this.dataGridViewEntitats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEntitats.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -438,22 +441,16 @@
             this.dataGridViewEntitats.DataSource = this.bindingSourceEntitats;
             this.dataGridViewEntitats.Location = new System.Drawing.Point(15, 24);
             this.dataGridViewEntitats.Margin = new System.Windows.Forms.Padding(1);
+            this.dataGridViewEntitats.MultiSelect = false;
             this.dataGridViewEntitats.Name = "dataGridViewEntitats";
+            this.dataGridViewEntitats.ReadOnly = true;
             this.dataGridViewEntitats.RowTemplate.Height = 31;
+            this.dataGridViewEntitats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEntitats.Size = new System.Drawing.Size(570, 294);
             this.dataGridViewEntitats.TabIndex = 0;
             this.dataGridViewEntitats.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEntitats_CellContentClick);
-            // 
-            // buttonCercarEntitat
-            // 
-            this.buttonCercarEntitat.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCercarEntitat.Location = new System.Drawing.Point(480, 21);
-            this.buttonCercarEntitat.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonCercarEntitat.Name = "buttonCercarEntitat";
-            this.buttonCercarEntitat.Size = new System.Drawing.Size(51, 27);
-            this.buttonCercarEntitat.TabIndex = 9;
-            this.buttonCercarEntitat.Text = "Cercar";
-            this.buttonCercarEntitat.UseVisualStyleBackColor = true;
+            this.dataGridViewEntitats.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewEntitats_UserDeletingRow);
+            this.dataGridViewEntitats.DoubleClick += new System.EventHandler(this.dataGridViewEntitats_DoubleClick);
             // 
             // textBoxCercarEntitats
             // 
@@ -463,6 +460,7 @@
             this.textBoxCercarEntitats.Name = "textBoxCercarEntitats";
             this.textBoxCercarEntitats.Size = new System.Drawing.Size(317, 20);
             this.textBoxCercarEntitats.TabIndex = 8;
+            this.textBoxCercarEntitats.TextChanged += new System.EventHandler(this.textBoxCercarEntitats_TextChanged);
             // 
             // tabPageModificacion
             // 
@@ -484,16 +482,21 @@
             this.panel2.Size = new System.Drawing.Size(1059, 88);
             this.panel2.TabIndex = 4;
             // 
-            // bindingSourceEntitats
+            // label1
             // 
-            this.bindingSourceEntitats.DataSource = typeof(ENTITATS);
-            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Filtrar per nom";
             // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Width = 25;
             // 
             // nomDataGridViewTextBoxColumn
@@ -501,36 +504,42 @@
             this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
             this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
             this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // temporadaDataGridViewTextBoxColumn
             // 
             this.temporadaDataGridViewTextBoxColumn.DataPropertyName = "temporada";
             this.temporadaDataGridViewTextBoxColumn.HeaderText = "temporada";
             this.temporadaDataGridViewTextBoxColumn.Name = "temporadaDataGridViewTextBoxColumn";
+            this.temporadaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // adrecaDataGridViewTextBoxColumn
             // 
             this.adrecaDataGridViewTextBoxColumn.DataPropertyName = "adreca";
             this.adrecaDataGridViewTextBoxColumn.HeaderText = "adreca";
             this.adrecaDataGridViewTextBoxColumn.Name = "adrecaDataGridViewTextBoxColumn";
+            this.adrecaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nifDataGridViewTextBoxColumn
             // 
             this.nifDataGridViewTextBoxColumn.DataPropertyName = "nif";
             this.nifDataGridViewTextBoxColumn.HeaderText = "nif";
             this.nifDataGridViewTextBoxColumn.Name = "nifDataGridViewTextBoxColumn";
+            this.nifDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // correuDataGridViewTextBoxColumn
             // 
             this.correuDataGridViewTextBoxColumn.DataPropertyName = "correu";
             this.correuDataGridViewTextBoxColumn.HeaderText = "correu";
             this.correuDataGridViewTextBoxColumn.Name = "correuDataGridViewTextBoxColumn";
+            this.correuDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // passwordDataGridViewTextBoxColumn
             // 
             this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
             this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
             this.passwordDataGridViewTextBoxColumn.Visible = false;
             // 
             // eQUIPSDataGridViewTextBoxColumn
@@ -538,6 +547,7 @@
             this.eQUIPSDataGridViewTextBoxColumn.DataPropertyName = "EQUIPS";
             this.eQUIPSDataGridViewTextBoxColumn.HeaderText = "EQUIPS";
             this.eQUIPSDataGridViewTextBoxColumn.Name = "eQUIPSDataGridViewTextBoxColumn";
+            this.eQUIPSDataGridViewTextBoxColumn.ReadOnly = true;
             this.eQUIPSDataGridViewTextBoxColumn.Visible = false;
             // 
             // iNCIDENCIADataGridViewTextBoxColumn
@@ -545,6 +555,7 @@
             this.iNCIDENCIADataGridViewTextBoxColumn.DataPropertyName = "INCIDENCIA";
             this.iNCIDENCIADataGridViewTextBoxColumn.HeaderText = "INCIDENCIA";
             this.iNCIDENCIADataGridViewTextBoxColumn.Name = "iNCIDENCIADataGridViewTextBoxColumn";
+            this.iNCIDENCIADataGridViewTextBoxColumn.ReadOnly = true;
             this.iNCIDENCIADataGridViewTextBoxColumn.Visible = false;
             // 
             // tELEFONSDataGridViewTextBoxColumn
@@ -552,14 +563,24 @@
             this.tELEFONSDataGridViewTextBoxColumn.DataPropertyName = "TELEFONS";
             this.tELEFONSDataGridViewTextBoxColumn.HeaderText = "TELEFONS";
             this.tELEFONSDataGridViewTextBoxColumn.Name = "tELEFONSDataGridViewTextBoxColumn";
+            this.tELEFONSDataGridViewTextBoxColumn.ReadOnly = true;
             this.tELEFONSDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bindingSourceEntitats
+            // 
+            this.bindingSourceEntitats.DataSource = typeof(ENTITATS);
+            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
+            // 
+            // bindingSourceEspais
+            // 
+            this.bindingSourceEspais.DataSource = typeof(LLOC_DEPORTIVO);
             // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(857, 476);
+            this.ClientSize = new System.Drawing.Size(857, 523);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.SidePanel);
@@ -568,6 +589,7 @@
             this.MaximizeBox = false;
             this.Name = "FormInicio";
             this.Text = "Inicio";
+            this.Activated += new System.EventHandler(this.FormInicio_Activated);
             this.Load += new System.EventHandler(this.FormInicio_Load);
             this.SidePanel.ResumeLayout(false);
             this.SidePanel.PerformLayout();
@@ -594,6 +616,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -632,7 +655,6 @@
         private System.Windows.Forms.Button buttonAddEntitat;
         private System.Windows.Forms.GroupBox groupBoxEntitats;
         private System.Windows.Forms.DataGridView dataGridViewEntitats;
-        private System.Windows.Forms.Button buttonCercarEntitat;
         private System.Windows.Forms.TextBox textBoxCercarEntitats;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.BindingSource bindingSourceEntitats;
@@ -646,5 +668,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn eQUIPSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iNCIDENCIADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tELEFONSDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource bindingSourceEspais;
     }
 }
