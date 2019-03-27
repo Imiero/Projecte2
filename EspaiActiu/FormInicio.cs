@@ -202,7 +202,7 @@ namespace EspaiActiu
             ENTITATS entitat = (ENTITATS)dataGridViewEntitats.CurrentRow.DataBoundItem;
 
             FormDetallsEntitat f = new FormDetallsEntitat(entitat);
-            f.ShowDialog();
-        }
+            f.Show();
+        }        
     }
 }

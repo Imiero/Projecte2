@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,35 +12,56 @@ namespace EspaiActiu.BD
     {
         //LINQ
 
-        public static sant_cugatEntities bd = new sant_cugatEntities();
 
         //Agregar telefonos
-        public static void InsertTelefono(int id_enti,String rao,String telefono)
+        public static void InsertTelefono(int id_enti, String rao, String telefono)
         {
             TELEFONS telefon = new TELEFONS();
             telefon.id_entitat = id_enti;
             telefon.rao = rao;
             telefon.telefono = telefono;
 
+            ORM.bd.TELEFONS.Add(telefon);
             try
             {
-                ORMTelefono.bd.SaveChanges();
+                ORM.bd.SaveChanges();
             }
-            catch(Exception){
-                //Mirar practica control de errores
+            catch (Exception) {
+
             }
         }
 
         //Seleccionar telefonos de una entidad
         public static List<TELEFONS> SelectTelefonosByEntitat(int id_enti)
         {
+
             List<TELEFONS> _telefons =
-               (from t in bd.TELEFONS
+               (from t in ORM.bd.TELEFONS
                 where t.id_entitat.Equals(id_enti)
                 select t).ToList();
 
             return _telefons;
         }
 
+        //Eliminar telefonos
+        public static void DeleteTelefon(TELEFONS telefon)
+        {
+            ORM.bd.TELEFONS.Remove(telefon);
+            try
+            {
+                ORM.bd.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                SqlException sqlEx = (SqlException)ex.InnerException.InnerException;
+
+            }
+
+        }
+
     }
-}
+
+
+
+    }
+

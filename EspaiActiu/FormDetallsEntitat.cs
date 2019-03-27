@@ -11,9 +11,12 @@ using System.Windows.Forms;
 
 namespace EspaiActiu
 {
+   
+
     public partial class FormDetallsEntitat : Form
     {
         private ENTITATS entitat;
+        bool alta = false;
 
         public FormDetallsEntitat(ENTITATS entitat)
         {
@@ -25,8 +28,10 @@ namespace EspaiActiu
         private void FormDetallsEntitat_Load(object sender, EventArgs e)
         {
             this.Text = entitat.nom;
+            //bindingSourceTelefons.DataSource = ORMTelefono.SelectTelefonosByEntitat(entitat.id);
+            bindingSourceTelefons.DataSource = entitat.TELEFONS.ToList();
 
-            Refresh();
+            Refrescar();
             
         }
 
@@ -73,7 +78,7 @@ namespace EspaiActiu
 
 
                     //Refrescamos los datos
-                    Refresh();
+                    Refrescar();
                 }
                 else
                 {
@@ -84,7 +89,7 @@ namespace EspaiActiu
         }
 
 
-        private void Refresh()
+        private void Refrescar()
         {
             this.Text = entitat.nom;
 
@@ -96,9 +101,41 @@ namespace EspaiActiu
             textBoxTemp.Text = entitat.temporada;
         }
 
+        private void pictureBoxNuevoTelefono_Click(object sender, EventArgs e)
+        {
+            FormNuevoTelefono f = new FormNuevoTelefono(entitat.id);
+            alta = true;
+            f.ShowDialog();
+        }
+
         private void bindingSourceTelefons_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormDetallsEntitat_Activated(object sender, EventArgs e)
+        {
+            if (alta)
+            {
+                bindingSourceTelefons.DataSource = entitat.TELEFONS.ToList();
+                alta = false;
+            }
+            
+        }
+
+        private void listBoxTelefons_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Delete)
+            {
+                DialogResult result = MessageBox.Show("Segur que vols eliminar el telèfon?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if(result == DialogResult.Yes)
+                {
+                    ORMTelefono.DeleteTelefon((TELEFONS)listBoxTelefons.SelectedItem);
+                    bindingSourceTelefons.DataSource = entitat.TELEFONS.ToList();
+                }                
+                
+            }
         }
     }
 }

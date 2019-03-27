@@ -12,13 +12,13 @@ namespace EspaiActiu.BD
     {
         //LINQ
 
-        public static sant_cugatEntities bd = new sant_cugatEntities();
+        
 
         //Seleccionar todos las entidades en una List
         public static List<ENTITATS> SelectAllEntitats()
         {
             List<ENTITATS> _entitats =
-                (from e in bd.ENTITATS
+                (from e in ORM.bd.ENTITATS
                  orderby e.nom
                  select e
                  ).ToList();
@@ -30,7 +30,7 @@ namespace EspaiActiu.BD
         public static List<ENTITATS> SelectEntitatsByNom(String nom)
         {
             List<ENTITATS> _entitats =
-                (from e in bd.ENTITATS
+                (from e in ORM.bd.ENTITATS
                  where e.nom.Contains(nom)
                  orderby e.nom
                  select e).ToList();
@@ -49,11 +49,11 @@ namespace EspaiActiu.BD
             entitat.correu = correu;
             entitat.password = password;
 
-            ORMEntitats.bd.ENTITATS.Add(entitat);
+            ORM.bd.ENTITATS.Add(entitat);
 
             try
             {
-                ORMEntitats.bd.SaveChanges();
+                ORM.bd.SaveChanges();
             }
             catch (Exception)
             {
@@ -65,10 +65,10 @@ namespace EspaiActiu.BD
         //Eliminar entidades
         public static void DeleteEntitat(ENTITATS entitat)
         {
-            ORMEntitats.bd.ENTITATS.Remove(entitat);
+            ORM.bd.ENTITATS.Remove(entitat);
             try
             {
-                ORMEntitats.bd.SaveChanges();
+                ORM.bd.SaveChanges();
             }
             catch (DbUpdateException ex)
             {
@@ -81,7 +81,7 @@ namespace EspaiActiu.BD
         //Modificar entidades
         public static void UpdateEntitat(String nom,String temporada,String adreça,String nif,String correu,int id)
         {
-            ENTITATS entitat = ORMEntitats.bd.ENTITATS.Find(id);
+            ENTITATS entitat = ORM.bd.ENTITATS.Find(id);
 
             entitat.nom = nom;
             entitat.temporada = temporada;
@@ -91,12 +91,19 @@ namespace EspaiActiu.BD
 
             try
             {
-                ORMEntitats.bd.SaveChanges();
+                ORM.bd.SaveChanges();
             }
             catch (DbUpdateException ex)
             {
                 //En caso de estar duplicado no podría crearse y petaria el programa
             }
+        }
+
+        //Seleccionar una entidad filtrando por ID
+        public static ENTITATS SelectEntitatByID(int id)
+        {
+            ENTITATS entitat = ORM.bd.ENTITATS.Find(id);
+            return entitat;
         }
     }
 }

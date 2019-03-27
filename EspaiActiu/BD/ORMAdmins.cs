@@ -10,13 +10,13 @@ namespace EspaiActiu.BD
     {
         //LINQ
 
-        public static sant_cugatEntities bd = new sant_cugatEntities();
+      
 
         //Seleccionar todos los admins en una List
         public static List<ADMINS> SelectAllAdmins()
         {
             List<ADMINS> _admins =
-                (from a in bd.ADMINS
+                (from a in ORM.bd.ADMINS
                  orderby a.nombre
                  select a
                  ).ToList();

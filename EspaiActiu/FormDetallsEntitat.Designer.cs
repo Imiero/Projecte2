@@ -37,7 +37,6 @@
             this.lNIF = new System.Windows.Forms.Label();
             this.lAdreça = new System.Windows.Forms.Label();
             this.lNomEntitat = new System.Windows.Forms.Label();
-            this.listViewTelefons = new System.Windows.Forms.ListView();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.textBoxNom = new System.Windows.Forms.TextBox();
             this.textBoxCorreu = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.pictureBoxNuevoTelefono = new System.Windows.Forms.PictureBox();
             this.pictureBoxNouEquip = new System.Windows.Forms.PictureBox();
             this.bindingSourceTelefons = new System.Windows.Forms.BindingSource(this.components);
+            this.listBoxTelefons = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNuevoTelefono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNouEquip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTelefons)).BeginInit();
@@ -131,14 +131,6 @@
             this.lNomEntitat.TabIndex = 49;
             this.lNomEntitat.Text = "Nom entitat";
             // 
-            // listViewTelefons
-            // 
-            this.listViewTelefons.Location = new System.Drawing.Point(12, 205);
-            this.listViewTelefons.Name = "listViewTelefons";
-            this.listViewTelefons.Size = new System.Drawing.Size(245, 54);
-            this.listViewTelefons.TabIndex = 59;
-            this.listViewTelefons.UseCompatibleStateImageBehavior = false;
-            // 
             // buttonModificar
             // 
             this.buttonModificar.Location = new System.Drawing.Point(182, 346);
@@ -216,12 +208,13 @@
             this.pictureBoxNuevoTelefono.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxNuevoTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxNuevoTelefono.Image = global::EspaiActiu.Properties.Resources.plus1;
-            this.pictureBoxNuevoTelefono.Location = new System.Drawing.Point(238, 240);
+            this.pictureBoxNuevoTelefono.Location = new System.Drawing.Point(238, 242);
             this.pictureBoxNuevoTelefono.Name = "pictureBoxNuevoTelefono";
             this.pictureBoxNuevoTelefono.Size = new System.Drawing.Size(19, 19);
             this.pictureBoxNuevoTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxNuevoTelefono.TabIndex = 69;
             this.pictureBoxNuevoTelefono.TabStop = false;
+            this.pictureBoxNuevoTelefono.Click += new System.EventHandler(this.pictureBoxNuevoTelefono_Click);
             // 
             // pictureBoxNouEquip
             // 
@@ -238,7 +231,18 @@
             // bindingSourceTelefons
             // 
             this.bindingSourceTelefons.DataSource = typeof(TELEFONS);
-            this.bindingSourceTelefons.CurrentChanged += new System.EventHandler(this.bindingSourceTelefons_CurrentChanged);
+            // 
+            // listBoxTelefons
+            // 
+            this.listBoxTelefons.DataSource = this.bindingSourceTelefons;
+            this.listBoxTelefons.DisplayMember = "telefono";
+            this.listBoxTelefons.FormattingEnabled = true;
+            this.listBoxTelefons.Location = new System.Drawing.Point(12, 205);
+            this.listBoxTelefons.Name = "listBoxTelefons";
+            this.listBoxTelefons.Size = new System.Drawing.Size(245, 56);
+            this.listBoxTelefons.TabIndex = 71;
+            this.listBoxTelefons.ValueMember = "id";
+            this.listBoxTelefons.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBoxTelefons_KeyDown);
             // 
             // FormDetallsEntitat
             // 
@@ -256,7 +260,6 @@
             this.Controls.Add(this.textBoxCorreu);
             this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.buttonModificar);
-            this.Controls.Add(this.listViewTelefons);
             this.Controls.Add(this.lEquips);
             this.Controls.Add(this.listViewEquips);
             this.Controls.Add(this.bSortir);
@@ -265,9 +268,11 @@
             this.Controls.Add(this.lNIF);
             this.Controls.Add(this.lAdreça);
             this.Controls.Add(this.lNomEntitat);
+            this.Controls.Add(this.listBoxTelefons);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDetallsEntitat";
             this.Text = "FormDetallsEntitat";
+            this.Activated += new System.EventHandler(this.FormDetallsEntitat_Activated);
             this.Load += new System.EventHandler(this.FormDetallsEntitat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNuevoTelefono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNouEquip)).EndInit();
@@ -287,7 +292,6 @@
         private System.Windows.Forms.Label lNIF;
         private System.Windows.Forms.Label lAdreça;
         private System.Windows.Forms.Label lNomEntitat;
-        private System.Windows.Forms.ListView listViewTelefons;
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.TextBox textBoxNom;
         private System.Windows.Forms.TextBox textBoxCorreu;
@@ -300,5 +304,6 @@
         private System.Windows.Forms.PictureBox pictureBoxNuevoTelefono;
         private System.Windows.Forms.PictureBox pictureBoxNouEquip;
         private System.Windows.Forms.BindingSource bindingSourceTelefons;
+        private System.Windows.Forms.ListBox listBoxTelefons;
     }
 }
