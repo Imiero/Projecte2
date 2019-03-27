@@ -77,5 +77,26 @@ namespace EspaiActiu.BD
             }
 
         }
+
+        //Modificar entidades
+        public static void UpdateEntitat(String nom,String temporada,String adreça,String nif,String correu,int id)
+        {
+            ENTITATS entitat = ORMEntitats.bd.ENTITATS.Find(id);
+
+            entitat.nom = nom;
+            entitat.temporada = temporada;
+            entitat.adreca = adreça;
+            entitat.correu = correu;
+            entitat.nif = nif;
+
+            try
+            {
+                ORMEntitats.bd.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                //En caso de estar duplicado no podría crearse y petaria el programa
+            }
+        }
     }
 }

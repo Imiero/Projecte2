@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="BD\ORMAdmins.cs" />
     <Compile Include="BD\ORMEntitats.cs" />
+    <Compile Include="BD\ORMTelefono.cs" />
     <Compile Include="CATEGORIA_EDAT.cs">
       <DependentUpon>ModelSantCugat.tt</DependentUpon>
     </Compile>
@@ -223,6 +224,7 @@
     <None Include="Properties\DataSources\EspaiActiu.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\LLOC_DEPORTIVO.datasource" />
+    <None Include="Properties\DataSources\TELEFONS.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -293,6 +295,8 @@
       <DependentUpon>ModelSantCugat.edmx</DependentUpon>
       <LastGenOutput>ModelSantCugat.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\plus1.png" />
+    <None Include="Resources\plus.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

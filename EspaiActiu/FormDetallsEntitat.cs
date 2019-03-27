@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EspaiActiu.BD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,12 +26,7 @@ namespace EspaiActiu
         {
             this.Text = entitat.nom;
 
-            lNomEntitat.Text = entitat.nom;
-            lNIF.Text = entitat.nif;
-            lNom.Text = entitat.nom;
-            lEmail.Text = entitat.correu;
-            lAdreça.Text = entitat.adreca;
-
+            Refresh();
             
         }
 
@@ -55,6 +51,52 @@ namespace EspaiActiu
         }
 
         private void lNom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvEquips_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Estas segur que vols modificar?", "Modificar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                //Verificamos que todos los campos esten llenos
+                if(textBoxNom.Text.Length != 0 || textBoxTemp.Text.Length != 0 || textBoxAdreça.Text.Length != 0 || textBoxNIF.Text.Length != 0 || textBoxCorreu.Text.Length != 0)
+                {
+                    ORMEntitats.UpdateEntitat(textBoxNom.Text, textBoxTemp.Text, textBoxAdreça.Text, textBoxNIF.Text, textBoxCorreu.Text, entitat.id);
+                    MessageBox.Show("Entitat modificada amb éxit.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    //Refrescamos los datos
+                    Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Tots els camps han de estar omplerts.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                                
+            }
+        }
+
+
+        private void Refresh()
+        {
+            this.Text = entitat.nom;
+
+            lNomEntitat.Text = entitat.nom;
+            textBoxNIF.Text = entitat.nif;
+            textBoxNom.Text = entitat.nom;
+            textBoxCorreu.Text = entitat.correu;
+            textBoxAdreça.Text = entitat.adreca;
+            textBoxTemp.Text = entitat.temporada;
+        }
+
+        private void bindingSourceTelefons_CurrentChanged(object sender, EventArgs e)
         {
 
         }

@@ -28,36 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lEquips = new System.Windows.Forms.Label();
-            this.lvEquips = new System.Windows.Forms.ListView();
+            this.listViewEquips = new System.Windows.Forms.ListView();
             this.bSortir = new System.Windows.Forms.Button();
             this.bEditar = new System.Windows.Forms.Button();
             this.lTelefon = new System.Windows.Forms.Label();
             this.lNIF = new System.Windows.Forms.Label();
             this.lAdreça = new System.Windows.Forms.Label();
-            this.lEmail = new System.Windows.Forms.Label();
-            this.lNom = new System.Windows.Forms.Label();
             this.lNomEntitat = new System.Windows.Forms.Label();
             this.listViewTelefons = new System.Windows.Forms.ListView();
             this.buttonModificar = new System.Windows.Forms.Button();
+            this.textBoxNom = new System.Windows.Forms.TextBox();
+            this.textBoxCorreu = new System.Windows.Forms.TextBox();
+            this.textBoxAdreça = new System.Windows.Forms.TextBox();
+            this.textBoxNIF = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxTemp = new System.Windows.Forms.TextBox();
+            this.pictureBoxNuevoTelefono = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNouEquip = new System.Windows.Forms.PictureBox();
+            this.bindingSourceTelefons = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNuevoTelefono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNouEquip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTelefons)).BeginInit();
             this.SuspendLayout();
             // 
             // lEquips
             // 
             this.lEquips.AutoSize = true;
-            this.lEquips.Location = new System.Drawing.Point(9, 214);
+            this.lEquips.Location = new System.Drawing.Point(9, 262);
             this.lEquips.Name = "lEquips";
             this.lEquips.Size = new System.Drawing.Size(42, 13);
             this.lEquips.TabIndex = 58;
             this.lEquips.Text = "Equips:";
             // 
-            // lvEquips
+            // listViewEquips
             // 
-            this.lvEquips.Location = new System.Drawing.Point(12, 230);
-            this.lvEquips.Name = "lvEquips";
-            this.lvEquips.Size = new System.Drawing.Size(179, 62);
-            this.lvEquips.TabIndex = 57;
-            this.lvEquips.UseCompatibleStateImageBehavior = false;
+            this.listViewEquips.Location = new System.Drawing.Point(12, 278);
+            this.listViewEquips.Name = "listViewEquips";
+            this.listViewEquips.Size = new System.Drawing.Size(245, 62);
+            this.listViewEquips.TabIndex = 57;
+            this.listViewEquips.UseCompatibleStateImageBehavior = false;
+            this.listViewEquips.SelectedIndexChanged += new System.EventHandler(this.lvEquips_SelectedIndexChanged);
             // 
             // bSortir
             // 
@@ -80,7 +94,7 @@
             // lTelefon
             // 
             this.lTelefon.AutoSize = true;
-            this.lTelefon.Location = new System.Drawing.Point(9, 131);
+            this.lTelefon.Location = new System.Drawing.Point(9, 189);
             this.lTelefon.Name = "lTelefon";
             this.lTelefon.Size = new System.Drawing.Size(51, 13);
             this.lTelefon.TabIndex = 54;
@@ -90,7 +104,7 @@
             // lNIF
             // 
             this.lNIF.AutoSize = true;
-            this.lNIF.Location = new System.Drawing.Point(9, 115);
+            this.lNIF.Location = new System.Drawing.Point(9, 137);
             this.lNIF.Name = "lNIF";
             this.lNIF.Size = new System.Drawing.Size(24, 13);
             this.lNIF.TabIndex = 53;
@@ -100,38 +114,18 @@
             // lAdreça
             // 
             this.lAdreça.AutoSize = true;
-            this.lAdreça.Location = new System.Drawing.Point(9, 99);
+            this.lAdreça.Location = new System.Drawing.Point(9, 111);
             this.lAdreça.Name = "lAdreça";
             this.lAdreça.Size = new System.Drawing.Size(41, 13);
             this.lAdreça.TabIndex = 52;
             this.lAdreça.Text = "Adreça";
             this.lAdreça.Click += new System.EventHandler(this.lAdreça_Click);
             // 
-            // lEmail
-            // 
-            this.lEmail.AutoSize = true;
-            this.lEmail.Location = new System.Drawing.Point(9, 82);
-            this.lEmail.Name = "lEmail";
-            this.lEmail.Size = new System.Drawing.Size(87, 13);
-            this.lEmail.TabIndex = 51;
-            this.lEmail.Text = "Correu electrònic";
-            this.lEmail.Click += new System.EventHandler(this.lEmail_Click);
-            // 
-            // lNom
-            // 
-            this.lNom.AutoSize = true;
-            this.lNom.Location = new System.Drawing.Point(9, 63);
-            this.lNom.Name = "lNom";
-            this.lNom.Size = new System.Drawing.Size(29, 13);
-            this.lNom.TabIndex = 50;
-            this.lNom.Text = "Nom";
-            this.lNom.Click += new System.EventHandler(this.lNom_Click);
-            // 
             // lNomEntitat
             // 
             this.lNomEntitat.AutoSize = true;
             this.lNomEntitat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNomEntitat.Location = new System.Drawing.Point(12, 9);
+            this.lNomEntitat.Location = new System.Drawing.Point(6, 9);
             this.lNomEntitat.Name = "lNomEntitat";
             this.lNomEntitat.Size = new System.Drawing.Size(153, 31);
             this.lNomEntitat.TabIndex = 49;
@@ -139,42 +133,145 @@
             // 
             // listViewTelefons
             // 
-            this.listViewTelefons.Location = new System.Drawing.Point(12, 147);
+            this.listViewTelefons.Location = new System.Drawing.Point(12, 205);
             this.listViewTelefons.Name = "listViewTelefons";
-            this.listViewTelefons.Size = new System.Drawing.Size(179, 54);
+            this.listViewTelefons.Size = new System.Drawing.Size(245, 54);
             this.listViewTelefons.TabIndex = 59;
             this.listViewTelefons.UseCompatibleStateImageBehavior = false;
             // 
             // buttonModificar
             // 
-            this.buttonModificar.Location = new System.Drawing.Point(116, 302);
+            this.buttonModificar.Location = new System.Drawing.Point(182, 346);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(75, 23);
             this.buttonModificar.TabIndex = 60;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
+            // 
+            // textBoxNom
+            // 
+            this.textBoxNom.Location = new System.Drawing.Point(76, 59);
+            this.textBoxNom.Name = "textBoxNom";
+            this.textBoxNom.Size = new System.Drawing.Size(181, 20);
+            this.textBoxNom.TabIndex = 61;
+            // 
+            // textBoxCorreu
+            // 
+            this.textBoxCorreu.Location = new System.Drawing.Point(76, 85);
+            this.textBoxCorreu.Name = "textBoxCorreu";
+            this.textBoxCorreu.Size = new System.Drawing.Size(181, 20);
+            this.textBoxCorreu.TabIndex = 62;
+            // 
+            // textBoxAdreça
+            // 
+            this.textBoxAdreça.Location = new System.Drawing.Point(76, 108);
+            this.textBoxAdreça.Name = "textBoxAdreça";
+            this.textBoxAdreça.Size = new System.Drawing.Size(181, 20);
+            this.textBoxAdreça.TabIndex = 63;
+            // 
+            // textBoxNIF
+            // 
+            this.textBoxNIF.Location = new System.Drawing.Point(76, 134);
+            this.textBoxNIF.Name = "textBoxNIF";
+            this.textBoxNIF.Size = new System.Drawing.Size(181, 20);
+            this.textBoxNIF.TabIndex = 64;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "Nom";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 66;
+            this.label2.Text = "Correu";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 67;
+            this.label3.Text = "Temporada";
+            // 
+            // textBoxTemp
+            // 
+            this.textBoxTemp.Location = new System.Drawing.Point(76, 161);
+            this.textBoxTemp.Name = "textBoxTemp";
+            this.textBoxTemp.Size = new System.Drawing.Size(181, 20);
+            this.textBoxTemp.TabIndex = 68;
+            // 
+            // pictureBoxNuevoTelefono
+            // 
+            this.pictureBoxNuevoTelefono.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxNuevoTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxNuevoTelefono.Image = global::EspaiActiu.Properties.Resources.plus1;
+            this.pictureBoxNuevoTelefono.Location = new System.Drawing.Point(238, 240);
+            this.pictureBoxNuevoTelefono.Name = "pictureBoxNuevoTelefono";
+            this.pictureBoxNuevoTelefono.Size = new System.Drawing.Size(19, 19);
+            this.pictureBoxNuevoTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxNuevoTelefono.TabIndex = 69;
+            this.pictureBoxNuevoTelefono.TabStop = false;
+            // 
+            // pictureBoxNouEquip
+            // 
+            this.pictureBoxNouEquip.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxNouEquip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxNouEquip.Image = global::EspaiActiu.Properties.Resources.plus1;
+            this.pictureBoxNouEquip.Location = new System.Drawing.Point(238, 321);
+            this.pictureBoxNouEquip.Name = "pictureBoxNouEquip";
+            this.pictureBoxNouEquip.Size = new System.Drawing.Size(19, 19);
+            this.pictureBoxNouEquip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxNouEquip.TabIndex = 70;
+            this.pictureBoxNouEquip.TabStop = false;
+            // 
+            // bindingSourceTelefons
+            // 
+            this.bindingSourceTelefons.DataSource = typeof(TELEFONS);
+            this.bindingSourceTelefons.CurrentChanged += new System.EventHandler(this.bindingSourceTelefons_CurrentChanged);
             // 
             // FormDetallsEntitat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(198, 337);
+            this.ClientSize = new System.Drawing.Size(270, 381);
+            this.Controls.Add(this.pictureBoxNouEquip);
+            this.Controls.Add(this.pictureBoxNuevoTelefono);
+            this.Controls.Add(this.textBoxTemp);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxNIF);
+            this.Controls.Add(this.textBoxAdreça);
+            this.Controls.Add(this.textBoxCorreu);
+            this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.buttonModificar);
             this.Controls.Add(this.listViewTelefons);
             this.Controls.Add(this.lEquips);
-            this.Controls.Add(this.lvEquips);
+            this.Controls.Add(this.listViewEquips);
             this.Controls.Add(this.bSortir);
             this.Controls.Add(this.bEditar);
             this.Controls.Add(this.lTelefon);
             this.Controls.Add(this.lNIF);
             this.Controls.Add(this.lAdreça);
-            this.Controls.Add(this.lEmail);
-            this.Controls.Add(this.lNom);
             this.Controls.Add(this.lNomEntitat);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDetallsEntitat";
             this.Text = "FormDetallsEntitat";
             this.Load += new System.EventHandler(this.FormDetallsEntitat_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNuevoTelefono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNouEquip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTelefons)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,16 +280,25 @@
         #endregion
 
         private System.Windows.Forms.Label lEquips;
-        private System.Windows.Forms.ListView lvEquips;
+        private System.Windows.Forms.ListView listViewEquips;
         private System.Windows.Forms.Button bSortir;
         private System.Windows.Forms.Button bEditar;
         private System.Windows.Forms.Label lTelefon;
         private System.Windows.Forms.Label lNIF;
         private System.Windows.Forms.Label lAdreça;
-        private System.Windows.Forms.Label lEmail;
-        private System.Windows.Forms.Label lNom;
         private System.Windows.Forms.Label lNomEntitat;
         private System.Windows.Forms.ListView listViewTelefons;
         private System.Windows.Forms.Button buttonModificar;
+        private System.Windows.Forms.TextBox textBoxNom;
+        private System.Windows.Forms.TextBox textBoxCorreu;
+        private System.Windows.Forms.TextBox textBoxAdreça;
+        private System.Windows.Forms.TextBox textBoxNIF;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxTemp;
+        private System.Windows.Forms.PictureBox pictureBoxNuevoTelefono;
+        private System.Windows.Forms.PictureBox pictureBoxNouEquip;
+        private System.Windows.Forms.BindingSource bindingSourceTelefons;
     }
 }

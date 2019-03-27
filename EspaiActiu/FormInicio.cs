@@ -169,7 +169,7 @@ namespace EspaiActiu
 
         private void textBoxCercarEntitats_TextChanged(object sender, EventArgs e)
         {
-            
+            bindingSourceEntitats.DataSource = ORMEntitats.SelectEntitatsByNom(textBoxCercarEntitats.Text);
         }
 
         private void buttonCercarEntitat_Click(object sender, EventArgs e)

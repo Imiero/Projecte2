@@ -55,7 +55,7 @@
             this.buttonLogin.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.buttonLogin.Location = new System.Drawing.Point(189, 286);
-            this.buttonLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(150, 41);
             this.buttonLogin.TabIndex = 0;
@@ -70,7 +70,7 @@
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(184, 20);
             this.textBoxNombre.TabIndex = 4;
-            this.textBoxNombre.Text = "Usuario";
+            this.textBoxNombre.Text = "Admin1";
             this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             this.textBoxNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyDown);
             // 
@@ -82,7 +82,7 @@
             this.textBoxContraseña.PasswordChar = '*';
             this.textBoxContraseña.Size = new System.Drawing.Size(184, 20);
             this.textBoxContraseña.TabIndex = 5;
-            this.textBoxContraseña.Text = "Contrasenya";
+            this.textBoxContraseña.Text = "1234";
             this.textBoxContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyDown);
             // 
             // label1
@@ -191,7 +191,7 @@
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLogin";
