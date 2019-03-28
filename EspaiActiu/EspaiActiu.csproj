@@ -69,7 +69,13 @@
     </Compile>
     <Compile Include="BD\ORM.cs" />
     <Compile Include="BD\ORMAdmins.cs" />
+    <Compile Include="BD\ORMCategoria.cs" />
+    <Compile Include="BD\ORMCategoriaEdat.cs" />
+    <Compile Include="BD\ORMCompeticio.cs" />
     <Compile Include="BD\ORMEntitats.cs" />
+    <Compile Include="BD\ORMEquips.cs" />
+    <Compile Include="BD\ORMEsports.cs" />
+    <Compile Include="BD\ORMSexe.cs" />
     <Compile Include="BD\ORMTelefono.cs" />
     <Compile Include="CATEGORIA_EDAT.cs">
       <DependentUpon>ModelSantCugat.tt</DependentUpon>
@@ -130,6 +136,12 @@
     </Compile>
     <Compile Include="FormInicio.Designer.cs">
       <DependentUpon>FormInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoEquipo.Designer.cs">
+      <DependentUpon>FormNuevoEquipo.cs</DependentUpon>
     </Compile>
     <Compile Include="FormNuevoTelefono.cs">
       <SubType>Form</SubType>
@@ -208,6 +220,9 @@
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoEquipo.resx">
+      <DependentUpon>FormNuevoEquipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNuevoTelefono.resx">
       <DependentUpon>FormNuevoTelefono.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,11 +244,17 @@
       <DependentUpon>ModelSantCugat.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CATEGORIA_EDAT.datasource" />
+    <None Include="Properties\DataSources\CATEGORIA_NIVELL.datasource" />
+    <None Include="Properties\DataSources\COMPETICIO.datasource" />
     <None Include="Properties\DataSources\ENTITATS.datasource" />
+    <None Include="Properties\DataSources\EQUIPS.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.BD.ORMAdmins.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.Properties.Settings.datasource" />
     <None Include="Properties\DataSources\LLOC_DEPORTIVO.datasource" />
+    <None Include="Properties\DataSources\SEXE.datasource" />
+    <None Include="Properties\DataSources\SPORTS.datasource" />
     <None Include="Properties\DataSources\TELEFONS.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

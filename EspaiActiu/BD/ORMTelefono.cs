@@ -59,6 +59,13 @@ namespace EspaiActiu.BD
 
         }
 
+        //Seleccionar un telefono filtrando por id
+        public static TELEFONS SelectTelefonByID(int id)
+        {
+            TELEFONS telefon = ORM.bd.TELEFONS.Find(id);
+            return telefon;
+        }
+
     }
 
 

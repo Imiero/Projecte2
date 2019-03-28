@@ -55,13 +55,15 @@
             this.buttonCercarEspais = new System.Windows.Forms.Button();
             this.textBoxCercarEspais = new System.Windows.Forms.TextBox();
             this.tabPageEquips = new System.Windows.Forms.TabPage();
-            this.buttonAddEntitat = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxEntitats = new System.Windows.Forms.GroupBox();
             this.dataGridViewEntitats = new System.Windows.Forms.DataGridView();
+            this.buttonAddEntitat = new System.Windows.Forms.Button();
             this.textBoxCercarEntitats = new System.Windows.Forms.TextBox();
             this.tabPageModificacion = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,8 +74,6 @@
             this.eQUIPSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iNCIDENCIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tELEFONSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             this.SidePanel.SuspendLayout();
             this.EntitatsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EntitatsImage)).BeginInit();
@@ -396,17 +396,14 @@
             this.tabPageEquips.TabIndex = 2;
             this.tabPageEquips.Text = "tabPage1";
             // 
-            // buttonAddEntitat
+            // label1
             // 
-            this.buttonAddEntitat.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddEntitat.Location = new System.Drawing.Point(520, 321);
-            this.buttonAddEntitat.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAddEntitat.Name = "buttonAddEntitat";
-            this.buttonAddEntitat.Size = new System.Drawing.Size(61, 24);
-            this.buttonAddEntitat.TabIndex = 11;
-            this.buttonAddEntitat.Text = "Afegir Entitat";
-            this.buttonAddEntitat.UseVisualStyleBackColor = true;
-            this.buttonAddEntitat.Click += new System.EventHandler(this.buttonAddEntitat_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Filtrar per nom";
             // 
             // groupBoxEntitats
             // 
@@ -426,6 +423,7 @@
             // 
             this.dataGridViewEntitats.AllowUserToAddRows = false;
             this.dataGridViewEntitats.AutoGenerateColumns = false;
+            this.dataGridViewEntitats.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewEntitats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEntitats.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -451,6 +449,18 @@
             this.dataGridViewEntitats.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEntitats_CellContentClick);
             this.dataGridViewEntitats.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridViewEntitats_UserDeletingRow);
             this.dataGridViewEntitats.DoubleClick += new System.EventHandler(this.dataGridViewEntitats_DoubleClick);
+            // 
+            // buttonAddEntitat
+            // 
+            this.buttonAddEntitat.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddEntitat.Location = new System.Drawing.Point(520, 321);
+            this.buttonAddEntitat.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAddEntitat.Name = "buttonAddEntitat";
+            this.buttonAddEntitat.Size = new System.Drawing.Size(61, 24);
+            this.buttonAddEntitat.TabIndex = 11;
+            this.buttonAddEntitat.Text = "Afegir Entitat";
+            this.buttonAddEntitat.UseVisualStyleBackColor = true;
+            this.buttonAddEntitat.Click += new System.EventHandler(this.buttonAddEntitat_Click);
             // 
             // textBoxCercarEntitats
             // 
@@ -482,14 +492,14 @@
             this.panel2.Size = new System.Drawing.Size(1059, 88);
             this.panel2.TabIndex = 4;
             // 
-            // label1
+            // bindingSourceEntitats
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Filtrar per nom";
+            this.bindingSourceEntitats.DataSource = typeof(ENTITATS);
+            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
+            // 
+            // bindingSourceEspais
+            // 
+            this.bindingSourceEspais.DataSource = typeof(LLOC_DEPORTIVO);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -497,7 +507,7 @@
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 25;
+            this.idDataGridViewTextBoxColumn.Width = 20;
             // 
             // nomDataGridViewTextBoxColumn
             // 
@@ -512,6 +522,7 @@
             this.temporadaDataGridViewTextBoxColumn.HeaderText = "temporada";
             this.temporadaDataGridViewTextBoxColumn.Name = "temporadaDataGridViewTextBoxColumn";
             this.temporadaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.temporadaDataGridViewTextBoxColumn.Width = 65;
             // 
             // adrecaDataGridViewTextBoxColumn
             // 
@@ -533,6 +544,7 @@
             this.correuDataGridViewTextBoxColumn.HeaderText = "correu";
             this.correuDataGridViewTextBoxColumn.Name = "correuDataGridViewTextBoxColumn";
             this.correuDataGridViewTextBoxColumn.ReadOnly = true;
+            this.correuDataGridViewTextBoxColumn.Width = 150;
             // 
             // passwordDataGridViewTextBoxColumn
             // 
@@ -565,15 +577,6 @@
             this.tELEFONSDataGridViewTextBoxColumn.Name = "tELEFONSDataGridViewTextBoxColumn";
             this.tELEFONSDataGridViewTextBoxColumn.ReadOnly = true;
             this.tELEFONSDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // bindingSourceEntitats
-            // 
-            this.bindingSourceEntitats.DataSource = typeof(ENTITATS);
-            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
-            // 
-            // bindingSourceEspais
-            // 
-            this.bindingSourceEspais.DataSource = typeof(LLOC_DEPORTIVO);
             // 
             // FormInicio
             // 
@@ -658,6 +661,8 @@
         private System.Windows.Forms.TextBox textBoxCercarEntitats;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.BindingSource bindingSourceEntitats;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource bindingSourceEspais;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn temporadaDataGridViewTextBoxColumn;
@@ -668,7 +673,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn eQUIPSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iNCIDENCIADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tELEFONSDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource bindingSourceEspais;
     }
 }

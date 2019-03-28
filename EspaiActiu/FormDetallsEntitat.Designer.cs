@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lEquips = new System.Windows.Forms.Label();
-            this.listViewEquips = new System.Windows.Forms.ListView();
             this.bSortir = new System.Windows.Forms.Button();
             this.bEditar = new System.Windows.Forms.Button();
             this.lTelefon = new System.Windows.Forms.Label();
@@ -50,9 +49,12 @@
             this.pictureBoxNouEquip = new System.Windows.Forms.PictureBox();
             this.bindingSourceTelefons = new System.Windows.Forms.BindingSource(this.components);
             this.listBoxTelefons = new System.Windows.Forms.ListBox();
+            this.bindingSourceEquips = new System.Windows.Forms.BindingSource(this.components);
+            this.listBoxEquips = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNuevoTelefono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNouEquip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTelefons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).BeginInit();
             this.SuspendLayout();
             // 
             // lEquips
@@ -63,15 +65,6 @@
             this.lEquips.Size = new System.Drawing.Size(42, 13);
             this.lEquips.TabIndex = 58;
             this.lEquips.Text = "Equips:";
-            // 
-            // listViewEquips
-            // 
-            this.listViewEquips.Location = new System.Drawing.Point(12, 278);
-            this.listViewEquips.Name = "listViewEquips";
-            this.listViewEquips.Size = new System.Drawing.Size(245, 62);
-            this.listViewEquips.TabIndex = 57;
-            this.listViewEquips.UseCompatibleStateImageBehavior = false;
-            this.listViewEquips.SelectedIndexChanged += new System.EventHandler(this.lvEquips_SelectedIndexChanged);
             // 
             // bSortir
             // 
@@ -207,6 +200,7 @@
             // 
             this.pictureBoxNuevoTelefono.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxNuevoTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxNuevoTelefono.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxNuevoTelefono.Image = global::EspaiActiu.Properties.Resources.plus1;
             this.pictureBoxNuevoTelefono.Location = new System.Drawing.Point(238, 242);
             this.pictureBoxNuevoTelefono.Name = "pictureBoxNuevoTelefono";
@@ -220,13 +214,15 @@
             // 
             this.pictureBoxNouEquip.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxNouEquip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxNouEquip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxNouEquip.Image = global::EspaiActiu.Properties.Resources.plus1;
-            this.pictureBoxNouEquip.Location = new System.Drawing.Point(238, 321);
+            this.pictureBoxNouEquip.Location = new System.Drawing.Point(238, 315);
             this.pictureBoxNouEquip.Name = "pictureBoxNouEquip";
             this.pictureBoxNouEquip.Size = new System.Drawing.Size(19, 19);
             this.pictureBoxNouEquip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxNouEquip.TabIndex = 70;
             this.pictureBoxNouEquip.TabStop = false;
+            this.pictureBoxNouEquip.Click += new System.EventHandler(this.pictureBoxNouEquip_Click);
             // 
             // bindingSourceTelefons
             // 
@@ -242,7 +238,25 @@
             this.listBoxTelefons.Size = new System.Drawing.Size(245, 56);
             this.listBoxTelefons.TabIndex = 71;
             this.listBoxTelefons.ValueMember = "id";
+            this.listBoxTelefons.SelectedIndexChanged += new System.EventHandler(this.listBoxTelefons_SelectedIndexChanged);
             this.listBoxTelefons.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBoxTelefons_KeyDown);
+            // 
+            // bindingSourceEquips
+            // 
+            this.bindingSourceEquips.DataSource = typeof(EQUIPS);
+            // 
+            // listBoxEquips
+            // 
+            this.listBoxEquips.DataSource = this.bindingSourceEquips;
+            this.listBoxEquips.DisplayMember = "nom";
+            this.listBoxEquips.FormattingEnabled = true;
+            this.listBoxEquips.Location = new System.Drawing.Point(12, 278);
+            this.listBoxEquips.Name = "listBoxEquips";
+            this.listBoxEquips.Size = new System.Drawing.Size(245, 56);
+            this.listBoxEquips.TabIndex = 72;
+            this.listBoxEquips.ValueMember = "id";
+            this.listBoxEquips.SelectedIndexChanged += new System.EventHandler(this.listBoxEquips_SelectedIndexChanged);
+            this.listBoxEquips.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBoxEquips_KeyDown);
             // 
             // FormDetallsEntitat
             // 
@@ -261,7 +275,6 @@
             this.Controls.Add(this.textBoxNom);
             this.Controls.Add(this.buttonModificar);
             this.Controls.Add(this.lEquips);
-            this.Controls.Add(this.listViewEquips);
             this.Controls.Add(this.bSortir);
             this.Controls.Add(this.bEditar);
             this.Controls.Add(this.lTelefon);
@@ -269,6 +282,7 @@
             this.Controls.Add(this.lAdreça);
             this.Controls.Add(this.lNomEntitat);
             this.Controls.Add(this.listBoxTelefons);
+            this.Controls.Add(this.listBoxEquips);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDetallsEntitat";
             this.Text = "FormDetallsEntitat";
@@ -277,6 +291,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNuevoTelefono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNouEquip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTelefons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,7 +300,6 @@
         #endregion
 
         private System.Windows.Forms.Label lEquips;
-        private System.Windows.Forms.ListView listViewEquips;
         private System.Windows.Forms.Button bSortir;
         private System.Windows.Forms.Button bEditar;
         private System.Windows.Forms.Label lTelefon;
@@ -305,5 +319,7 @@
         private System.Windows.Forms.PictureBox pictureBoxNouEquip;
         private System.Windows.Forms.BindingSource bindingSourceTelefons;
         private System.Windows.Forms.ListBox listBoxTelefons;
+        private System.Windows.Forms.BindingSource bindingSourceEquips;
+        private System.Windows.Forms.ListBox listBoxEquips;
     }
 }

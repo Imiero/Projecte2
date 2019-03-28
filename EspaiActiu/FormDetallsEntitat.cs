@@ -18,6 +18,7 @@ namespace EspaiActiu
         private ENTITATS entitat;
         bool alta = false;
 
+
         public FormDetallsEntitat(ENTITATS entitat)
         {
             InitializeComponent();
@@ -30,6 +31,8 @@ namespace EspaiActiu
             this.Text = entitat.nom;
             //bindingSourceTelefons.DataSource = ORMTelefono.SelectTelefonosByEntitat(entitat.id);
             bindingSourceTelefons.DataSource = entitat.TELEFONS.ToList();
+            bindingSourceEquips.DataSource = entitat.EQUIPS.ToList();
+            
 
             Refrescar();
             
@@ -118,6 +121,7 @@ namespace EspaiActiu
             if (alta)
             {
                 bindingSourceTelefons.DataSource = entitat.TELEFONS.ToList();
+                bindingSourceEquips.DataSource = entitat.EQUIPS.ToList();
                 alta = false;
             }
             
@@ -135,6 +139,56 @@ namespace EspaiActiu
                     bindingSourceTelefons.DataSource = entitat.TELEFONS.ToList();
                 }                
                 
+            }
+        }
+
+        private void listBoxTelefons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int id_telef = (int)listBoxTelefons.SelectedValue;
+                FormNuevoTelefono f = new FormNuevoTelefono(id_telef, true);
+                f.Show();
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void pictureBoxNouEquip_Click(object sender, EventArgs e)
+        {
+            alta = true;
+            FormNuevoEquipo f = new FormNuevoEquipo(entitat.id);
+            f.Show();
+        }
+
+        private void listBoxEquips_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                DialogResult result = MessageBox.Show("Segur que vols eliminar el equip?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (result == DialogResult.Yes)
+                {
+                    ORMEquips.DeleteEquip((EQUIPS)listBoxEquips.SelectedItem);
+                    bindingSourceEquips.DataSource = entitat.EQUIPS.ToList();
+                }
+
+            }
+        }
+
+        private void listBoxEquips_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int id_equip = (int)listBoxEquips.SelectedValue;
+                FormNuevoEquipo f = new FormNuevoEquipo(id_equip, true);
+                f.Show();
+            }
+            catch (Exception)
+            {
+
             }
         }
     }
