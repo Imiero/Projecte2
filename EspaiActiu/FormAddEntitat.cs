@@ -83,5 +83,21 @@ namespace EspaiActiu
 
         }
 
+        private void pictureBoxOjoPassword_Click(object sender, EventArgs e)
+        {
+            if (tbContrasenya.PasswordChar == '*')
+            {
+                tbContrasenya.PasswordChar = '\0';
+                tbContrasenya2.PasswordChar = '\0';
+                pictureBoxOjoPassword.Image = Properties.Resources.ojoabierto;
+            }
+
+            else if (tbContrasenya.PasswordChar == '\0')
+            {
+                tbContrasenya.PasswordChar = '*';
+                tbContrasenya2.PasswordChar = '*';
+                pictureBoxOjoPassword.Image = Properties.Resources.ojocerrado;
+            }
+        }
     }
 }

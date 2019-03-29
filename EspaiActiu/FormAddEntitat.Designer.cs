@@ -44,6 +44,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxTemporada = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBoxOjoPassword = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjoPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // tbNIF
@@ -84,14 +86,15 @@
             // 
             this.tbContrasenya2.Location = new System.Drawing.Point(100, 81);
             this.tbContrasenya2.Name = "tbContrasenya2";
+            this.tbContrasenya2.PasswordChar = '*';
             this.tbContrasenya2.Size = new System.Drawing.Size(260, 20);
             this.tbContrasenya2.TabIndex = 57;
-            
             // 
             // tbContrasenya
             // 
             this.tbContrasenya.Location = new System.Drawing.Point(100, 55);
             this.tbContrasenya.Name = "tbContrasenya";
+            this.tbContrasenya.PasswordChar = '*';
             this.tbContrasenya.Size = new System.Drawing.Size(260, 20);
             this.tbContrasenya.TabIndex = 56;
             // 
@@ -170,7 +173,6 @@
             this.textBoxTemporada.Name = "textBoxTemporada";
             this.textBoxTemporada.Size = new System.Drawing.Size(260, 20);
             this.textBoxTemporada.TabIndex = 61;
-            
             // 
             // label7
             // 
@@ -181,11 +183,23 @@
             this.label7.TabIndex = 73;
             this.label7.Text = "Temporada";
             // 
+            // pictureBoxOjoPassword
+            // 
+            this.pictureBoxOjoPassword.Image = global::EspaiActiu.Properties.Resources.ojocerrado;
+            this.pictureBoxOjoPassword.Location = new System.Drawing.Point(366, 55);
+            this.pictureBoxOjoPassword.Name = "pictureBoxOjoPassword";
+            this.pictureBoxOjoPassword.Size = new System.Drawing.Size(23, 20);
+            this.pictureBoxOjoPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxOjoPassword.TabIndex = 74;
+            this.pictureBoxOjoPassword.TabStop = false;
+            this.pictureBoxOjoPassword.Click += new System.EventHandler(this.pictureBoxOjoPassword_Click);
+            // 
             // FormAddEntitat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 263);
+            this.Controls.Add(this.pictureBoxOjoPassword);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxTemporada);
             this.Controls.Add(this.label4);
@@ -202,11 +216,12 @@
             this.Controls.Add(this.tbContrasenya2);
             this.Controls.Add(this.tbContrasenya);
             this.Controls.Add(this.tbUsuari);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FormAddEntitat";
             this.Text = "Agregar Entitat";
             this.Load += new System.EventHandler(this.FormAddEntitat_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormAddEntitat_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjoPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +245,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxTemporada;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBoxOjoPassword;
     }
 }
