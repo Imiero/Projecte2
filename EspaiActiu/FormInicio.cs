@@ -147,6 +147,7 @@ namespace EspaiActiu
             fEspai.ShowDialog();
         }
 
+        //Al clicar en el boton de "Afegir" abririamos el form "FormAddEntitat" para crear una entidad
         private void buttonAddEntitat_Click(object sender, EventArgs e)
         {
             FormAddEntitat fEnti = new FormAddEntitat();
@@ -167,6 +168,7 @@ namespace EspaiActiu
 
         }
 
+        //Al escribir algo en la textbox se filtra el contenido de la GridView de entidades por nombre
         private void textBoxCercarEntitats_TextChanged(object sender, EventArgs e)
         {
             bindingSourceEntitats.DataSource = ORMEntitats.SelectEntitatsByNom(textBoxCercarEntitats.Text);
@@ -177,11 +179,13 @@ namespace EspaiActiu
 
         }
 
+        //Al volver a esta pantalla se refresca la grid
         private void FormInicio_Activated(object sender, EventArgs e)
         {
             bindingSourceEntitats.DataSource = ORMEntitats.SelectEntitatsByNom(textBoxCercarEntitats.Text);
         }
 
+        //Al pulsar suprimir sobre un elemento de la Grid aparece un mensaje de confirmacion, en caso de pulsar "Yes" se borra la entidad con la funcion "DeleteEntitat" pasandole el objeto seleccionado en la grid.
         private void dataGridViewEntitats_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             DialogResult result3 = MessageBox.Show("Segur que vols eliminar l'entitat?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
@@ -203,6 +207,21 @@ namespace EspaiActiu
 
             FormDetallsEntitat f = new FormDetallsEntitat(entitat);
             f.Show();
-        }        
+        }
+
+        private void groupBoxEntitats_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPageEquips_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

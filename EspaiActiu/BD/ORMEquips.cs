@@ -48,7 +48,7 @@ namespace EspaiActiu.BD
             return _equipos;
         }
 
-        //Eliminar telefonos
+        //Eliminar equip
         public static void DeleteEquip(EQUIPS equip)
         {
             ORM.bd.EQUIPS.Remove(equip);
@@ -62,6 +62,29 @@ namespace EspaiActiu.BD
 
             }
 
+        }
+
+        //Modificar equip
+        
+        public static void UpdateEquipo(String nom,int id_esport,int id_competicio, int id_categoria, int id_categoriaEdat, int sexe, int id)
+        {
+            EQUIPS equip = ORM.bd.EQUIPS.Find(id);
+
+            equip.nom = nom;
+            equip.id_sport = id_esport;
+            equip.id_competicio = id_competicio;
+            equip.id_categoria = id_categoria;
+            equip.id_categoria_edat = id_categoriaEdat;
+            equip.id_sexe = sexe;
+
+            try
+            {
+                ORM.bd.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                //En caso de estar duplicado no podría crearse y petaria el programa
+            }
         }
 
     }

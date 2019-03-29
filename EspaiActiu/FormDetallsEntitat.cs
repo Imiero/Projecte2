@@ -12,6 +12,8 @@ using System.Windows.Forms;
 namespace EspaiActiu
 {
    
+    //TO DO: Preguntar a Francisco porque cuando generas una entidad, durante la "sesion" que la has generado no aparecen en la lista de telefonos o equipos (Se pueden crear y estan en la BD)
+
 
     public partial class FormDetallsEntitat : Form
     {
@@ -74,15 +76,14 @@ namespace EspaiActiu
             if (result == DialogResult.Yes)
             {
                 //Verificamos que todos los campos esten llenos
-                if(textBoxNom.Text.Length != 0 || textBoxTemp.Text.Length != 0 || textBoxAdreça.Text.Length != 0 || textBoxNIF.Text.Length != 0 || textBoxCorreu.Text.Length != 0)
+                if(textBoxNom.Text.Length != 0 && textBoxTemp.Text.Length != 0 && textBoxAdreça.Text.Length != 0 && textBoxNIF.Text.Length == 9 && textBoxCorreu.Text.Length != 0)
                 {
                     ORMEntitats.UpdateEntitat(textBoxNom.Text, textBoxTemp.Text, textBoxAdreça.Text, textBoxNIF.Text, textBoxCorreu.Text, entitat.id);
                     MessageBox.Show("Entitat modificada amb éxit.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                    //Refrescamos los datos
-                    Refrescar();
+                    this.Close();
                 }
+
+
                 else
                 {
                     MessageBox.Show("Tots els camps han de estar omplerts.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -144,16 +145,7 @@ namespace EspaiActiu
 
         private void listBoxTelefons_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                int id_telef = (int)listBoxTelefons.SelectedValue;
-                FormNuevoTelefono f = new FormNuevoTelefono(id_telef, true);
-                f.Show();
-            }
-            catch (Exception)
-            {
 
-            }
         }
 
         private void pictureBoxNouEquip_Click(object sender, EventArgs e)
@@ -180,10 +172,31 @@ namespace EspaiActiu
 
         private void listBoxEquips_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void listBoxTelefons_DoubleClick(object sender, EventArgs e)
+        {
+            alta = true;
+            try
+            {
+                int id_telef = (int)listBoxTelefons.SelectedValue;
+                FormNuevoTelefono f = new FormNuevoTelefono(id_telef, true);
+                f.Show();
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void listBoxEquips_DoubleClick(object sender, EventArgs e)
+        {
+            alta = true;
             try
             {
                 int id_equip = (int)listBoxEquips.SelectedValue;
-                FormNuevoEquipo f = new FormNuevoEquipo(id_equip, true);
+                FormNuevoEquipo f = new FormNuevoEquipo((EQUIPS)listBoxEquips.SelectedItem, true);
                 f.Show();
             }
             catch (Exception)

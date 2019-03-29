@@ -239,6 +239,7 @@
             this.listBoxTelefons.TabIndex = 71;
             this.listBoxTelefons.ValueMember = "id";
             this.listBoxTelefons.SelectedIndexChanged += new System.EventHandler(this.listBoxTelefons_SelectedIndexChanged);
+            this.listBoxTelefons.DoubleClick += new System.EventHandler(this.listBoxTelefons_DoubleClick);
             this.listBoxTelefons.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBoxTelefons_KeyDown);
             // 
             // bindingSourceEquips
@@ -256,6 +257,7 @@
             this.listBoxEquips.TabIndex = 72;
             this.listBoxEquips.ValueMember = "id";
             this.listBoxEquips.SelectedIndexChanged += new System.EventHandler(this.listBoxEquips_SelectedIndexChanged);
+            this.listBoxEquips.DoubleClick += new System.EventHandler(this.listBoxEquips_DoubleClick);
             this.listBoxEquips.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBoxEquips_KeyDown);
             // 
             // FormDetallsEntitat

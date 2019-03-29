@@ -13,8 +13,8 @@ namespace EspaiActiu
 {
     public partial class FormNuevoEquipo : Form
     {
-        
-        int id_enti;
+        EQUIPS equip;
+        int id_enti,id_equip;
         bool detalls = false;
         public FormNuevoEquipo(int id_enti)
         {
@@ -22,10 +22,10 @@ namespace EspaiActiu
             this.id_enti = id_enti;
         }
 
-        public FormNuevoEquipo(int id_enti, bool detalls)
+        public FormNuevoEquipo(EQUIPS equip, bool detalls)
         {
             InitializeComponent();
-            this.id_enti = id_enti;
+            this.equip = equip;
             this.detalls = detalls;
         }
 
@@ -40,6 +40,23 @@ namespace EspaiActiu
             bindingSourceEdat.DataSource = ORMCategoriaEdat.SelectAllCateogriasEdat();
             bindingSourceSexe.DataSource = ORMSexe.SelectAllSexes();
 
+            //En caso de abrirse a causa de un doble click en uno de los equipos tendriamos preseleccionados los detalles del mismo
+            if (detalls)
+            {
+                this.id_equip = equip.id;
+
+                this.Text = "Detalls del equip";
+                this.textBoxNom.Text = equip.nom;
+                this.comboBoxCategoria.SelectedItem= equip.CATEGORIA_NIVELL;
+                this.comboBoxCategoriaEdat.SelectedItem = equip.CATEGORIA_EDAT;
+                this.comboBoxCompeticio.SelectedItem = equip.COMPETICIO;
+                this.comboBoxEsport.SelectedItem = equip.SPORTS;
+                this.comboBoxSexe.SelectedItem = equip.SEXE;
+                
+                this.buttonAceptar.Visible = false;
+                this.buttonModificar.Visible = true;
+
+            }
 
         }
 
@@ -60,6 +77,20 @@ namespace EspaiActiu
                 MessageBox.Show("Tots els camps han de estar omplerts.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
                 
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            if (textBoxNom.Text.Length != 0)
+            {
+                ORMEquips.UpdateEquipo(textBoxNom.Text, (int)comboBoxEsport.SelectedValue, (int)comboBoxCompeticio.SelectedValue, (int)comboBoxCategoria.SelectedValue, (int)comboBoxCategoriaEdat.SelectedValue, (int)comboBoxSexe.SelectedValue, id_equip);
+                MessageBox.Show("Equip modificat amb èxit.", "Correcte", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Tots els camps han de estar omplerts.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

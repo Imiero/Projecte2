@@ -35,11 +35,17 @@ namespace EspaiActiu
                 MessageBox.Show("Omplir els camps.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
+            //Verificamos que la contraseña tenga mas de 4 caracteres
+            else if (tbContrasenya.Text.Length < 4 && tbContrasenya2.Text.Length < 4)
+            {
+                MessageBox.Show("La contrasenya ha de tenir mes de 4 caràcters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
             //Ahora verificamos que las contraseñas coincidan
             else if (tbContrasenya.Text != tbContrasenya2.Text)
             {
                 MessageBox.Show("Les contrasenyes no coincideixen.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            }                        
 
             //El NIF solo puede ser de 9 caracteres, se podría ampliar verificando que sean 8 numeros y 1 letra
             else if (tbNIF.Text.Length != 9)

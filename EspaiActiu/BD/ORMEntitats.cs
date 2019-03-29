@@ -11,7 +11,6 @@ namespace EspaiActiu.BD
     public class ORMEntitats
     {
         //LINQ
-
         
 
         //Seleccionar todos las entidades en una List

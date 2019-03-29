@@ -48,6 +48,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.buttonSalir = new System.Windows.Forms.Button();
             this.buttonAceptar = new System.Windows.Forms.Button();
+            this.buttonModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEsport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCompeticio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCategoria)).BeginInit();
@@ -216,11 +217,23 @@
             this.buttonAceptar.UseVisualStyleBackColor = true;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
+            // buttonModificar
+            // 
+            this.buttonModificar.Location = new System.Drawing.Point(104, 193);
+            this.buttonModificar.Name = "buttonModificar";
+            this.buttonModificar.Size = new System.Drawing.Size(75, 23);
+            this.buttonModificar.TabIndex = 14;
+            this.buttonModificar.Text = "Modificar";
+            this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.Visible = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
+            // 
             // FormNuevoEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(270, 228);
+            this.Controls.Add(this.buttonModificar);
             this.Controls.Add(this.buttonAceptar);
             this.Controls.Add(this.buttonSalir);
             this.Controls.Add(this.label6);
@@ -269,5 +282,6 @@
         private System.Windows.Forms.BindingSource bindingSourceCategoria;
         private System.Windows.Forms.BindingSource bindingSourceEdat;
         private System.Windows.Forms.BindingSource bindingSourceSexe;
+        private System.Windows.Forms.Button buttonModificar;
     }
 }

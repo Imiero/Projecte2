@@ -62,8 +62,6 @@
             this.textBoxCercarEntitats = new System.Windows.Forms.TextBox();
             this.tabPageModificacion = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.temporadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +72,8 @@
             this.eQUIPSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iNCIDENCIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tELEFONSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             this.SidePanel.SuspendLayout();
             this.EntitatsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EntitatsImage)).BeginInit();
@@ -395,6 +395,7 @@
             this.tabPageEquips.Size = new System.Drawing.Size(963, 535);
             this.tabPageEquips.TabIndex = 2;
             this.tabPageEquips.Text = "tabPage1";
+            this.tabPageEquips.Click += new System.EventHandler(this.tabPageEquips_Click);
             // 
             // label1
             // 
@@ -418,6 +419,7 @@
             this.groupBoxEntitats.TabIndex = 10;
             this.groupBoxEntitats.TabStop = false;
             this.groupBoxEntitats.Text = "Entitats";
+            this.groupBoxEntitats.Enter += new System.EventHandler(this.groupBoxEntitats_Enter);
             // 
             // dataGridViewEntitats
             // 
@@ -491,15 +493,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1059, 88);
             this.panel2.TabIndex = 4;
-            // 
-            // bindingSourceEntitats
-            // 
-            this.bindingSourceEntitats.DataSource = typeof(ENTITATS);
-            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
-            // 
-            // bindingSourceEspais
-            // 
-            this.bindingSourceEspais.DataSource = typeof(LLOC_DEPORTIVO);
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -511,10 +505,12 @@
             // 
             // nomDataGridViewTextBoxColumn
             // 
+            this.nomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
             this.nomDataGridViewTextBoxColumn.HeaderText = "nom";
             this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
             this.nomDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomDataGridViewTextBoxColumn.Width = 52;
             // 
             // temporadaDataGridViewTextBoxColumn
             // 
@@ -533,18 +529,20 @@
             // 
             // nifDataGridViewTextBoxColumn
             // 
+            this.nifDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.nifDataGridViewTextBoxColumn.DataPropertyName = "nif";
             this.nifDataGridViewTextBoxColumn.HeaderText = "nif";
             this.nifDataGridViewTextBoxColumn.Name = "nifDataGridViewTextBoxColumn";
             this.nifDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nifDataGridViewTextBoxColumn.Width = 44;
             // 
             // correuDataGridViewTextBoxColumn
             // 
+            this.correuDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.correuDataGridViewTextBoxColumn.DataPropertyName = "correu";
             this.correuDataGridViewTextBoxColumn.HeaderText = "correu";
             this.correuDataGridViewTextBoxColumn.Name = "correuDataGridViewTextBoxColumn";
             this.correuDataGridViewTextBoxColumn.ReadOnly = true;
-            this.correuDataGridViewTextBoxColumn.Width = 150;
             // 
             // passwordDataGridViewTextBoxColumn
             // 
@@ -577,6 +575,15 @@
             this.tELEFONSDataGridViewTextBoxColumn.Name = "tELEFONSDataGridViewTextBoxColumn";
             this.tELEFONSDataGridViewTextBoxColumn.ReadOnly = true;
             this.tELEFONSDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // bindingSourceEntitats
+            // 
+            this.bindingSourceEntitats.DataSource = typeof(ENTITATS);
+            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
+            // 
+            // bindingSourceEspais
+            // 
+            this.bindingSourceEspais.DataSource = typeof(LLOC_DEPORTIVO);
             // 
             // FormInicio
             // 

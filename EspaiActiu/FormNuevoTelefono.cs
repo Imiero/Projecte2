@@ -65,7 +65,7 @@ namespace EspaiActiu
         private void button1_Click(object sender, EventArgs e)
         {
             //Verificamos que ambas textbox esten llenas
-            if (textBoxNombre.Text.Length !=0 || textBoxTelefono.Text.Length != 0)
+            if (textBoxNombre.Text.Length !=0 && textBoxTelefono.Text.Length >= 9 && textBoxTelefono.Text.Length <=15)
             {
                 ORMTelefono.InsertTelefono(id_enti, textBoxNombre.Text, textBoxTelefono.Text);
                 this.Close();
