@@ -68,6 +68,7 @@
       <DependentUpon>ModelSantCugat.tt</DependentUpon>
     </Compile>
     <Compile Include="BD\ORM.cs" />
+    <Compile Include="BD\ORMActivitatsDemandades.cs" />
     <Compile Include="BD\ORMAdmins.cs" />
     <Compile Include="BD\ORMCategoria.cs" />
     <Compile Include="BD\ORMCategoriaEdat.cs" />
@@ -244,6 +245,8 @@
       <DependentUpon>ModelSantCugat.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ACTIVIDADES_DEMANADAS.datasource" />
+    <None Include="Properties\DataSources\ACTIVITATS.datasource" />
     <None Include="Properties\DataSources\CATEGORIA_EDAT.datasource" />
     <None Include="Properties\DataSources\CATEGORIA_NIVELL.datasource" />
     <None Include="Properties\DataSources\COMPETICIO.datasource" />

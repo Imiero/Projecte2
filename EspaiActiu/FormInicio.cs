@@ -71,6 +71,7 @@ namespace EspaiActiu
             f.Show();
         }
 
+        #region Label, panel, picturebox etc... Clicks
         private void label1_Click(object sender, EventArgs e)
         {
             tabPeticio();
@@ -131,13 +132,14 @@ namespace EspaiActiu
             tabEquips();
         }
 
-
+        #endregion
 
 
         private void FormInicio_Load(object sender, EventArgs e)
         {
             tabPeticio();
             bindingSourceEntitats.DataSource = ORMEntitats.SelectAllEntitats();
+            bindingSourcePeticions.DataSource = ORMActivitatsDemandades.SelectAllActvitats();
         }
 
 
@@ -220,6 +222,16 @@ namespace EspaiActiu
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBoxBuscarPeticion_TextChanged(object sender, EventArgs e)
+        {
+            bindingSourcePeticions.DataSource = ORMActivitatsDemandades.SelectEntitatsByNom(textBoxBuscarPeticion.Text);
+        }
+
+        private void dataGridViewPeticio_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
