@@ -111,12 +111,6 @@
     <Compile Include="FormAddEspai.Designer.cs">
       <DependentUpon>FormAddEspai.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDenegacio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDenegacio.Designer.cs">
-      <DependentUpon>FormDenegacio.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormDetallsEntitat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,9 +208,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddEspai.resx">
       <DependentUpon>FormAddEspai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDenegacio.resx">
-      <DependentUpon>FormDenegacio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetallsEntitat.resx">
       <DependentUpon>FormDetallsEntitat.cs</DependentUpon>

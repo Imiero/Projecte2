@@ -58,6 +58,7 @@
             // 
             // textBoxNom
             // 
+            this.textBoxNom.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNom.Location = new System.Drawing.Point(80, 12);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(180, 20);
@@ -68,10 +69,11 @@
             this.comboBoxEsport.DataSource = this.bindingSourceEsport;
             this.comboBoxEsport.DisplayMember = "nom";
             this.comboBoxEsport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEsport.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEsport.FormattingEnabled = true;
             this.comboBoxEsport.Location = new System.Drawing.Point(80, 39);
             this.comboBoxEsport.Name = "comboBoxEsport";
-            this.comboBoxEsport.Size = new System.Drawing.Size(180, 21);
+            this.comboBoxEsport.Size = new System.Drawing.Size(180, 22);
             this.comboBoxEsport.TabIndex = 1;
             this.comboBoxEsport.ValueMember = "id";
             // 
@@ -84,10 +86,11 @@
             this.comboBoxCompeticio.DataSource = this.bindingSourceCompeticio;
             this.comboBoxCompeticio.DisplayMember = "nom";
             this.comboBoxCompeticio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCompeticio.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCompeticio.FormattingEnabled = true;
             this.comboBoxCompeticio.Location = new System.Drawing.Point(80, 67);
             this.comboBoxCompeticio.Name = "comboBoxCompeticio";
-            this.comboBoxCompeticio.Size = new System.Drawing.Size(180, 21);
+            this.comboBoxCompeticio.Size = new System.Drawing.Size(180, 22);
             this.comboBoxCompeticio.TabIndex = 2;
             this.comboBoxCompeticio.ValueMember = "id";
             // 
@@ -100,10 +103,11 @@
             this.comboBoxCategoria.DataSource = this.bindingSourceCategoria;
             this.comboBoxCategoria.DisplayMember = "nom";
             this.comboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCategoria.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCategoria.FormattingEnabled = true;
             this.comboBoxCategoria.Location = new System.Drawing.Point(80, 95);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
-            this.comboBoxCategoria.Size = new System.Drawing.Size(180, 21);
+            this.comboBoxCategoria.Size = new System.Drawing.Size(180, 22);
             this.comboBoxCategoria.TabIndex = 3;
             this.comboBoxCategoria.ValueMember = "id";
             // 
@@ -116,10 +120,11 @@
             this.comboBoxCategoriaEdat.DataSource = this.bindingSourceEdat;
             this.comboBoxCategoriaEdat.DisplayMember = "nom";
             this.comboBoxCategoriaEdat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCategoriaEdat.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCategoriaEdat.FormattingEnabled = true;
             this.comboBoxCategoriaEdat.Location = new System.Drawing.Point(80, 123);
             this.comboBoxCategoriaEdat.Name = "comboBoxCategoriaEdat";
-            this.comboBoxCategoriaEdat.Size = new System.Drawing.Size(180, 21);
+            this.comboBoxCategoriaEdat.Size = new System.Drawing.Size(180, 22);
             this.comboBoxCategoriaEdat.TabIndex = 4;
             this.comboBoxCategoriaEdat.ValueMember = "id";
             // 
@@ -132,10 +137,11 @@
             this.comboBoxSexe.DataSource = this.bindingSourceSexe;
             this.comboBoxSexe.DisplayMember = "nom";
             this.comboBoxSexe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSexe.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSexe.FormattingEnabled = true;
             this.comboBoxSexe.Location = new System.Drawing.Point(80, 151);
             this.comboBoxSexe.Name = "comboBoxSexe";
-            this.comboBoxSexe.Size = new System.Drawing.Size(180, 21);
+            this.comboBoxSexe.Size = new System.Drawing.Size(180, 22);
             this.comboBoxSexe.TabIndex = 5;
             this.comboBoxSexe.ValueMember = "id";
             // 
@@ -146,59 +152,66 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(28, 14);
             this.label1.TabIndex = 6;
             this.label1.Text = "Nom";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(38, 14);
             this.label2.TabIndex = 7;
             this.label2.Text = "Esport";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(59, 14);
             this.label3.TabIndex = 8;
             this.label3.Text = "Competició";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 98);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(53, 14);
             this.label4.TabIndex = 9;
             this.label4.Text = "Categoria";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(12, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.Size = new System.Drawing.Size(28, 14);
             this.label5.TabIndex = 10;
             this.label5.Text = "Edat";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(12, 154);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.Size = new System.Drawing.Size(32, 14);
             this.label6.TabIndex = 11;
             this.label6.Text = "Sexe";
             // 
             // buttonSalir
             // 
+            this.buttonSalir.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalir.Location = new System.Drawing.Point(185, 193);
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Size = new System.Drawing.Size(75, 23);
@@ -219,6 +232,7 @@
             // 
             // buttonModificar
             // 
+            this.buttonModificar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModificar.Location = new System.Drawing.Point(104, 193);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(75, 23);

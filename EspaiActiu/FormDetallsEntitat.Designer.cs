@@ -60,26 +60,27 @@
             // lEquips
             // 
             this.lEquips.AutoSize = true;
-            this.lEquips.Location = new System.Drawing.Point(9, 262);
+            this.lEquips.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lEquips.Location = new System.Drawing.Point(9, 282);
             this.lEquips.Name = "lEquips";
-            this.lEquips.Size = new System.Drawing.Size(42, 13);
+            this.lEquips.Size = new System.Drawing.Size(42, 14);
             this.lEquips.TabIndex = 58;
             this.lEquips.Text = "Equips:";
             // 
             // bSortir
             // 
-            this.bSortir.Location = new System.Drawing.Point(359, 405);
+            this.bSortir.Location = new System.Drawing.Point(359, 436);
             this.bSortir.Name = "bSortir";
-            this.bSortir.Size = new System.Drawing.Size(92, 32);
+            this.bSortir.Size = new System.Drawing.Size(92, 34);
             this.bSortir.TabIndex = 56;
             this.bSortir.Text = "Sortir";
             this.bSortir.UseVisualStyleBackColor = true;
             // 
             // bEditar
             // 
-            this.bEditar.Location = new System.Drawing.Point(260, 405);
+            this.bEditar.Location = new System.Drawing.Point(260, 436);
             this.bEditar.Name = "bEditar";
-            this.bEditar.Size = new System.Drawing.Size(92, 32);
+            this.bEditar.Size = new System.Drawing.Size(92, 34);
             this.bEditar.TabIndex = 55;
             this.bEditar.Text = "Editar";
             this.bEditar.UseVisualStyleBackColor = true;
@@ -87,9 +88,10 @@
             // lTelefon
             // 
             this.lTelefon.AutoSize = true;
-            this.lTelefon.Location = new System.Drawing.Point(9, 189);
+            this.lTelefon.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTelefon.Location = new System.Drawing.Point(9, 204);
             this.lTelefon.Name = "lTelefon";
-            this.lTelefon.Size = new System.Drawing.Size(51, 13);
+            this.lTelefon.Size = new System.Drawing.Size(51, 14);
             this.lTelefon.TabIndex = 54;
             this.lTelefon.Text = "Telèfons:";
             this.lTelefon.Click += new System.EventHandler(this.lTelefon_Click);
@@ -97,9 +99,10 @@
             // lNIF
             // 
             this.lNIF.AutoSize = true;
-            this.lNIF.Location = new System.Drawing.Point(9, 137);
+            this.lNIF.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNIF.Location = new System.Drawing.Point(9, 148);
             this.lNIF.Name = "lNIF";
-            this.lNIF.Size = new System.Drawing.Size(24, 13);
+            this.lNIF.Size = new System.Drawing.Size(22, 14);
             this.lNIF.TabIndex = 53;
             this.lNIF.Text = "NIF";
             this.lNIF.Click += new System.EventHandler(this.lNIF_Click);
@@ -107,9 +110,10 @@
             // lAdreça
             // 
             this.lAdreça.AutoSize = true;
-            this.lAdreça.Location = new System.Drawing.Point(9, 111);
+            this.lAdreça.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lAdreça.Location = new System.Drawing.Point(9, 120);
             this.lAdreça.Name = "lAdreça";
-            this.lAdreça.Size = new System.Drawing.Size(41, 13);
+            this.lAdreça.Size = new System.Drawing.Size(43, 14);
             this.lAdreça.TabIndex = 52;
             this.lAdreça.Text = "Adreça";
             this.lAdreça.Click += new System.EventHandler(this.lAdreça_Click);
@@ -117,18 +121,19 @@
             // lNomEntitat
             // 
             this.lNomEntitat.AutoSize = true;
-            this.lNomEntitat.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNomEntitat.Location = new System.Drawing.Point(6, 9);
+            this.lNomEntitat.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNomEntitat.Location = new System.Drawing.Point(9, 9);
             this.lNomEntitat.Name = "lNomEntitat";
-            this.lNomEntitat.Size = new System.Drawing.Size(153, 31);
+            this.lNomEntitat.Size = new System.Drawing.Size(60, 14);
             this.lNomEntitat.TabIndex = 49;
             this.lNomEntitat.Text = "Nom entitat";
             // 
             // buttonModificar
             // 
-            this.buttonModificar.Location = new System.Drawing.Point(182, 346);
+            this.buttonModificar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModificar.Location = new System.Drawing.Point(182, 373);
             this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(75, 23);
+            this.buttonModificar.Size = new System.Drawing.Size(75, 25);
             this.buttonModificar.TabIndex = 60;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = true;
@@ -136,28 +141,32 @@
             // 
             // textBoxNom
             // 
-            this.textBoxNom.Location = new System.Drawing.Point(76, 59);
+            this.textBoxNom.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNom.Location = new System.Drawing.Point(76, 64);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(181, 20);
             this.textBoxNom.TabIndex = 61;
             // 
             // textBoxCorreu
             // 
-            this.textBoxCorreu.Location = new System.Drawing.Point(76, 85);
+            this.textBoxCorreu.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCorreu.Location = new System.Drawing.Point(76, 92);
             this.textBoxCorreu.Name = "textBoxCorreu";
             this.textBoxCorreu.Size = new System.Drawing.Size(181, 20);
             this.textBoxCorreu.TabIndex = 62;
             // 
             // textBoxAdreça
             // 
-            this.textBoxAdreça.Location = new System.Drawing.Point(76, 108);
+            this.textBoxAdreça.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAdreça.Location = new System.Drawing.Point(76, 116);
             this.textBoxAdreça.Name = "textBoxAdreça";
             this.textBoxAdreça.Size = new System.Drawing.Size(181, 20);
             this.textBoxAdreça.TabIndex = 63;
             // 
             // textBoxNIF
             // 
-            this.textBoxNIF.Location = new System.Drawing.Point(76, 134);
+            this.textBoxNIF.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNIF.Location = new System.Drawing.Point(76, 144);
             this.textBoxNIF.Name = "textBoxNIF";
             this.textBoxNIF.Size = new System.Drawing.Size(181, 20);
             this.textBoxNIF.TabIndex = 64;
@@ -165,33 +174,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 62);
+            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(28, 14);
             this.label1.TabIndex = 65;
             this.label1.Text = "Nom";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 88);
+            this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(40, 14);
             this.label2.TabIndex = 66;
             this.label2.Text = "Correu";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 164);
+            this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(9, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(60, 14);
             this.label3.TabIndex = 67;
             this.label3.Text = "Temporada";
             // 
             // textBoxTemp
             // 
-            this.textBoxTemp.Location = new System.Drawing.Point(76, 161);
+            this.textBoxTemp.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTemp.Location = new System.Drawing.Point(76, 173);
             this.textBoxTemp.Name = "textBoxTemp";
             this.textBoxTemp.Size = new System.Drawing.Size(181, 20);
             this.textBoxTemp.TabIndex = 68;
@@ -202,9 +215,9 @@
             this.pictureBoxNuevoTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxNuevoTelefono.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxNuevoTelefono.Image = global::EspaiActiu.Properties.Resources.plus1;
-            this.pictureBoxNuevoTelefono.Location = new System.Drawing.Point(238, 242);
+            this.pictureBoxNuevoTelefono.Location = new System.Drawing.Point(238, 261);
             this.pictureBoxNuevoTelefono.Name = "pictureBoxNuevoTelefono";
-            this.pictureBoxNuevoTelefono.Size = new System.Drawing.Size(19, 19);
+            this.pictureBoxNuevoTelefono.Size = new System.Drawing.Size(19, 20);
             this.pictureBoxNuevoTelefono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxNuevoTelefono.TabIndex = 69;
             this.pictureBoxNuevoTelefono.TabStop = false;
@@ -216,9 +229,9 @@
             this.pictureBoxNouEquip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxNouEquip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxNouEquip.Image = global::EspaiActiu.Properties.Resources.plus1;
-            this.pictureBoxNouEquip.Location = new System.Drawing.Point(238, 315);
+            this.pictureBoxNouEquip.Location = new System.Drawing.Point(238, 339);
             this.pictureBoxNouEquip.Name = "pictureBoxNouEquip";
-            this.pictureBoxNouEquip.Size = new System.Drawing.Size(19, 19);
+            this.pictureBoxNouEquip.Size = new System.Drawing.Size(19, 20);
             this.pictureBoxNouEquip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxNouEquip.TabIndex = 70;
             this.pictureBoxNouEquip.TabStop = false;
@@ -233,9 +246,10 @@
             this.listBoxTelefons.DataSource = this.bindingSourceTelefons;
             this.listBoxTelefons.DisplayMember = "telefono";
             this.listBoxTelefons.FormattingEnabled = true;
-            this.listBoxTelefons.Location = new System.Drawing.Point(12, 205);
+            this.listBoxTelefons.ItemHeight = 14;
+            this.listBoxTelefons.Location = new System.Drawing.Point(12, 221);
             this.listBoxTelefons.Name = "listBoxTelefons";
-            this.listBoxTelefons.Size = new System.Drawing.Size(245, 56);
+            this.listBoxTelefons.Size = new System.Drawing.Size(245, 60);
             this.listBoxTelefons.TabIndex = 71;
             this.listBoxTelefons.ValueMember = "id";
             this.listBoxTelefons.SelectedIndexChanged += new System.EventHandler(this.listBoxTelefons_SelectedIndexChanged);
@@ -251,9 +265,10 @@
             this.listBoxEquips.DataSource = this.bindingSourceEquips;
             this.listBoxEquips.DisplayMember = "nom";
             this.listBoxEquips.FormattingEnabled = true;
-            this.listBoxEquips.Location = new System.Drawing.Point(12, 278);
+            this.listBoxEquips.ItemHeight = 14;
+            this.listBoxEquips.Location = new System.Drawing.Point(12, 299);
             this.listBoxEquips.Name = "listBoxEquips";
-            this.listBoxEquips.Size = new System.Drawing.Size(245, 56);
+            this.listBoxEquips.Size = new System.Drawing.Size(245, 60);
             this.listBoxEquips.TabIndex = 72;
             this.listBoxEquips.ValueMember = "id";
             this.listBoxEquips.SelectedIndexChanged += new System.EventHandler(this.listBoxEquips_SelectedIndexChanged);
@@ -262,9 +277,9 @@
             // 
             // FormDetallsEntitat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(270, 381);
+            this.ClientSize = new System.Drawing.Size(270, 410);
             this.Controls.Add(this.pictureBoxNouEquip);
             this.Controls.Add(this.pictureBoxNuevoTelefono);
             this.Controls.Add(this.textBoxTemp);
@@ -285,6 +300,7 @@
             this.Controls.Add(this.lNomEntitat);
             this.Controls.Add(this.listBoxTelefons);
             this.Controls.Add(this.listBoxEquips);
+            this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDetallsEntitat";
             this.Text = "FormDetallsEntitat";

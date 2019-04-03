@@ -236,7 +236,7 @@ namespace EspaiActiu
                 ACTIVIDADES_DEMANADAS activitat = (ACTIVIDADES_DEMANADAS)dataGridViewPeticio.CurrentRow.DataBoundItem;
                 
                 FormDetallsPeticio f = new FormDetallsPeticio(activitat);
-                f.Show();
+                f.ShowDialog();
             
         }
     }

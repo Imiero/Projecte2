@@ -54,10 +54,10 @@
             this.buttonLogin.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonLogin.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonLogin.Location = new System.Drawing.Point(189, 286);
+            this.buttonLogin.Location = new System.Drawing.Point(189, 308);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(150, 41);
+            this.buttonLogin.Size = new System.Drawing.Size(150, 44);
             this.buttonLogin.TabIndex = 0;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -66,7 +66,7 @@
             // textBoxNombre
             // 
             this.textBoxNombre.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.Location = new System.Drawing.Point(171, 209);
+            this.textBoxNombre.Location = new System.Drawing.Point(171, 225);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(184, 20);
             this.textBoxNombre.TabIndex = 4;
@@ -77,7 +77,7 @@
             // textBoxContraseña
             // 
             this.textBoxContraseña.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxContraseña.Location = new System.Drawing.Point(171, 251);
+            this.textBoxContraseña.Location = new System.Drawing.Point(171, 270);
             this.textBoxContraseña.Name = "textBoxContraseña";
             this.textBoxContraseña.PasswordChar = '*';
             this.textBoxContraseña.Size = new System.Drawing.Size(184, 20);
@@ -89,7 +89,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(168, 193);
+            this.label1.Location = new System.Drawing.Point(168, 208);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 14);
             this.label1.TabIndex = 11;
@@ -99,7 +99,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(168, 235);
+            this.label2.Location = new System.Drawing.Point(168, 253);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 14);
             this.label2.TabIndex = 12;
@@ -111,7 +111,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(98, 445);
+            this.panel1.Size = new System.Drawing.Size(98, 479);
             this.panel1.TabIndex = 13;
             // 
             // panel2
@@ -119,15 +119,15 @@
             this.panel2.BackColor = System.Drawing.SystemColors.MenuText;
             this.panel2.Location = new System.Drawing.Point(97, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 445);
+            this.panel2.Size = new System.Drawing.Size(1, 479);
             this.panel2.TabIndex = 14;
             // 
             // pictureBoxOjoPassword
             // 
             this.pictureBoxOjoPassword.Image = global::EspaiActiu.Properties.Resources.ojocerrado;
-            this.pictureBoxOjoPassword.Location = new System.Drawing.Point(361, 251);
+            this.pictureBoxOjoPassword.Location = new System.Drawing.Point(361, 270);
             this.pictureBoxOjoPassword.Name = "pictureBoxOjoPassword";
-            this.pictureBoxOjoPassword.Size = new System.Drawing.Size(27, 20);
+            this.pictureBoxOjoPassword.Size = new System.Drawing.Size(27, 22);
             this.pictureBoxOjoPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxOjoPassword.TabIndex = 10;
             this.pictureBoxOjoPassword.TabStop = false;
@@ -136,9 +136,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::EspaiActiu.Properties.Resources.password;
-            this.pictureBox4.Location = new System.Drawing.Point(147, 251);
+            this.pictureBox4.Location = new System.Drawing.Point(147, 270);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox4.Size = new System.Drawing.Size(20, 22);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
@@ -146,9 +146,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(147, 209);
+            this.pictureBox3.Location = new System.Drawing.Point(147, 225);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox3.Size = new System.Drawing.Size(20, 22);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -156,9 +156,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::EspaiActiu.Properties.Resources.logo;
-            this.pictureBox2.Location = new System.Drawing.Point(189, 30);
+            this.pictureBox2.Location = new System.Drawing.Point(189, 32);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox2.Size = new System.Drawing.Size(150, 162);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -166,19 +166,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EspaiActiu.Properties.Resources.logo_color;
-            this.pictureBox1.Location = new System.Drawing.Point(189, 341);
+            this.pictureBox1.Location = new System.Drawing.Point(189, 367);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 41);
+            this.pictureBox1.Size = new System.Drawing.Size(150, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(444, 444);
+            this.ClientSize = new System.Drawing.Size(444, 478);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxOjoPassword);
@@ -190,6 +190,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;

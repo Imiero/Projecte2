@@ -30,7 +30,7 @@ namespace EspaiActiu
             //Hacer el equivalente del equipo al espacio para assignar la TextBoxEspai como la del equipo.
             //Cargamos los datos de la peticion
             textBoxNombre.Text = activitat.nom;
-            textBoxDurada.Text = activitat.durada;
+            textBoxDurada.Text = activitat.durada + " H";
             textBoxEquip.Text = equip.nom;
             textBoxInici.Text = horari.horari_inici.ToString();
             textBoxFinal.Text = horari.horari_fi.ToString();
@@ -41,6 +41,19 @@ namespace EspaiActiu
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EQUIPS equip = ORMEquips.SelectEquiposByID(activitat.id_equipo);
+            FormNuevoEquipo f = new FormNuevoEquipo(equip, true);
+            f.Show();
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
