@@ -233,7 +233,11 @@ namespace EspaiActiu
 
         private void dataGridViewPeticio_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+                ACTIVIDADES_DEMANADAS activitat = (ACTIVIDADES_DEMANADAS)dataGridViewPeticio.CurrentRow.DataBoundItem;
+                
+                FormDetallsPeticio f = new FormDetallsPeticio(activitat);
+                f.Show();
+            
         }
     }
 }

@@ -73,11 +73,14 @@
     <Compile Include="BD\ORMCategoria.cs" />
     <Compile Include="BD\ORMCategoriaEdat.cs" />
     <Compile Include="BD\ORMCompeticio.cs" />
+    <Compile Include="BD\ORMDia.cs" />
     <Compile Include="BD\ORMEntitats.cs" />
     <Compile Include="BD\ORMEquips.cs" />
     <Compile Include="BD\ORMEsports.cs" />
+    <Compile Include="BD\ORMHorari.cs" />
     <Compile Include="BD\ORMSexe.cs" />
     <Compile Include="BD\ORMTelefono.cs" />
+    <Compile Include="BD\ORMTipoActividad.cs" />
     <Compile Include="CATEGORIA_EDAT.cs">
       <DependentUpon>ModelSantCugat.tt</DependentUpon>
     </Compile>
@@ -125,6 +128,12 @@
     </Compile>
     <Compile Include="FormDetallsEspai.Designer.cs">
       <DependentUpon>FormDetallsEspai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetallsPeticio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetallsPeticio.Designer.cs">
+      <DependentUpon>FormDetallsPeticio.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -214,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetallsEspai.resx">
       <DependentUpon>FormDetallsEspai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetallsPeticio.resx">
+      <DependentUpon>FormDetallsPeticio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

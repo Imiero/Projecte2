@@ -48,6 +48,15 @@ namespace EspaiActiu.BD
             return _equipos;
         }
 
+        //Seleccionar equipos por id 
+        public static EQUIPS SelectEquiposByID(int id)
+        {
+
+            EQUIPS _equipos = ORM.bd.EQUIPS.Find(id);
+
+            return _equipos;
+        }
+
         //Eliminar equip
         public static void DeleteEquip(EQUIPS equip)
         {
