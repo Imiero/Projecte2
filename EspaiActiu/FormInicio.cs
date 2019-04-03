@@ -140,6 +140,7 @@ namespace EspaiActiu
             tabPeticio();
             bindingSourceEntitats.DataSource = ORMEntitats.SelectAllEntitats();
             bindingSourcePeticions.DataSource = ORMActivitatsDemandades.SelectAllActvitats();
+            bindingSourceActivitats.DataSource = ORMActivitats.SelectAllActivitats();
         }
 
 

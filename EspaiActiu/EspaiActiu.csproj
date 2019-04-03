@@ -68,6 +68,7 @@
       <DependentUpon>ModelSantCugat.tt</DependentUpon>
     </Compile>
     <Compile Include="BD\ORM.cs" />
+    <Compile Include="BD\ORMActivitats.cs" />
     <Compile Include="BD\ORMActivitatsDemandades.cs" />
     <Compile Include="BD\ORMAdmins.cs" />
     <Compile Include="BD\ORMCategoria.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="BD\ORMEquips.cs" />
     <Compile Include="BD\ORMEsports.cs" />
     <Compile Include="BD\ORMHorari.cs" />
+    <Compile Include="BD\ORMHorarisInstalacio.cs" />
     <Compile Include="BD\ORMSexe.cs" />
     <Compile Include="BD\ORMTelefono.cs" />
     <Compile Include="BD\ORMTipoActividad.cs" />
@@ -253,6 +255,7 @@
     <None Include="Properties\DataSources\CATEGORIA_EDAT.datasource" />
     <None Include="Properties\DataSources\CATEGORIA_NIVELL.datasource" />
     <None Include="Properties\DataSources\COMPETICIO.datasource" />
+    <None Include="Properties\DataSources\DIES_SETMANA.datasource" />
     <None Include="Properties\DataSources\ENTITATS.datasource" />
     <None Include="Properties\DataSources\EQUIPS.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.BD.ORMAdmins.datasource" />

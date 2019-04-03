@@ -121,10 +121,10 @@
             // lNomEntitat
             // 
             this.lNomEntitat.AutoSize = true;
-            this.lNomEntitat.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNomEntitat.Location = new System.Drawing.Point(9, 9);
+            this.lNomEntitat.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNomEntitat.Location = new System.Drawing.Point(12, 19);
             this.lNomEntitat.Name = "lNomEntitat";
-            this.lNomEntitat.Size = new System.Drawing.Size(60, 14);
+            this.lNomEntitat.Size = new System.Drawing.Size(116, 24);
             this.lNomEntitat.TabIndex = 49;
             this.lNomEntitat.Text = "Nom entitat";
             // 

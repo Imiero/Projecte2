@@ -196,7 +196,7 @@ namespace EspaiActiu
             try
             {
                 int id_equip = (int)listBoxEquips.SelectedValue;
-                FormNuevoEquipo f = new FormNuevoEquipo((EQUIPS)listBoxEquips.SelectedItem, true);
+                FormNuevoEquipo f = new FormNuevoEquipo((EQUIPS)listBoxEquips.SelectedItem, true,0);
                 f.Show();
             }
             catch (Exception)

@@ -14,26 +14,27 @@ namespace EspaiActiu
     public partial class FormNuevoEquipo : Form
     {
         EQUIPS equip;
-        int id_enti,id_equip;
-        bool detalls = false;
+        int id_enti,id_equip,check = 0;
+        bool detalls = false;        
         public FormNuevoEquipo(int id_enti)
         {
             InitializeComponent();
             this.id_enti = id_enti;
         }
 
-        public FormNuevoEquipo(EQUIPS equip, bool detalls)
+        public FormNuevoEquipo(EQUIPS equip, bool detalls, int check)
         {
             InitializeComponent();
             this.equip = equip;
             this.detalls = detalls;
+            this.check = check;
         }
 
 
 
         private void FormNuevoEquipo_Load(object sender, EventArgs e)
         {
-
+            //Cargar la combo desde la funcion de "ORMHorarisInstalacio" para poder cargar los dias y las horas y tal...
             bindingSourceEsport.DataSource = ORMEsports.SelectAllEsports();
             bindingSourceCompeticio.DataSource = ORMCompeticio.SelectAllCompeticio();
             bindingSourceCategoria.DataSource = ORMCategoria.SelectAllCateogrias();
@@ -55,6 +56,20 @@ namespace EspaiActiu
                 
                 this.buttonAceptar.Visible = false;
                 this.buttonModificar.Visible = true;
+
+                if(check == 1) //En caso de abrirse desde una peticion, no se puede modificar nada
+                {
+
+                    this.Text = "Detalls del equip";
+                    this.textBoxNom.Enabled = false;
+                    this.comboBoxCategoria.Enabled = false;
+                    this.comboBoxCategoriaEdat.Enabled = false;
+                    this.comboBoxCompeticio.Enabled = false;
+                    this.comboBoxEsport.Enabled = false;
+                    this.comboBoxSexe.Enabled = false;
+
+                    this.buttonModificar.Visible = false;
+                }
 
             }
 

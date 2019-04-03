@@ -8,13 +8,17 @@ namespace EspaiActiu.BD
 {
     public class ORMDia
     {
-        //Seleccionar dias por id 
-        public static DIES_SETMANA SelectDiaByID(int id)
+        //Seleccionar todos los admins en una List
+        public static List<DIES_SETMANA> SelectAllDies()
         {
+            List<DIES_SETMANA> _admins =
+                (from d in ORM.bd.DIES_SETMANA
+                 orderby d.id
+                 select d
+                 ).ToList();
 
-            DIES_SETMANA _dies = ORM.bd.DIES_SETMANA.Find(id);
+            return _admins;
 
-            return _dies;
         }
     }
 }
