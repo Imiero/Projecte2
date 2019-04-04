@@ -219,7 +219,6 @@
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FormAddEntitat";
             this.Text = "Agregar Entitat";
-            this.Load += new System.EventHandler(this.FormAddEntitat_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormAddEntitat_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOjoPassword)).EndInit();
             this.ResumeLayout(false);

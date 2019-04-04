@@ -21,5 +21,6 @@ namespace EspaiActiu
         {
             this.Close();
         }
+
     }
 }

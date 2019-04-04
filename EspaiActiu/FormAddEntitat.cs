@@ -60,10 +60,7 @@ namespace EspaiActiu
             }
         }
 
-        private void FormAddEntitat_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void FormAddEntitat_KeyDown(object sender, KeyEventArgs e)
         {

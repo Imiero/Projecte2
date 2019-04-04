@@ -45,7 +45,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabPageModificacion = new System.Windows.Forms.TabPage();
             this.tabPageEquips = new System.Windows.Forms.TabPage();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonAddEntitat = new System.Windows.Forms.Button();
             this.groupBoxEntitats = new System.Windows.Forms.GroupBox();
             this.dataGridViewEntitats = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,13 +61,16 @@
             this.iNCIDENCIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tELEFONSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonAddEntitat = new System.Windows.Forms.Button();
             this.textBoxCercarEntitats = new System.Windows.Forms.TextBox();
             this.tabPageEspais = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.buttonAddEspai = new System.Windows.Forms.Button();
-            this.groupBoxEspais = new System.Windows.Forms.GroupBox();
-            this.dataGridViewEspais = new System.Windows.Forms.DataGridView();
-            this.buttonCercarEspais = new System.Windows.Forms.Button();
+            this.groupBoxInstalacions = new System.Windows.Forms.GroupBox();
+            this.dataGridViewInstalacions = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adrecaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceInstalacions = new System.Windows.Forms.BindingSource(this.components);
             this.textBoxCercarEspais = new System.Windows.Forms.TextBox();
             this.tabPagePeticions = new System.Windows.Forms.TabPage();
             this.textBoxBuscarActivitat = new System.Windows.Forms.TextBox();
@@ -105,6 +110,7 @@
             this.bindingSourceActivitats = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
+            this.bAfegirInstalacio = new System.Windows.Forms.Button();
             this.SidePanel.SuspendLayout();
             this.EntitatsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EntitatsImage)).BeginInit();
@@ -119,8 +125,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
             this.tabPageEspais.SuspendLayout();
-            this.groupBoxEspais.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspais)).BeginInit();
+            this.groupBoxInstalacions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalacions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).BeginInit();
             this.tabPagePeticions.SuspendLayout();
             this.GroupBoxPeticio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeticio)).BeginInit();
@@ -294,7 +301,9 @@
             // tabPageEquips
             // 
             this.tabPageEquips.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPageEquips.Controls.Add(this.splitter1);
             this.tabPageEquips.Controls.Add(this.label1);
+            this.tabPageEquips.Controls.Add(this.buttonAddEntitat);
             this.tabPageEquips.Controls.Add(this.groupBoxEntitats);
             this.tabPageEquips.Controls.Add(this.textBoxCercarEntitats);
             this.tabPageEquips.Location = new System.Drawing.Point(4, 14);
@@ -303,7 +312,14 @@
             this.tabPageEquips.Size = new System.Drawing.Size(963, 535);
             this.tabPageEquips.TabIndex = 2;
             this.tabPageEquips.Text = "tabPage1";
-            this.tabPageEquips.Click += new System.EventHandler(this.tabPageEquips_Click);
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(3, 535);
+            this.splitter1.TabIndex = 13;
+            this.splitter1.TabStop = false;
             // 
             // label1
             // 
@@ -314,10 +330,21 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Filtrar per nom";
             // 
+            // buttonAddEntitat
+            // 
+            this.buttonAddEntitat.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddEntitat.Location = new System.Drawing.Point(516, 29);
+            this.buttonAddEntitat.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAddEntitat.Name = "buttonAddEntitat";
+            this.buttonAddEntitat.Size = new System.Drawing.Size(91, 24);
+            this.buttonAddEntitat.TabIndex = 11;
+            this.buttonAddEntitat.Text = "Afegir Entitat";
+            this.buttonAddEntitat.UseVisualStyleBackColor = true;
+            this.buttonAddEntitat.Click += new System.EventHandler(this.buttonAddEntitat_Click);
+            // 
             // groupBoxEntitats
             // 
             this.groupBoxEntitats.Controls.Add(this.dataGridViewEntitats);
-            this.groupBoxEntitats.Controls.Add(this.buttonAddEntitat);
             this.groupBoxEntitats.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxEntitats.Location = new System.Drawing.Point(22, 64);
             this.groupBoxEntitats.Margin = new System.Windows.Forms.Padding(1);
@@ -446,34 +473,23 @@
             this.bindingSourceEntitats.DataSource = typeof(ENTITATS);
             this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
             // 
-            // buttonAddEntitat
-            // 
-            this.buttonAddEntitat.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddEntitat.Location = new System.Drawing.Point(520, 321);
-            this.buttonAddEntitat.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAddEntitat.Name = "buttonAddEntitat";
-            this.buttonAddEntitat.Size = new System.Drawing.Size(61, 24);
-            this.buttonAddEntitat.TabIndex = 11;
-            this.buttonAddEntitat.Text = "Afegir Entitat";
-            this.buttonAddEntitat.UseVisualStyleBackColor = true;
-            this.buttonAddEntitat.Click += new System.EventHandler(this.buttonAddEntitat_Click);
-            // 
             // textBoxCercarEntitats
             // 
             this.textBoxCercarEntitats.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCercarEntitats.Location = new System.Drawing.Point(111, 29);
             this.textBoxCercarEntitats.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxCercarEntitats.Name = "textBoxCercarEntitats";
-            this.textBoxCercarEntitats.Size = new System.Drawing.Size(317, 20);
+            this.textBoxCercarEntitats.Size = new System.Drawing.Size(349, 20);
             this.textBoxCercarEntitats.TabIndex = 8;
             this.textBoxCercarEntitats.TextChanged += new System.EventHandler(this.textBoxCercarEntitats_TextChanged);
             // 
             // tabPageEspais
             // 
             this.tabPageEspais.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPageEspais.Controls.Add(this.bAfegirInstalacio);
+            this.tabPageEspais.Controls.Add(this.label4);
             this.tabPageEspais.Controls.Add(this.buttonAddEspai);
-            this.tabPageEspais.Controls.Add(this.groupBoxEspais);
-            this.tabPageEspais.Controls.Add(this.buttonCercarEspais);
+            this.tabPageEspais.Controls.Add(this.groupBoxInstalacions);
             this.tabPageEspais.Controls.Add(this.textBoxCercarEspais);
             this.tabPageEspais.Location = new System.Drawing.Point(4, 14);
             this.tabPageEspais.Margin = new System.Windows.Forms.Padding(1);
@@ -482,6 +498,17 @@
             this.tabPageEspais.Size = new System.Drawing.Size(963, 535);
             this.tabPageEspais.TabIndex = 1;
             this.tabPageEspais.Text = "tabPage2";
+            this.tabPageEspais.Click += new System.EventHandler(this.tabPageEspais_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(34, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 14);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Filtrar per nom";
             // 
             // buttonAddEspai
             // 
@@ -495,50 +522,74 @@
             this.buttonAddEspai.UseVisualStyleBackColor = true;
             this.buttonAddEspai.Click += new System.EventHandler(this.buttonAddEspai_Click);
             // 
-            // groupBoxEspais
+            // groupBoxInstalacions
             // 
-            this.groupBoxEspais.Controls.Add(this.dataGridViewEspais);
-            this.groupBoxEspais.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxEspais.Location = new System.Drawing.Point(22, 64);
-            this.groupBoxEspais.Margin = new System.Windows.Forms.Padding(1);
-            this.groupBoxEspais.Name = "groupBoxEspais";
-            this.groupBoxEspais.Padding = new System.Windows.Forms.Padding(1);
-            this.groupBoxEspais.Size = new System.Drawing.Size(536, 332);
-            this.groupBoxEspais.TabIndex = 6;
-            this.groupBoxEspais.TabStop = false;
-            this.groupBoxEspais.Text = "Espais";
+            this.groupBoxInstalacions.Controls.Add(this.dataGridViewInstalacions);
+            this.groupBoxInstalacions.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxInstalacions.Location = new System.Drawing.Point(22, 64);
+            this.groupBoxInstalacions.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBoxInstalacions.Name = "groupBoxInstalacions";
+            this.groupBoxInstalacions.Padding = new System.Windows.Forms.Padding(1);
+            this.groupBoxInstalacions.Size = new System.Drawing.Size(536, 332);
+            this.groupBoxInstalacions.TabIndex = 6;
+            this.groupBoxInstalacions.TabStop = false;
+            this.groupBoxInstalacions.Text = "Instal·lacions";
             // 
-            // dataGridViewEspais
+            // dataGridViewInstalacions
             // 
-            this.dataGridViewEspais.AllowUserToAddRows = false;
-            this.dataGridViewEspais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEspais.Location = new System.Drawing.Point(15, 24);
-            this.dataGridViewEspais.Margin = new System.Windows.Forms.Padding(1);
-            this.dataGridViewEspais.Name = "dataGridViewEspais";
-            this.dataGridViewEspais.ReadOnly = true;
-            this.dataGridViewEspais.RowTemplate.Height = 31;
-            this.dataGridViewEspais.Size = new System.Drawing.Size(507, 294);
-            this.dataGridViewEspais.TabIndex = 0;
+            this.dataGridViewInstalacions.AllowUserToAddRows = false;
+            this.dataGridViewInstalacions.AutoGenerateColumns = false;
+            this.dataGridViewInstalacions.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridViewInstalacions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInstalacions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn2,
+            this.nomDataGridViewTextBoxColumn3,
+            this.adrecaDataGridViewTextBoxColumn1});
+            this.dataGridViewInstalacions.DataSource = this.bindingSourceInstalacions;
+            this.dataGridViewInstalacions.Location = new System.Drawing.Point(15, 25);
+            this.dataGridViewInstalacions.Margin = new System.Windows.Forms.Padding(1);
+            this.dataGridViewInstalacions.Name = "dataGridViewInstalacions";
+            this.dataGridViewInstalacions.ReadOnly = true;
+            this.dataGridViewInstalacions.RowTemplate.Height = 31;
+            this.dataGridViewInstalacions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewInstalacions.Size = new System.Drawing.Size(507, 294);
+            this.dataGridViewInstalacions.TabIndex = 0;
+            this.dataGridViewInstalacions.DoubleClick += new System.EventHandler(this.dataGridViewInstalacions_DoubleClick);
             // 
-            // buttonCercarEspais
+            // idDataGridViewTextBoxColumn2
             // 
-            this.buttonCercarEspais.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCercarEspais.Location = new System.Drawing.Point(480, 21);
-            this.buttonCercarEspais.Margin = new System.Windows.Forms.Padding(1);
-            this.buttonCercarEspais.Name = "buttonCercarEspais";
-            this.buttonCercarEspais.Size = new System.Drawing.Size(51, 27);
-            this.buttonCercarEspais.TabIndex = 5;
-            this.buttonCercarEspais.Text = "Cercar";
-            this.buttonCercarEspais.UseVisualStyleBackColor = true;
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // nomDataGridViewTextBoxColumn3
+            // 
+            this.nomDataGridViewTextBoxColumn3.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn3.HeaderText = "nom";
+            this.nomDataGridViewTextBoxColumn3.Name = "nomDataGridViewTextBoxColumn3";
+            this.nomDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // adrecaDataGridViewTextBoxColumn1
+            // 
+            this.adrecaDataGridViewTextBoxColumn1.DataPropertyName = "adreca";
+            this.adrecaDataGridViewTextBoxColumn1.HeaderText = "adreca";
+            this.adrecaDataGridViewTextBoxColumn1.Name = "adrecaDataGridViewTextBoxColumn1";
+            this.adrecaDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // bindingSourceInstalacions
+            // 
+            this.bindingSourceInstalacions.DataSource = typeof(INSTALACIO);
             // 
             // textBoxCercarEspais
             // 
             this.textBoxCercarEspais.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCercarEspais.Location = new System.Drawing.Point(125, 29);
+            this.textBoxCercarEspais.Location = new System.Drawing.Point(121, 27);
             this.textBoxCercarEspais.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxCercarEspais.Name = "textBoxCercarEspais";
-            this.textBoxCercarEspais.Size = new System.Drawing.Size(317, 20);
+            this.textBoxCercarEspais.Size = new System.Drawing.Size(216, 20);
             this.textBoxCercarEspais.TabIndex = 4;
+            this.textBoxCercarEspais.TextChanged += new System.EventHandler(this.textBoxCercarEspais_TextChanged);
             // 
             // tabPagePeticions
             // 
@@ -918,6 +969,18 @@
             // 
             this.bindingSourceEspais.DataSource = typeof(LLOC_DEPORTIVO);
             // 
+            // bAfegirInstalacio
+            // 
+            this.bAfegirInstalacio.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAfegirInstalacio.Location = new System.Drawing.Point(431, 27);
+            this.bAfegirInstalacio.Margin = new System.Windows.Forms.Padding(2);
+            this.bAfegirInstalacio.Name = "bAfegirInstalacio";
+            this.bAfegirInstalacio.Size = new System.Drawing.Size(127, 24);
+            this.bAfegirInstalacio.TabIndex = 12;
+            this.bAfegirInstalacio.Text = "Afegir instalació";
+            this.bAfegirInstalacio.UseVisualStyleBackColor = true;
+            this.bAfegirInstalacio.Click += new System.EventHandler(this.bAfegirInstalacio_Click);
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -952,8 +1015,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).EndInit();
             this.tabPageEspais.ResumeLayout(false);
             this.tabPageEspais.PerformLayout();
-            this.groupBoxEspais.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspais)).EndInit();
+            this.groupBoxInstalacions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInstalacions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).EndInit();
             this.tabPagePeticions.ResumeLayout(false);
             this.tabPagePeticions.PerformLayout();
             this.GroupBoxPeticio.ResumeLayout(false);
@@ -1005,9 +1069,8 @@
         private System.Windows.Forms.TextBox textBoxCercarEntitats;
         private System.Windows.Forms.TabPage tabPageEspais;
         private System.Windows.Forms.Button buttonAddEspai;
-        private System.Windows.Forms.GroupBox groupBoxEspais;
-        private System.Windows.Forms.DataGridView dataGridViewEspais;
-        private System.Windows.Forms.Button buttonCercarEspais;
+        private System.Windows.Forms.GroupBox groupBoxInstalacions;
+        private System.Windows.Forms.DataGridView dataGridViewInstalacions;
         private System.Windows.Forms.TextBox textBoxCercarEspais;
         private System.Windows.Forms.TabPage tabPagePeticions;
         private System.Windows.Forms.GroupBox GroupBoxPeticio;
@@ -1046,5 +1109,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tIPUSACTIVIDADDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn hORARISACTIVITATDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bindingSourceActivitats;
+        private System.Windows.Forms.BindingSource bindingSourceInstalacions;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adrecaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Button bAfegirInstalacio;
     }
 }
