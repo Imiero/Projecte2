@@ -13,11 +13,11 @@ namespace EspaiActiu.BD
         {
 
             int i = 0;
-            foreach ( DateTime Obertura in Obertures)
+            foreach (DateTime Obertura in Obertures)
             {
                 HORARIS_INSTALACIO horarisIns = new HORARIS_INSTALACIO();
 
-                horarisIns.dia = byte.Parse((i+1).ToString());
+                horarisIns.dia = byte.Parse((i + 1).ToString());
                 horarisIns.horari_inici = Obertura.TimeOfDay;
                 horarisIns.horari_fi = tancaments[i].TimeOfDay;
                 horarisIns.id_centre = id_centre;
@@ -35,7 +35,7 @@ namespace EspaiActiu.BD
                 i++;
             }
 
-            
+
 
         }
     }

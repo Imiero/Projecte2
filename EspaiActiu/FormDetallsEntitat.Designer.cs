@@ -146,6 +146,7 @@
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(181, 20);
             this.textBoxNom.TabIndex = 61;
+    
             // 
             // textBoxCorreu
             // 

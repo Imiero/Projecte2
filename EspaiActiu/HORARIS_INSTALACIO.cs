@@ -20,4 +20,5 @@ public partial class HORARIS_INSTALACIO
 
     public virtual DIES_SETMANA DIES_SETMANA { get; set; }
     public virtual INSTALACIO INSTALACIO { get; set; }
+
 }

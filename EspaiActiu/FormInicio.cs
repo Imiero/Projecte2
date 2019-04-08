@@ -138,9 +138,13 @@ namespace EspaiActiu
         private void FormInicio_Load(object sender, EventArgs e)
         {
             tabPeticio();
+
+            //cargamos grids
             bindingSourceEntitats.DataSource = ORMEntitats.SelectAllEntitats();
             bindingSourcePeticions.DataSource = ORMActivitatsDemandades.SelectAllActvitats();
-            bindingSourceActivitats.DataSource = ORMActivitats.SelectAllActivitats();
+
+            bindingSourceInstalacions.DataSource = ORMInstalacions.SelectAllInstalacions();
+
         }
 
 
@@ -186,6 +190,7 @@ namespace EspaiActiu
         private void FormInicio_Activated(object sender, EventArgs e)
         {
             bindingSourceEntitats.DataSource = ORMEntitats.SelectEntitatsByNom(textBoxCercarEntitats.Text);
+            bindingSourceInstalacions.DataSource = ORMInstalacions.SelectInstalacionssByNom(textBoxCercarEspais.Text);
         }
 
         //Al pulsar suprimir sobre un elemento de la Grid aparece un mensaje de confirmacion, en caso de pulsar "Yes" se borra la entidad con la funcion "DeleteEntitat" pasandole el objeto seleccionado en la grid.
@@ -212,15 +217,21 @@ namespace EspaiActiu
             f.Show();
         }
 
+        //Al clicar una instalacion abrir form de detalles
+        private void dataGridViewInstalacions_DoubleClick(object sender, EventArgs e)
+        {
+            INSTALACIO instalacio = (INSTALACIO)dataGridViewInstalacions.CurrentRow.DataBoundItem;
+
+            FormDetallsInstalacions f = new FormDetallsInstalacions(instalacio);
+            f.Show();
+        }
+
         private void groupBoxEntitats_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void tabPageEquips_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -237,8 +248,25 @@ namespace EspaiActiu
                 ACTIVIDADES_DEMANADAS activitat = (ACTIVIDADES_DEMANADAS)dataGridViewPeticio.CurrentRow.DataBoundItem;
                 
                 FormDetallsPeticio f = new FormDetallsPeticio(activitat);
-                f.ShowDialog();
+                f.Show();
             
+        }
+
+        //Al escribir algo en la textbox de búsqueda se filtra el contenido de la GridView de instalaciones por nombre
+        private void textBoxCercarEspais_TextChanged(object sender, EventArgs e)
+        {
+            bindingSourceInstalacions.DataSource = ORMInstalacions.SelectInstalacionssByNom(textBoxCercarEspais.Text);
+        }
+
+        private void tabPageEspais_Click(object sender, EventArgs e)
+        {
+
+        }
+        //Agregar Instalación
+        private void bAfegirInstalacio_Click(object sender, EventArgs e)
+        {
+            FormAddInstalacio fInst = new FormAddInstalacio();
+            fInst.ShowDialog();
         }
     }
 }

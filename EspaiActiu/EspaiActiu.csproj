@@ -68,7 +68,6 @@
       <DependentUpon>ModelSantCugat.tt</DependentUpon>
     </Compile>
     <Compile Include="BD\ORM.cs" />
-    <Compile Include="BD\ORMActivitats.cs" />
     <Compile Include="BD\ORMActivitatsDemandades.cs" />
     <Compile Include="BD\ORMAdmins.cs" />
     <Compile Include="BD\ORMCategoria.cs" />
@@ -77,9 +76,11 @@
     <Compile Include="BD\ORMDia.cs" />
     <Compile Include="BD\ORMEntitats.cs" />
     <Compile Include="BD\ORMEquips.cs" />
+    <Compile Include="BD\ORMEspai.cs" />
     <Compile Include="BD\ORMEsports.cs" />
     <Compile Include="BD\ORMHorari.cs" />
     <Compile Include="BD\ORMHorarisInstalacio.cs" />
+    <Compile Include="BD\ORMInstalacions.cs" />
     <Compile Include="BD\ORMSexe.cs" />
     <Compile Include="BD\ORMTelefono.cs" />
     <Compile Include="BD\ORMTipoActividad.cs" />
@@ -113,6 +114,18 @@
     <Compile Include="FormAddEspai.Designer.cs">
       <DependentUpon>FormAddEspai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddInstalacio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddInstalacio.Designer.cs">
+      <DependentUpon>FormAddInstalacio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDenegacio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDenegacio.Designer.cs">
+      <DependentUpon>FormDenegacio.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDetallsEntitat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +137,12 @@
     </Compile>
     <Compile Include="FormDetallsEspai.Designer.cs">
       <DependentUpon>FormDetallsEspai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetallsInstalacions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetallsInstalacions.Designer.cs">
+      <DependentUpon>FormDetallsInstalacions.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDetallsPeticio.cs">
       <SubType>Form</SubType>
@@ -211,11 +230,20 @@
     <EmbeddedResource Include="FormAddEspai.resx">
       <DependentUpon>FormAddEspai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddInstalacio.resx">
+      <DependentUpon>FormAddInstalacio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDenegacio.resx">
+      <DependentUpon>FormDenegacio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDetallsEntitat.resx">
       <DependentUpon>FormDetallsEntitat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetallsEspai.resx">
       <DependentUpon>FormDetallsEspai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetallsInstalacions.resx">
+      <DependentUpon>FormDetallsInstalacions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetallsPeticio.resx">
       <DependentUpon>FormDetallsPeticio.cs</DependentUpon>
@@ -261,6 +289,8 @@
     <None Include="Properties\DataSources\EspaiActiu.BD.ORMAdmins.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\HORARIS_INSTALACIO.datasource" />
+    <None Include="Properties\DataSources\INSTALACIO.datasource" />
     <None Include="Properties\DataSources\LLOC_DEPORTIVO.datasource" />
     <None Include="Properties\DataSources\SEXE.datasource" />
     <None Include="Properties\DataSources\SPORTS.datasource" />
