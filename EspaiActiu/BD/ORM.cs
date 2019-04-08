@@ -8,6 +8,6 @@ namespace EspaiActiu.BD
 {
     public static class ORM
     {
-        public static sant_cugatEntities bd = new sant_cugatEntities();
+        public static sant_cugatEntities1 bd = new sant_cugatEntities1();
     }
 }

@@ -110,6 +110,7 @@
           <Property Name="horari_fi" Type="time" Precision="7" Nullable="false" />
           <Property Name="dia" Type="tinyint" Nullable="false" />
           <Property Name="id_actividad" Type="int" Nullable="false" />
+          <Property Name="id_instalacio" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="HORARIS_INSTALACIO">
           <Key>
@@ -163,6 +164,16 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nom" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="TELEFONS">
           <Key>
@@ -415,6 +426,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_HORARIS_ACTIVITAT_INSTALACIONS">
+          <End Role="INSTALACIO" Type="Self.INSTALACIO" Multiplicity="1" />
+          <End Role="HORARIS_ACTIVITAT" Type="Self.HORARIS_ACTIVITAT" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="INSTALACIO">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HORARIS_ACTIVITAT">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_HORARIS_CENTRES_CENTRE_DEPO">
           <End Role="INSTALACIO" Type="Self.INSTALACIO" Multiplicity="1" />
           <End Role="HORARIS_INSTALACIO" Type="Self.HORARIS_INSTALACIO" Multiplicity="*" />
@@ -505,6 +528,7 @@
           <EntitySet Name="LLOC_DEPORTIVO" EntityType="Self.LLOC_DEPORTIVO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SEXE" EntityType="Self.SEXE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SPORTS" EntityType="Self.SPORTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TELEFONS" EntityType="Self.TELEFONS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIPUS_ACTIVIDAD" EntityType="Self.TIPUS_ACTIVIDAD" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIPUS_INCIDENCIES" EntityType="Self.TIPUS_INCIDENCIES" Schema="dbo" store:Type="Tables" />
@@ -582,6 +606,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_HORARIS_ACTIVITAT_DIES_SETMANA" Association="Self.FK_HORARIS_ACTIVITAT_DIES_SETMANA">
             <End Role="DIES_SETMANA" EntitySet="DIES_SETMANA" />
+            <End Role="HORARIS_ACTIVITAT" EntitySet="HORARIS_ACTIVITAT" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HORARIS_ACTIVITAT_INSTALACIONS" Association="Self.FK_HORARIS_ACTIVITAT_INSTALACIONS">
+            <End Role="INSTALACIO" EntitySet="INSTALACIO" />
             <End Role="HORARIS_ACTIVITAT" EntitySet="HORARIS_ACTIVITAT" />
           </AssociationSet>
           <AssociationSet Name="FK_HORARIS_CENTRES_CENTRE_DEPO" Association="Self.FK_HORARIS_CENTRES_CENTRE_DEPO">
@@ -750,8 +778,10 @@
           <Property Name="horari_fi" Type="Time" Nullable="false" Precision="7" />
           <Property Name="dia" Type="Byte" Nullable="false" />
           <Property Name="id_actividad" Type="Int32" Nullable="false" />
+          <Property Name="id_instalacio" Type="Int32" Nullable="false" />
           <NavigationProperty Name="ACTIVITATS" Relationship="Self.FK_HORARIS_ACTIVITAT_ACTIVITATS" FromRole="HORARIS_ACTIVITAT" ToRole="ACTIVITATS" />
           <NavigationProperty Name="DIES_SETMANA" Relationship="Self.FK_HORARIS_ACTIVITAT_DIES_SETMANA" FromRole="HORARIS_ACTIVITAT" ToRole="DIES_SETMANA" />
+          <NavigationProperty Name="INSTALACIO" Relationship="Self.FK_HORARIS_ACTIVITAT_INSTALACIONS" FromRole="HORARIS_ACTIVITAT" ToRole="INSTALACIO" />
         </EntityType>
         <EntityType Name="HORARIS_INSTALACIO">
           <Key>
@@ -786,6 +816,7 @@
           <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="adreca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="es_propi" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="HORARIS_ACTIVITAT" Relationship="Self.FK_HORARIS_ACTIVITAT_INSTALACIONS" FromRole="INSTALACIO" ToRole="HORARIS_ACTIVITAT" />
           <NavigationProperty Name="HORARIS_INSTALACIO" Relationship="Self.FK_HORARIS_CENTRES_CENTRE_DEPO" FromRole="INSTALACIO" ToRole="HORARIS_INSTALACIO" />
           <NavigationProperty Name="LLOC_DEPORTIVO" Relationship="Self.FK_ESPAIS_CENTRE_DEPO" FromRole="INSTALACIO" ToRole="LLOC_DEPORTIVO" />
         </EntityType>
@@ -818,6 +849,16 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="EQUIPS" Relationship="Self.FK_EQUIPS_SPORTS" FromRole="SPORTS" ToRole="EQUIPS" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="TELEFONS">
           <Key>
@@ -1098,6 +1139,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_HORARIS_ACTIVITAT_INSTALACIONS">
+          <End Role="INSTALACIO" Type="Self.INSTALACIO" Multiplicity="1" />
+          <End Role="HORARIS_ACTIVITAT" Type="Self.HORARIS_ACTIVITAT" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="INSTALACIO">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="HORARIS_ACTIVITAT">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_HORARIS_CENTRES_CENTRE_DEPO">
           <End Role="INSTALACIO" Type="Self.INSTALACIO" Multiplicity="1" />
           <End Role="HORARIS_INSTALACIO" Type="Self.HORARIS_INSTALACIO" Multiplicity="*" />
@@ -1146,7 +1199,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="sant_cugatEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="sant_cugatEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ACTIVIDADES_DEMANADAS" EntityType="Self.ACTIVIDADES_DEMANADAS" />
           <EntitySet Name="ACTIVITATS" EntityType="Self.ACTIVITATS" />
           <EntitySet Name="ADMINS" EntityType="Self.ADMINS" />
@@ -1164,6 +1217,7 @@
           <EntitySet Name="LLOC_DEPORTIVO" EntityType="Self.LLOC_DEPORTIVO" />
           <EntitySet Name="SEXE" EntityType="Self.SEXE" />
           <EntitySet Name="SPORTS" EntityType="Self.SPORTS" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="TELEFONS" EntityType="Self.TELEFONS" />
           <EntitySet Name="TIPUS_ACTIVIDAD" EntityType="Self.TIPUS_ACTIVIDAD" />
           <EntitySet Name="TIPUS_INCIDENCIES" EntityType="Self.TIPUS_INCIDENCIES" />
@@ -1251,6 +1305,10 @@
             <End Role="SPORTS" EntitySet="SPORTS" />
             <End Role="EQUIPS" EntitySet="EQUIPS" />
           </AssociationSet>
+          <AssociationSet Name="FK_HORARIS_ACTIVITAT_INSTALACIONS" Association="Self.FK_HORARIS_ACTIVITAT_INSTALACIONS">
+            <End Role="INSTALACIO" EntitySet="INSTALACIO" />
+            <End Role="HORARIS_ACTIVITAT" EntitySet="HORARIS_ACTIVITAT" />
+          </AssociationSet>
           <AssociationSet Name="FK_HORARIS_CENTRES_CENTRE_DEPO" Association="Self.FK_HORARIS_CENTRES_CENTRE_DEPO">
             <End Role="INSTALACIO" EntitySet="INSTALACIO" />
             <End Role="HORARIS_INSTALACIO" EntitySet="HORARIS_INSTALACIO" />
@@ -1273,7 +1331,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="sant_cugatModelStoreContainer" CdmEntityContainer="sant_cugatEntities">
+        <EntityContainerMapping StorageEntityContainer="sant_cugatModelStoreContainer" CdmEntityContainer="sant_cugatEntities1">
           <EntitySetMapping Name="ACTIVIDADES_DEMANADAS">
             <EntityTypeMapping TypeName="sant_cugatModel.ACTIVIDADES_DEMANADAS">
               <MappingFragment StoreEntitySet="ACTIVIDADES_DEMANADAS">
@@ -1388,6 +1446,7 @@
                 <ScalarProperty Name="horari_fi" ColumnName="horari_fi" />
                 <ScalarProperty Name="dia" ColumnName="dia" />
                 <ScalarProperty Name="id_actividad" ColumnName="id_actividad" />
+                <ScalarProperty Name="id_instalacio" ColumnName="id_instalacio" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1447,6 +1506,17 @@
               <MappingFragment StoreEntitySet="SPORTS">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nom" ColumnName="nom" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="sant_cugatModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

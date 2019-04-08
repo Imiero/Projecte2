@@ -56,13 +56,36 @@ namespace EspaiActiu.BD
         {
             List<HORARIS_ACTIVITAT> _horaris =
                 (from a in ORM.bd.HORARIS_ACTIVITAT
-                 where a.id.Equals(id)
+                 where a.id_instalacio.Equals(id)
                  orderby a.dia
                  select a
                  ).ToList();
 
             return _horaris;
 
+        }
+
+        public static void InsertHorariActivitat(TimeSpan horari_inici,TimeSpan horari_fi, int dia, int id_activitat,int id_instalacio)
+        {
+
+            HORARIS_ACTIVITAT horari = new HORARIS_ACTIVITAT();
+
+            ORM.bd.HORARIS_ACTIVITAT.Add(horari);
+
+            horari.horari_inici = horari_inici;
+            horari.horari_fi = horari_fi;
+            horari.dia = (byte)dia;
+            horari.id_actividad = id_activitat;
+            horari.id_instalacio = id_instalacio;
+
+            try
+            {
+                ORM.bd.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+            }
         }
     }
 }

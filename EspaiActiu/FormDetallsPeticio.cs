@@ -14,8 +14,10 @@ namespace EspaiActiu
 
     public partial class FormDetallsPeticio : Form
     {
+        
 
         private ACTIVIDADES_DEMANADAS activitat;
+
         public FormDetallsPeticio(ACTIVIDADES_DEMANADAS activitat)
         {
             InitializeComponent();
@@ -66,7 +68,17 @@ namespace EspaiActiu
 
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
-            
+            DialogResult result = MessageBox.Show("Segur que vols rebutjar la activitat?", "Rebutjar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                ORMActivitatsDemandades.SolicitudRechazada(activitat.id);
+                this.Close();
+            }
+            else
+            {
+                
+            }
         }
 
         private void buttonSortir_Click(object sender, EventArgs e)
@@ -104,6 +116,21 @@ namespace EspaiActiu
         private void groupBoxInstalacio_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonAcceptar_Click(object sender, EventArgs e)
+        {
+            ORMActivitats.InsertActividad(activitat.id, activitat.nom, activitat.id_tipus_actividad, activitat.id_equipo, activitat.id_espai, 1);
+            //no se rechazada, pero el metodo se llamaba asi so...
+            ORMActivitatsDemandades.SolicitudRechazada(activitat.id);
+
+            AssignacioHoraris f = new AssignacioHoraris(activitat.id,activitat.id_espai);
+            f.Show();
+        }
+
+        private void FormDetallsPeticio_Activated(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -19,7 +19,7 @@ namespace EspaiActiu
             FormLogin login = new FormLogin();
 
             Application.Run(login);
-
+            
             if (FormLogin.correcto)
             {
                 Application.Run(new FormInicio());

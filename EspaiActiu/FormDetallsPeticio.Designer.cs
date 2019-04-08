@@ -43,43 +43,28 @@
             this.buttonAcceptar = new System.Windows.Forms.Button();
             this.groupBoxHorari = new System.Windows.Forms.GroupBox();
             this.dataGridViewHorariDemanat = new System.Windows.Forms.DataGridView();
-            this.buttonDetallsEspai = new System.Windows.Forms.Button();
+            this.bindingSourceHorariDemanat = new System.Windows.Forms.BindingSource(this.components);
             this.buttonDetallsEquip = new System.Windows.Forms.Button();
             this.buttonSortir = new System.Windows.Forms.Button();
             this.groupBoxPeticio = new System.Windows.Forms.GroupBox();
             this.dataGridViewHorariInstalacio = new System.Windows.Forms.DataGridView();
+            this.bindingSourceHorariInstalacio = new System.Windows.Forms.BindingSource(this.components);
             this.groupBoxInstalacio = new System.Windows.Forms.GroupBox();
-            this.groupBoxHorariIns = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.bindingSourceHorarisActivitats = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horariiniciDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horarifiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceHorariInstalacio = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horariiniciDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horarifiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idactividaddemanadaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aCTIVIDADESDEMANADASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dIESSETMANADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceHorariDemanat = new System.Windows.Forms.BindingSource(this.components);
-            this.horariiniciDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horarifiDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBoxHorariIns = new System.Windows.Forms.GroupBox();
             this.groupBoxHorari.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHorariDemanat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHorariDemanat)).BeginInit();
             this.groupBoxPeticio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHorariInstalacio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHorariInstalacio)).BeginInit();
             this.groupBoxInstalacio.SuspendLayout();
-            this.groupBoxHorariIns.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHorarisActivitats)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHorariInstalacio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHorariDemanat)).BeginInit();
+            this.groupBoxHorariIns.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -180,7 +165,7 @@
             // buttonCancelar
             // 
             this.buttonCancelar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelar.Location = new System.Drawing.Point(93, 410);
+            this.buttonCancelar.Location = new System.Drawing.Point(762, 410);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 25);
             this.buttonCancelar.TabIndex = 11;
@@ -191,12 +176,13 @@
             // buttonAcceptar
             // 
             this.buttonAcceptar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAcceptar.Location = new System.Drawing.Point(12, 410);
+            this.buttonAcceptar.Location = new System.Drawing.Point(681, 410);
             this.buttonAcceptar.Name = "buttonAcceptar";
             this.buttonAcceptar.Size = new System.Drawing.Size(75, 25);
             this.buttonAcceptar.TabIndex = 12;
             this.buttonAcceptar.Text = "Acceptar";
             this.buttonAcceptar.UseVisualStyleBackColor = true;
+            this.buttonAcceptar.Click += new System.EventHandler(this.buttonAcceptar_Click);
             // 
             // groupBoxHorari
             // 
@@ -213,30 +199,11 @@
             // 
             this.dataGridViewHorariDemanat.AutoGenerateColumns = false;
             this.dataGridViewHorariDemanat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHorariDemanat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.diaDataGridViewTextBoxColumn,
-            this.horariiniciDataGridViewTextBoxColumn,
-            this.horarifiDataGridViewTextBoxColumn,
-            this.idactividaddemanadaDataGridViewTextBoxColumn,
-            this.aCTIVIDADESDEMANADASDataGridViewTextBoxColumn,
-            this.dIESSETMANADataGridViewTextBoxColumn});
             this.dataGridViewHorariDemanat.DataSource = this.bindingSourceHorariDemanat;
             this.dataGridViewHorariDemanat.Location = new System.Drawing.Point(6, 19);
             this.dataGridViewHorariDemanat.Name = "dataGridViewHorariDemanat";
             this.dataGridViewHorariDemanat.Size = new System.Drawing.Size(244, 191);
             this.dataGridViewHorariDemanat.TabIndex = 26;
-            // 
-            // buttonDetallsEspai
-            // 
-            this.buttonDetallsEspai.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDetallsEspai.Location = new System.Drawing.Point(234, 103);
-            this.buttonDetallsEspai.Name = "buttonDetallsEspai";
-            this.buttonDetallsEspai.Size = new System.Drawing.Size(86, 20);
-            this.buttonDetallsEspai.TabIndex = 1;
-            this.buttonDetallsEspai.Text = "Detalls Espai";
-            this.buttonDetallsEspai.UseVisualStyleBackColor = true;
-            this.buttonDetallsEspai.Click += new System.EventHandler(this.buttonDetallsEspai_Click);
             // 
             // buttonDetallsEquip
             // 
@@ -251,7 +218,7 @@
             // 
             // buttonSortir
             // 
-            this.buttonSortir.Location = new System.Drawing.Point(174, 411);
+            this.buttonSortir.Location = new System.Drawing.Point(843, 412);
             this.buttonSortir.Name = "buttonSortir";
             this.buttonSortir.Size = new System.Drawing.Size(75, 23);
             this.buttonSortir.TabIndex = 20;
@@ -262,7 +229,6 @@
             // groupBoxPeticio
             // 
             this.groupBoxPeticio.Controls.Add(this.groupBoxHorari);
-            this.groupBoxPeticio.Controls.Add(this.buttonDetallsEspai);
             this.groupBoxPeticio.Controls.Add(this.label1);
             this.groupBoxPeticio.Controls.Add(this.label2);
             this.groupBoxPeticio.Controls.Add(this.buttonDetallsEquip);
@@ -287,11 +253,6 @@
             this.dataGridViewHorariInstalacio.AllowUserToDeleteRows = false;
             this.dataGridViewHorariInstalacio.AutoGenerateColumns = false;
             this.dataGridViewHorariInstalacio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHorariInstalacio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.diaDataGridViewTextBoxColumn1,
-            this.horariiniciDataGridViewTextBoxColumn1,
-            this.horarifiDataGridViewTextBoxColumn1});
             this.dataGridViewHorariInstalacio.DataSource = this.bindingSourceHorariInstalacio;
             this.dataGridViewHorariInstalacio.Location = new System.Drawing.Point(0, 15);
             this.dataGridViewHorariInstalacio.Name = "dataGridViewHorariInstalacio";
@@ -306,26 +267,16 @@
             this.groupBoxInstalacio.Controls.Add(this.groupBoxHorariIns);
             this.groupBoxInstalacio.Location = new System.Drawing.Point(384, 12);
             this.groupBoxInstalacio.Name = "groupBoxInstalacio";
-            this.groupBoxInstalacio.Size = new System.Drawing.Size(700, 392);
+            this.groupBoxInstalacio.Size = new System.Drawing.Size(541, 392);
             this.groupBoxInstalacio.TabIndex = 23;
             this.groupBoxInstalacio.TabStop = false;
             this.groupBoxInstalacio.Text = "Dades instalacio";
             this.groupBoxInstalacio.Enter += new System.EventHandler(this.groupBoxInstalacio_Enter);
             // 
-            // groupBoxHorariIns
-            // 
-            this.groupBoxHorariIns.Controls.Add(this.dataGridViewHorariInstalacio);
-            this.groupBoxHorariIns.Location = new System.Drawing.Point(439, 16);
-            this.groupBoxHorariIns.Name = "groupBoxHorariIns";
-            this.groupBoxHorariIns.Size = new System.Drawing.Size(255, 370);
-            this.groupBoxHorariIns.TabIndex = 23;
-            this.groupBoxHorariIns.TabStop = false;
-            this.groupBoxHorariIns.Text = "Horari";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView2);
-            this.groupBox1.Location = new System.Drawing.Point(6, 136);
+            this.groupBox1.Location = new System.Drawing.Point(279, 19);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(255, 250);
             this.groupBox1.TabIndex = 24;
@@ -338,10 +289,6 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.horariiniciDataGridViewTextBoxColumn2,
-            this.horarifiDataGridViewTextBoxColumn2,
-            this.diaDataGridViewTextBoxColumn2});
             this.dataGridView2.DataSource = this.bindingSourceHorarisActivitats;
             this.dataGridView2.Location = new System.Drawing.Point(0, 14);
             this.dataGridView2.Name = "dataGridView2";
@@ -349,140 +296,21 @@
             this.dataGridView2.Size = new System.Drawing.Size(250, 226);
             this.dataGridView2.TabIndex = 0;
             // 
-            // bindingSourceHorarisActivitats
+            // groupBoxHorariIns
             // 
-            this.bindingSourceHorarisActivitats.DataSource = typeof(HORARIS_ACTIVITAT);
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn1.Visible = false;
-            this.idDataGridViewTextBoxColumn1.Width = 40;
-            // 
-            // diaDataGridViewTextBoxColumn1
-            // 
-            this.diaDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.diaDataGridViewTextBoxColumn1.DataPropertyName = "dia";
-            this.diaDataGridViewTextBoxColumn1.HeaderText = "dia";
-            this.diaDataGridViewTextBoxColumn1.Name = "diaDataGridViewTextBoxColumn1";
-            this.diaDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.diaDataGridViewTextBoxColumn1.Width = 46;
-            // 
-            // horariiniciDataGridViewTextBoxColumn1
-            // 
-            this.horariiniciDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.horariiniciDataGridViewTextBoxColumn1.DataPropertyName = "horari_inici";
-            this.horariiniciDataGridViewTextBoxColumn1.HeaderText = "horari_inici";
-            this.horariiniciDataGridViewTextBoxColumn1.Name = "horariiniciDataGridViewTextBoxColumn1";
-            this.horariiniciDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.horariiniciDataGridViewTextBoxColumn1.Width = 84;
-            // 
-            // horarifiDataGridViewTextBoxColumn1
-            // 
-            this.horarifiDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.horarifiDataGridViewTextBoxColumn1.DataPropertyName = "horari_fi";
-            this.horarifiDataGridViewTextBoxColumn1.HeaderText = "horari_fi";
-            this.horarifiDataGridViewTextBoxColumn1.Name = "horarifiDataGridViewTextBoxColumn1";
-            this.horarifiDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.horarifiDataGridViewTextBoxColumn1.Width = 72;
-            // 
-            // bindingSourceHorariInstalacio
-            // 
-            this.bindingSourceHorariInstalacio.DataSource = typeof(HORARIS_INSTALACIO);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // diaDataGridViewTextBoxColumn
-            // 
-            this.diaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.diaDataGridViewTextBoxColumn.DataPropertyName = "dia";
-            this.diaDataGridViewTextBoxColumn.HeaderText = "Dia";
-            this.diaDataGridViewTextBoxColumn.Name = "diaDataGridViewTextBoxColumn";
-            this.diaDataGridViewTextBoxColumn.Width = 47;
-            // 
-            // horariiniciDataGridViewTextBoxColumn
-            // 
-            this.horariiniciDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.horariiniciDataGridViewTextBoxColumn.DataPropertyName = "horari_inici";
-            this.horariiniciDataGridViewTextBoxColumn.HeaderText = "Hora inici";
-            this.horariiniciDataGridViewTextBoxColumn.Name = "horariiniciDataGridViewTextBoxColumn";
-            this.horariiniciDataGridViewTextBoxColumn.Width = 76;
-            // 
-            // horarifiDataGridViewTextBoxColumn
-            // 
-            this.horarifiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.horarifiDataGridViewTextBoxColumn.DataPropertyName = "horari_fi";
-            this.horarifiDataGridViewTextBoxColumn.HeaderText = "Hora final";
-            this.horarifiDataGridViewTextBoxColumn.Name = "horarifiDataGridViewTextBoxColumn";
-            this.horarifiDataGridViewTextBoxColumn.Width = 78;
-            // 
-            // idactividaddemanadaDataGridViewTextBoxColumn
-            // 
-            this.idactividaddemanadaDataGridViewTextBoxColumn.DataPropertyName = "id_actividad_demanada";
-            this.idactividaddemanadaDataGridViewTextBoxColumn.HeaderText = "id_actividad_demanada";
-            this.idactividaddemanadaDataGridViewTextBoxColumn.Name = "idactividaddemanadaDataGridViewTextBoxColumn";
-            this.idactividaddemanadaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // aCTIVIDADESDEMANADASDataGridViewTextBoxColumn
-            // 
-            this.aCTIVIDADESDEMANADASDataGridViewTextBoxColumn.DataPropertyName = "ACTIVIDADES_DEMANADAS";
-            this.aCTIVIDADESDEMANADASDataGridViewTextBoxColumn.HeaderText = "ACTIVIDADES_DEMANADAS";
-            this.aCTIVIDADESDEMANADASDataGridViewTextBoxColumn.Name = "aCTIVIDADESDEMANADASDataGridViewTextBoxColumn";
-            this.aCTIVIDADESDEMANADASDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dIESSETMANADataGridViewTextBoxColumn
-            // 
-            this.dIESSETMANADataGridViewTextBoxColumn.DataPropertyName = "DIES_SETMANA";
-            this.dIESSETMANADataGridViewTextBoxColumn.HeaderText = "DIES_SETMANA";
-            this.dIESSETMANADataGridViewTextBoxColumn.Name = "dIESSETMANADataGridViewTextBoxColumn";
-            this.dIESSETMANADataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dIESSETMANADataGridViewTextBoxColumn.Visible = false;
-            // 
-            // bindingSourceHorariDemanat
-            // 
-            this.bindingSourceHorariDemanat.DataSource = typeof(HORARIS_ACT_DEMANADA);
-            // 
-            // horariiniciDataGridViewTextBoxColumn2
-            // 
-            this.horariiniciDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.horariiniciDataGridViewTextBoxColumn2.DataPropertyName = "horari_inici";
-            this.horariiniciDataGridViewTextBoxColumn2.HeaderText = "horari_inici";
-            this.horariiniciDataGridViewTextBoxColumn2.Name = "horariiniciDataGridViewTextBoxColumn2";
-            this.horariiniciDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.horariiniciDataGridViewTextBoxColumn2.Width = 84;
-            // 
-            // horarifiDataGridViewTextBoxColumn2
-            // 
-            this.horarifiDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.horarifiDataGridViewTextBoxColumn2.DataPropertyName = "horari_fi";
-            this.horarifiDataGridViewTextBoxColumn2.HeaderText = "horari_fi";
-            this.horarifiDataGridViewTextBoxColumn2.Name = "horarifiDataGridViewTextBoxColumn2";
-            this.horarifiDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.horarifiDataGridViewTextBoxColumn2.Width = 72;
-            // 
-            // diaDataGridViewTextBoxColumn2
-            // 
-            this.diaDataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.diaDataGridViewTextBoxColumn2.DataPropertyName = "dia";
-            this.diaDataGridViewTextBoxColumn2.HeaderText = "dia";
-            this.diaDataGridViewTextBoxColumn2.Name = "diaDataGridViewTextBoxColumn2";
-            this.diaDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.diaDataGridViewTextBoxColumn2.Width = 46;
+            this.groupBoxHorariIns.Controls.Add(this.dataGridViewHorariInstalacio);
+            this.groupBoxHorariIns.Location = new System.Drawing.Point(6, 19);
+            this.groupBoxHorariIns.Name = "groupBoxHorariIns";
+            this.groupBoxHorariIns.Size = new System.Drawing.Size(255, 370);
+            this.groupBoxHorariIns.TabIndex = 23;
+            this.groupBoxHorariIns.TabStop = false;
+            this.groupBoxHorariIns.Text = "Horari";
             // 
             // FormDetallsPeticio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 440);
+            this.ClientSize = new System.Drawing.Size(929, 440);
             this.Controls.Add(this.groupBoxInstalacio);
             this.Controls.Add(this.groupBoxPeticio);
             this.Controls.Add(this.buttonSortir);
@@ -492,19 +320,20 @@
             this.MaximizeBox = false;
             this.Name = "FormDetallsPeticio";
             this.Text = "Detalls Peticio";
+            this.Activated += new System.EventHandler(this.FormDetallsPeticio_Activated);
             this.Load += new System.EventHandler(this.FormDetallsPeticio_Load);
             this.groupBoxHorari.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHorariDemanat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHorariDemanat)).EndInit();
             this.groupBoxPeticio.ResumeLayout(false);
             this.groupBoxPeticio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHorariInstalacio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHorariInstalacio)).EndInit();
             this.groupBoxInstalacio.ResumeLayout(false);
-            this.groupBoxHorariIns.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHorarisActivitats)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHorariInstalacio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHorariDemanat)).EndInit();
+            this.groupBoxHorariIns.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -524,7 +353,6 @@
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonAcceptar;
         private System.Windows.Forms.GroupBox groupBoxHorari;
-        private System.Windows.Forms.Button buttonDetallsEspai;
         private System.Windows.Forms.Button buttonDetallsEquip;
         private System.Windows.Forms.Button buttonSortir;
         private System.Windows.Forms.DataGridView dataGridViewHorariDemanat;
@@ -539,17 +367,17 @@
         private System.Windows.Forms.GroupBox groupBoxPeticio;
         private System.Windows.Forms.DataGridView dataGridViewHorariInstalacio;
         private System.Windows.Forms.BindingSource bindingSourceHorariInstalacio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diaDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horariiniciDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horarifiDataGridViewTextBoxColumn1;
         private System.Windows.Forms.GroupBox groupBoxInstalacio;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.GroupBox groupBoxHorariIns;
         private System.Windows.Forms.BindingSource bindingSourceHorarisActivitats;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horariiniciDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horarifiDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn horariiniciDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn horarifiDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diaDataGridViewTextBoxColumn2;
     }
 }

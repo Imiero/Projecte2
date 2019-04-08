@@ -53,6 +53,7 @@ namespace EspaiActiu
                     {
                         if(admin.password == textBoxContraseña.Text)
                         {
+                            
                             correcto = true;
                         }
                     }

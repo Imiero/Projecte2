@@ -24,6 +24,7 @@ public partial class INSTALACIO
     public string adreca { get; set; }
     public bool es_propi { get; set; }
 
+    public virtual HORARIS_ACTIVITAT HORARIS_ACTIVITAT { get; set; }
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
     public virtual ICollection<HORARIS_INSTALACIO> HORARIS_INSTALACIO { get; set; }
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

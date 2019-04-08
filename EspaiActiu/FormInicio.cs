@@ -16,6 +16,7 @@ namespace EspaiActiu
         public FormInicio()
         {
             InitializeComponent();
+
         }
 
         //myLabel.ForeColor = System.Drawing.Color.Red;

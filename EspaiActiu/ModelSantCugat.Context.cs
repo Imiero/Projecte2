@@ -11,10 +11,10 @@ using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
-public partial class sant_cugatEntities : DbContext
+public partial class sant_cugatEntities1 : DbContext
 {
-    public sant_cugatEntities()
-        : base("name=sant_cugatEntities")
+    public sant_cugatEntities1()
+        : base("name=sant_cugatEntities1")
     {
     }
 
@@ -40,6 +40,7 @@ public partial class sant_cugatEntities : DbContext
     public virtual DbSet<LLOC_DEPORTIVO> LLOC_DEPORTIVO { get; set; }
     public virtual DbSet<SEXE> SEXE { get; set; }
     public virtual DbSet<SPORTS> SPORTS { get; set; }
+    public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     public virtual DbSet<TELEFONS> TELEFONS { get; set; }
     public virtual DbSet<TIPUS_ACTIVIDAD> TIPUS_ACTIVIDAD { get; set; }
     public virtual DbSet<TIPUS_INCIDENCIES> TIPUS_INCIDENCIES { get; set; }

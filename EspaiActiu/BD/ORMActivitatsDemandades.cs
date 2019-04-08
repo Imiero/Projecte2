@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace EspaiActiu.BD
         {
             List<ACTIVIDADES_DEMANADAS> _actividades =
                 (from a in ORM.bd.ACTIVIDADES_DEMANADAS
-                 orderby a.nom
+                 orderby a.revisada
                  select a
                  ).ToList();
 
@@ -37,6 +38,23 @@ namespace EspaiActiu.BD
             return _actividades;
         }
 
+        //Solicitud rechazada, es posa la revisio en True y ya
+
+        public static void SolicitudRechazada(int id)
+        {
+            ACTIVIDADES_DEMANADAS a = ORM.bd.ACTIVIDADES_DEMANADAS.Find(id);
+
+            a.revisada = true;
+
+            try
+            {
+                ORM.bd.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                //En caso de estar duplicado no podría crearse y petaria el programa
+            }
+        }
 
     }
 }

@@ -10,16 +10,11 @@
 using System;
 using System.Collections.Generic;
 
-public partial class HORARIS_ACTIVITAT
+public partial class sysdiagrams
 {
-    public int id { get; set; }
-    public System.TimeSpan horari_inici { get; set; }
-    public System.TimeSpan horari_fi { get; set; }
-    public byte dia { get; set; }
-    public int id_actividad { get; set; }
-    public int id_instalacio { get; set; }
-
-    public virtual ACTIVITATS ACTIVITATS { get; set; }
-    public virtual DIES_SETMANA DIES_SETMANA { get; set; }
-    public virtual INSTALACIO INSTALACIO { get; set; }
+    public string name { get; set; }
+    public int principal_id { get; set; }
+    public int diagram_id { get; set; }
+    public Nullable<int> version { get; set; }
+    public byte[] definition { get; set; }
 }

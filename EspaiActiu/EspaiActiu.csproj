@@ -121,6 +121,12 @@
     <Compile Include="FormAddInstalacio.Designer.cs">
       <DependentUpon>FormAddInstalacio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAssignacioHoraris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAssignacioHoraris.Designer.cs">
+      <DependentUpon>FormAssignacioHoraris.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDetallsEntitat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     <Compile Include="SPORTS.cs">
       <DependentUpon>ModelSantCugat.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>ModelSantCugat.tt</DependentUpon>
+    </Compile>
     <Compile Include="TELEFONS.cs">
       <DependentUpon>ModelSantCugat.tt</DependentUpon>
     </Compile>
@@ -227,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddInstalacio.resx">
       <DependentUpon>FormAddInstalacio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAssignacioHoraris.resx">
+      <DependentUpon>FormAssignacioHoraris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetallsEntitat.resx">
       <DependentUpon>FormDetallsEntitat.cs</DependentUpon>
@@ -272,23 +284,59 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ACTIVIDADES_DEMANADAS.datasource" />
     <None Include="Properties\DataSources\ACTIVITATS.datasource" />
+    <None Include="Properties\DataSources\ADMINS.datasource" />
+    <None Include="Properties\DataSources\AssignacioHoraris.datasource" />
     <None Include="Properties\DataSources\CATEGORIA_EDAT.datasource" />
     <None Include="Properties\DataSources\CATEGORIA_NIVELL.datasource" />
     <None Include="Properties\DataSources\COMPETICIO.datasource" />
     <None Include="Properties\DataSources\DIES_SETMANA.datasource" />
     <None Include="Properties\DataSources\ENTITATS.datasource" />
     <None Include="Properties\DataSources\EQUIPS.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORM.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMActivitats.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMActivitatsDemandades.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.BD.ORMAdmins.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMCategoria.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMCategoriaEdat.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMCompeticio.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMDia.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMEntitats.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMEquips.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMEspai.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMEsports.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMHorari.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMHorarisInstalacio.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMInstalacions.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMSexe.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMTelefono.datasource" />
+    <None Include="Properties\DataSources\EspaiActiu.BD.ORMTipoActividad.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\FormAddEntitat.datasource" />
+    <None Include="Properties\DataSources\FormAddEspai.datasource" />
+    <None Include="Properties\DataSources\FormAddInstalacio.datasource" />
+    <None Include="Properties\DataSources\FormDetallsEntitat.datasource" />
+    <None Include="Properties\DataSources\FormDetallsEspai.datasource" />
+    <None Include="Properties\DataSources\FormDetallsInstalacions.datasource" />
+    <None Include="Properties\DataSources\FormDetallsPeticio.datasource" />
+    <None Include="Properties\DataSources\FormInicio.datasource" />
+    <None Include="Properties\DataSources\FormLogin.datasource" />
+    <None Include="Properties\DataSources\FormNuevoEquipo.datasource" />
+    <None Include="Properties\DataSources\FormNuevoTelefono.datasource" />
     <None Include="Properties\DataSources\HORARIS_ACTIVITAT.datasource" />
     <None Include="Properties\DataSources\HORARIS_ACT_DEMANADA.datasource" />
     <None Include="Properties\DataSources\HORARIS_INSTALACIO.datasource" />
+    <None Include="Properties\DataSources\INCIDENCIA.datasource" />
     <None Include="Properties\DataSources\INSTALACIO.datasource" />
     <None Include="Properties\DataSources\LLOC_DEPORTIVO.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\sant_cugatEntities1.datasource" />
     <None Include="Properties\DataSources\SEXE.datasource" />
     <None Include="Properties\DataSources\SPORTS.datasource" />
+    <None Include="Properties\DataSources\sysdiagrams.datasource" />
     <None Include="Properties\DataSources\TELEFONS.datasource" />
+    <None Include="Properties\DataSources\TIPUS_ACTIVIDAD.datasource" />
+    <None Include="Properties\DataSources\TIPUS_INCIDENCIES.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -347,7 +395,6 @@
   <ItemGroup>
     <None Include="Resources\logo_color.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="ModelSantCugat.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -359,6 +406,8 @@
       <DependentUpon>ModelSantCugat.edmx</DependentUpon>
       <LastGenOutput>ModelSantCugat.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\plus1.png" />
     <None Include="Resources\plus.png" />
   </ItemGroup>
