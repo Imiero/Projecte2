@@ -16,5 +16,10 @@ namespace EspaiActiu
         {
             InitializeComponent();
         }
+
+        private void FormDetallsEspai_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

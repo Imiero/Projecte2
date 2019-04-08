@@ -68,6 +68,7 @@
       <DependentUpon>ModelSantCugat.tt</DependentUpon>
     </Compile>
     <Compile Include="BD\ORM.cs" />
+    <Compile Include="BD\ORMActivitats.cs" />
     <Compile Include="BD\ORMActivitatsDemandades.cs" />
     <Compile Include="BD\ORMAdmins.cs" />
     <Compile Include="BD\ORMCategoria.cs" />
@@ -280,6 +281,8 @@
     <None Include="Properties\DataSources\EspaiActiu.BD.ORMAdmins.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\HORARIS_ACTIVITAT.datasource" />
+    <None Include="Properties\DataSources\HORARIS_ACT_DEMANADA.datasource" />
     <None Include="Properties\DataSources\HORARIS_INSTALACIO.datasource" />
     <None Include="Properties\DataSources\INSTALACIO.datasource" />
     <None Include="Properties\DataSources\LLOC_DEPORTIVO.datasource" />

@@ -216,7 +216,7 @@
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Size = new System.Drawing.Size(75, 23);
             this.buttonSalir.TabIndex = 12;
-            this.buttonSalir.Text = "Salir";
+            this.buttonSalir.Text = "Sortir";
             this.buttonSalir.UseVisualStyleBackColor = true;
             this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 

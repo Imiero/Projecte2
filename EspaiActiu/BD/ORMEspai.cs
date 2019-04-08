@@ -1,4 +1,4 @@
-﻿using System;
+﻿   using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +19,15 @@ namespace EspaiActiu.BD
                  select i).ToList();
 
             return _espais;
+        }
+
+
+
+        //Selecciona un espacio buscando su id
+        public static LLOC_DEPORTIVO SelectEspaiFiltroID(int id)
+        {
+            LLOC_DEPORTIVO lloc = ORM.bd.LLOC_DEPORTIVO.Find(id);
+            return lloc;
         }
     }
 }

@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace EspaiActiu
 {
+
     public partial class FormDetallsPeticio : Form
     {
+
         private ACTIVIDADES_DEMANADAS activitat;
         public FormDetallsPeticio(ACTIVIDADES_DEMANADAS activitat)
         {
@@ -22,19 +24,32 @@ namespace EspaiActiu
 
         private void FormDetallsPeticio_Load(object sender, EventArgs e)
         {
-            HORARIS_ACT_DEMANADA horari = ORMHorari.SelectEquiposByID(activitat.id);
+            //Creamos los objetos que vamos a ir necesitando
             EQUIPS equip = ORMEquips.SelectEquiposByID(activitat.id_equipo);
             TIPUS_ACTIVIDAD tipu_acti = ORMTipoActividad.SelectTipoActividadByID(activitat.id_tipus_actividad);
+            LLOC_DEPORTIVO espai = ORMEspai.SelectEspaiFiltroID(activitat.id_espai);
 
-            //Hacer el equivalente del equipo al espacio para assignar la TextBoxEspai como la del equipo.
+            List<ACTIVITATS> listActi = ORMActivitats.SelectActivitatsByInstalacion(espai.id);
+
+
+            bindingSourceHorarisActivitats.DataSource = ORMHorari.SelectAllHorarisByInstalacio(espai.id_instalacions);      
+
+            
+            bindingSourceHorariDemanat.DataSource = ORMHorari.SelectAllHoraris(activitat.id);
+            bindingSourceHorariInstalacio.DataSource = ORMInstalacions.SelectHorarisById(espai.id_instalacions);
+
+
             //Cargamos los datos de la peticion
             textBoxNombre.Text = activitat.nom;
             textBoxDurada.Text = activitat.durada + " H";
             textBoxEquip.Text = equip.nom;
-            textBoxInici.Text = horari.horari_inici.ToString();
-            textBoxFinal.Text = horari.horari_fi.ToString();
             textBoxTipusActivitat.Text = tipu_acti.nom;
-        }
+            textBoxEspai.Text = espai.nom;
+
+           
+
+            }
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
@@ -57,6 +72,38 @@ namespace EspaiActiu
         private void buttonSortir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonDetallsEspai_Click(object sender, EventArgs e)
+        {
+            FormDetallsEspai f = new FormDetallsEspai();
+        }
+
+        private void comboBoxDias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            
+
+        }
+
+        private void comboBoxDias_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingSourceHorari_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxInstalacio_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

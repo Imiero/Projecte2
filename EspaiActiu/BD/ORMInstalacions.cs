@@ -68,7 +68,11 @@ namespace EspaiActiu.BD
             return instalacio.id;
         }
 
-        //
+        public static INSTALACIO SelectInstalacioByID(int id)
+        {
+            INSTALACIO ins = ORM.bd.INSTALACIO.Find(id);
+            return ins;
+        }
 
     }
 }

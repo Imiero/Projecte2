@@ -8,21 +8,19 @@ namespace EspaiActiu.BD
 {
     public class ORMActivitats
     {
-        //LINQ
 
 
-
-        //Seleccionar todas las actividades en una List
-        public static List<ACTIVITATS> SelectAllActivitats()
+        //Seleccionar actividades filtrando la isntalacion
+        public static List<ACTIVITATS> SelectActivitatsByInstalacion(int id)
         {
+
             List<ACTIVITATS> _activitats =
-                (from a in ORM.bd.ACTIVITATS
-                 orderby a.nom
-                 select a
-                 ).ToList();
+            (from a in ORM.bd.ACTIVITATS
+             where a.id_espai.Equals(id)
+             select a
+             ).ToList();
 
             return _activitats;
-
         }
     }
 }

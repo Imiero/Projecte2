@@ -45,30 +45,27 @@
             // 
             // bSortir
             // 
-            this.bSortir.Location = new System.Drawing.Point(693, 738);
-            this.bSortir.Margin = new System.Windows.Forms.Padding(6);
+            this.bSortir.Location = new System.Drawing.Point(378, 400);
             this.bSortir.Name = "bSortir";
-            this.bSortir.Size = new System.Drawing.Size(169, 59);
+            this.bSortir.Size = new System.Drawing.Size(92, 32);
             this.bSortir.TabIndex = 46;
             this.bSortir.Text = "Sortir";
             this.bSortir.UseVisualStyleBackColor = true;
             // 
             // bIncidencies
             // 
-            this.bIncidencies.Location = new System.Drawing.Point(93, 738);
-            this.bIncidencies.Margin = new System.Windows.Forms.Padding(6);
+            this.bIncidencies.Location = new System.Drawing.Point(51, 400);
             this.bIncidencies.Name = "bIncidencies";
-            this.bIncidencies.Size = new System.Drawing.Size(326, 59);
+            this.bIncidencies.Size = new System.Drawing.Size(178, 32);
             this.bIncidencies.TabIndex = 45;
             this.bIncidencies.Text = "Incidències";
             this.bIncidencies.UseVisualStyleBackColor = true;
             // 
             // bEditar
             // 
-            this.bEditar.Location = new System.Drawing.Point(511, 738);
-            this.bEditar.Margin = new System.Windows.Forms.Padding(6);
+            this.bEditar.Location = new System.Drawing.Point(279, 400);
             this.bEditar.Name = "bEditar";
-            this.bEditar.Size = new System.Drawing.Size(169, 59);
+            this.bEditar.Size = new System.Drawing.Size(92, 32);
             this.bEditar.TabIndex = 44;
             this.bEditar.Text = "Editar";
             this.bEditar.UseVisualStyleBackColor = true;
@@ -76,97 +73,88 @@
             // dgvHoraris
             // 
             this.dgvHoraris.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHoraris.Location = new System.Drawing.Point(93, 374);
-            this.dgvHoraris.Margin = new System.Windows.Forms.Padding(6);
+            this.dgvHoraris.Location = new System.Drawing.Point(51, 203);
             this.dgvHoraris.Name = "dgvHoraris";
-            this.dgvHoraris.Size = new System.Drawing.Size(766, 262);
+            this.dgvHoraris.Size = new System.Drawing.Size(418, 142);
             this.dgvHoraris.TabIndex = 43;
             // 
             // lRao
             // 
             this.lRao.AutoSize = true;
-            this.lRao.Location = new System.Drawing.Point(310, 284);
-            this.lRao.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lRao.Location = new System.Drawing.Point(169, 154);
             this.lRao.Name = "lRao";
-            this.lRao.Size = new System.Drawing.Size(47, 25);
+            this.lRao.Size = new System.Drawing.Size(27, 13);
             this.lRao.TabIndex = 42;
             this.lRao.Text = "Raó";
             // 
             // lTelefon
             // 
             this.lTelefon.AutoSize = true;
-            this.lTelefon.Location = new System.Drawing.Point(308, 253);
-            this.lTelefon.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lTelefon.Location = new System.Drawing.Point(168, 137);
             this.lTelefon.Name = "lTelefon";
-            this.lTelefon.Size = new System.Drawing.Size(78, 25);
+            this.lTelefon.Size = new System.Drawing.Size(43, 13);
             this.lTelefon.TabIndex = 41;
             this.lTelefon.Text = "Telèfon";
             // 
             // lCorreu
             // 
             this.lCorreu.AutoSize = true;
-            this.lCorreu.Location = new System.Drawing.Point(310, 221);
-            this.lCorreu.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lCorreu.Location = new System.Drawing.Point(169, 120);
             this.lCorreu.Name = "lCorreu";
-            this.lCorreu.Size = new System.Drawing.Size(160, 25);
+            this.lCorreu.Size = new System.Drawing.Size(87, 13);
             this.lCorreu.TabIndex = 40;
             this.lCorreu.Text = "Correu electrònic";
             // 
             // lNIF
             // 
             this.lNIF.AutoSize = true;
-            this.lNIF.Location = new System.Drawing.Point(308, 192);
-            this.lNIF.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lNIF.Location = new System.Drawing.Point(168, 104);
             this.lNIF.Name = "lNIF";
-            this.lNIF.Size = new System.Drawing.Size(43, 25);
+            this.lNIF.Size = new System.Drawing.Size(24, 13);
             this.lNIF.TabIndex = 39;
             this.lNIF.Text = "NIF";
             // 
             // lAdreça
             // 
             this.lAdreça.AutoSize = true;
-            this.lAdreça.Location = new System.Drawing.Point(310, 162);
-            this.lAdreça.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lAdreça.Location = new System.Drawing.Point(169, 88);
             this.lAdreça.Name = "lAdreça";
-            this.lAdreça.Size = new System.Drawing.Size(75, 25);
+            this.lAdreça.Size = new System.Drawing.Size(41, 13);
             this.lAdreça.TabIndex = 38;
             this.lAdreça.Text = "Adreça";
             // 
             // lTemporada
             // 
             this.lTemporada.AutoSize = true;
-            this.lTemporada.Location = new System.Drawing.Point(308, 131);
-            this.lTemporada.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lTemporada.Location = new System.Drawing.Point(168, 71);
             this.lTemporada.Name = "lTemporada";
-            this.lTemporada.Size = new System.Drawing.Size(113, 25);
+            this.lTemporada.Size = new System.Drawing.Size(61, 13);
             this.lTemporada.TabIndex = 37;
             this.lTemporada.Text = "Temporada";
             // 
             // lNom
             // 
             this.lNom.AutoSize = true;
-            this.lNom.Location = new System.Drawing.Point(310, 96);
-            this.lNom.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lNom.Location = new System.Drawing.Point(169, 52);
             this.lNom.Name = "lNom";
-            this.lNom.Size = new System.Drawing.Size(53, 25);
+            this.lNom.Size = new System.Drawing.Size(29, 13);
             this.lNom.TabIndex = 36;
             this.lNom.Text = "Nom";
             // 
             // lNomEspai
             // 
             this.lNomEspai.AutoSize = true;
-            this.lNomEspai.Location = new System.Drawing.Point(399, 14);
-            this.lNomEspai.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lNomEspai.Location = new System.Drawing.Point(218, 8);
             this.lNomEspai.Name = "lNomEspai";
-            this.lNomEspai.Size = new System.Drawing.Size(105, 25);
+            this.lNomEspai.Size = new System.Drawing.Size(57, 13);
             this.lNomEspai.TabIndex = 35;
             this.lNomEspai.Text = "Nom espai";
             // 
             // FormDetallsEspai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 852);
+            this.ClientSize = new System.Drawing.Size(527, 462);
             this.Controls.Add(this.bSortir);
             this.Controls.Add(this.bIncidencies);
             this.Controls.Add(this.bEditar);
@@ -179,8 +167,10 @@
             this.Controls.Add(this.lTemporada);
             this.Controls.Add(this.lNom);
             this.Controls.Add(this.lNomEspai);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormDetallsEspai";
             this.Text = "FormDetallsEspai";
+            this.Load += new System.EventHandler(this.FormDetallsEspai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoraris)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
