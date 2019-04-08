@@ -51,5 +51,17 @@ namespace EspaiActiu.BD
         }
 
 
+        public static List<ACTIVITATS> SelectAllActvitats()
+        {
+            List<ACTIVITATS> _actividades =
+                (from a in ORM.bd.ACTIVITATS
+                 orderby a.nom
+                 select a
+                 ).ToList();
+
+            return _actividades;
+
+        }
+
     }
 }

@@ -143,9 +143,8 @@ namespace EspaiActiu
             //cargamos grids
             bindingSourceEntitats.DataSource = ORMEntitats.SelectAllEntitats();
             bindingSourcePeticions.DataSource = ORMActivitatsDemandades.SelectAllActvitats();
-
             bindingSourceInstalacions.DataSource = ORMInstalacions.SelectAllInstalacions();
-
+            bindingSourceActivitats.DataSource = ORMActivitats.SelectAllActvitats();
         }
 
 
