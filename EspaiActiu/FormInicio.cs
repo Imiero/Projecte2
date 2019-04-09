@@ -191,6 +191,9 @@ namespace EspaiActiu
         {
             bindingSourceEntitats.DataSource = ORMEntitats.SelectEntitatsByNom(textBoxCercarEntitats.Text);
             bindingSourceInstalacions.DataSource = ORMInstalacions.SelectInstalacionssByNom(textBoxCercarEspais.Text);
+            bindingSourcePeticions.DataSource = ORMActivitatsDemandades.SelectAllActvitats();
+            bindingSourceActivitats.DataSource = ORMActivitats.SelectAllActvitats();
+
         }
 
         //Al pulsar suprimir sobre un elemento de la Grid aparece un mensaje de confirmacion, en caso de pulsar "Yes" se borra la entidad con la funcion "DeleteEntitat" pasandole el objeto seleccionado en la grid.

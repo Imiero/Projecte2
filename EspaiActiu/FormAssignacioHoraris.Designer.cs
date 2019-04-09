@@ -48,7 +48,7 @@
             this.dateTimePickerInici.Location = new System.Drawing.Point(73, 38);
             this.dateTimePickerInici.Name = "dateTimePickerInici";
             this.dateTimePickerInici.ShowUpDown = true;
-            this.dateTimePickerInici.Size = new System.Drawing.Size(59, 20);
+            this.dateTimePickerInici.Size = new System.Drawing.Size(121, 20);
             this.dateTimePickerInici.TabIndex = 8;
             // 
             // dateTimePickerFinal
@@ -57,7 +57,7 @@
             this.dateTimePickerFinal.Location = new System.Drawing.Point(73, 64);
             this.dateTimePickerFinal.Name = "dateTimePickerFinal";
             this.dateTimePickerFinal.ShowUpDown = true;
-            this.dateTimePickerFinal.Size = new System.Drawing.Size(59, 20);
+            this.dateTimePickerFinal.Size = new System.Drawing.Size(121, 20);
             this.dateTimePickerFinal.TabIndex = 9;
             // 
             // label1

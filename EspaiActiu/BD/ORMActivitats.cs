@@ -63,5 +63,13 @@ namespace EspaiActiu.BD
 
         }
 
+        //Seleccionar equipos por id 
+        public static ACTIVITATS SelectActivitatByID(int id)
+        {
+
+            ACTIVITATS _activitat = ORM.bd.ACTIVITATS.Find(id);
+
+            return _activitat;
+        }
     }
 }

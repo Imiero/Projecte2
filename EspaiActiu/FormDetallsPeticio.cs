@@ -46,7 +46,11 @@ namespace EspaiActiu
             textBoxTipusActivitat.Text = tipu_acti.nom;
             textBoxEspai.Text = espai.nom;
 
-           
+            ACTIVITATS activitatAcceptada = ORMActivitats.SelectActivitatByID(activitat.id);
+            if(activitatAcceptada != null) //Si la actividad ya ha sido aceptada no mostramos el boton de aceptar, ya que petaria el programa al intentar generar otra actividad con la PK duplicada
+            {
+                buttonAcceptar.Visible = false;
+            }
 
             }
 
@@ -122,7 +126,7 @@ namespace EspaiActiu
             //no se rechazada, pero el metodo se llamaba asi so...
             ORMActivitatsDemandades.SolicitudRechazada(activitat.id);
 
-            AssignacioHoraris f = new AssignacioHoraris(activitat.id,activitat.id_espai);
+            AssignacioHoraris f = new AssignacioHoraris(activitat.id,activitat.id_espai,this);
             f.Show();
         }
 

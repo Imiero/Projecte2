@@ -70,13 +70,15 @@ namespace EspaiActiu.BD
 
             HORARIS_ACTIVITAT horari = new HORARIS_ACTIVITAT();
 
-            ORM.bd.HORARIS_ACTIVITAT.Add(horari);
-
             horari.horari_inici = horari_inici;
             horari.horari_fi = horari_fi;
-            horari.dia = (byte)dia;
+            byte bytedia;
+            bytedia = Convert.ToByte(dia);
+            horari.dia = bytedia;
             horari.id_actividad = id_activitat;
             horari.id_instalacio = id_instalacio;
+
+            ORM.bd.HORARIS_ACTIVITAT.Add(horari);
 
             try
             {
@@ -84,7 +86,7 @@ namespace EspaiActiu.BD
             }
             catch (Exception)
             {
-
+                
             }
         }
     }

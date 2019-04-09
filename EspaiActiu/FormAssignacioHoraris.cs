@@ -14,14 +14,15 @@ namespace EspaiActiu
     public partial class AssignacioHoraris : Form
     {
         int id_espai, id_activitat;
+        FormDetallsPeticio f;
 
 
-
-        public AssignacioHoraris(int id_activitat, int id_espai)
+        public AssignacioHoraris(int id_activitat, int id_espai, FormDetallsPeticio f)
         {
             this.id_activitat = id_activitat;
             this.id_espai = id_espai;
             InitializeComponent();
+            this.f = f;
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
@@ -31,6 +32,7 @@ namespace EspaiActiu
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
+            
             //Pasmos los date times a timespans
             DateTime dt = dateTimePickerInici.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
@@ -38,12 +40,21 @@ namespace EspaiActiu
             DateTime dt2 = dateTimePickerFinal.Value;
             TimeSpan st2 = new TimeSpan(dt2.Hour, dt2.Minute, dt2.Second);
 
-            ORMHorari.InsertHorariActivitat(st,st2, (int)comboBox1.SelectedValue, id_activitat, id_espai);
+            ORMHorari.InsertHorariActivitat(st, st2, int.Parse(comboBox1.SelectedValue.ToString()), id_activitat, id_espai);
+            
+
+            if (checkBoxFinal.Checked)
+            {
+                f.Close();
+                this.Close();
+            }
         }
 
         private void AssignacioHoraris_Load(object sender, EventArgs e)
         {
             dIESSETMANABindingSource.DataSource = ORMDia.SelectAllDies();
+
+
         }
     }
 }
