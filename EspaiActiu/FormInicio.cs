@@ -229,6 +229,7 @@ namespace EspaiActiu
             f.Show();
         }
 
+
         private void groupBoxEntitats_Enter(object sender, EventArgs e)
         {
 

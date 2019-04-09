@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,11 +70,49 @@ namespace EspaiActiu.BD
             return instalacio.id;
         }
 
+        //Filtrar instalacio per id
         public static INSTALACIO SelectInstalacioByID(int id)
         {
             INSTALACIO ins = ORM.bd.INSTALACIO.Find(id);
             return ins;
         }
+
+        //Modificar instalacio
+        public static void UpdateInstalacio(String nom, String adreca, int id)
+        {
+
+            INSTALACIO instalacio = ORM.bd.INSTALACIO.Find(id);
+
+            instalacio.nom = nom;
+            instalacio.adreca = adreca;
+
+            try
+            {
+                ORM.bd.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                //En caso de estar duplicado no podría crearse y petaria el programa
+            }
+
+        }
+
+        //Eliminar instalación --> cambiar bdd para poder eliminar
+        public static void DeleteInstalacio(INSTALACIO instalacio)
+        {
+            ORM.bd.INSTALACIO.Remove(instalacio);
+            try
+            {
+                ORM.bd.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                SqlException sqlEx = (SqlException)ex.InnerException.InnerException;
+
+            }
+
+        }
+
 
     }
 }

@@ -39,6 +39,9 @@ namespace EspaiActiu
             Refrescar();
         }
 
+    
+
+
 
         private void Refrescar()
         {
@@ -50,6 +53,55 @@ namespace EspaiActiu
          
         }
 
+
+
+        //al clicar un espaicio en la lista de instalaciones id a detalles
+        private void dgvLlistaEspais_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LLOC_DEPORTIVO espai = (LLOC_DEPORTIVO)dgvLlistaEspais.CurrentRow.DataBoundItem;
+
+            FormDetallsEspai f = new FormDetallsEspai(espai);
+            f.Show();
+
+        }
         
+        //Modificar
+        private void bModificar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Estas segur que vols modificar?", "Modificar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                //Verificamos que todos los campos esten llenos______________ mirar como modificar horarios
+                if (tbNomInstalacio.Text.Length != 0 && tbAdrecaInstalacio.Text.Length != 0)
+                {
+    
+                    ORMInstalacions.UpdateInstalacio(tbNomInstalacio.Text, tbAdrecaInstalacio.Text, instalacio.id);
+                    MessageBox.Show("Entitat modificada amb éxit.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+
+
+                else
+                {
+                    MessageBox.Show("Tots els camps han de estar omplerts.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        //Eliminar
+        private void bEliminar_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("Estas segur que vols eliminar la instalacio?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                //ORMInstalacions.DeleteInstalacio(instalacio);
+                MessageBox.Show("La instalacio ha estat eliminada.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
     }
 }

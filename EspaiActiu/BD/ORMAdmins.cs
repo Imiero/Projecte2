@@ -15,13 +15,20 @@ namespace EspaiActiu.BD
         //Seleccionar todos los admins en una List
         public static List<ADMINS> SelectAllAdmins()
         {
-            List<ADMINS> _admins =
-                (from a in ORM.bd.ADMINS
-                 orderby a.nombre
-                 select a
-                 ).ToList();
 
-            return _admins;
+            try
+            {
+                List<ADMINS> _admins =
+                    (from a in ORM.bd.ADMINS
+                     orderby a.nombre
+                     select a
+                     ).ToList();
+
+                return _admins;
+            }catch(Exception e)
+            {
+                return null;
+            }
 
         }
 
