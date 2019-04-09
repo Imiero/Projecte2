@@ -50,7 +50,7 @@ namespace EspaiActiu.BD
             }
         }
 
-
+        //Seleccionar todas las actividades
         public static List<ACTIVITATS> SelectAllActvitats()
         {
             List<ACTIVITATS> _actividades =
@@ -63,13 +63,25 @@ namespace EspaiActiu.BD
 
         }
 
-        //Seleccionar equipos por id 
+        //Selecciona ractvididades por id 
         public static ACTIVITATS SelectActivitatByID(int id)
         {
 
             ACTIVITATS _activitat = ORM.bd.ACTIVITATS.Find(id);
 
             return _activitat;
+        }
+
+        //Seleccionar todas las actividades  filtrando por el nombre
+        public static List<ACTIVITATS> SelectActivitatsByNom(String nom)
+        {
+            List<ACTIVITATS> _actividades =
+                (from a in ORM.bd.ACTIVITATS
+                 where a.nom.Contains(nom)
+                 orderby a.nom
+                 select a).ToList();
+
+            return _actividades;
         }
     }
 }

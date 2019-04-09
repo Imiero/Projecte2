@@ -271,5 +271,15 @@ namespace EspaiActiu
             FormAddInstalacio fInst = new FormAddInstalacio();
             fInst.ShowDialog();
         }
+
+        private void textBoxBuscarActivitat_TextChanged(object sender, EventArgs e)
+        {
+            bindingSourceActivitats.DataSource = ORMActivitats.SelectActivitatsByNom(textBoxBuscarActivitat.Text);
+        }
+
+        private void dataGridViewActivitats_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -493,6 +493,7 @@
             this.textBoxBuscarActivitat.Name = "textBoxBuscarActivitat";
             this.textBoxBuscarActivitat.Size = new System.Drawing.Size(151, 20);
             this.textBoxBuscarActivitat.TabIndex = 17;
+            this.textBoxBuscarActivitat.TextChanged += new System.EventHandler(this.textBoxBuscarActivitat_TextChanged);
             // 
             // label3
             // 
@@ -585,6 +586,7 @@
             this.dataGridViewActivitats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewActivitats.Size = new System.Drawing.Size(214, 294);
             this.dataGridViewActivitats.TabIndex = 14;
+            this.dataGridViewActivitats.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewActivitats_CellContentClick);
             // 
             // tabControl1
             // 

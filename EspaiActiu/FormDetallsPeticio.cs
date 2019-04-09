@@ -50,6 +50,7 @@ namespace EspaiActiu
             if(activitatAcceptada != null) //Si la actividad ya ha sido aceptada no mostramos el boton de aceptar, ya que petaria el programa al intentar generar otra actividad con la PK duplicada
             {
                 buttonAcceptar.Visible = false;
+                buttonCancelar.Visible = false;
             }
 
             }
