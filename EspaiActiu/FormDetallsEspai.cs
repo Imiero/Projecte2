@@ -12,9 +12,32 @@ namespace EspaiActiu
 {
     public partial class FormDetallsEspai : Form
     {
+
+        private LLOC_DEPORTIVO espai;
+
         public FormDetallsEspai()
         {
             InitializeComponent();
+            this.espai = espai;
         }
+
+        private void FormDetallsEspai_Load(object sender, EventArgs e)
+        {
+            this.Text = espai.nom;
+        }
+
+        private void Refrescar()
+        {
+            this.Text = espai.nom;
+
+            lNomEspai.Text = espai.nom;
+           //tbPreu = espai.pre;
+
+         
+          
+
+        }
+
+
     }
 }

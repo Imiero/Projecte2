@@ -34,8 +34,6 @@
             this.tbNomInstalacio = new System.Windows.Forms.TextBox();
             this.tbAdrecaInstalacio = new System.Windows.Forms.TextBox();
             this.dgvLlistaEspais = new System.Windows.Forms.DataGridView();
-            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exteriorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             this.gbEspais = new System.Windows.Forms.GroupBox();
             this.gbHoraris = new System.Windows.Forms.GroupBox();
@@ -48,6 +46,7 @@
             this.hORARISINSTALACIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lLOCDEPORTIVOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gbDetallsInstalacio = new System.Windows.Forms.GroupBox();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLlistaEspais)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).BeginInit();
             this.gbEspais.SuspendLayout();
@@ -101,8 +100,7 @@
             this.dgvLlistaEspais.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvLlistaEspais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLlistaEspais.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomDataGridViewTextBoxColumn,
-            this.exteriorDataGridViewCheckBoxColumn});
+            this.nomDataGridViewTextBoxColumn});
             this.dgvLlistaEspais.DataSource = this.bindingSourceEspais;
             this.dgvLlistaEspais.Location = new System.Drawing.Point(18, 28);
             this.dgvLlistaEspais.Name = "dgvLlistaEspais";
@@ -110,20 +108,6 @@
             this.dgvLlistaEspais.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLlistaEspais.Size = new System.Drawing.Size(345, 106);
             this.dgvLlistaEspais.TabIndex = 4;
-            // 
-            // nomDataGridViewTextBoxColumn
-            // 
-            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
-            this.nomDataGridViewTextBoxColumn.HeaderText = "Nom";
-            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
-            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // exteriorDataGridViewCheckBoxColumn
-            // 
-            this.exteriorDataGridViewCheckBoxColumn.DataPropertyName = "exterior";
-            this.exteriorDataGridViewCheckBoxColumn.HeaderText = "Exterior";
-            this.exteriorDataGridViewCheckBoxColumn.Name = "exteriorDataGridViewCheckBoxColumn";
-            this.exteriorDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // bindingSourceEspais
             // 
@@ -224,6 +208,13 @@
             this.gbDetallsInstalacio.TabStop = false;
             this.gbDetallsInstalacio.Text = "Dades instalació";
             // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // FormDetallsInstalacions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,12 +252,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource bindingSourceHoraris;
         private System.Windows.Forms.BindingSource hORARISINSTALACIOBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn exteriorDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horari_inici;
         private System.Windows.Forms.DataGridViewTextBoxColumn horari_fi;
         private System.Windows.Forms.DataGridViewTextBoxColumn dIESSETMANADataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox gbDetallsInstalacio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
     }
 }
