@@ -36,7 +36,6 @@ namespace EspaiActiu
             //Pasmos los date times a timespans
             DateTime dt = dateTimePickerInici.Value;
             TimeSpan st = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
-
             DateTime dt2 = dateTimePickerFinal.Value;
             TimeSpan st2 = new TimeSpan(dt2.Hour, dt2.Minute, dt2.Second);
 

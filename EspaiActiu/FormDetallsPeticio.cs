@@ -130,10 +130,15 @@ namespace EspaiActiu
             ORMActivitatsDemandades.SolicitudRechazada(activitat.id);
 
             AssignacioHoraris f = new AssignacioHoraris(activitat.id,activitat.id_espai,this);
-            f.Show();
+            f.ShowDialog();
         }
 
         private void FormDetallsPeticio_Activated(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
         }

@@ -63,7 +63,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="dia" Type="varchar" MaxLength="12" Nullable="false" />
         </EntityType>
         <EntityType Name="ENTITATS">
@@ -98,7 +98,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="horari_inici" Type="time" Precision="7" Nullable="false" />
           <Property Name="horari_fi" Type="time" Precision="7" Nullable="false" />
-          <Property Name="dia" Type="tinyint" Nullable="false" />
+          <Property Name="dia" Type="int" Nullable="false" />
           <Property Name="id_actividad_demanada" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="HORARIS_ACTIVITAT">
@@ -108,7 +108,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="horari_inici" Type="time" Precision="7" Nullable="false" />
           <Property Name="horari_fi" Type="time" Precision="7" Nullable="false" />
-          <Property Name="dia" Type="tinyint" Nullable="false" />
+          <Property Name="dia" Type="int" Nullable="false" />
           <Property Name="id_actividad" Type="int" Nullable="false" />
           <Property Name="id_instalacio" Type="int" Nullable="false" />
         </EntityType>
@@ -119,7 +119,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="horari_inici" Type="time" Precision="7" Nullable="false" />
           <Property Name="horari_fi" Type="time" Precision="7" Nullable="false" />
-          <Property Name="dia" Type="tinyint" Nullable="false" />
+          <Property Name="dia" Type="int" Nullable="false" />
           <Property Name="id_centre" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="INCIDENCIA">
