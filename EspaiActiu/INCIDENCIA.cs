@@ -7,18 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class INCIDENCIA
+namespace EspaiActiu
 {
-    public int id { get; set; }
-    public int id_entidad { get; set; }
-    public int id_lloc { get; set; }
-    public string descripcion { get; set; }
-    public int id_tipo_incidencia { get; set; }
-
-    public virtual ENTITATS ENTITATS { get; set; }
-    public virtual LLOC_DEPORTIVO LLOC_DEPORTIVO { get; set; }
-    public virtual TIPUS_INCIDENCIES TIPUS_INCIDENCIES { get; set; }
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class INCIDENCIA
+    {
+        public int id { get; set; }
+        public int id_entidad { get; set; }
+        public int id_lloc { get; set; }
+        public string descripcion { get; set; }
+        public int id_tipo_incidencia { get; set; }
+    
+        public virtual ENTITATS ENTITATS { get; set; }
+        public virtual LLOC_DEPORTIVO LLOC_DEPORTIVO { get; set; }
+        public virtual TIPUS_INCIDENCIES TIPUS_INCIDENCIES { get; set; }
+    }
 }

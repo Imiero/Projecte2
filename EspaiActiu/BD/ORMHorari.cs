@@ -79,15 +79,8 @@ namespace EspaiActiu.BD
             horari.id_instalacio = id_instalacio;
 
             ORM.bd.HORARIS_ACTIVITAT.Add(horari);
-
-            try
-            {
-                ORM.bd.SaveChanges();
-            }
-            catch (Exception)
-            {
-                
-            }
+            ORM.bd.SaveChanges();
+            
         }
     }
 }

@@ -7,30 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class LLOC_DEPORTIVO
+namespace EspaiActiu
 {
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-    public LLOC_DEPORTIVO()
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class LLOC_DEPORTIVO
     {
-        this.ACTIVIDADES_DEMANADAS = new HashSet<ACTIVIDADES_DEMANADAS>();
-        this.ACTIVITATS = new HashSet<ACTIVITATS>();
-        this.INCIDENCIA = new HashSet<INCIDENCIA>();
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public LLOC_DEPORTIVO()
+        {
+            this.ACTIVIDADES_DEMANADAS = new HashSet<ACTIVIDADES_DEMANADAS>();
+            this.ACTIVITATS = new HashSet<ACTIVITATS>();
+            this.INCIDENCIA = new HashSet<INCIDENCIA>();
+            this.HORARIS_ACTIVITAT = new HashSet<HORARIS_ACTIVITAT>();
+        }
+    
+        public int id { get; set; }
+        public string nom { get; set; }
+        public decimal preu { get; set; }
+        public bool exterior { get; set; }
+        public int id_instalacions { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ACTIVIDADES_DEMANADAS> ACTIVIDADES_DEMANADAS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ACTIVITATS> ACTIVITATS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<INCIDENCIA> INCIDENCIA { get; set; }
+        public virtual INSTALACIO INSTALACIO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HORARIS_ACTIVITAT> HORARIS_ACTIVITAT { get; set; }
     }
-
-    public int id { get; set; }
-    public string nom { get; set; }
-    public decimal preu { get; set; }
-    public bool exterior { get; set; }
-    public int id_instalacions { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<ACTIVIDADES_DEMANADAS> ACTIVIDADES_DEMANADAS { get; set; }
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<ACTIVITATS> ACTIVITATS { get; set; }
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<INCIDENCIA> INCIDENCIA { get; set; }
-    public virtual INSTALACIO INSTALACIO { get; set; }
 }

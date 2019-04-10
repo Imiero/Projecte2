@@ -7,35 +7,38 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class EQUIPS
+namespace EspaiActiu
 {
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-    public EQUIPS()
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class EQUIPS
     {
-        this.ACTIVIDADES_DEMANADAS = new HashSet<ACTIVIDADES_DEMANADAS>();
-        this.ACTIVITATS = new HashSet<ACTIVITATS>();
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public EQUIPS()
+        {
+            this.ACTIVIDADES_DEMANADAS = new HashSet<ACTIVIDADES_DEMANADAS>();
+            this.ACTIVITATS = new HashSet<ACTIVITATS>();
+        }
+    
+        public int id { get; set; }
+        public int id_entitat { get; set; }
+        public string nom { get; set; }
+        public int id_sport { get; set; }
+        public int id_competicio { get; set; }
+        public int id_categoria { get; set; }
+        public int id_categoria_edat { get; set; }
+        public int id_sexe { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ACTIVIDADES_DEMANADAS> ACTIVIDADES_DEMANADAS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ACTIVITATS> ACTIVITATS { get; set; }
+        public virtual CATEGORIA_EDAT CATEGORIA_EDAT { get; set; }
+        public virtual CATEGORIA_NIVELL CATEGORIA_NIVELL { get; set; }
+        public virtual COMPETICIO COMPETICIO { get; set; }
+        public virtual ENTITATS ENTITATS { get; set; }
+        public virtual SEXE SEXE { get; set; }
+        public virtual SPORTS SPORTS { get; set; }
     }
-
-    public int id { get; set; }
-    public int id_entitat { get; set; }
-    public string nom { get; set; }
-    public int id_sport { get; set; }
-    public int id_competicio { get; set; }
-    public int id_categoria { get; set; }
-    public int id_categoria_edat { get; set; }
-    public int id_sexe { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<ACTIVIDADES_DEMANADAS> ACTIVIDADES_DEMANADAS { get; set; }
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<ACTIVITATS> ACTIVITATS { get; set; }
-    public virtual CATEGORIA_EDAT CATEGORIA_EDAT { get; set; }
-    public virtual CATEGORIA_NIVELL CATEGORIA_NIVELL { get; set; }
-    public virtual COMPETICIO COMPETICIO { get; set; }
-    public virtual ENTITATS ENTITATS { get; set; }
-    public virtual SEXE SEXE { get; set; }
-    public virtual SPORTS SPORTS { get; set; }
 }

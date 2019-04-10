@@ -7,17 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class HORARIS_ACT_DEMANADA
+namespace EspaiActiu
 {
-    public int id { get; set; }
-    public System.TimeSpan horari_inici { get; set; }
-    public System.TimeSpan horari_fi { get; set; }
-    public byte dia { get; set; }
-    public int id_actividad_demanada { get; set; }
-
-    public virtual ACTIVIDADES_DEMANADAS ACTIVIDADES_DEMANADAS { get; set; }
-    public virtual DIES_SETMANA DIES_SETMANA { get; set; }
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class HORARIS_ACT_DEMANADA
+    {
+        public int id { get; set; }
+        public System.TimeSpan horari_inici { get; set; }
+        public System.TimeSpan horari_fi { get; set; }
+        public byte dia { get; set; }
+        public int id_actividad_demanada { get; set; }
+    
+        public virtual ACTIVIDADES_DEMANADAS ACTIVIDADES_DEMANADAS { get; set; }
+        public virtual DIES_SETMANA DIES_SETMANA { get; set; }
+    }
 }

@@ -33,6 +33,8 @@ namespace EspaiActiu
 
             List<ACTIVITATS> listActi = ORMActivitats.SelectActivitatsByInstalacion(espai.id);
 
+            bindingSourceDias.DataSource = ORMDia.SelectAllDies();
+
 
             bindingSourceHorarisActivitats.DataSource = ORMHorari.SelectAllHorarisByInstalacio(espai.id);                  
             bindingSourceHorariDemanat.DataSource = ORMHorari.SelectAllHoraris(activitat.id);

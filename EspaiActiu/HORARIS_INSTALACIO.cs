@@ -7,17 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class HORARIS_INSTALACIO
+namespace EspaiActiu
 {
-    public int id { get; set; }
-    public System.TimeSpan horari_inici { get; set; }
-    public System.TimeSpan horari_fi { get; set; }
-    public byte dia { get; set; }
-    public int id_centre { get; set; }
-
-    public virtual DIES_SETMANA DIES_SETMANA { get; set; }
-    public virtual INSTALACIO INSTALACIO { get; set; }
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class HORARIS_INSTALACIO
+    {
+        public int id { get; set; }
+        public System.TimeSpan horari_inici { get; set; }
+        public System.TimeSpan horari_fi { get; set; }
+        public byte dia { get; set; }
+        public int id_centre { get; set; }
+    
+        public virtual DIES_SETMANA DIES_SETMANA { get; set; }
+        public virtual INSTALACIO INSTALACIO { get; set; }
+    }
 }

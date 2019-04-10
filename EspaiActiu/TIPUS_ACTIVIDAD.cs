@@ -7,23 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class TIPUS_ACTIVIDAD
+namespace EspaiActiu
 {
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-    public TIPUS_ACTIVIDAD()
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class TIPUS_ACTIVIDAD
     {
-        this.ACTIVIDADES_DEMANADAS = new HashSet<ACTIVIDADES_DEMANADAS>();
-        this.ACTIVITATS = new HashSet<ACTIVITATS>();
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TIPUS_ACTIVIDAD()
+        {
+            this.ACTIVIDADES_DEMANADAS = new HashSet<ACTIVIDADES_DEMANADAS>();
+            this.ACTIVITATS = new HashSet<ACTIVITATS>();
+        }
+    
+        public int id { get; set; }
+        public string nom { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ACTIVIDADES_DEMANADAS> ACTIVIDADES_DEMANADAS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ACTIVITATS> ACTIVITATS { get; set; }
     }
-
-    public int id { get; set; }
-    public string nom { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<ACTIVIDADES_DEMANADAS> ACTIVIDADES_DEMANADAS { get; set; }
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<ACTIVITATS> ACTIVITATS { get; set; }
 }

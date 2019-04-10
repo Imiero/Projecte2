@@ -7,31 +7,34 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class ENTITATS
+namespace EspaiActiu
 {
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-    public ENTITATS()
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class ENTITATS
     {
-        this.EQUIPS = new HashSet<EQUIPS>();
-        this.INCIDENCIA = new HashSet<INCIDENCIA>();
-        this.TELEFONS = new HashSet<TELEFONS>();
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ENTITATS()
+        {
+            this.EQUIPS = new HashSet<EQUIPS>();
+            this.INCIDENCIA = new HashSet<INCIDENCIA>();
+            this.TELEFONS = new HashSet<TELEFONS>();
+        }
+    
+        public int id { get; set; }
+        public string nom { get; set; }
+        public string temporada { get; set; }
+        public string adreca { get; set; }
+        public string nif { get; set; }
+        public string correu { get; set; }
+        public string password { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EQUIPS> EQUIPS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<INCIDENCIA> INCIDENCIA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TELEFONS> TELEFONS { get; set; }
     }
-
-    public int id { get; set; }
-    public string nom { get; set; }
-    public string temporada { get; set; }
-    public string adreca { get; set; }
-    public string nif { get; set; }
-    public string correu { get; set; }
-    public string password { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<EQUIPS> EQUIPS { get; set; }
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<INCIDENCIA> INCIDENCIA { get; set; }
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<TELEFONS> TELEFONS { get; set; }
 }
