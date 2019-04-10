@@ -16,6 +16,7 @@
           <Property Name="id_espai" Type="int" Nullable="false" />
           <Property Name="id_tipus_actividad" Type="int" Nullable="false" />
           <Property Name="revisada" Type="bit" Nullable="false" />
+          <Property Name="estado" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ACTIVITATS">
           <Key>
@@ -657,6 +658,7 @@
           <NavigationProperty Name="TIPUS_ACTIVIDAD" Relationship="Self.FK_ACTIVIDADES_DEMANADAS_TIPUS_ACTIVIDAD" FromRole="ACTIVIDADES_DEMANADAS" ToRole="TIPUS_ACTIVIDAD" />
           <NavigationProperty Name="ACTIVITATS" Relationship="Self.FK_ACTIVITATS_ACTIVIDADES_DEMANADAS" FromRole="ACTIVIDADES_DEMANADAS" ToRole="ACTIVITATS" />
           <NavigationProperty Name="HORARIS_ACT_DEMANADA" Relationship="Self.FK_HORARIS_ACT_DEMANADA_ACTIVIDADES_DEMANADAS" FromRole="ACTIVIDADES_DEMANADAS" ToRole="HORARIS_ACT_DEMANADA" />
+          <Property Name="estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="ACTIVITATS">
           <Key>
@@ -1334,6 +1336,7 @@
           <EntitySetMapping Name="ACTIVIDADES_DEMANADAS">
             <EntityTypeMapping TypeName="sant_cugatModel.ACTIVIDADES_DEMANADAS">
               <MappingFragment StoreEntitySet="ACTIVIDADES_DEMANADAS">
+                <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nom" ColumnName="nom" />
                 <ScalarProperty Name="durada" ColumnName="durada" />

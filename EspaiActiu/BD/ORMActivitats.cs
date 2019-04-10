@@ -27,6 +27,7 @@ namespace EspaiActiu.BD
 
         public static void InsertActividad(int id_actividad_demanada, String nom, int id_tipus_actividad, int id_equip, int id_espai, int id_admin)
         {
+
             ACTIVITATS actividad = new ACTIVITATS();
 
             actividad.id_actividad_demanada = id_actividad_demanada;
@@ -36,6 +37,7 @@ namespace EspaiActiu.BD
             actividad.id_espai = id_espai;
             actividad.id_admin = id_admin;
             actividad.ult_modif = DateTime.Now;
+
             
 
             ORM.bd.ACTIVITATS.Add(actividad);

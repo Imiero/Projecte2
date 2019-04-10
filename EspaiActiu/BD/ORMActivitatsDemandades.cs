@@ -45,6 +45,24 @@ namespace EspaiActiu.BD
             ACTIVIDADES_DEMANADAS a = ORM.bd.ACTIVIDADES_DEMANADAS.Find(id);
 
             a.revisada = true;
+            a.estado = "Rechazada";
+
+            try
+            {
+                ORM.bd.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                //En caso de estar duplicado no podría crearse y petaria el programa
+            }
+        }
+
+        public static void SolicitudAceptada(int id)
+        {
+            String aceptada = "Acceptada";
+            ACTIVIDADES_DEMANADAS a = ORM.bd.ACTIVIDADES_DEMANADAS.Find(id);
+            a.estado = aceptada;
+            a.revisada = true;
 
             try
             {

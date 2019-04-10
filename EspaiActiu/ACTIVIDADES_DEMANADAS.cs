@@ -27,6 +27,7 @@ namespace EspaiActiu
         public int id_espai { get; set; }
         public int id_tipus_actividad { get; set; }
         public bool revisada { get; set; }
+        public string estado { get; set; }
     
         public virtual EQUIPS EQUIPS { get; set; }
         public virtual LLOC_DEPORTIVO LLOC_DEPORTIVO { get; set; }

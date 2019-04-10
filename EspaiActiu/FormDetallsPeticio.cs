@@ -126,9 +126,7 @@ namespace EspaiActiu
         private void buttonAcceptar_Click(object sender, EventArgs e)
         {
             ORMActivitats.InsertActividad(activitat.id, activitat.nom, activitat.id_tipus_actividad, activitat.id_equipo, activitat.id_espai, 1);
-            //no se rechazada, pero el metodo se llamaba asi so...
-            ORMActivitatsDemandades.SolicitudRechazada(activitat.id);
-
+            ORMActivitatsDemandades.SolicitudAceptada(activitat.id);
             AssignacioHoraris f = new AssignacioHoraris(activitat.id,activitat.id_espai,this);
             f.ShowDialog();
         }

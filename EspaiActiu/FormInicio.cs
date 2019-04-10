@@ -145,6 +145,17 @@ namespace EspaiActiu
             bindingSourcePeticions.DataSource = ORMActivitatsDemandades.SelectAllActvitats();
             bindingSourceInstalacions.DataSource = ORMInstalacions.SelectAllInstalacions();
             bindingSourceActivitats.DataSource = ORMActivitats.SelectAllActvitats();
+
+            //Grid de peticiones
+
+            foreach (DataGridViewRow item in dataGridViewPeticio.Rows)
+            {
+                //if (item.Cells[1].Value.ToString().Equals("Acceptada"))
+                if (item.Cells[1].Value == null)
+                {
+                    item.DefaultCellStyle.SelectionBackColor = Color.Green;
+                }
+            }  
         }
 
 
