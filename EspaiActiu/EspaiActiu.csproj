@@ -67,6 +67,7 @@
     <Compile Include="ADMINS.cs">
       <DependentUpon>ModelSantCugat.tt</DependentUpon>
     </Compile>
+    <Compile Include="Encriptacion.cs" />
     <Compile Include="BD\ORM.cs" />
     <Compile Include="BD\ORMActivitats.cs" />
     <Compile Include="BD\ORMActivitatsDemandades.cs" />

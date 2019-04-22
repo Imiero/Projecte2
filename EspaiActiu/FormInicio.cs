@@ -310,22 +310,27 @@ namespace EspaiActiu
 
         private void buttonAcceptar_Click(object sender, EventArgs e)
         {
-            if(textBoxNom.Text.Length == 0 || textBoxPAss.Text.Length < 4 || textBoxCorreu.Text.Length == 0)
-            {
-                MessageBox.Show("Les dades son incorrectes.", "ERROR", MessageBoxButtons.OK,MessageBoxIcon.Information);
-            }
-            else
-            {
-                ORMAdmins.InsertAdmin(textBoxNom.Text, textBoxPAss.Text, textBoxCorreu.Text);
-                //Refrescamos la grid
-                bindingSourceAdmins.DataSource = ORMAdmins.SelectAllAdmins();
-                //Dejamos las textbox limpias
-                textBoxNom.Text = "";
-                textBoxPAss.Text = "";
-                textBoxCorreu.Text = "";
+                if (textBoxNom.Text.Length == 0 || textBoxPAss.Text.Length < 4 || textBoxCorreu.Text.Length == 0)
+                {
+                    MessageBox.Show("Les dades son incorrectes.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
-            }
-            
+
+
+                else
+                {
+                    ORMAdmins.InsertAdmin(textBoxNom.Text, textBoxPAss.Text, textBoxCorreu.Text);
+                    //Refrescamos la grid
+                    bindingSourceAdmins.DataSource = ORMAdmins.SelectAllAdmins();
+                    //Dejamos las textbox limpias
+                    textBoxNom.Text = "";
+                    textBoxPAss.Text = "";
+                    textBoxCorreu.Text = "";
+
+                }
+
+
+
         }
 
         private void label9_Click(object sender, EventArgs e)
