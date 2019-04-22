@@ -30,11 +30,15 @@ namespace EspaiActiu
         private void FormDetallsInstalacions_Load(object sender, EventArgs e)
         {
             this.Text = instalacio.nom;
+
+            //cargamos los dias para que se muestren como el nombre del dia no un numero
+            bindingSourceDias.DataSource = ORMDia.SelectAllDies();
             //Llamamos al método para cargar la grid con la lista de espacios de una instalacion
             bindingSourceEspais.DataSource = ORMEspai.SelectAllEspaisById(instalacio.id);
 
             //cargamos grid con los horaris de la instalación filtrando por id
             bindingSourceHoraris.DataSource = ORMInstalacions.SelectHorarisById(instalacio.id);
+         
 
             Refrescar();
         }
@@ -90,18 +94,6 @@ namespace EspaiActiu
             }
         }
 
-        //Eliminar
-        private void bEliminar_Click(object sender, EventArgs e)
-        {
-
-            DialogResult result = MessageBox.Show("Estas segur que vols eliminar la instalacio?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                //ORMInstalacions.DeleteInstalacio(instalacio);
-                MessageBox.Show("La instalacio ha estat eliminada.", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-        }
+        
     }
 }
