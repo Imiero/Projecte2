@@ -283,15 +283,23 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ACTIVIDADES_DEMANADAS.datasource" />
+    <None Include="Properties\DataSources\ACTIVIDADES_DEMANADAS1.datasource" />
     <None Include="Properties\DataSources\ACTIVITATS.datasource" />
+    <None Include="Properties\DataSources\ACTIVITATS1.datasource" />
     <None Include="Properties\DataSources\ADMINS.datasource" />
-    <None Include="Properties\DataSources\AssignacioHoraris.datasource" />
+    <None Include="Properties\DataSources\ADMINS1.datasource" />
     <None Include="Properties\DataSources\CATEGORIA_EDAT.datasource" />
+    <None Include="Properties\DataSources\CATEGORIA_EDAT1.datasource" />
     <None Include="Properties\DataSources\CATEGORIA_NIVELL.datasource" />
+    <None Include="Properties\DataSources\CATEGORIA_NIVELL1.datasource" />
     <None Include="Properties\DataSources\COMPETICIO.datasource" />
+    <None Include="Properties\DataSources\COMPETICIO1.datasource" />
     <None Include="Properties\DataSources\DIES_SETMANA.datasource" />
+    <None Include="Properties\DataSources\DIES_SETMANA1.datasource" />
     <None Include="Properties\DataSources\ENTITATS.datasource" />
+    <None Include="Properties\DataSources\ENTITATS1.datasource" />
     <None Include="Properties\DataSources\EQUIPS.datasource" />
+    <None Include="Properties\DataSources\EQUIPS1.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.BD.ORM.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.BD.ORMActivitats.datasource" />
     <None Include="Properties\DataSources\EspaiActiu.BD.ORMActivitatsDemandades.datasource" />
@@ -324,19 +332,30 @@
     <None Include="Properties\DataSources\FormNuevoEquipo.datasource" />
     <None Include="Properties\DataSources\FormNuevoTelefono.datasource" />
     <None Include="Properties\DataSources\HORARIS_ACTIVITAT.datasource" />
+    <None Include="Properties\DataSources\HORARIS_ACTIVITAT1.datasource" />
     <None Include="Properties\DataSources\HORARIS_ACT_DEMANADA.datasource" />
+    <None Include="Properties\DataSources\HORARIS_ACT_DEMANADA1.datasource" />
     <None Include="Properties\DataSources\HORARIS_INSTALACIO.datasource" />
+    <None Include="Properties\DataSources\HORARIS_INSTALACIO1.datasource" />
     <None Include="Properties\DataSources\INCIDENCIA.datasource" />
+    <None Include="Properties\DataSources\INCIDENCIA1.datasource" />
     <None Include="Properties\DataSources\INSTALACIO.datasource" />
+    <None Include="Properties\DataSources\INSTALACIO1.datasource" />
     <None Include="Properties\DataSources\LLOC_DEPORTIVO.datasource" />
+    <None Include="Properties\DataSources\LLOC_DEPORTIVO1.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\sant_cugatEntities1.datasource" />
     <None Include="Properties\DataSources\SEXE.datasource" />
+    <None Include="Properties\DataSources\SEXE1.datasource" />
     <None Include="Properties\DataSources\SPORTS.datasource" />
+    <None Include="Properties\DataSources\SPORTS1.datasource" />
     <None Include="Properties\DataSources\sysdiagrams.datasource" />
     <None Include="Properties\DataSources\TELEFONS.datasource" />
+    <None Include="Properties\DataSources\TELEFONS1.datasource" />
     <None Include="Properties\DataSources\TIPUS_ACTIVIDAD.datasource" />
+    <None Include="Properties\DataSources\TIPUS_ACTIVIDAD1.datasource" />
     <None Include="Properties\DataSources\TIPUS_INCIDENCIES.datasource" />
+    <None Include="Properties\DataSources\TIPUS_INCIDENCIES1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

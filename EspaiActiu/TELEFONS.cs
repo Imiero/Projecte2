@@ -7,15 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class TELEFONS
+namespace EspaiActiu
 {
-    public int id { get; set; }
-    public int id_entitat { get; set; }
-    public string rao { get; set; }
-    public string telefono { get; set; }
-
-    public virtual ENTITATS ENTITATS { get; set; }
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class TELEFONS
+    {
+        public int id { get; set; }
+        public int id_entitat { get; set; }
+        public string rao { get; set; }
+        public string telefono { get; set; }
+    
+        public virtual ENTITATS ENTITATS { get; set; }
+    }
 }

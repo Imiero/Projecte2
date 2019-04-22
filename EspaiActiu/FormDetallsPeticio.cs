@@ -33,6 +33,8 @@ namespace EspaiActiu
 
             List<ACTIVITATS> listActi = ORMActivitats.SelectActivitatsByInstalacion(espai.id);
 
+            bindingSourceDias.DataSource = ORMDia.SelectAllDies();
+
 
             bindingSourceHorarisActivitats.DataSource = ORMHorari.SelectAllHorarisByInstalacio(espai.id);                  
             bindingSourceHorariDemanat.DataSource = ORMHorari.SelectAllHoraris(activitat.id);
@@ -124,14 +126,17 @@ namespace EspaiActiu
         private void buttonAcceptar_Click(object sender, EventArgs e)
         {
             ORMActivitats.InsertActividad(activitat.id, activitat.nom, activitat.id_tipus_actividad, activitat.id_equipo, activitat.id_espai, 1);
-            //no se rechazada, pero el metodo se llamaba asi so...
-            ORMActivitatsDemandades.SolicitudRechazada(activitat.id);
-
+            ORMActivitatsDemandades.SolicitudAceptada(activitat.id);
             AssignacioHoraris f = new AssignacioHoraris(activitat.id,activitat.id_espai,this);
-            f.Show();
+            f.ShowDialog();
         }
 
         private void FormDetallsPeticio_Activated(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
         }

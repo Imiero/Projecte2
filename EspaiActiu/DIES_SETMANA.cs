@@ -7,26 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class DIES_SETMANA
+namespace EspaiActiu
 {
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-    public DIES_SETMANA()
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class DIES_SETMANA
     {
-        this.HORARIS_ACT_DEMANADA = new HashSet<HORARIS_ACT_DEMANADA>();
-        this.HORARIS_ACTIVITAT = new HashSet<HORARIS_ACTIVITAT>();
-        this.HORARIS_INSTALACIO = new HashSet<HORARIS_INSTALACIO>();
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public DIES_SETMANA()
+        {
+            this.HORARIS_ACT_DEMANADA = new HashSet<HORARIS_ACT_DEMANADA>();
+            this.HORARIS_INSTALACIO = new HashSet<HORARIS_INSTALACIO>();
+            this.HORARIS_ACTIVITAT = new HashSet<HORARIS_ACTIVITAT>();
+        }
+    
+        public byte id { get; set; }
+        public string dia { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HORARIS_ACT_DEMANADA> HORARIS_ACT_DEMANADA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HORARIS_INSTALACIO> HORARIS_INSTALACIO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HORARIS_ACTIVITAT> HORARIS_ACTIVITAT { get; set; }
     }
-
-    public byte id { get; set; }
-    public string dia { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<HORARIS_ACT_DEMANADA> HORARIS_ACT_DEMANADA { get; set; }
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<HORARIS_ACTIVITAT> HORARIS_ACTIVITAT { get; set; }
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<HORARIS_INSTALACIO> HORARIS_INSTALACIO { get; set; }
 }

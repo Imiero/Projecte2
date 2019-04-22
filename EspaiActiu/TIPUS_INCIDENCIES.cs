@@ -7,20 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
-public partial class TIPUS_INCIDENCIES
+namespace EspaiActiu
 {
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-    public TIPUS_INCIDENCIES()
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class TIPUS_INCIDENCIES
     {
-        this.INCIDENCIA = new HashSet<INCIDENCIA>();
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TIPUS_INCIDENCIES()
+        {
+            this.INCIDENCIA = new HashSet<INCIDENCIA>();
+        }
+    
+        public int id { get; set; }
+        public string tipus { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<INCIDENCIA> INCIDENCIA { get; set; }
     }
-
-    public int id { get; set; }
-    public string tipus { get; set; }
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-    public virtual ICollection<INCIDENCIA> INCIDENCIA { get; set; }
 }

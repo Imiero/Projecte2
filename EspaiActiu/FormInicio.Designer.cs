@@ -69,6 +69,19 @@
             this.dataGridViewActivitats = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBoxAdmins = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBoxAdd = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxNom = new System.Windows.Forms.TextBox();
+            this.textBoxPAss = new System.Windows.Forms.TextBox();
+            this.textBoxCorreu = new System.Windows.Forms.TextBox();
+            this.buttonAcceptar = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,18 +90,22 @@
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceActivitats = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.espropiDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bindingSourceInstalacions = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceAdmins = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.espropiDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.SidePanel.SuspendLayout();
             this.EntitatsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EntitatsImage)).BeginInit();
@@ -98,6 +115,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PetiImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panel2.SuspendLayout();
+            this.tabPageModificacion.SuspendLayout();
             this.tabPageEquips.SuspendLayout();
             this.groupBoxEntitats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
@@ -111,10 +129,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitats)).BeginInit();
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).BeginInit();
+            this.groupBoxAdmins.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBoxAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePeticions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAdmins)).BeginInit();
             this.SuspendLayout();
             // 
             // SidePanel
@@ -269,6 +291,8 @@
             // tabPageModificacion
             // 
             this.tabPageModificacion.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPageModificacion.Controls.Add(this.groupBoxAdd);
+            this.tabPageModificacion.Controls.Add(this.groupBoxAdmins);
             this.tabPageModificacion.Location = new System.Drawing.Point(4, 14);
             this.tabPageModificacion.Margin = new System.Windows.Forms.Padding(1);
             this.tabPageModificacion.Name = "tabPageModificacion";
@@ -488,7 +512,7 @@
             // textBoxBuscarActivitat
             // 
             this.textBoxBuscarActivitat.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscarActivitat.Location = new System.Drawing.Point(406, 29);
+            this.textBoxBuscarActivitat.Location = new System.Drawing.Point(451, 29);
             this.textBoxBuscarActivitat.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxBuscarActivitat.Name = "textBoxBuscarActivitat";
             this.textBoxBuscarActivitat.Size = new System.Drawing.Size(151, 20);
@@ -498,7 +522,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(329, 32);
+            this.label3.Location = new System.Drawing.Point(374, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 16;
@@ -521,7 +545,7 @@
             this.GroupBoxPeticio.Margin = new System.Windows.Forms.Padding(1);
             this.GroupBoxPeticio.Name = "GroupBoxPeticio";
             this.GroupBoxPeticio.Padding = new System.Windows.Forms.Padding(1);
-            this.GroupBoxPeticio.Size = new System.Drawing.Size(300, 332);
+            this.GroupBoxPeticio.Size = new System.Drawing.Size(351, 332);
             this.GroupBoxPeticio.TabIndex = 3;
             this.GroupBoxPeticio.TabStop = false;
             this.GroupBoxPeticio.Text = "Peticións";
@@ -535,9 +559,11 @@
             this.dataGridViewPeticio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPeticio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn17,
+            this.estado,
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn33,
-            this.dataGridViewCheckBoxColumn1});
+            this.dataGridViewCheckBoxColumn1,
+            this.dataGridViewTextBoxColumn7});
             this.dataGridViewPeticio.DataSource = this.bindingSourcePeticions;
             this.dataGridViewPeticio.Location = new System.Drawing.Point(13, 24);
             this.dataGridViewPeticio.Margin = new System.Windows.Forms.Padding(1);
@@ -546,7 +572,7 @@
             this.dataGridViewPeticio.ReadOnly = true;
             this.dataGridViewPeticio.RowTemplate.Height = 31;
             this.dataGridViewPeticio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPeticio.Size = new System.Drawing.Size(285, 294);
+            this.dataGridViewPeticio.Size = new System.Drawing.Size(336, 294);
             this.dataGridViewPeticio.TabIndex = 0;
             this.dataGridViewPeticio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPeticio_CellContentClick);
             // 
@@ -563,7 +589,7 @@
             // groupBoxActivitats
             // 
             this.groupBoxActivitats.Controls.Add(this.dataGridViewActivitats);
-            this.groupBoxActivitats.Location = new System.Drawing.Point(332, 64);
+            this.groupBoxActivitats.Location = new System.Drawing.Point(377, 64);
             this.groupBoxActivitats.Name = "groupBoxActivitats";
             this.groupBoxActivitats.Size = new System.Drawing.Size(233, 332);
             this.groupBoxActivitats.TabIndex = 15;
@@ -580,7 +606,7 @@
             this.dataGridViewTextBoxColumn20,
             this.dataGridViewTextBoxColumn24});
             this.dataGridViewActivitats.DataSource = this.bindingSourceActivitats;
-            this.dataGridViewActivitats.Location = new System.Drawing.Point(11, 24);
+            this.dataGridViewActivitats.Location = new System.Drawing.Point(6, 24);
             this.dataGridViewActivitats.Name = "dataGridViewActivitats";
             this.dataGridViewActivitats.ReadOnly = true;
             this.dataGridViewActivitats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -605,6 +631,126 @@
             this.tabControl1.Size = new System.Drawing.Size(690, 469);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 3;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "estado";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // groupBoxAdmins
+            // 
+            this.groupBoxAdmins.Controls.Add(this.dataGridView1);
+            this.groupBoxAdmins.Location = new System.Drawing.Point(22, 64);
+            this.groupBoxAdmins.Name = "groupBoxAdmins";
+            this.groupBoxAdmins.Size = new System.Drawing.Size(330, 234);
+            this.groupBoxAdmins.TabIndex = 1;
+            this.groupBoxAdmins.TabStop = false;
+            this.groupBoxAdmins.Text = "Admins";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.nombreDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn9});
+            this.dataGridView1.DataSource = this.bindingSourceAdmins;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(310, 200);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Nom";
+            // 
+            // groupBoxAdd
+            // 
+            this.groupBoxAdd.Controls.Add(this.buttonAcceptar);
+            this.groupBoxAdd.Controls.Add(this.textBoxCorreu);
+            this.groupBoxAdd.Controls.Add(this.textBoxPAss);
+            this.groupBoxAdd.Controls.Add(this.textBoxNom);
+            this.groupBoxAdd.Controls.Add(this.label7);
+            this.groupBoxAdd.Controls.Add(this.label6);
+            this.groupBoxAdd.Controls.Add(this.label5);
+            this.groupBoxAdd.Location = new System.Drawing.Point(358, 64);
+            this.groupBoxAdd.Name = "groupBoxAdd";
+            this.groupBoxAdd.Size = new System.Drawing.Size(244, 124);
+            this.groupBoxAdd.TabIndex = 1;
+            this.groupBoxAdd.TabStop = false;
+            this.groupBoxAdd.Text = "Agregar admin";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Correu";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 46);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Contrasenya";
+            // 
+            // textBoxNom
+            // 
+            this.textBoxNom.Location = new System.Drawing.Point(78, 17);
+            this.textBoxNom.Name = "textBoxNom";
+            this.textBoxNom.Size = new System.Drawing.Size(160, 20);
+            this.textBoxNom.TabIndex = 5;
+            // 
+            // textBoxPAss
+            // 
+            this.textBoxPAss.Location = new System.Drawing.Point(78, 43);
+            this.textBoxPAss.Name = "textBoxPAss";
+            this.textBoxPAss.Size = new System.Drawing.Size(160, 20);
+            this.textBoxPAss.TabIndex = 6;
+            // 
+            // textBoxCorreu
+            // 
+            this.textBoxCorreu.Location = new System.Drawing.Point(78, 69);
+            this.textBoxCorreu.Name = "textBoxCorreu";
+            this.textBoxCorreu.Size = new System.Drawing.Size(160, 20);
+            this.textBoxCorreu.TabIndex = 7;
+            // 
+            // buttonAcceptar
+            // 
+            this.buttonAcceptar.Location = new System.Drawing.Point(163, 95);
+            this.buttonAcceptar.Name = "buttonAcceptar";
+            this.buttonAcceptar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAcceptar.TabIndex = 8;
+            this.buttonAcceptar.Text = "Acceptar";
+            this.buttonAcceptar.UseVisualStyleBackColor = true;
+            this.buttonAcceptar.Click += new System.EventHandler(this.buttonAcceptar_Click);
             // 
             // dataGridViewTextBoxColumn17
             // 
@@ -635,15 +781,16 @@
             // 
             // dataGridViewCheckBoxColumn1
             // 
-            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewCheckBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "revisada";
             this.dataGridViewCheckBoxColumn1.HeaderText = "Revisada";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Width = 58;
             // 
             // bindingSourcePeticions
             // 
-            this.bindingSourcePeticions.DataSource = typeof(ACTIVIDADES_DEMANADAS);
+            this.bindingSourcePeticions.DataSource = typeof(EspaiActiu.ACTIVIDADES_DEMANADAS);
             // 
             // dataGridViewTextBoxColumn20
             // 
@@ -664,105 +811,135 @@
             // 
             // bindingSourceActivitats
             // 
-            this.bindingSourceActivitats.DataSource = typeof(ACTIVITATS);
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn11.HeaderText = "id";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "nom";
-            this.dataGridViewTextBoxColumn12.HeaderText = "nom";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 52;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "adreca";
-            this.dataGridViewTextBoxColumn13.HeaderText = "adreca";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 66;
-            // 
-            // espropiDataGridViewCheckBoxColumn
-            // 
-            this.espropiDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.espropiDataGridViewCheckBoxColumn.DataPropertyName = "es_propi";
-            this.espropiDataGridViewCheckBoxColumn.HeaderText = "es_propi";
-            this.espropiDataGridViewCheckBoxColumn.Name = "espropiDataGridViewCheckBoxColumn";
-            this.espropiDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.espropiDataGridViewCheckBoxColumn.Width = 55;
+            this.bindingSourceActivitats.DataSource = typeof(EspaiActiu.ACTIVITATS);
             // 
             // bindingSourceInstalacions
             // 
-            this.bindingSourceInstalacions.DataSource = typeof(INSTALACIO);
+            this.bindingSourceInstalacions.DataSource = typeof(EspaiActiu.INSTALACIO);
+            // 
+            // bindingSourceEntitats
+            // 
+            this.bindingSourceEntitats.DataSource = typeof(EspaiActiu.ENTITATS);
+            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn8.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 43;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "correu";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Correu";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // bindingSourceAdmins
+            // 
+            this.bindingSourceAdmins.DataSource = typeof(EspaiActiu.ADMINS);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 40;
+            this.dataGridViewTextBoxColumn1.Width = 41;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "nom";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nom";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nom";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 52;
+            this.dataGridViewTextBoxColumn2.Width = 53;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "temporada";
-            this.dataGridViewTextBoxColumn3.HeaderText = "temporada";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Temporada";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 83;
+            this.dataGridViewTextBoxColumn3.Width = 85;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "adreca";
-            this.dataGridViewTextBoxColumn4.HeaderText = "adreca";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Adreça";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 66;
+            this.dataGridViewTextBoxColumn4.Width = 68;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn5.DataPropertyName = "nif";
-            this.dataGridViewTextBoxColumn5.HeaderText = "nif";
+            this.dataGridViewTextBoxColumn5.HeaderText = "NIF";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 44;
+            this.dataGridViewTextBoxColumn5.Width = 47;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn6.DataPropertyName = "correu";
-            this.dataGridViewTextBoxColumn6.HeaderText = "correu";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Correu";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // bindingSourceEntitats
+            // dataGridViewTextBoxColumn11
             // 
-            this.bindingSourceEntitats.DataSource = typeof(ENTITATS);
-            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn11.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 41;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "nom";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 53;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "adreca";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Adreça";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 68;
+            // 
+            // espropiDataGridViewCheckBoxColumn
+            // 
+            this.espropiDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.espropiDataGridViewCheckBoxColumn.DataPropertyName = "es_propi";
+            this.espropiDataGridViewCheckBoxColumn.HeaderText = "Propia";
+            this.espropiDataGridViewCheckBoxColumn.Name = "espropiDataGridViewCheckBoxColumn";
+            this.espropiDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.espropiDataGridViewCheckBoxColumn.Width = 43;
             // 
             // FormInicio
             // 
@@ -791,6 +968,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PetiImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.tabPageModificacion.ResumeLayout(false);
             this.tabPageEquips.ResumeLayout(false);
             this.tabPageEquips.PerformLayout();
             this.groupBoxEntitats.ResumeLayout(false);
@@ -807,10 +985,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitats)).EndInit();
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).EndInit();
+            this.groupBoxAdmins.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBoxAdd.ResumeLayout(false);
+            this.groupBoxAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePeticions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEntitats)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAdmins)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -899,18 +1082,35 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lLOCDEPORTIVODataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tIPUSACTIVIDADDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn hORARISACTIVITATDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.GroupBox groupBoxAdmins;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.BindingSource bindingSourceAdmins;
+        private System.Windows.Forms.GroupBox groupBoxAdd;
+        private System.Windows.Forms.Button buttonAcceptar;
+        private System.Windows.Forms.TextBox textBoxCorreu;
+        private System.Windows.Forms.TextBox textBoxPAss;
+        private System.Windows.Forms.TextBox textBoxNom;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;

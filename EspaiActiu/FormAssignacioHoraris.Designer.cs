@@ -50,6 +50,7 @@
             this.dateTimePickerInici.ShowUpDown = true;
             this.dateTimePickerInici.Size = new System.Drawing.Size(121, 20);
             this.dateTimePickerInici.TabIndex = 8;
+            this.dateTimePickerInici.Value = new System.DateTime(2019, 4, 10, 10, 0, 0, 0);
             // 
             // dateTimePickerFinal
             // 
@@ -59,6 +60,7 @@
             this.dateTimePickerFinal.ShowUpDown = true;
             this.dateTimePickerFinal.Size = new System.Drawing.Size(121, 20);
             this.dateTimePickerFinal.TabIndex = 9;
+            this.dateTimePickerFinal.Value = new System.DateTime(2019, 4, 10, 10, 0, 0, 0);
             // 
             // label1
             // 
@@ -82,7 +84,7 @@
             // 
             // dIESSETMANABindingSource
             // 
-            this.dIESSETMANABindingSource.DataSource = typeof(DIES_SETMANA);
+            this.dIESSETMANABindingSource.DataSource = typeof(EspaiActiu.DIES_SETMANA);
             // 
             // label2
             // 

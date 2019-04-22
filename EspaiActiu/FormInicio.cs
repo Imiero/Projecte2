@@ -145,6 +145,18 @@ namespace EspaiActiu
             bindingSourcePeticions.DataSource = ORMActivitatsDemandades.SelectAllActvitats();
             bindingSourceInstalacions.DataSource = ORMInstalacions.SelectAllInstalacions();
             bindingSourceActivitats.DataSource = ORMActivitats.SelectAllActvitats();
+            bindingSourceAdmins.DataSource = ORMAdmins.SelectAllAdmins();
+
+            //Grid de peticiones
+
+            foreach (DataGridViewRow item in dataGridViewPeticio.Rows)
+            {
+                //if (item.Cells[1].Value.ToString().Equals("Acceptada"))
+                if (item.Cells[1].Value == null)
+                {
+                    item.DefaultCellStyle.SelectionBackColor = Color.Green;
+                }
+            }  
         }
 
 
@@ -252,7 +264,7 @@ namespace EspaiActiu
                 ACTIVIDADES_DEMANADAS activitat = (ACTIVIDADES_DEMANADAS)dataGridViewPeticio.CurrentRow.DataBoundItem;
                 
                 FormDetallsPeticio f = new FormDetallsPeticio(activitat);
-                f.Show();
+                f.ShowDialog();
             
         }
 
@@ -281,6 +293,40 @@ namespace EspaiActiu
         private void dataGridViewActivitats_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            DialogResult result4 = MessageBox.Show("Segur que vols eliminar l'admin?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result4 == DialogResult.Yes)
+            {
+                ORMAdmins.DeleteAdmin((ADMINS)dataGridView1.SelectedRows[0].DataBoundItem);
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void buttonAcceptar_Click(object sender, EventArgs e)
+        {
+            if(textBoxNom.Text.Length == 0 || textBoxPAss.Text.Length < 4 || textBoxCorreu.Text.Length == 0)
+            {
+                MessageBox.Show("Les dades son incorrectes.", "ERROR", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                ORMAdmins.InsertAdmin(textBoxNom.Text, textBoxPAss.Text, textBoxCorreu.Text);
+                //Refrescamos la grid
+                bindingSourceAdmins.DataSource = ORMAdmins.SelectAllAdmins();
+                //Dejamos las textbox limpias
+                textBoxNom.Text = "";
+                textBoxPAss.Text = "";
+                textBoxCorreu.Text = "";
+
+            }
+            
         }
     }
 }
