@@ -27,26 +27,35 @@ namespace EspaiActiu
             Petilabel.ForeColor = System.Drawing.Color.Black;
             EspaLabel.ForeColor = System.Drawing.Color.Black;
             Entitatslabel.ForeColor = System.Drawing.Color.Black;
+            label9.ForeColor = System.Drawing.Color.Black;
         }
         private void tabPeticio()
         {
-            tabControl1.SelectedIndex = 0;
+            tabControl.SelectedIndex = 0;
             resetColors();
             Petilabel.ForeColor = System.Drawing.Color.White;
             
         }
         private void tabEspais()
         {
-            tabControl1.SelectedIndex = 1;
+            tabControl.SelectedIndex = 1;
             resetColors();
             EspaLabel.ForeColor = System.Drawing.Color.White;
             
         }
         private void tabEquips()
         {
-            tabControl1.SelectedIndex = 2;
+            tabControl.SelectedIndex = 2;
             resetColors();
             Entitatslabel.ForeColor = System.Drawing.Color.White;
+
+        }
+
+        private void tabAdmins()
+        {
+            tabControl.SelectedIndex = 3;
+            resetColors();
+            label9.ForeColor = System.Drawing.Color.White;
 
         }
         private void Sortir()
@@ -147,16 +156,6 @@ namespace EspaiActiu
             bindingSourceActivitats.DataSource = ORMActivitats.SelectAllActvitats();
             bindingSourceAdmins.DataSource = ORMAdmins.SelectAllAdmins();
 
-            //Grid de peticiones
-
-            foreach (DataGridViewRow item in dataGridViewPeticio.Rows)
-            {
-                //if (item.Cells[1].Value.ToString().Equals("Acceptada"))
-                if (item.Cells[1].Value == null)
-                {
-                    item.DefaultCellStyle.SelectionBackColor = Color.Green;
-                }
-            }  
         }
 
 
@@ -328,5 +327,21 @@ namespace EspaiActiu
             }
             
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            tabAdmins();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            tabAdmins();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            tabAdmins();
+        }
+
     }
 }

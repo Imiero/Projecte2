@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssignacioHoraris));
             this.dateTimePickerInici = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFinal = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -116,21 +117,23 @@
             // 
             // buttonSortir
             // 
+            this.buttonSortir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.buttonSortir.Location = new System.Drawing.Point(116, 116);
             this.buttonSortir.Name = "buttonSortir";
             this.buttonSortir.Size = new System.Drawing.Size(75, 23);
             this.buttonSortir.TabIndex = 16;
             this.buttonSortir.Text = "Sortir";
-            this.buttonSortir.UseVisualStyleBackColor = true;
+            this.buttonSortir.UseVisualStyleBackColor = false;
             // 
             // buttonAceptar
             // 
+            this.buttonAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(212)))), ((int)(((byte)(97)))));
             this.buttonAceptar.Location = new System.Drawing.Point(35, 116);
             this.buttonAceptar.Name = "buttonAceptar";
             this.buttonAceptar.Size = new System.Drawing.Size(75, 23);
             this.buttonAceptar.TabIndex = 17;
             this.buttonAceptar.Text = "Acceptar";
-            this.buttonAceptar.UseVisualStyleBackColor = true;
+            this.buttonAceptar.UseVisualStyleBackColor = false;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // AssignacioHoraris
@@ -148,6 +151,7 @@
             this.Controls.Add(this.dateTimePickerFinal);
             this.Controls.Add(this.dateTimePickerInici);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AssignacioHoraris";
             this.Text = "FormAssignacioHoraris";
             this.Load += new System.EventHandler(this.AssignacioHoraris_Load);

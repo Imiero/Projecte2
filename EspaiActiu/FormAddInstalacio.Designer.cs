@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddInstalacio));
             this.lNomInstalacio = new System.Windows.Forms.Label();
             this.lAdrecaInstalacio = new System.Windows.Forms.Label();
             this.dbDatosInstalacio = new System.Windows.Forms.GroupBox();
@@ -70,7 +71,7 @@
             // 
             this.lNomInstalacio.AutoSize = true;
             this.lNomInstalacio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNomInstalacio.Location = new System.Drawing.Point(32, 31);
+            this.lNomInstalacio.Location = new System.Drawing.Point(32, 33);
             this.lNomInstalacio.Name = "lNomInstalacio";
             this.lNomInstalacio.Size = new System.Drawing.Size(35, 16);
             this.lNomInstalacio.TabIndex = 0;
@@ -80,7 +81,7 @@
             // 
             this.lAdrecaInstalacio.AutoSize = true;
             this.lAdrecaInstalacio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lAdrecaInstalacio.Location = new System.Drawing.Point(32, 69);
+            this.lAdrecaInstalacio.Location = new System.Drawing.Point(32, 74);
             this.lAdrecaInstalacio.Name = "lAdrecaInstalacio";
             this.lAdrecaInstalacio.Size = new System.Drawing.Size(49, 16);
             this.lAdrecaInstalacio.TabIndex = 1;
@@ -95,9 +96,9 @@
             this.dbDatosInstalacio.Controls.Add(this.lNomInstalacio);
             this.dbDatosInstalacio.Controls.Add(this.lAdrecaInstalacio);
             this.dbDatosInstalacio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dbDatosInstalacio.Location = new System.Drawing.Point(22, 12);
+            this.dbDatosInstalacio.Location = new System.Drawing.Point(22, 13);
             this.dbDatosInstalacio.Name = "dbDatosInstalacio";
-            this.dbDatosInstalacio.Size = new System.Drawing.Size(411, 442);
+            this.dbDatosInstalacio.Size = new System.Drawing.Size(411, 476);
             this.dbDatosInstalacio.TabIndex = 3;
             this.dbDatosInstalacio.TabStop = false;
             this.dbDatosInstalacio.Text = "Dades nova instalació";
@@ -105,7 +106,7 @@
             // cbEsPropi
             // 
             this.cbEsPropi.AutoSize = true;
-            this.cbEsPropi.Location = new System.Drawing.Point(35, 106);
+            this.cbEsPropi.Location = new System.Drawing.Point(35, 114);
             this.cbEsPropi.Name = "cbEsPropi";
             this.cbEsPropi.Size = new System.Drawing.Size(57, 20);
             this.cbEsPropi.TabIndex = 7;
@@ -114,14 +115,14 @@
             // 
             // tbAdrecaInstalacio
             // 
-            this.tbAdrecaInstalacio.Location = new System.Drawing.Point(90, 66);
+            this.tbAdrecaInstalacio.Location = new System.Drawing.Point(90, 71);
             this.tbAdrecaInstalacio.Name = "tbAdrecaInstalacio";
             this.tbAdrecaInstalacio.Size = new System.Drawing.Size(290, 22);
             this.tbAdrecaInstalacio.TabIndex = 6;
             // 
             // tbNomInstalacio
             // 
-            this.tbNomInstalacio.Location = new System.Drawing.Point(90, 31);
+            this.tbNomInstalacio.Location = new System.Drawing.Point(90, 33);
             this.tbNomInstalacio.Name = "tbNomInstalacio";
             this.tbNomInstalacio.Size = new System.Drawing.Size(290, 22);
             this.tbNomInstalacio.TabIndex = 5;
@@ -152,9 +153,9 @@
             this.gbHorarisInstalacio.Controls.Add(this.lDimarts);
             this.gbHorarisInstalacio.Controls.Add(this.lDilluns);
             this.gbHorarisInstalacio.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbHorarisInstalacio.Location = new System.Drawing.Point(35, 149);
+            this.gbHorarisInstalacio.Location = new System.Drawing.Point(35, 160);
             this.gbHorarisInstalacio.Name = "gbHorarisInstalacio";
-            this.gbHorarisInstalacio.Size = new System.Drawing.Size(345, 260);
+            this.gbHorarisInstalacio.Size = new System.Drawing.Size(345, 280);
             this.gbHorarisInstalacio.TabIndex = 3;
             this.gbHorarisInstalacio.TabStop = false;
             this.gbHorarisInstalacio.Text = "Horaris";
@@ -162,7 +163,7 @@
             // dtpFi7
             // 
             this.dtpFi7.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpFi7.Location = new System.Drawing.Point(248, 214);
+            this.dtpFi7.Location = new System.Drawing.Point(248, 230);
             this.dtpFi7.Name = "dtpFi7";
             this.dtpFi7.ShowUpDown = true;
             this.dtpFi7.Size = new System.Drawing.Size(59, 21);
@@ -171,7 +172,7 @@
             // dtpInici7
             // 
             this.dtpInici7.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpInici7.Location = new System.Drawing.Point(135, 214);
+            this.dtpInici7.Location = new System.Drawing.Point(135, 230);
             this.dtpInici7.Name = "dtpInici7";
             this.dtpInici7.ShowUpDown = true;
             this.dtpInici7.Size = new System.Drawing.Size(59, 21);
@@ -180,7 +181,7 @@
             // dtpFi6
             // 
             this.dtpFi6.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpFi6.Location = new System.Drawing.Point(248, 187);
+            this.dtpFi6.Location = new System.Drawing.Point(248, 201);
             this.dtpFi6.Name = "dtpFi6";
             this.dtpFi6.ShowUpDown = true;
             this.dtpFi6.Size = new System.Drawing.Size(59, 21);
@@ -189,7 +190,7 @@
             // dtpInici6
             // 
             this.dtpInici6.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpInici6.Location = new System.Drawing.Point(135, 187);
+            this.dtpInici6.Location = new System.Drawing.Point(135, 201);
             this.dtpInici6.Name = "dtpInici6";
             this.dtpInici6.ShowUpDown = true;
             this.dtpInici6.Size = new System.Drawing.Size(59, 21);
@@ -198,7 +199,7 @@
             // dtpFi5
             // 
             this.dtpFi5.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpFi5.Location = new System.Drawing.Point(248, 160);
+            this.dtpFi5.Location = new System.Drawing.Point(248, 172);
             this.dtpFi5.Name = "dtpFi5";
             this.dtpFi5.ShowUpDown = true;
             this.dtpFi5.Size = new System.Drawing.Size(59, 21);
@@ -207,7 +208,7 @@
             // dtpInici5
             // 
             this.dtpInici5.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpInici5.Location = new System.Drawing.Point(135, 160);
+            this.dtpInici5.Location = new System.Drawing.Point(135, 172);
             this.dtpInici5.Name = "dtpInici5";
             this.dtpInici5.ShowUpDown = true;
             this.dtpInici5.Size = new System.Drawing.Size(59, 21);
@@ -216,7 +217,7 @@
             // dtpFi4
             // 
             this.dtpFi4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpFi4.Location = new System.Drawing.Point(248, 133);
+            this.dtpFi4.Location = new System.Drawing.Point(248, 143);
             this.dtpFi4.Name = "dtpFi4";
             this.dtpFi4.ShowUpDown = true;
             this.dtpFi4.Size = new System.Drawing.Size(59, 21);
@@ -225,7 +226,7 @@
             // dtpInici4
             // 
             this.dtpInici4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpInici4.Location = new System.Drawing.Point(135, 133);
+            this.dtpInici4.Location = new System.Drawing.Point(135, 143);
             this.dtpInici4.Name = "dtpInici4";
             this.dtpInici4.ShowUpDown = true;
             this.dtpInici4.Size = new System.Drawing.Size(59, 21);
@@ -234,7 +235,7 @@
             // dtpFi3
             // 
             this.dtpFi3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpFi3.Location = new System.Drawing.Point(248, 105);
+            this.dtpFi3.Location = new System.Drawing.Point(248, 113);
             this.dtpFi3.Name = "dtpFi3";
             this.dtpFi3.ShowUpDown = true;
             this.dtpFi3.Size = new System.Drawing.Size(59, 21);
@@ -243,7 +244,7 @@
             // dtpInici3
             // 
             this.dtpInici3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpInici3.Location = new System.Drawing.Point(135, 106);
+            this.dtpInici3.Location = new System.Drawing.Point(135, 114);
             this.dtpInici3.Name = "dtpInici3";
             this.dtpInici3.ShowUpDown = true;
             this.dtpInici3.Size = new System.Drawing.Size(59, 21);
@@ -252,7 +253,7 @@
             // dtpFi2
             // 
             this.dtpFi2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpFi2.Location = new System.Drawing.Point(248, 78);
+            this.dtpFi2.Location = new System.Drawing.Point(248, 84);
             this.dtpFi2.Name = "dtpFi2";
             this.dtpFi2.ShowUpDown = true;
             this.dtpFi2.Size = new System.Drawing.Size(59, 21);
@@ -261,7 +262,7 @@
             // dtpInici2
             // 
             this.dtpInici2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpInici2.Location = new System.Drawing.Point(135, 79);
+            this.dtpInici2.Location = new System.Drawing.Point(135, 85);
             this.dtpInici2.Name = "dtpInici2";
             this.dtpInici2.ShowUpDown = true;
             this.dtpInici2.Size = new System.Drawing.Size(59, 21);
@@ -270,7 +271,7 @@
             // dtpFi1
             // 
             this.dtpFi1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpFi1.Location = new System.Drawing.Point(248, 51);
+            this.dtpFi1.Location = new System.Drawing.Point(248, 55);
             this.dtpFi1.Name = "dtpFi1";
             this.dtpFi1.ShowUpDown = true;
             this.dtpFi1.Size = new System.Drawing.Size(59, 21);
@@ -279,7 +280,7 @@
             // lHoraFin
             // 
             this.lHoraFin.AutoSize = true;
-            this.lHoraFin.Location = new System.Drawing.Point(245, 18);
+            this.lHoraFin.Location = new System.Drawing.Point(245, 19);
             this.lHoraFin.Name = "lHoraFin";
             this.lHoraFin.Size = new System.Drawing.Size(68, 15);
             this.lHoraFin.TabIndex = 9;
@@ -288,7 +289,7 @@
             // lHoraInici
             // 
             this.lHoraInici.AutoSize = true;
-            this.lHoraInici.Location = new System.Drawing.Point(132, 18);
+            this.lHoraInici.Location = new System.Drawing.Point(132, 19);
             this.lHoraInici.Name = "lHoraInici";
             this.lHoraInici.Size = new System.Drawing.Size(55, 15);
             this.lHoraInici.TabIndex = 8;
@@ -297,7 +298,7 @@
             // dtpInici1
             // 
             this.dtpInici1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpInici1.Location = new System.Drawing.Point(135, 52);
+            this.dtpInici1.Location = new System.Drawing.Point(135, 56);
             this.dtpInici1.Name = "dtpInici1";
             this.dtpInici1.ShowUpDown = true;
             this.dtpInici1.Size = new System.Drawing.Size(59, 21);
@@ -306,7 +307,7 @@
             // lDiumenge
             // 
             this.lDiumenge.AutoSize = true;
-            this.lDiumenge.Location = new System.Drawing.Point(25, 220);
+            this.lDiumenge.Location = new System.Drawing.Point(25, 237);
             this.lDiumenge.Name = "lDiumenge";
             this.lDiumenge.Size = new System.Drawing.Size(65, 15);
             this.lDiumenge.TabIndex = 6;
@@ -315,7 +316,7 @@
             // lDissabte
             // 
             this.lDissabte.AutoSize = true;
-            this.lDissabte.Location = new System.Drawing.Point(25, 193);
+            this.lDissabte.Location = new System.Drawing.Point(25, 208);
             this.lDissabte.Name = "lDissabte";
             this.lDissabte.Size = new System.Drawing.Size(57, 15);
             this.lDissabte.TabIndex = 5;
@@ -324,7 +325,7 @@
             // lDivendres
             // 
             this.lDivendres.AutoSize = true;
-            this.lDivendres.Location = new System.Drawing.Point(25, 166);
+            this.lDivendres.Location = new System.Drawing.Point(25, 179);
             this.lDivendres.Name = "lDivendres";
             this.lDivendres.Size = new System.Drawing.Size(63, 15);
             this.lDivendres.TabIndex = 4;
@@ -333,7 +334,7 @@
             // lDijous
             // 
             this.lDijous.AutoSize = true;
-            this.lDijous.Location = new System.Drawing.Point(25, 139);
+            this.lDijous.Location = new System.Drawing.Point(25, 150);
             this.lDijous.Name = "lDijous";
             this.lDijous.Size = new System.Drawing.Size(43, 15);
             this.lDijous.TabIndex = 3;
@@ -342,7 +343,7 @@
             // lDimecres
             // 
             this.lDimecres.AutoSize = true;
-            this.lDimecres.Location = new System.Drawing.Point(25, 112);
+            this.lDimecres.Location = new System.Drawing.Point(25, 121);
             this.lDimecres.Name = "lDimecres";
             this.lDimecres.Size = new System.Drawing.Size(61, 15);
             this.lDimecres.TabIndex = 2;
@@ -351,7 +352,7 @@
             // lDimarts
             // 
             this.lDimarts.AutoSize = true;
-            this.lDimarts.Location = new System.Drawing.Point(25, 85);
+            this.lDimarts.Location = new System.Drawing.Point(25, 92);
             this.lDimarts.Name = "lDimarts";
             this.lDimarts.Size = new System.Drawing.Size(51, 15);
             this.lDimarts.TabIndex = 1;
@@ -360,7 +361,7 @@
             // lDilluns
             // 
             this.lDilluns.AutoSize = true;
-            this.lDilluns.Location = new System.Drawing.Point(25, 58);
+            this.lDilluns.Location = new System.Drawing.Point(25, 62);
             this.lDilluns.Name = "lDilluns";
             this.lDilluns.Size = new System.Drawing.Size(46, 15);
             this.lDilluns.TabIndex = 0;
@@ -368,34 +369,38 @@
             // 
             // bAceptar
             // 
-            this.bAceptar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAceptar.Location = new System.Drawing.Point(181, 460);
+            this.bAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(212)))), ((int)(((byte)(97)))));
+            this.bAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAceptar.Location = new System.Drawing.Point(181, 495);
             this.bAceptar.Name = "bAceptar";
-            this.bAceptar.Size = new System.Drawing.Size(90, 33);
+            this.bAceptar.Size = new System.Drawing.Size(90, 36);
             this.bAceptar.TabIndex = 7;
             this.bAceptar.Text = "Aceptar";
-            this.bAceptar.UseVisualStyleBackColor = true;
+            this.bAceptar.UseVisualStyleBackColor = false;
             this.bAceptar.Click += new System.EventHandler(this.bAceptar_Click);
             // 
             // bCancelar
             // 
-            this.bCancelar.Location = new System.Drawing.Point(310, 460);
+            this.bCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.bCancelar.Location = new System.Drawing.Point(310, 495);
             this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(92, 33);
+            this.bCancelar.Size = new System.Drawing.Size(92, 36);
             this.bCancelar.TabIndex = 8;
             this.bCancelar.Text = "Cancelar";
-            this.bCancelar.UseVisualStyleBackColor = true;
+            this.bCancelar.UseVisualStyleBackColor = false;
             this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
             // 
             // FormAddInstalacio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(455, 505);
+            this.ClientSize = new System.Drawing.Size(455, 544);
             this.Controls.Add(this.bCancelar);
             this.Controls.Add(this.dbDatosInstalacio);
             this.Controls.Add(this.bAceptar);
+            this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddInstalacio";
             this.Text = "FormAddInstalacio";
             this.dbDatosInstalacio.ResumeLayout(false);

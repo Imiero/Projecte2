@@ -29,31 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetallsInstalacions));
             this.lNom = new System.Windows.Forms.Label();
             this.lAdreca = new System.Windows.Forms.Label();
             this.tbNomInstalacio = new System.Windows.Forms.TextBox();
             this.tbAdrecaInstalacio = new System.Windows.Forms.TextBox();
             this.dgvLlistaEspais = new System.Windows.Forms.DataGridView();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             this.gbEspais = new System.Windows.Forms.GroupBox();
             this.gbHoraris = new System.Windows.Forms.GroupBox();
             this.dgvHoraris = new System.Windows.Forms.DataGridView();
+            this.diaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingSourceDias = new System.Windows.Forms.BindingSource(this.components);
             this.horari_inici = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horari_fi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceHoraris = new System.Windows.Forms.BindingSource(this.components);
             this.gbDetallsInstalacio = new System.Windows.Forms.GroupBox();
             this.bModificar = new System.Windows.Forms.Button();
-            this.diaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceHoraris = new System.Windows.Forms.BindingSource(this.components);
-            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
             this.hORARISINSTALACIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lLOCDEPORTIVOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLlistaEspais)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).BeginInit();
             this.gbEspais.SuspendLayout();
             this.gbHoraris.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoraris)).BeginInit();
-            this.gbDetallsInstalacio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHoraris)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).BeginInit();
+            this.gbDetallsInstalacio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hORARISINSTALACIOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lLOCDEPORTIVOBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -109,6 +112,17 @@
             this.dgvLlistaEspais.TabIndex = 4;
             this.dgvLlistaEspais.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLlistaEspais_CellContentClick);
             // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSourceEspais
+            // 
+            this.bindingSourceEspais.DataSource = typeof(EspaiActiu.LLOC_DEPORTIVO);
+            // 
             // gbEspais
             // 
             this.gbEspais.Controls.Add(this.dgvLlistaEspais);
@@ -144,21 +158,45 @@
             this.dgvHoraris.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvHoraris.Location = new System.Drawing.Point(18, 21);
             this.dgvHoraris.Name = "dgvHoraris";
+            this.dgvHoraris.ReadOnly = true;
             this.dgvHoraris.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvHoraris.Size = new System.Drawing.Size(345, 109);
             this.dgvHoraris.TabIndex = 0;
+            // 
+            // diaDataGridViewTextBoxColumn
+            // 
+            this.diaDataGridViewTextBoxColumn.DataPropertyName = "dia";
+            this.diaDataGridViewTextBoxColumn.DataSource = this.bindingSourceDias;
+            this.diaDataGridViewTextBoxColumn.DisplayMember = "dia";
+            this.diaDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.diaDataGridViewTextBoxColumn.HeaderText = "Dia";
+            this.diaDataGridViewTextBoxColumn.Name = "diaDataGridViewTextBoxColumn";
+            this.diaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.diaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.diaDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.diaDataGridViewTextBoxColumn.ValueMember = "id";
+            // 
+            // bindingSourceDias
+            // 
+            this.bindingSourceDias.DataSource = typeof(EspaiActiu.DIES_SETMANA);
             // 
             // horari_inici
             // 
             this.horari_inici.DataPropertyName = "horari_inici";
             this.horari_inici.HeaderText = "Obertura";
             this.horari_inici.Name = "horari_inici";
+            this.horari_inici.ReadOnly = true;
             // 
             // horari_fi
             // 
             this.horari_fi.DataPropertyName = "horari_fi";
             this.horari_fi.HeaderText = "Tancament";
             this.horari_fi.Name = "horari_fi";
+            this.horari_fi.ReadOnly = true;
+            // 
+            // bindingSourceHoraris
+            // 
+            this.bindingSourceHoraris.DataSource = typeof(EspaiActiu.HORARIS_INSTALACIO);
             // 
             // gbDetallsInstalacio
             // 
@@ -178,43 +216,22 @@
             // 
             // bModificar
             // 
+            this.bModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(95)))));
             this.bModificar.Location = new System.Drawing.Point(292, 474);
             this.bModificar.Name = "bModificar";
             this.bModificar.Size = new System.Drawing.Size(123, 23);
             this.bModificar.TabIndex = 8;
             this.bModificar.Text = "Modificar";
-            this.bModificar.UseVisualStyleBackColor = true;
+            this.bModificar.UseVisualStyleBackColor = false;
             this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
-            // 
-            // diaDataGridViewTextBoxColumn
-            // 
-            this.diaDataGridViewTextBoxColumn.DataPropertyName = "dia";
-            this.diaDataGridViewTextBoxColumn.HeaderText = "dia";
-            this.diaDataGridViewTextBoxColumn.Name = "diaDataGridViewTextBoxColumn";
-            this.diaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bindingSourceHoraris
-            // 
-            this.bindingSourceHoraris.DataSource = typeof(HORARIS_INSTALACIO);
-            // 
-            // nomDataGridViewTextBoxColumn
-            // 
-            this.nomDataGridViewTextBoxColumn.DataPropertyName = "nom";
-            this.nomDataGridViewTextBoxColumn.HeaderText = "Nom";
-            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
-            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bindingSourceEspais
-            // 
-            this.bindingSourceEspais.DataSource = typeof(LLOC_DEPORTIVO);
             // 
             // hORARISINSTALACIOBindingSource
             // 
-            this.hORARISINSTALACIOBindingSource.DataSource = typeof(HORARIS_INSTALACIO);
+            this.hORARISINSTALACIOBindingSource.DataSource = typeof(EspaiActiu.HORARIS_INSTALACIO);
             // 
             // lLOCDEPORTIVOBindingSource
             // 
-            this.lLOCDEPORTIVOBindingSource.DataSource = typeof(LLOC_DEPORTIVO);
+            this.lLOCDEPORTIVOBindingSource.DataSource = typeof(EspaiActiu.LLOC_DEPORTIVO);
             // 
             // FormDetallsInstalacions
             // 
@@ -223,17 +240,19 @@
             this.ClientSize = new System.Drawing.Size(456, 509);
             this.Controls.Add(this.bModificar);
             this.Controls.Add(this.gbDetallsInstalacio);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDetallsInstalacions";
             this.Text = "FormDetallsInstalacions";
             this.Load += new System.EventHandler(this.FormDetallsInstalacions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLlistaEspais)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).EndInit();
             this.gbEspais.ResumeLayout(false);
             this.gbHoraris.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoraris)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceDias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHoraris)).EndInit();
             this.gbDetallsInstalacio.ResumeLayout(false);
             this.gbDetallsInstalacio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceHoraris)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hORARISINSTALACIOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lLOCDEPORTIVOBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -257,7 +276,8 @@
         private System.Windows.Forms.GroupBox gbDetallsInstalacio;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button bModificar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bindingSourceDias;
+        private System.Windows.Forms.DataGridViewComboBoxColumn diaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horari_inici;
         private System.Windows.Forms.DataGridViewTextBoxColumn horari_fi;
     }

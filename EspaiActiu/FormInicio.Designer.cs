@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInicio));
             this.SidePanel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.EntitatsPanel = new System.Windows.Forms.Panel();
             this.EntitatsImage = new System.Windows.Forms.PictureBox();
             this.Entitatslabel = new System.Windows.Forms.Label();
@@ -44,6 +47,16 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabPageModificacion = new System.Windows.Forms.TabPage();
+            this.groupBoxAdd = new System.Windows.Forms.GroupBox();
+            this.buttonAcceptar = new System.Windows.Forms.Button();
+            this.textBoxCorreu = new System.Windows.Forms.TextBox();
+            this.textBoxPAss = new System.Windows.Forms.TextBox();
+            this.textBoxNom = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBoxAdmins = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPageEquips = new System.Windows.Forms.TabPage();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.buttonAddEntitat = new System.Windows.Forms.Button();
@@ -67,21 +80,11 @@
             this.textBoxBuscarPeticion = new System.Windows.Forms.TextBox();
             this.groupBoxActivitats = new System.Windows.Forms.GroupBox();
             this.dataGridViewActivitats = new System.Windows.Forms.DataGridView();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBoxAdmins = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBoxAdd = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxNom = new System.Windows.Forms.TextBox();
-            this.textBoxPAss = new System.Windows.Forms.TextBox();
-            this.textBoxCorreu = new System.Windows.Forms.TextBox();
-            this.buttonAcceptar = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,23 +93,25 @@
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceActivitats = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.espropiDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bindingSourceInstalacions = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceAdmins = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.espropiDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceAdmins = new System.Windows.Forms.BindingSource(this.components);
             this.SidePanel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.EntitatsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EntitatsImage)).BeginInit();
             this.EspaisLabel.SuspendLayout();
@@ -116,6 +121,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPageModificacion.SuspendLayout();
+            this.groupBoxAdd.SuspendLayout();
+            this.groupBoxAdmins.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPageEquips.SuspendLayout();
             this.groupBoxEntitats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
@@ -127,11 +135,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeticio)).BeginInit();
             this.groupBoxActivitats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitats)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.tabControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).BeginInit();
-            this.groupBoxAdmins.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBoxAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePeticions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).BeginInit();
@@ -142,6 +147,7 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(160)))), ((int)(((byte)(56)))));
+            this.SidePanel.Controls.Add(this.panel3);
             this.SidePanel.Controls.Add(this.EntitatsPanel);
             this.SidePanel.Controls.Add(this.EspaLabel);
             this.SidePanel.Controls.Add(this.EspaisLabel);
@@ -155,11 +161,45 @@
             this.SidePanel.Size = new System.Drawing.Size(239, 523);
             this.SidePanel.TabIndex = 1;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Location = new System.Drawing.Point(2, 412);
+            this.panel3.Margin = new System.Windows.Forms.Padding(1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(235, 76);
+            this.panel3.TabIndex = 10;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EspaiActiu.Properties.Resources.usericon;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(87, 24);
+            this.label9.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(117, 32);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Admins";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // EntitatsPanel
             // 
             this.EntitatsPanel.Controls.Add(this.EntitatsImage);
             this.EntitatsPanel.Controls.Add(this.Entitatslabel);
-            this.EntitatsPanel.Location = new System.Drawing.Point(1, 393);
+            this.EntitatsPanel.Location = new System.Drawing.Point(2, 332);
             this.EntitatsPanel.Margin = new System.Windows.Forms.Padding(1);
             this.EntitatsPanel.Name = "EntitatsPanel";
             this.EntitatsPanel.Size = new System.Drawing.Size(235, 76);
@@ -194,7 +234,7 @@
             // 
             this.EspaLabel.AutoSize = true;
             this.EspaLabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EspaLabel.Location = new System.Drawing.Point(89, 333);
+            this.EspaLabel.Location = new System.Drawing.Point(90, 272);
             this.EspaLabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.EspaLabel.Name = "EspaLabel";
             this.EspaLabel.Size = new System.Drawing.Size(103, 32);
@@ -205,7 +245,7 @@
             // EspaisLabel
             // 
             this.EspaisLabel.Controls.Add(this.EspaiImage);
-            this.EspaisLabel.Location = new System.Drawing.Point(2, 313);
+            this.EspaisLabel.Location = new System.Drawing.Point(3, 252);
             this.EspaisLabel.Margin = new System.Windows.Forms.Padding(1);
             this.EspaisLabel.Name = "EspaisLabel";
             this.EspaisLabel.Size = new System.Drawing.Size(235, 76);
@@ -228,7 +268,7 @@
             // 
             this.Petilabel.AutoSize = true;
             this.Petilabel.Font = new System.Drawing.Font("Arial", 20.14286F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Petilabel.Location = new System.Drawing.Point(88, 252);
+            this.Petilabel.Location = new System.Drawing.Point(89, 191);
             this.Petilabel.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.Petilabel.Name = "Petilabel";
             this.Petilabel.Size = new System.Drawing.Size(137, 32);
@@ -239,7 +279,7 @@
             // PetiPanel
             // 
             this.PetiPanel.Controls.Add(this.PetiImage);
-            this.PetiPanel.Location = new System.Drawing.Point(1, 231);
+            this.PetiPanel.Location = new System.Drawing.Point(2, 170);
             this.PetiPanel.Margin = new System.Windows.Forms.Padding(1);
             this.PetiPanel.Name = "PetiPanel";
             this.PetiPanel.Size = new System.Drawing.Size(235, 76);
@@ -284,7 +324,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1059, 88);
+            this.panel2.Size = new System.Drawing.Size(1060, 110);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -299,6 +339,110 @@
             this.tabPageModificacion.Size = new System.Drawing.Size(682, 451);
             this.tabPageModificacion.TabIndex = 3;
             this.tabPageModificacion.Text = "tabPage1";
+            // 
+            // groupBoxAdd
+            // 
+            this.groupBoxAdd.Controls.Add(this.buttonAcceptar);
+            this.groupBoxAdd.Controls.Add(this.textBoxCorreu);
+            this.groupBoxAdd.Controls.Add(this.textBoxPAss);
+            this.groupBoxAdd.Controls.Add(this.textBoxNom);
+            this.groupBoxAdd.Controls.Add(this.label7);
+            this.groupBoxAdd.Controls.Add(this.label6);
+            this.groupBoxAdd.Controls.Add(this.label5);
+            this.groupBoxAdd.Location = new System.Drawing.Point(358, 64);
+            this.groupBoxAdd.Name = "groupBoxAdd";
+            this.groupBoxAdd.Size = new System.Drawing.Size(244, 124);
+            this.groupBoxAdd.TabIndex = 1;
+            this.groupBoxAdd.TabStop = false;
+            this.groupBoxAdd.Text = "Agregar admin";
+            // 
+            // buttonAcceptar
+            // 
+            this.buttonAcceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(212)))), ((int)(((byte)(97)))));
+            this.buttonAcceptar.Location = new System.Drawing.Point(163, 95);
+            this.buttonAcceptar.Name = "buttonAcceptar";
+            this.buttonAcceptar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAcceptar.TabIndex = 8;
+            this.buttonAcceptar.Text = "Afegir Admin";
+            this.buttonAcceptar.UseVisualStyleBackColor = false;
+            this.buttonAcceptar.Click += new System.EventHandler(this.buttonAcceptar_Click);
+            // 
+            // textBoxCorreu
+            // 
+            this.textBoxCorreu.Location = new System.Drawing.Point(78, 69);
+            this.textBoxCorreu.Name = "textBoxCorreu";
+            this.textBoxCorreu.Size = new System.Drawing.Size(160, 20);
+            this.textBoxCorreu.TabIndex = 7;
+            // 
+            // textBoxPAss
+            // 
+            this.textBoxPAss.Location = new System.Drawing.Point(78, 43);
+            this.textBoxPAss.Name = "textBoxPAss";
+            this.textBoxPAss.Size = new System.Drawing.Size(160, 20);
+            this.textBoxPAss.TabIndex = 6;
+            // 
+            // textBoxNom
+            // 
+            this.textBoxNom.Location = new System.Drawing.Point(78, 17);
+            this.textBoxNom.Name = "textBoxNom";
+            this.textBoxNom.Size = new System.Drawing.Size(160, 20);
+            this.textBoxNom.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 46);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Contrasenya";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Correu";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Nom";
+            // 
+            // groupBoxAdmins
+            // 
+            this.groupBoxAdmins.Controls.Add(this.dataGridView1);
+            this.groupBoxAdmins.Location = new System.Drawing.Point(22, 64);
+            this.groupBoxAdmins.Name = "groupBoxAdmins";
+            this.groupBoxAdmins.Size = new System.Drawing.Size(330, 234);
+            this.groupBoxAdmins.TabIndex = 1;
+            this.groupBoxAdmins.TabStop = false;
+            this.groupBoxAdmins.Text = "Admins";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.nombreDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn9});
+            this.dataGridView1.DataSource = this.bindingSourceAdmins;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(310, 200);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
             // tabPageEquips
             // 
@@ -325,6 +469,7 @@
             // 
             // buttonAddEntitat
             // 
+            this.buttonAddEntitat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(212)))), ((int)(((byte)(97)))));
             this.buttonAddEntitat.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddEntitat.Location = new System.Drawing.Point(512, 27);
             this.buttonAddEntitat.Margin = new System.Windows.Forms.Padding(2);
@@ -332,7 +477,7 @@
             this.buttonAddEntitat.Size = new System.Drawing.Size(91, 24);
             this.buttonAddEntitat.TabIndex = 11;
             this.buttonAddEntitat.Text = "Afegir Entitat";
-            this.buttonAddEntitat.UseVisualStyleBackColor = true;
+            this.buttonAddEntitat.UseVisualStyleBackColor = false;
             this.buttonAddEntitat.Click += new System.EventHandler(this.buttonAddEntitat_Click);
             // 
             // label1
@@ -414,14 +559,16 @@
             // 
             // bAfegirInstalacio
             // 
+            this.bAfegirInstalacio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(212)))), ((int)(((byte)(97)))));
+            this.bAfegirInstalacio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bAfegirInstalacio.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAfegirInstalacio.Location = new System.Drawing.Point(431, 27);
+            this.bAfegirInstalacio.Location = new System.Drawing.Point(477, 27);
             this.bAfegirInstalacio.Margin = new System.Windows.Forms.Padding(2);
             this.bAfegirInstalacio.Name = "bAfegirInstalacio";
             this.bAfegirInstalacio.Size = new System.Drawing.Size(127, 24);
             this.bAfegirInstalacio.TabIndex = 12;
             this.bAfegirInstalacio.Text = "Afegir instalació";
-            this.bAfegirInstalacio.UseVisualStyleBackColor = true;
+            this.bAfegirInstalacio.UseVisualStyleBackColor = false;
             this.bAfegirInstalacio.Click += new System.EventHandler(this.bAfegirInstalacio_Click);
             // 
             // label4
@@ -454,7 +601,7 @@
             this.groupBoxInstalacions.Margin = new System.Windows.Forms.Padding(1);
             this.groupBoxInstalacions.Name = "groupBoxInstalacions";
             this.groupBoxInstalacions.Padding = new System.Windows.Forms.Padding(1);
-            this.groupBoxInstalacions.Size = new System.Drawing.Size(536, 332);
+            this.groupBoxInstalacions.Size = new System.Drawing.Size(582, 332);
             this.groupBoxInstalacions.TabIndex = 6;
             this.groupBoxInstalacions.TabStop = false;
             this.groupBoxInstalacions.Text = "Instal·lacions";
@@ -484,10 +631,10 @@
             // textBoxCercarEspais
             // 
             this.textBoxCercarEspais.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCercarEspais.Location = new System.Drawing.Point(121, 27);
+            this.textBoxCercarEspais.Location = new System.Drawing.Point(114, 29);
             this.textBoxCercarEspais.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxCercarEspais.Name = "textBoxCercarEspais";
-            this.textBoxCercarEspais.Size = new System.Drawing.Size(216, 20);
+            this.textBoxCercarEspais.Size = new System.Drawing.Size(208, 20);
             this.textBoxCercarEspais.TabIndex = 4;
             this.textBoxCercarEspais.TextChanged += new System.EventHandler(this.textBoxCercarEspais_TextChanged);
             // 
@@ -545,7 +692,7 @@
             this.GroupBoxPeticio.Margin = new System.Windows.Forms.Padding(1);
             this.GroupBoxPeticio.Name = "GroupBoxPeticio";
             this.GroupBoxPeticio.Padding = new System.Windows.Forms.Padding(1);
-            this.GroupBoxPeticio.Size = new System.Drawing.Size(351, 332);
+            this.GroupBoxPeticio.Size = new System.Drawing.Size(365, 332);
             this.GroupBoxPeticio.TabIndex = 3;
             this.GroupBoxPeticio.TabStop = false;
             this.GroupBoxPeticio.Text = "Peticións";
@@ -572,7 +719,7 @@
             this.dataGridViewPeticio.ReadOnly = true;
             this.dataGridViewPeticio.RowTemplate.Height = 31;
             this.dataGridViewPeticio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPeticio.Size = new System.Drawing.Size(336, 294);
+            this.dataGridViewPeticio.Size = new System.Drawing.Size(350, 294);
             this.dataGridViewPeticio.TabIndex = 0;
             this.dataGridViewPeticio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPeticio_CellContentClick);
             // 
@@ -589,9 +736,9 @@
             // groupBoxActivitats
             // 
             this.groupBoxActivitats.Controls.Add(this.dataGridViewActivitats);
-            this.groupBoxActivitats.Location = new System.Drawing.Point(377, 64);
+            this.groupBoxActivitats.Location = new System.Drawing.Point(391, 64);
             this.groupBoxActivitats.Name = "groupBoxActivitats";
-            this.groupBoxActivitats.Size = new System.Drawing.Size(233, 332);
+            this.groupBoxActivitats.Size = new System.Drawing.Size(220, 332);
             this.groupBoxActivitats.TabIndex = 15;
             this.groupBoxActivitats.TabStop = false;
             this.groupBoxActivitats.Text = "Activitats";
@@ -614,23 +761,23 @@
             this.dataGridViewActivitats.TabIndex = 14;
             this.dataGridViewActivitats.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewActivitats_CellContentClick);
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabControl1.Controls.Add(this.tabPagePeticions);
-            this.tabControl1.Controls.Add(this.tabPageEspais);
-            this.tabControl1.Controls.Add(this.tabPageEquips);
-            this.tabControl1.Controls.Add(this.tabPageModificacion);
-            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl1.ItemSize = new System.Drawing.Size(0, 10);
-            this.tabControl1.Location = new System.Drawing.Point(239, 92);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(1);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(690, 469);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
-            this.tabControl1.TabIndex = 3;
+            this.tabControl.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tabControl.Controls.Add(this.tabPagePeticions);
+            this.tabControl.Controls.Add(this.tabPageEspais);
+            this.tabControl.Controls.Add(this.tabPageEquips);
+            this.tabControl.Controls.Add(this.tabPageModificacion);
+            this.tabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl.ItemSize = new System.Drawing.Size(0, 10);
+            this.tabControl.Location = new System.Drawing.Point(239, 92);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(1);
+            this.tabControl.Multiline = true;
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(690, 469);
+            this.tabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
+            this.tabControl.TabIndex = 3;
             // 
             // estado
             // 
@@ -647,110 +794,6 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Estado";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // groupBoxAdmins
-            // 
-            this.groupBoxAdmins.Controls.Add(this.dataGridView1);
-            this.groupBoxAdmins.Location = new System.Drawing.Point(22, 64);
-            this.groupBoxAdmins.Name = "groupBoxAdmins";
-            this.groupBoxAdmins.Size = new System.Drawing.Size(330, 234);
-            this.groupBoxAdmins.TabIndex = 1;
-            this.groupBoxAdmins.TabStop = false;
-            this.groupBoxAdmins.Text = "Admins";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn8,
-            this.nombreDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn9});
-            this.dataGridView1.DataSource = this.bindingSourceAdmins;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(310, 200);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Nom";
-            // 
-            // groupBoxAdd
-            // 
-            this.groupBoxAdd.Controls.Add(this.buttonAcceptar);
-            this.groupBoxAdd.Controls.Add(this.textBoxCorreu);
-            this.groupBoxAdd.Controls.Add(this.textBoxPAss);
-            this.groupBoxAdd.Controls.Add(this.textBoxNom);
-            this.groupBoxAdd.Controls.Add(this.label7);
-            this.groupBoxAdd.Controls.Add(this.label6);
-            this.groupBoxAdd.Controls.Add(this.label5);
-            this.groupBoxAdd.Location = new System.Drawing.Point(358, 64);
-            this.groupBoxAdd.Name = "groupBoxAdd";
-            this.groupBoxAdd.Size = new System.Drawing.Size(244, 124);
-            this.groupBoxAdd.TabIndex = 1;
-            this.groupBoxAdd.TabStop = false;
-            this.groupBoxAdd.Text = "Agregar admin";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 72);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Correu";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Contrasenya";
-            // 
-            // textBoxNom
-            // 
-            this.textBoxNom.Location = new System.Drawing.Point(78, 17);
-            this.textBoxNom.Name = "textBoxNom";
-            this.textBoxNom.Size = new System.Drawing.Size(160, 20);
-            this.textBoxNom.TabIndex = 5;
-            // 
-            // textBoxPAss
-            // 
-            this.textBoxPAss.Location = new System.Drawing.Point(78, 43);
-            this.textBoxPAss.Name = "textBoxPAss";
-            this.textBoxPAss.Size = new System.Drawing.Size(160, 20);
-            this.textBoxPAss.TabIndex = 6;
-            // 
-            // textBoxCorreu
-            // 
-            this.textBoxCorreu.Location = new System.Drawing.Point(78, 69);
-            this.textBoxCorreu.Name = "textBoxCorreu";
-            this.textBoxCorreu.Size = new System.Drawing.Size(160, 20);
-            this.textBoxCorreu.TabIndex = 7;
-            // 
-            // buttonAcceptar
-            // 
-            this.buttonAcceptar.Location = new System.Drawing.Point(163, 95);
-            this.buttonAcceptar.Name = "buttonAcceptar";
-            this.buttonAcceptar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAcceptar.TabIndex = 8;
-            this.buttonAcceptar.Text = "Acceptar";
-            this.buttonAcceptar.UseVisualStyleBackColor = true;
-            this.buttonAcceptar.Click += new System.EventHandler(this.buttonAcceptar_Click);
             // 
             // dataGridViewTextBoxColumn17
             // 
@@ -772,7 +815,7 @@
             // 
             // dataGridViewTextBoxColumn33
             // 
-            this.dataGridViewTextBoxColumn33.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn33.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dataGridViewTextBoxColumn33.DataPropertyName = "id_espai";
             this.dataGridViewTextBoxColumn33.HeaderText = "Espai";
             this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
@@ -813,44 +856,45 @@
             // 
             this.bindingSourceActivitats.DataSource = typeof(EspaiActiu.ACTIVITATS);
             // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn11.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 41;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "nom";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 53;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "adreca";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Adreça";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 68;
+            // 
+            // espropiDataGridViewCheckBoxColumn
+            // 
+            this.espropiDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.espropiDataGridViewCheckBoxColumn.DataPropertyName = "es_propi";
+            this.espropiDataGridViewCheckBoxColumn.HeaderText = "Propia";
+            this.espropiDataGridViewCheckBoxColumn.Name = "espropiDataGridViewCheckBoxColumn";
+            this.espropiDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.espropiDataGridViewCheckBoxColumn.Width = 43;
+            // 
             // bindingSourceInstalacions
             // 
             this.bindingSourceInstalacions.DataSource = typeof(EspaiActiu.INSTALACIO);
-            // 
-            // bindingSourceEntitats
-            // 
-            this.bindingSourceEntitats.DataSource = typeof(EspaiActiu.ENTITATS);
-            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn8.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 43;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nom";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 54;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "correu";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Correu";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // bindingSourceAdmins
-            // 
-            this.bindingSourceAdmins.DataSource = typeof(EspaiActiu.ADMINS);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -905,50 +949,49 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn11
+            // bindingSourceEntitats
             // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn11.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 41;
+            this.bindingSourceEntitats.DataSource = typeof(EspaiActiu.ENTITATS);
+            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
             // 
-            // dataGridViewTextBoxColumn12
+            // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "nom";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Nom";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 53;
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn8.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 43;
             // 
-            // dataGridViewTextBoxColumn13
+            // nombreDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "adreca";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Adreça";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 68;
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 54;
             // 
-            // espropiDataGridViewCheckBoxColumn
+            // dataGridViewTextBoxColumn9
             // 
-            this.espropiDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.espropiDataGridViewCheckBoxColumn.DataPropertyName = "es_propi";
-            this.espropiDataGridViewCheckBoxColumn.HeaderText = "Propia";
-            this.espropiDataGridViewCheckBoxColumn.Name = "espropiDataGridViewCheckBoxColumn";
-            this.espropiDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.espropiDataGridViewCheckBoxColumn.Width = 43;
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "correu";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Correu";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // bindingSourceAdmins
+            // 
+            this.bindingSourceAdmins.DataSource = typeof(EspaiActiu.ADMINS);
             // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(857, 523);
+            this.ClientSize = new System.Drawing.Size(866, 523);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.SidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -959,6 +1002,9 @@
             this.Load += new System.EventHandler(this.FormInicio_Load);
             this.SidePanel.ResumeLayout(false);
             this.SidePanel.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.EntitatsPanel.ResumeLayout(false);
             this.EntitatsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EntitatsImage)).EndInit();
@@ -969,6 +1015,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tabPageModificacion.ResumeLayout(false);
+            this.groupBoxAdd.ResumeLayout(false);
+            this.groupBoxAdd.PerformLayout();
+            this.groupBoxAdmins.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPageEquips.ResumeLayout(false);
             this.tabPageEquips.PerformLayout();
             this.groupBoxEntitats.ResumeLayout(false);
@@ -983,12 +1033,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPeticio)).EndInit();
             this.groupBoxActivitats.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitats)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).EndInit();
-            this.groupBoxAdmins.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBoxAdd.ResumeLayout(false);
-            this.groupBoxAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePeticions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).EndInit();
@@ -1042,7 +1088,7 @@
         private System.Windows.Forms.GroupBox GroupBoxPeticio;
         private System.Windows.Forms.DataGridView dataGridViewPeticio;
         private System.Windows.Forms.TextBox textBoxBuscarPeticion;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.BindingSource bindingSourcePeticions;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxBuscarActivitat;
@@ -1084,12 +1130,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hORARISACTIVITATDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.GroupBox groupBoxAdmins;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
@@ -1115,5 +1155,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewCheckBoxColumn espropiDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

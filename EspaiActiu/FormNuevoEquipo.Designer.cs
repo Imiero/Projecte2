@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoEquipo));
             this.textBoxNom = new System.Windows.Forms.TextBox();
             this.comboBoxEsport = new System.Windows.Forms.ComboBox();
             this.bindingSourceEsport = new System.Windows.Forms.BindingSource(this.components);
@@ -79,7 +80,7 @@
             // 
             // bindingSourceEsport
             // 
-            this.bindingSourceEsport.DataSource = typeof(SPORTS);
+            this.bindingSourceEsport.DataSource = typeof(EspaiActiu.SPORTS);
             // 
             // comboBoxCompeticio
             // 
@@ -96,7 +97,7 @@
             // 
             // bindingSourceCompeticio
             // 
-            this.bindingSourceCompeticio.DataSource = typeof(COMPETICIO);
+            this.bindingSourceCompeticio.DataSource = typeof(EspaiActiu.COMPETICIO);
             // 
             // comboBoxCategoria
             // 
@@ -113,7 +114,7 @@
             // 
             // bindingSourceCategoria
             // 
-            this.bindingSourceCategoria.DataSource = typeof(CATEGORIA_NIVELL);
+            this.bindingSourceCategoria.DataSource = typeof(EspaiActiu.CATEGORIA_NIVELL);
             // 
             // comboBoxCategoriaEdat
             // 
@@ -130,7 +131,7 @@
             // 
             // bindingSourceEdat
             // 
-            this.bindingSourceEdat.DataSource = typeof(CATEGORIA_EDAT);
+            this.bindingSourceEdat.DataSource = typeof(EspaiActiu.CATEGORIA_EDAT);
             // 
             // comboBoxSexe
             // 
@@ -147,7 +148,7 @@
             // 
             // bindingSourceSexe
             // 
-            this.bindingSourceSexe.DataSource = typeof(SEXE);
+            this.bindingSourceSexe.DataSource = typeof(EspaiActiu.SEXE);
             // 
             // label1
             // 
@@ -211,13 +212,14 @@
             // 
             // buttonSalir
             // 
+            this.buttonSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.buttonSalir.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalir.Location = new System.Drawing.Point(185, 193);
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Size = new System.Drawing.Size(75, 23);
             this.buttonSalir.TabIndex = 12;
             this.buttonSalir.Text = "Sortir";
-            this.buttonSalir.UseVisualStyleBackColor = true;
+            this.buttonSalir.UseVisualStyleBackColor = false;
             this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
             // buttonAceptar
@@ -232,13 +234,15 @@
             // 
             // buttonModificar
             // 
+            this.buttonModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(95)))));
             this.buttonModificar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModificar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonModificar.Location = new System.Drawing.Point(104, 193);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(75, 23);
             this.buttonModificar.TabIndex = 14;
             this.buttonModificar.Text = "Modificar";
-            this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.UseVisualStyleBackColor = false;
             this.buttonModificar.Visible = false;
             this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
@@ -262,6 +266,7 @@
             this.Controls.Add(this.comboBoxCompeticio);
             this.Controls.Add(this.comboBoxEsport);
             this.Controls.Add(this.textBoxNom);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNuevoEquipo";
             this.Text = "NuevoEquipo";
             this.Load += new System.EventHandler(this.FormNuevoEquipo_Load);

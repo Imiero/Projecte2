@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddEntitat));
             this.tbNIF = new System.Windows.Forms.TextBox();
             this.tbCorreu = new System.Windows.Forms.TextBox();
             this.bAceptar = new System.Windows.Forms.Button();
@@ -66,24 +67,26 @@
             // 
             // bAceptar
             // 
+            this.bAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(212)))), ((int)(((byte)(97)))));
             this.bAceptar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAceptar.Location = new System.Drawing.Point(237, 236);
             this.bAceptar.Name = "bAceptar";
             this.bAceptar.Size = new System.Drawing.Size(75, 34);
             this.bAceptar.TabIndex = 62;
             this.bAceptar.Text = "Acceptar";
-            this.bAceptar.UseVisualStyleBackColor = true;
+            this.bAceptar.UseVisualStyleBackColor = false;
             this.bAceptar.Click += new System.EventHandler(this.bAceptar_Click);
             // 
             // bSortir
             // 
+            this.bSortir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.bSortir.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSortir.Location = new System.Drawing.Point(318, 236);
             this.bSortir.Name = "bSortir";
             this.bSortir.Size = new System.Drawing.Size(75, 34);
             this.bSortir.TabIndex = 63;
             this.bSortir.Text = "Sortir";
-            this.bSortir.UseVisualStyleBackColor = true;
+            this.bSortir.UseVisualStyleBackColor = false;
             this.bSortir.Click += new System.EventHandler(this.bSortir_Click);
             // 
             // tbContrasenya2
@@ -233,6 +236,7 @@
             this.Controls.Add(this.tbContrasenya);
             this.Controls.Add(this.tbUsuari);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FormAddEntitat";
             this.Text = "Agregar Entitat";

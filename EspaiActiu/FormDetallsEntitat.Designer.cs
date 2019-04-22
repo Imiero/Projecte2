@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetallsEntitat));
             this.lEquips = new System.Windows.Forms.Label();
             this.bSortir = new System.Windows.Forms.Button();
             this.bEditar = new System.Windows.Forms.Button();
@@ -130,13 +131,14 @@
             // 
             // buttonModificar
             // 
+            this.buttonModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(95)))));
             this.buttonModificar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModificar.Location = new System.Drawing.Point(182, 373);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(75, 25);
             this.buttonModificar.TabIndex = 60;
             this.buttonModificar.Text = "Modificar";
-            this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.UseVisualStyleBackColor = false;
             this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // textBoxNom
@@ -146,7 +148,6 @@
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(181, 20);
             this.textBoxNom.TabIndex = 61;
-    
             // 
             // textBoxCorreu
             // 
@@ -240,7 +241,7 @@
             // 
             // bindingSourceTelefons
             // 
-            this.bindingSourceTelefons.DataSource = typeof(TELEFONS);
+            this.bindingSourceTelefons.DataSource = typeof(EspaiActiu.TELEFONS);
             // 
             // listBoxTelefons
             // 
@@ -259,7 +260,7 @@
             // 
             // bindingSourceEquips
             // 
-            this.bindingSourceEquips.DataSource = typeof(EQUIPS);
+            this.bindingSourceEquips.DataSource = typeof(EspaiActiu.EQUIPS);
             // 
             // listBoxEquips
             // 
@@ -302,6 +303,7 @@
             this.Controls.Add(this.listBoxTelefons);
             this.Controls.Add(this.listBoxEquips);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDetallsEntitat";
             this.Text = "FormDetallsEntitat";
