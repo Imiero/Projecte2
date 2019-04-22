@@ -45,7 +45,7 @@ namespace EspaiActiu.BD
             ACTIVIDADES_DEMANADAS a = ORM.bd.ACTIVIDADES_DEMANADAS.Find(id);
 
             a.revisada = true;
-            a.estado = "Rechazada";
+            a.estado = "Rebutjada";
 
             try
             {
