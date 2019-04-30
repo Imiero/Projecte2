@@ -27,35 +27,26 @@ namespace EspaiActiu
             Petilabel.ForeColor = System.Drawing.Color.Black;
             EspaLabel.ForeColor = System.Drawing.Color.Black;
             Entitatslabel.ForeColor = System.Drawing.Color.Black;
-            label9.ForeColor = System.Drawing.Color.Black;
         }
         private void tabPeticio()
         {
-            tabControl.SelectedIndex = 0;
+            tabControl1.SelectedIndex = 0;
             resetColors();
             Petilabel.ForeColor = System.Drawing.Color.White;
             
         }
         private void tabEspais()
         {
-            tabControl.SelectedIndex = 1;
+            tabControl1.SelectedIndex = 1;
             resetColors();
             EspaLabel.ForeColor = System.Drawing.Color.White;
             
         }
         private void tabEquips()
         {
-            tabControl.SelectedIndex = 2;
+            tabControl1.SelectedIndex = 2;
             resetColors();
             Entitatslabel.ForeColor = System.Drawing.Color.White;
-
-        }
-
-        private void tabAdmins()
-        {
-            tabControl.SelectedIndex = 3;
-            resetColors();
-            label9.ForeColor = System.Drawing.Color.White;
 
         }
         private void Sortir()
@@ -156,6 +147,16 @@ namespace EspaiActiu
             bindingSourceActivitats.DataSource = ORMActivitats.SelectAllActvitats();
             bindingSourceAdmins.DataSource = ORMAdmins.SelectAllAdmins();
 
+            //Grid de peticiones
+
+            foreach (DataGridViewRow item in dataGridViewPeticio.Rows)
+            {
+                //if (item.Cells[1].Value.ToString().Equals("Acceptada"))
+                if (item.Cells[1].Value == null)
+                {
+                    item.DefaultCellStyle.SelectionBackColor = Color.Green;
+                }
+            }  
         }
 
 
@@ -310,43 +311,27 @@ namespace EspaiActiu
 
         private void buttonAcceptar_Click(object sender, EventArgs e)
         {
-                if (textBoxNom.Text.Length == 0 || textBoxPAss.Text.Length < 4 || textBoxCorreu.Text.Length == 0)
-                {
-                    MessageBox.Show("Les dades son incorrectes.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+            if(textBoxNom.Text.Length == 0 || textBoxPAss.Text.Length < 4 || textBoxCorreu.Text.Length == 0)
+            {
+                MessageBox.Show("Les dades son incorrectes.", "ERROR", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                ORMAdmins.InsertAdmin(textBoxNom.Text, textBoxPAss.Text, textBoxCorreu.Text);
+                //Refrescamos la grid
+                bindingSourceAdmins.DataSource = ORMAdmins.SelectAllAdmins();
+                //Dejamos las textbox limpias
+                textBoxNom.Text = "";
+                textBoxPAss.Text = "";
+                textBoxCorreu.Text = "";
 
-
-
-                else
-                {
-                    ORMAdmins.InsertAdmin(textBoxNom.Text, textBoxPAss.Text, textBoxCorreu.Text);
-                    //Refrescamos la grid
-                    bindingSourceAdmins.DataSource = ORMAdmins.SelectAllAdmins();
-                    //Dejamos las textbox limpias
-                    textBoxNom.Text = "";
-                    textBoxPAss.Text = "";
-                    textBoxCorreu.Text = "";
-
-                }
-
-
-
+            }
+            
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            tabAdmins();
+            tabControl1.SelectedIndex = 3;
         }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            tabAdmins();
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-            tabAdmins();
-        }
-
     }
 }
