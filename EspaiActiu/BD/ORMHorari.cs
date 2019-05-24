@@ -65,7 +65,7 @@ namespace EspaiActiu.BD
 
         }
 
-        public static void InsertHorariActivitat(TimeSpan horari_inici,TimeSpan horari_fi, int dia, int id_activitat,int id_instalacio)
+        public static void InsertHorariActivitat(TimeSpan horari_inici, TimeSpan horari_fi, int dia, int id_activitat, int id_instalacio)
         {
 
             HORARIS_ACTIVITAT horari = new HORARIS_ACTIVITAT();
@@ -79,8 +79,14 @@ namespace EspaiActiu.BD
             horari.id_instalacio = id_instalacio;
 
             ORM.bd.HORARIS_ACTIVITAT.Add(horari);
-            ORM.bd.SaveChanges();
-            
+            try
+            {
+                ORM.bd.SaveChanges();
+            }
+            catch(Exception e)
+            {
+
+            }
         }
     }
 }

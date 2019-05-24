@@ -75,6 +75,7 @@
             // 
             this.comboBox1.DataSource = this.dIESSETMANABindingSource;
             this.comboBox1.DisplayMember = "dia";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(73, 7);
             this.comboBox1.Name = "comboBox1";
