@@ -328,5 +328,10 @@ namespace EspaiActiu
             }
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 3;
+        }
     }
 }

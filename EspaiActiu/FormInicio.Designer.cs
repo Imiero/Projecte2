@@ -44,6 +44,16 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabPageModificacion = new System.Windows.Forms.TabPage();
+            this.groupBoxAdd = new System.Windows.Forms.GroupBox();
+            this.buttonAcceptar = new System.Windows.Forms.Button();
+            this.textBoxCorreu = new System.Windows.Forms.TextBox();
+            this.textBoxPAss = new System.Windows.Forms.TextBox();
+            this.textBoxNom = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBoxAdmins = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPageEquips = new System.Windows.Forms.TabPage();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.buttonAddEntitat = new System.Windows.Forms.Button();
@@ -64,24 +74,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.GroupBoxPeticio = new System.Windows.Forms.GroupBox();
             this.dataGridViewPeticio = new System.Windows.Forms.DataGridView();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxBuscarPeticion = new System.Windows.Forms.TextBox();
             this.groupBoxActivitats = new System.Windows.Forms.GroupBox();
             this.dataGridViewActivitats = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.bindingSourceEspais = new System.Windows.Forms.BindingSource(this.components);
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBoxAdmins = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBoxAdd = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxNom = new System.Windows.Forms.TextBox();
-            this.textBoxPAss = new System.Windows.Forms.TextBox();
-            this.textBoxCorreu = new System.Windows.Forms.TextBox();
-            this.buttonAcceptar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,22 +91,22 @@
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSourceActivitats = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.espropiDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bindingSourceInstalacions = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceAdmins = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.espropiDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.bindingSourceEntitats = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceAdmins = new System.Windows.Forms.BindingSource(this.components);
             this.SidePanel.SuspendLayout();
             this.EntitatsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EntitatsImage)).BeginInit();
@@ -116,6 +117,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPageModificacion.SuspendLayout();
+            this.groupBoxAdd.SuspendLayout();
+            this.groupBoxAdmins.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPageEquips.SuspendLayout();
             this.groupBoxEntitats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEntitats)).BeginInit();
@@ -129,9 +133,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitats)).BeginInit();
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).BeginInit();
-            this.groupBoxAdmins.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBoxAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePeticions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).BeginInit();
@@ -142,6 +143,7 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(160)))), ((int)(((byte)(56)))));
+            this.SidePanel.Controls.Add(this.button1);
             this.SidePanel.Controls.Add(this.EntitatsPanel);
             this.SidePanel.Controls.Add(this.EspaLabel);
             this.SidePanel.Controls.Add(this.EspaisLabel);
@@ -284,7 +286,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1059, 88);
+            this.panel2.Size = new System.Drawing.Size(1059, 90);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -299,6 +301,110 @@
             this.tabPageModificacion.Size = new System.Drawing.Size(682, 451);
             this.tabPageModificacion.TabIndex = 3;
             this.tabPageModificacion.Text = "tabPage1";
+            // 
+            // groupBoxAdd
+            // 
+            this.groupBoxAdd.Controls.Add(this.buttonAcceptar);
+            this.groupBoxAdd.Controls.Add(this.textBoxCorreu);
+            this.groupBoxAdd.Controls.Add(this.textBoxPAss);
+            this.groupBoxAdd.Controls.Add(this.textBoxNom);
+            this.groupBoxAdd.Controls.Add(this.label7);
+            this.groupBoxAdd.Controls.Add(this.label6);
+            this.groupBoxAdd.Controls.Add(this.label5);
+            this.groupBoxAdd.Location = new System.Drawing.Point(358, 64);
+            this.groupBoxAdd.Name = "groupBoxAdd";
+            this.groupBoxAdd.Size = new System.Drawing.Size(244, 124);
+            this.groupBoxAdd.TabIndex = 1;
+            this.groupBoxAdd.TabStop = false;
+            this.groupBoxAdd.Text = "Agregar admin";
+            // 
+            // buttonAcceptar
+            // 
+            this.buttonAcceptar.Location = new System.Drawing.Point(163, 95);
+            this.buttonAcceptar.Name = "buttonAcceptar";
+            this.buttonAcceptar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAcceptar.TabIndex = 8;
+            this.buttonAcceptar.Text = "Acceptar";
+            this.buttonAcceptar.UseVisualStyleBackColor = true;
+            this.buttonAcceptar.Click += new System.EventHandler(this.buttonAcceptar_Click);
+            // 
+            // textBoxCorreu
+            // 
+            this.textBoxCorreu.Location = new System.Drawing.Point(78, 69);
+            this.textBoxCorreu.Name = "textBoxCorreu";
+            this.textBoxCorreu.Size = new System.Drawing.Size(160, 20);
+            this.textBoxCorreu.TabIndex = 7;
+            // 
+            // textBoxPAss
+            // 
+            this.textBoxPAss.Location = new System.Drawing.Point(78, 43);
+            this.textBoxPAss.Name = "textBoxPAss";
+            this.textBoxPAss.Size = new System.Drawing.Size(160, 20);
+            this.textBoxPAss.TabIndex = 6;
+            // 
+            // textBoxNom
+            // 
+            this.textBoxNom.Location = new System.Drawing.Point(78, 17);
+            this.textBoxNom.Name = "textBoxNom";
+            this.textBoxNom.Size = new System.Drawing.Size(160, 20);
+            this.textBoxNom.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 46);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Contrasenya";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Correu";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Nom";
+            // 
+            // groupBoxAdmins
+            // 
+            this.groupBoxAdmins.Controls.Add(this.dataGridView1);
+            this.groupBoxAdmins.Location = new System.Drawing.Point(22, 64);
+            this.groupBoxAdmins.Name = "groupBoxAdmins";
+            this.groupBoxAdmins.Size = new System.Drawing.Size(330, 234);
+            this.groupBoxAdmins.TabIndex = 1;
+            this.groupBoxAdmins.TabStop = false;
+            this.groupBoxAdmins.Text = "Admins";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.nombreDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn9});
+            this.dataGridView1.DataSource = this.bindingSourceAdmins;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(310, 200);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
             // tabPageEquips
             // 
@@ -576,6 +682,22 @@
             this.dataGridViewPeticio.TabIndex = 0;
             this.dataGridViewPeticio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPeticio_CellContentClick);
             // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "estado";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
             // textBoxBuscarPeticion
             // 
             this.textBoxBuscarPeticion.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -632,125 +754,15 @@
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 3;
             // 
-            // estado
+            // button1
             // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            this.estado.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "estado";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Estado";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // groupBoxAdmins
-            // 
-            this.groupBoxAdmins.Controls.Add(this.dataGridView1);
-            this.groupBoxAdmins.Location = new System.Drawing.Point(22, 64);
-            this.groupBoxAdmins.Name = "groupBoxAdmins";
-            this.groupBoxAdmins.Size = new System.Drawing.Size(330, 234);
-            this.groupBoxAdmins.TabIndex = 1;
-            this.groupBoxAdmins.TabStop = false;
-            this.groupBoxAdmins.Text = "Admins";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn8,
-            this.nombreDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn9});
-            this.dataGridView1.DataSource = this.bindingSourceAdmins;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(310, 200);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Nom";
-            // 
-            // groupBoxAdd
-            // 
-            this.groupBoxAdd.Controls.Add(this.buttonAcceptar);
-            this.groupBoxAdd.Controls.Add(this.textBoxCorreu);
-            this.groupBoxAdd.Controls.Add(this.textBoxPAss);
-            this.groupBoxAdd.Controls.Add(this.textBoxNom);
-            this.groupBoxAdd.Controls.Add(this.label7);
-            this.groupBoxAdd.Controls.Add(this.label6);
-            this.groupBoxAdd.Controls.Add(this.label5);
-            this.groupBoxAdd.Location = new System.Drawing.Point(358, 64);
-            this.groupBoxAdd.Name = "groupBoxAdd";
-            this.groupBoxAdd.Size = new System.Drawing.Size(244, 124);
-            this.groupBoxAdd.TabIndex = 1;
-            this.groupBoxAdd.TabStop = false;
-            this.groupBoxAdd.Text = "Agregar admin";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 72);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Correu";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 46);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Contrasenya";
-            // 
-            // textBoxNom
-            // 
-            this.textBoxNom.Location = new System.Drawing.Point(78, 17);
-            this.textBoxNom.Name = "textBoxNom";
-            this.textBoxNom.Size = new System.Drawing.Size(160, 20);
-            this.textBoxNom.TabIndex = 5;
-            // 
-            // textBoxPAss
-            // 
-            this.textBoxPAss.Location = new System.Drawing.Point(78, 43);
-            this.textBoxPAss.Name = "textBoxPAss";
-            this.textBoxPAss.Size = new System.Drawing.Size(160, 20);
-            this.textBoxPAss.TabIndex = 6;
-            // 
-            // textBoxCorreu
-            // 
-            this.textBoxCorreu.Location = new System.Drawing.Point(78, 69);
-            this.textBoxCorreu.Name = "textBoxCorreu";
-            this.textBoxCorreu.Size = new System.Drawing.Size(160, 20);
-            this.textBoxCorreu.TabIndex = 7;
-            // 
-            // buttonAcceptar
-            // 
-            this.buttonAcceptar.Location = new System.Drawing.Point(163, 95);
-            this.buttonAcceptar.Name = "buttonAcceptar";
-            this.buttonAcceptar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAcceptar.TabIndex = 8;
-            this.buttonAcceptar.Text = "Acceptar";
-            this.buttonAcceptar.UseVisualStyleBackColor = true;
-            this.buttonAcceptar.Click += new System.EventHandler(this.buttonAcceptar_Click);
+            this.button1.Location = new System.Drawing.Point(95, 160);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridViewTextBoxColumn17
             // 
@@ -813,44 +825,45 @@
             // 
             this.bindingSourceActivitats.DataSource = typeof(EspaiActiu.ACTIVITATS);
             // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn11.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 41;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "nom";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 53;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "adreca";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Adreça";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 68;
+            // 
+            // espropiDataGridViewCheckBoxColumn
+            // 
+            this.espropiDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.espropiDataGridViewCheckBoxColumn.DataPropertyName = "es_propi";
+            this.espropiDataGridViewCheckBoxColumn.HeaderText = "Propia";
+            this.espropiDataGridViewCheckBoxColumn.Name = "espropiDataGridViewCheckBoxColumn";
+            this.espropiDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.espropiDataGridViewCheckBoxColumn.Width = 43;
+            // 
             // bindingSourceInstalacions
             // 
             this.bindingSourceInstalacions.DataSource = typeof(EspaiActiu.INSTALACIO);
-            // 
-            // bindingSourceEntitats
-            // 
-            this.bindingSourceEntitats.DataSource = typeof(EspaiActiu.ENTITATS);
-            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn8.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 43;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nom";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 54;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "correu";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Correu";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // bindingSourceAdmins
-            // 
-            this.bindingSourceAdmins.DataSource = typeof(EspaiActiu.ADMINS);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -905,41 +918,40 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn11
+            // bindingSourceEntitats
             // 
-            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn11.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 41;
+            this.bindingSourceEntitats.DataSource = typeof(EspaiActiu.ENTITATS);
+            this.bindingSourceEntitats.CurrentChanged += new System.EventHandler(this.bindingSourceEntitats_CurrentChanged);
             // 
-            // dataGridViewTextBoxColumn12
+            // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "nom";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Nom";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 53;
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn8.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 43;
             // 
-            // dataGridViewTextBoxColumn13
+            // nombreDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "adreca";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Adreça";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 68;
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 54;
             // 
-            // espropiDataGridViewCheckBoxColumn
+            // dataGridViewTextBoxColumn9
             // 
-            this.espropiDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.espropiDataGridViewCheckBoxColumn.DataPropertyName = "es_propi";
-            this.espropiDataGridViewCheckBoxColumn.HeaderText = "Propia";
-            this.espropiDataGridViewCheckBoxColumn.Name = "espropiDataGridViewCheckBoxColumn";
-            this.espropiDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.espropiDataGridViewCheckBoxColumn.Width = 43;
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "correu";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Correu";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // bindingSourceAdmins
+            // 
+            this.bindingSourceAdmins.DataSource = typeof(EspaiActiu.ADMINS);
             // 
             // FormInicio
             // 
@@ -969,6 +981,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tabPageModificacion.ResumeLayout(false);
+            this.groupBoxAdd.ResumeLayout(false);
+            this.groupBoxAdd.PerformLayout();
+            this.groupBoxAdmins.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPageEquips.ResumeLayout(false);
             this.tabPageEquips.PerformLayout();
             this.groupBoxEntitats.ResumeLayout(false);
@@ -985,10 +1001,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActivitats)).EndInit();
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEspais)).EndInit();
-            this.groupBoxAdmins.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBoxAdd.ResumeLayout(false);
-            this.groupBoxAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourcePeticions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActivitats)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInstalacions)).EndInit();
@@ -1115,5 +1127,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewCheckBoxColumn espropiDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }
