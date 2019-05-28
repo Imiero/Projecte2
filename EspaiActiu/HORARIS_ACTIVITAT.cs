@@ -24,5 +24,6 @@ namespace EspaiActiu
         public virtual ACTIVITATS ACTIVITATS { get; set; }
         public virtual DIES_SETMANA DIES_SETMANA { get; set; }
         public virtual LLOC_DEPORTIVO LLOC_DEPORTIVO { get; set; }
+        public virtual INSTALACIO INSTALACIO { get; set; }
     }
 }
