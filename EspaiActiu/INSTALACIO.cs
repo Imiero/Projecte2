@@ -30,5 +30,6 @@ namespace EspaiActiu
         public virtual ICollection<HORARIS_INSTALACIO> HORARIS_INSTALACIO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LLOC_DEPORTIVO> LLOC_DEPORTIVO { get; set; }
+        public virtual HORARIS_ACTIVITAT HORARIS_ACTIVITAT { get; set; }
     }
 }

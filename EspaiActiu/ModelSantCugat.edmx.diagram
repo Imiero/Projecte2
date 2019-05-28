@@ -52,6 +52,7 @@
         <AssociationConnector Association="sant_cugatModel.FK_HORARIS_ACTIVITAT_ACTIVITATS" />
         <AssociationConnector Association="sant_cugatModel.FK_HORARIS_ACTIVITAT_DIES_SETMANA" />
         <AssociationConnector Association="sant_cugatModel.FK_HORARIS_ACTIVITAT_LLOC_DEPORTIVO" />
+        <AssociationConnector Association="sant_cugatModel.FK_HORARIS_ACTIVITAT_INSTALACIONS" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
