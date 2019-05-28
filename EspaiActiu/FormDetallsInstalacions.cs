@@ -32,7 +32,7 @@ namespace EspaiActiu
             this.Text = instalacio.nom;
 
             //cargamos los dias para que se muestren como el nombre del dia no un numero
-            bindingSourceDias.DataSource = ORMDia.SelectAllDies();
+            
             //Llamamos al método para cargar la grid con la lista de espacios de una instalacion
             bindingSourceEspais.DataSource = ORMEspai.SelectAllEspaisById(instalacio.id);
 
