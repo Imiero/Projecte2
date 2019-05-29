@@ -46,7 +46,7 @@ namespace EspaiActiu.BD
 
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (Exception)
             {
@@ -61,7 +61,7 @@ namespace EspaiActiu.BD
             ORM.bd.ADMINS.Remove(admin);
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (DbUpdateException ex)
             {

@@ -44,7 +44,7 @@ namespace EspaiActiu.BD
 
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (Exception)
             {

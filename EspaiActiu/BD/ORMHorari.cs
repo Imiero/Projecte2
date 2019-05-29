@@ -81,7 +81,7 @@ namespace EspaiActiu.BD
             ORM.bd.HORARIS_ACTIVITAT.Add(horari);
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch(Exception e)
             {

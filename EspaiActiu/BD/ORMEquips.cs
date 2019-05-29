@@ -28,7 +28,7 @@ namespace EspaiActiu.BD
 
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (Exception)
             {
@@ -63,7 +63,7 @@ namespace EspaiActiu.BD
             ORM.bd.EQUIPS.Remove(equip);
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (DbUpdateException ex)
             {
@@ -88,7 +88,7 @@ namespace EspaiActiu.BD
 
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (DbUpdateException ex)
             {

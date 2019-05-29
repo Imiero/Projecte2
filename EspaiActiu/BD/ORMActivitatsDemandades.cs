@@ -49,7 +49,7 @@ namespace EspaiActiu.BD
 
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (DbUpdateException ex)
             {
@@ -66,7 +66,7 @@ namespace EspaiActiu.BD
 
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (DbUpdateException ex)
             {

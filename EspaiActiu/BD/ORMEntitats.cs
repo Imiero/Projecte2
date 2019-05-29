@@ -52,7 +52,7 @@ namespace EspaiActiu.BD
 
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (Exception)
             {
@@ -67,7 +67,7 @@ namespace EspaiActiu.BD
             ORM.bd.ENTITATS.Remove(entitat);
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (DbUpdateException ex)
             {
@@ -90,7 +90,7 @@ namespace EspaiActiu.BD
 
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (DbUpdateException ex)
             {

@@ -24,7 +24,7 @@ namespace EspaiActiu.BD
             ORM.bd.TELEFONS.Add(telefon);
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (Exception) {
 
@@ -49,7 +49,7 @@ namespace EspaiActiu.BD
             ORM.bd.TELEFONS.Remove(telefon);
             try
             {
-                ORM.bd.SaveChanges();
+                ORM.SaveChanges();
             }
             catch (DbUpdateException ex)
             {
