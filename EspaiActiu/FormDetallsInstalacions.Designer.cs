@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetallsInstalacions));
             this.lNom = new System.Windows.Forms.Label();
             this.lAdreca = new System.Windows.Forms.Label();
             this.tbNomInstalacio = new System.Windows.Forms.TextBox();
@@ -226,6 +227,7 @@
             this.ClientSize = new System.Drawing.Size(456, 509);
             this.Controls.Add(this.bModificar);
             this.Controls.Add(this.gbDetallsInstalacio);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDetallsInstalacions";
             this.Text = "FormDetallsInstalacions";
             this.Load += new System.EventHandler(this.FormDetallsInstalacions_Load);

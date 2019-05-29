@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddEspai));
             this.lHorari = new System.Windows.Forms.Label();
             this.lTel = new System.Windows.Forms.Label();
             this.lMesInfo = new System.Windows.Forms.Label();
@@ -172,6 +173,7 @@
             this.Controls.Add(this.tbInfo);
             this.Controls.Add(this.tbDireccio);
             this.Controls.Add(this.tbNom);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FormAddEspai";
             this.Text = "FormAddEspai";

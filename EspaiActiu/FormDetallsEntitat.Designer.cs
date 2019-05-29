@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetallsEntitat));
             this.lEquips = new System.Windows.Forms.Label();
             this.bSortir = new System.Windows.Forms.Button();
             this.bEditar = new System.Windows.Forms.Button();
@@ -336,6 +337,7 @@
             this.Controls.Add(this.listBoxTelefons);
             this.Controls.Add(this.listBoxEquips);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDetallsEntitat";
             this.Text = "FormDetallsEntitat";

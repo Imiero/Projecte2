@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssignacioHoraris));
             this.dateTimePickerInici = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerFinal = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -151,6 +152,7 @@
             this.Controls.Add(this.dateTimePickerFinal);
             this.Controls.Add(this.dateTimePickerInici);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AssignacioHoraris";
             this.Text = "FormAssignacioHoraris";
             this.Load += new System.EventHandler(this.AssignacioHoraris_Load);

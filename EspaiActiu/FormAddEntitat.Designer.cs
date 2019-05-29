@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddEntitat));
             this.tbNIF = new System.Windows.Forms.TextBox();
             this.tbCorreu = new System.Windows.Forms.TextBox();
             this.bAceptar = new System.Windows.Forms.Button();
@@ -235,6 +236,7 @@
             this.Controls.Add(this.tbContrasenya);
             this.Controls.Add(this.tbUsuari);
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FormAddEntitat";
             this.Text = "Agregar Entitat";

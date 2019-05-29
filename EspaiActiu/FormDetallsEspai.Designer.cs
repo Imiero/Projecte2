@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDetallsEspai));
             this.bSortir = new System.Windows.Forms.Button();
             this.lPreu = new System.Windows.Forms.Label();
             this.lNomEspai = new System.Windows.Forms.Label();
@@ -105,6 +106,7 @@
             this.Controls.Add(this.gbDadesEspai);
             this.Controls.Add(this.bSortir);
             this.Controls.Add(this.lNomEspai);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDetallsEspai";
             this.Text = "FormDetallsEspai";

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddInstalacio));
             this.lNomInstalacio = new System.Windows.Forms.Label();
             this.lAdrecaInstalacio = new System.Windows.Forms.Label();
             this.dbDatosInstalacio = new System.Windows.Forms.GroupBox();
@@ -398,6 +399,7 @@
             this.Controls.Add(this.bCancelar);
             this.Controls.Add(this.dbDatosInstalacio);
             this.Controls.Add(this.bAceptar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddInstalacio";
             this.Text = "FormAddInstalacio";
             this.dbDatosInstalacio.ResumeLayout(false);

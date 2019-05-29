@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoEquipo));
             this.textBoxNom = new System.Windows.Forms.TextBox();
             this.comboBoxEsport = new System.Windows.Forms.ComboBox();
             this.bindingSourceEsport = new System.Windows.Forms.BindingSource(this.components);
@@ -265,6 +266,7 @@
             this.Controls.Add(this.comboBoxCompeticio);
             this.Controls.Add(this.comboBoxEsport);
             this.Controls.Add(this.textBoxNom);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNuevoEquipo";
             this.Text = "NuevoEquipo";
             this.Load += new System.EventHandler(this.FormNuevoEquipo_Load);
