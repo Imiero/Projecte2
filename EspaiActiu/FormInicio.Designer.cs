@@ -633,7 +633,7 @@
             this.GroupBoxPeticio.Size = new System.Drawing.Size(351, 332);
             this.GroupBoxPeticio.TabIndex = 3;
             this.GroupBoxPeticio.TabStop = false;
-            this.GroupBoxPeticio.Text = "Peticións";
+            this.GroupBoxPeticio.Text = "Peticions";
             // 
             // dataGridViewPeticio
             // 
