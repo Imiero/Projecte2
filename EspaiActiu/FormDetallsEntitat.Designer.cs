@@ -51,10 +51,14 @@
             this.listBoxTelefons = new System.Windows.Forms.ListBox();
             this.bindingSourceEquips = new System.Windows.Forms.BindingSource(this.components);
             this.listBoxEquips = new System.Windows.Forms.ListBox();
+            this.pictureBoxBorrarTele = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBorrarEquipo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNuevoTelefono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNouEquip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTelefons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBorrarTele)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBorrarEquipo)).BeginInit();
             this.SuspendLayout();
             // 
             // lEquips
@@ -130,13 +134,14 @@
             // 
             // buttonModificar
             // 
+            this.buttonModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(95)))));
             this.buttonModificar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModificar.Location = new System.Drawing.Point(182, 373);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(75, 25);
             this.buttonModificar.TabIndex = 60;
             this.buttonModificar.Text = "Modificar";
-            this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.UseVisualStyleBackColor = false;
             this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // textBoxNom
@@ -146,7 +151,6 @@
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(181, 20);
             this.textBoxNom.TabIndex = 61;
-    
             // 
             // textBoxCorreu
             // 
@@ -240,7 +244,7 @@
             // 
             // bindingSourceTelefons
             // 
-            this.bindingSourceTelefons.DataSource = typeof(TELEFONS);
+            this.bindingSourceTelefons.DataSource = typeof(EspaiActiu.TELEFONS);
             // 
             // listBoxTelefons
             // 
@@ -259,7 +263,7 @@
             // 
             // bindingSourceEquips
             // 
-            this.bindingSourceEquips.DataSource = typeof(EQUIPS);
+            this.bindingSourceEquips.DataSource = typeof(EspaiActiu.EQUIPS);
             // 
             // listBoxEquips
             // 
@@ -276,11 +280,41 @@
             this.listBoxEquips.DoubleClick += new System.EventHandler(this.listBoxEquips_DoubleClick);
             this.listBoxEquips.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBoxEquips_KeyDown);
             // 
+            // pictureBoxBorrarTele
+            // 
+            this.pictureBoxBorrarTele.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBorrarTele.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxBorrarTele.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxBorrarTele.Image = global::EspaiActiu.Properties.Resources.buttonminus;
+            this.pictureBoxBorrarTele.Location = new System.Drawing.Point(213, 261);
+            this.pictureBoxBorrarTele.Name = "pictureBoxBorrarTele";
+            this.pictureBoxBorrarTele.Size = new System.Drawing.Size(19, 20);
+            this.pictureBoxBorrarTele.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBorrarTele.TabIndex = 73;
+            this.pictureBoxBorrarTele.TabStop = false;
+            this.pictureBoxBorrarTele.Click += new System.EventHandler(this.pictureBoxBorrarTele_Click);
+            // 
+            // pictureBoxBorrarEquipo
+            // 
+            this.pictureBoxBorrarEquipo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBorrarEquipo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxBorrarEquipo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxBorrarEquipo.Image = global::EspaiActiu.Properties.Resources.buttonminus;
+            this.pictureBoxBorrarEquipo.Location = new System.Drawing.Point(213, 339);
+            this.pictureBoxBorrarEquipo.Name = "pictureBoxBorrarEquipo";
+            this.pictureBoxBorrarEquipo.Size = new System.Drawing.Size(19, 20);
+            this.pictureBoxBorrarEquipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBorrarEquipo.TabIndex = 74;
+            this.pictureBoxBorrarEquipo.TabStop = false;
+            this.pictureBoxBorrarEquipo.Click += new System.EventHandler(this.pictureBoxBorrarEquipo_Click);
+            // 
             // FormDetallsEntitat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(270, 410);
+            this.Controls.Add(this.pictureBoxBorrarEquipo);
+            this.Controls.Add(this.pictureBoxBorrarTele);
             this.Controls.Add(this.pictureBoxNouEquip);
             this.Controls.Add(this.pictureBoxNuevoTelefono);
             this.Controls.Add(this.textBoxTemp);
@@ -311,6 +345,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNouEquip)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceTelefons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceEquips)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBorrarTele)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBorrarEquipo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,5 +376,7 @@
         private System.Windows.Forms.ListBox listBoxTelefons;
         private System.Windows.Forms.BindingSource bindingSourceEquips;
         private System.Windows.Forms.ListBox listBoxEquips;
+        private System.Windows.Forms.PictureBox pictureBoxBorrarTele;
+        private System.Windows.Forms.PictureBox pictureBoxBorrarEquipo;
     }
 }

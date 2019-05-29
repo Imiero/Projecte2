@@ -39,12 +39,13 @@
             // 
             // bSortir
             // 
+            this.bSortir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.bSortir.Location = new System.Drawing.Point(156, 274);
             this.bSortir.Name = "bSortir";
             this.bSortir.Size = new System.Drawing.Size(123, 32);
             this.bSortir.TabIndex = 46;
             this.bSortir.Text = "Sortir";
-            this.bSortir.UseVisualStyleBackColor = true;
+            this.bSortir.UseVisualStyleBackColor = false;
             this.bSortir.Click += new System.EventHandler(this.bSortir_Click);
             // 
             // lPreu
@@ -52,7 +53,7 @@
             this.lPreu.AutoSize = true;
             this.lPreu.Location = new System.Drawing.Point(28, 64);
             this.lPreu.Name = "lPreu";
-            this.lPreu.Size = new System.Drawing.Size(31, 16);
+            this.lPreu.Size = new System.Drawing.Size(36, 16);
             this.lPreu.TabIndex = 37;
             this.lPreu.Text = "Preu";
             // 
@@ -78,7 +79,7 @@
             this.gbDadesEspai.Controls.Add(this.cbExterior);
             this.gbDadesEspai.Controls.Add(this.lPreu);
             this.gbDadesEspai.Controls.Add(this.tbPreu);
-            this.gbDadesEspai.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDadesEspai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDadesEspai.Location = new System.Drawing.Point(28, 79);
             this.gbDadesEspai.Name = "gbDadesEspai";
             this.gbDadesEspai.Size = new System.Drawing.Size(251, 177);
@@ -91,7 +92,7 @@
             this.cbExterior.AutoSize = true;
             this.cbExterior.Location = new System.Drawing.Point(140, 102);
             this.cbExterior.Name = "cbExterior";
-            this.cbExterior.Size = new System.Drawing.Size(64, 20);
+            this.cbExterior.Size = new System.Drawing.Size(72, 20);
             this.cbExterior.TabIndex = 49;
             this.cbExterior.Text = "Exterior";
             this.cbExterior.UseVisualStyleBackColor = true;

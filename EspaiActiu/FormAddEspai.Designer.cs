@@ -99,21 +99,23 @@
             // 
             // bAceptar
             // 
+            this.bAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(212)))), ((int)(((byte)(97)))));
             this.bAceptar.Location = new System.Drawing.Point(51, 419);
             this.bAceptar.Name = "bAceptar";
             this.bAceptar.Size = new System.Drawing.Size(75, 32);
             this.bAceptar.TabIndex = 63;
             this.bAceptar.Text = "Aceptar";
-            this.bAceptar.UseVisualStyleBackColor = true;
+            this.bAceptar.UseVisualStyleBackColor = false;
             // 
             // bSortir
             // 
+            this.bSortir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.bSortir.Location = new System.Drawing.Point(235, 419);
             this.bSortir.Name = "bSortir";
             this.bSortir.Size = new System.Drawing.Size(75, 32);
             this.bSortir.TabIndex = 62;
             this.bSortir.Text = "Sortir";
-            this.bSortir.UseVisualStyleBackColor = true;
+            this.bSortir.UseVisualStyleBackColor = false;
             // 
             // tbTelefonEspai
             // 

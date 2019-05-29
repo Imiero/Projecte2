@@ -27,6 +27,7 @@ namespace EspaiActiu
             Petilabel.ForeColor = System.Drawing.Color.Black;
             EspaLabel.ForeColor = System.Drawing.Color.Black;
             Entitatslabel.ForeColor = System.Drawing.Color.Black;
+            labelAdmins.ForeColor = System.Drawing.Color.Black;
         }
         private void tabPeticio()
         {
@@ -48,6 +49,12 @@ namespace EspaiActiu
             resetColors();
             Entitatslabel.ForeColor = System.Drawing.Color.White;
 
+        }
+        private void tabAdmins()
+        {
+            tabControl1.SelectedIndex = 3;
+            resetColors();
+            labelAdmins.ForeColor = System.Drawing.Color.White;
         }
         private void Sortir()
         {
@@ -332,6 +339,41 @@ namespace EspaiActiu
         private void button1_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 3;
+        }
+
+        private void buttonEsborrar_Click(object sender, EventArgs e)
+        {
+            DialogResult result5 = MessageBox.Show("Segur que vols eliminar l'entitat?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result5 == DialogResult.Yes)
+            {
+                ORMEntitats.DeleteEntitat((ENTITATS)dataGridViewEntitats.SelectedRows[0].DataBoundItem);
+                bindingSourceEntitats.DataSource = ORMEntitats.SelectEntitatsByNom(textBoxCercarEntitats.Text);
+            }
+            else
+            {
+                
+            }
+        }
+
+        private void PetiPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            tabAdmins();
+        }
+
+        private void labelAdmins_Click(object sender, EventArgs e)
+        {
+            tabAdmins();
+        }
+
+        private void EntitatsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

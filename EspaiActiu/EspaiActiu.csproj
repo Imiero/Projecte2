@@ -425,6 +425,8 @@
       <DependentUpon>ModelSantCugat.edmx</DependentUpon>
       <LastGenOutput>ModelSantCugat.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\adminicon.png" />
+    <None Include="Resources\buttonminus.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus1.png" />

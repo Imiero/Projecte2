@@ -202,12 +202,13 @@
             // 
             // bModificar
             // 
+            this.bModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(95)))));
             this.bModificar.Location = new System.Drawing.Point(292, 474);
             this.bModificar.Name = "bModificar";
             this.bModificar.Size = new System.Drawing.Size(123, 23);
             this.bModificar.TabIndex = 8;
             this.bModificar.Text = "Modificar";
-            this.bModificar.UseVisualStyleBackColor = true;
+            this.bModificar.UseVisualStyleBackColor = false;
             this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
             // 
             // hORARISINSTALACIOBindingSource

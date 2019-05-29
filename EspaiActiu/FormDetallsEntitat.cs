@@ -204,5 +204,27 @@ namespace EspaiActiu
 
             }
         }
+
+        private void pictureBoxBorrarTele_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Segur que vols eliminar el telèfon?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                ORMTelefono.DeleteTelefon((TELEFONS)listBoxTelefons.SelectedItem);
+                bindingSourceTelefons.DataSource = entitat.TELEFONS.ToList();
+            }
+        }
+
+        private void pictureBoxBorrarEquipo_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Segur que vols eliminar el equip?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (result == DialogResult.Yes)
+            {
+                ORMEquips.DeleteEquip((EQUIPS)listBoxEquips.SelectedItem);
+                bindingSourceEquips.DataSource = entitat.EQUIPS.ToList();
+            }
+        }
     }
 }
